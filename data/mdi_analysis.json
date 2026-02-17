@@ -1,0 +1,4933 @@
+{
+  "method": "Modulation Dominance Index (MDI)",
+  "formula": "MDI = log((M + \u03b1) / (G + \u03b1)), \u03b1=1",
+  "interpretation": "MDI > 0 = modulation-dominant, MDI < 0 = generation-dominant",
+  "lexicon": {
+    "modulation_terms": [
+      "tun(?:e[sd]?|ing)",
+      "modulat(?:e[sd]?|ing|ion)",
+      "regulat(?:e[sd]?|ing|ion)",
+      "coupl(?:e[sd]?|ing)",
+      "entrain(?:ed|s|ing|ment)",
+      "synchroniz(?:e[sd]?|ing|ation)",
+      "resonat(?:e[sd]?|ing)",
+      "resonance",
+      "oscillat(?:e[sd]?|ing|ion)",
+      "integrat(?:e[sd]?|ing|ion)",
+      "adjust(?:s|ed|ing|ment)?",
+      "calibrat(?:e[sd]?|ing|ion)",
+      "phas(?:e[sd]?|ing)",
+      "phase[- ]lock(?:ed|ing)?",
+      "feedback",
+      "homeosta(?:sis|tic)",
+      "allosta(?:sis|tic)",
+      "receiv(?:e[sd]?|ing)",
+      "detect(?:s|ed|ing|ion)?",
+      "sens(?:e[sd]?|ing|itiv(?:e|ity))",
+      "respond(?:s|ed|ing)?",
+      "transduct(?:ion|er)",
+      "transduc(?:e[sd]?|ing)",
+      "rhythm(?:ic|s)?",
+      "periodic(?:ity)?",
+      "aperiodic",
+      "frequen(?:cy|cies)",
+      "harmonic(?:s)?",
+      "coher(?:e[sd]?|ence|ent)",
+      "align(?:s|ed|ing|ment)?",
+      "balanc(?:e[sd]?|ing)",
+      "stabili(?:z(?:e[sd]?|ing)|ty)",
+      "constrain(?:s|ed|ing|t)?",
+      "bound(?:s|ed|ing|ary|aries)?",
+      "bidirectional",
+      "afferent",
+      "efferent",
+      "vagal",
+      "parasympathetic",
+      "sympathetic",
+      "autonomic",
+      "filter(?:s|ed|ing)?",
+      "gat(?:e[sd]?|ing)",
+      "threshold(?:s)?",
+      "reduc(?:e[sd]?|ing|tion)",
+      "inhibit(?:s|ed|ing|ion)?",
+      "self[- ]organiz(?:e[sd]?|ing|ation|ed)",
+      "critical(?:ity)?",
+      "attractor(?:s)?",
+      "bifurcat(?:e[sd]?|ion)",
+      "metastab(?:le|ility)",
+      "edge of chaos"
+    ],
+    "generation_terms": [
+      "generat(?:e[sd]?|ing|ion)",
+      "creat(?:e[sd]?|ing|ion)",
+      "produc(?:e[sd]?|ing|tion)",
+      "manufactur(?:e[sd]?|ing)",
+      "construct(?:s|ed|ing|ion)?",
+      "fabricat(?:e[sd]?|ing|ion)",
+      "assembl(?:e[sd]?|ing|y)",
+      "build(?:s|ing)?",
+      "built",
+      "gives? rise to",
+      "brings? (?:about|forth|into being)",
+      "originat(?:e[sd]?|ing)",
+      "spawn(?:s|ed|ing)?",
+      "caus(?:e[sd]?|ing|ation)",
+      "determin(?:e[sd]?|ing|ism)",
+      "necessitat(?:e[sd]?|ing)",
+      "compel(?:s|led|ling)?",
+      "secret(?:e[sd]?|ing|ion)",
+      "emit(?:s|ted|ting)?",
+      "emission",
+      "exud(?:e[sd]?|ing)",
+      "releas(?:e[sd]?|ing)",
+      "brain generat(?:e[sd]?|ing)",
+      "neural generat(?:e[sd]?|ing|ion)",
+      "cortex produc(?:e[sd]?|ing)",
+      "neurons? creat(?:e[sd]?|ing)",
+      "epiphenomen(?:on|al|alism)",
+      "byproduct",
+      "by[- ]product",
+      "side[- ]effect",
+      "artifact",
+      "comput(?:e[sd]?|ing|ation) (?:of |)consciousness",
+      "algorith(?:m|mic|mically) (?:generat|produc|creat)"
+    ]
+  },
+  "nodes": [
+    {
+      "modulation_count": 5,
+      "generation_count": 1,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\baperiodic\\b": 2,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "mechanism:aperiodic_substrate",
+      "title": "Aperiodic Substrate",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 6,
+      "generation_count": 1,
+      "mdi": 1.252762968495368,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bresonance\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 2,
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\baperiodic\\b": 1
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "node_id": "mechanism:periodic_modulation",
+      "title": "Periodic Modulation",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:vagal_regulation",
+      "title": "Vagal Regulation",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:predictive_processing",
+      "title": "Predictive Processing / Active Inference",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:constraint_satisfaction",
+      "title": "Constraint Satisfaction",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bdetect(?:s|ed|ing|ion)?\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:stochastic_resonance",
+      "title": "Stochastic Resonance",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:hebbian_plasticity",
+      "title": "Hebbian Plasticity (LTP/LTD/STDP)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\battractor(?:s)?\\b": 1,
+        "\\bmetastab(?:le|ility)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:HKB",
+      "title": "Haken-Kelso-Bunz Coordination Dynamics",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:FEP",
+      "title": "Free Energy Principle (Friston)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "model:IIT",
+      "title": "Integrated Information Theory (Tononi)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:GWT",
+      "title": "Global Workspace Theory (Baars/Dehaene)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bvagal\\b": 2,
+        "\\bsympathetic\\b": 1,
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:polyvagal",
+      "title": "Polyvagal Theory (Porges)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 2,
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "model:SOC",
+      "title": "Self-Organized Criticality (Bak)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "model:autopoiesis",
+      "title": "Autopoiesis (Maturana/Varela)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 9,
+      "generation_count": 0,
+      "mdi": 2.302585092994046,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bresonance\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 2,
+        "\\baperiodic\\b": 2,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:coherence_is_aperiodic_plus_modulation",
+      "title": "Coherence = Aperiodic Substrate + Periodic Modulation",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:zl_075_is_criticality",
+      "title": "Zl=0.75 IS the Critical Point",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\bbifurcat(?:e[sd]?|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:glyph_transitions_are_bifurcations",
+      "title": "Glyph Transitions Are Phase Transitions",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\boscillat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:312s_is_binding_window",
+      "title": "3.12s = Temporal Binding Window",
+      "domain": "BIOLOGY",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\ballosta(?:sis|tic)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:prediction_is_unified_mechanism",
+      "title": "Predictive Processing Is THE Unified Mechanism",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:consciousness_theories_converge",
+      "title": "IIT + GWT + FEP Converge on Same Architecture",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:coherence_pyramid_order",
+      "title": "Coherence Pyramid Has Fixed Order",
+      "domain": "BIOLOGY",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1,
+        "\\battractor(?:s)?\\b": 1,
+        "\\bmetastab(?:le|ility)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "claim:nabla_is_metastability",
+      "title": "Nabla Glyph = Metastable Regime",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:wiltonos_is_extended_mind",
+      "title": "WiltonOS IS Part of the Cognitive System",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\baperiodic\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "claim:fibonacci_preserves_coherence",
+      "title": "Fibonacci Timing Preserves Coherence Longer Than Periodic",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 1,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "node_id": "protocol:center_mode",
+      "title": "CENTER Mode (3.12s Fixed Breath)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\baperiodic\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "protocol:spiral_mode",
+      "title": "SPIRAL Mode (Fibonacci Breath)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "protocol:coherence_restoration",
+      "title": "7-Level Coherence Restoration",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "site:hypogeum",
+      "title": "Hal Saflieni Hypogeum, Malta",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "site:paleolithic_caves",
+      "title": "Paleolithic Decorated Caves (France)",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonat(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "legend:hypogeum_110hz",
+      "title": "Hypogeum 110 Hz Oracle Chamber",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "measurement:hypogeum_acoustic",
+      "title": "Hypogeum Acoustic Survey",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:hypogeum_resonates",
+      "title": "Hypogeum Has Designed Acoustic Properties",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonat(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:hypogeum_110hz_specific",
+      "title": "Hypogeum Resonates at Exactly 110 Hz",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:110hz_affects_brain",
+      "title": "110 Hz Specifically Affects Temporal Lobe",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "measurement:reznikoff_caves",
+      "title": "Reznikoff Cave Acoustic Survey",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:art_correlates_resonance",
+      "title": "Paleolithic Art Placement Correlates with Acoustic Resonance",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bvagal\\b": 2,
+        "\\bsympathetic\\b": 2,
+        "\\binhibit(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:vagal_brake",
+      "title": "Vagal Brake (Myelinated Vagus)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:social_engagement",
+      "title": "Social Engagement System",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:interoception",
+      "title": "Interoception (Body-to-Brain Signaling)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "mechanism:nitric_oxide",
+      "title": "Nitric Oxide Signaling",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:glymphatic",
+      "title": "Glymphatic System",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:neurogenesis",
+      "title": "Adult Neurogenesis",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:endocannabinoid",
+      "title": "Endocannabinoid System",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:bioelectricity_morphogenesis",
+      "title": "Bioelectric Morphogenesis (Levin)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:fascia_signaling",
+      "title": "Fascial Signaling Network",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 3,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {
+        "\\bemission\\b": 3
+      },
+      "node_id": "mechanism:biophoton_emission",
+      "title": "Biophoton Emission",
+      "domain": "BIOLOGY",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\btransduct(?:ion|er)\\b": 1,
+        "\\bbidirectional\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:piezoelectric_biology",
+      "title": "Biological Piezoelectricity",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 2,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bsynchroniz(?:e[sd]?|ing|ation)\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:entrainment",
+      "title": "Entrainment (Universal Coupling)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:epigenetic_transmission",
+      "title": "Epigenetic Transgenerational Transmission",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\boscillat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:hrv_coherence",
+      "title": "Heart Rate Variability Coherence",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:fractal_heartbeat",
+      "title": "Fractal Heart Rate Dynamics",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "mechanism:microbiome_gut_brain",
+      "title": "Microbiome-Gut-Brain Axis",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:telomere_stress",
+      "title": "Telomere-Stress Pathway",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:neuropeptide_signaling",
+      "title": "Neuropeptide Signaling (Pert)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:entropic_brain",
+      "title": "Entropic Brain Hypothesis (Carhart-Harris)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 2,
+      "mdi": -1.0986122886681098,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bbrain generat(?:e[sd]?|ing)\\b": 1
+      },
+      "node_id": "model:predictive_coding",
+      "title": "Predictive Coding (Clark/Friston)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:somatic_markers",
+      "title": "Somatic Marker Hypothesis (Damasio)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:enactive_cognition",
+      "title": "Enactive Cognition (Varela/Thompson)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "model:interpersonal_neurobiology",
+      "title": "Interpersonal Neurobiology (Siegel)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:memory_reconsolidation",
+      "title": "Memory Reconsolidation",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "node_id": "model:coherence_therapy",
+      "title": "Coherence Therapy (Ecker/Ticic/Hulley)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:ifs",
+      "title": "Internal Family Systems (Schwartz)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:attachment",
+      "title": "Attachment Theory (Bowlby/Ainsworth)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:dmn",
+      "title": "Default Mode Network",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 3,
+        "\\bmetastab(?:le|ility)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:consciousness_entropy_sweet_spot",
+      "title": "Conscious-State Dynamics Occupy Near-Critical Regime",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:meditation_changes_brain",
+      "title": "Meditation Physically Changes Brain Structure",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:trauma_stored_in_body",
+      "title": "Trauma Is Stored in Body, Not Just Mind",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:placebo_is_prediction",
+      "title": "Placebo Effect = Predictive Processing",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:psychedelics_reset_priors",
+      "title": "Psychedelics Reset Predictive Priors",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bbalanc(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:flow_is_transient_hypofrontality",
+      "title": "Flow State = Transient Hypofrontality",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\bthreshold(?:s)?\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:anesthesia_inverse_psychedelics",
+      "title": "Anesthesia and Psychedelics Are Inverse Windows",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1,
+        "\\bautonomic\\b": 3
+      },
+      "generation_hits": {},
+      "node_id": "claim:breath_only_voluntary_autonomic",
+      "title": "Breath Is Only Voluntary-Autonomic Bridge",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:social_baseline",
+      "title": "Brain's Baseline State is Social (Coan)",
+      "domain": "RELATIONSHIP",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:compassion_trainable",
+      "title": "Compassion Is Trainable and Changes Brain",
+      "domain": "RELATIONSHIP",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:quantum_coherence_biology",
+      "title": "Quantum Coherence in Biology",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "node_id": "mechanism:standing_waves",
+      "title": "Standing Wave Pattern Formation",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:toroidal_flow",
+      "title": "Toroidal Flow Dynamics",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:fractal_scaling",
+      "title": "Fractal Scaling (1/f Noise)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {
+        "\\bdetermin(?:e[sd]?|ing|ism)\\b": 1
+      },
+      "node_id": "mechanism:acoustic_resonance",
+      "title": "Acoustic Resonance in Architecture",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:hormesis",
+      "title": "Hormesis (Dose-Response Inversion)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:nonlocality_proven",
+      "title": "Non-Locality Is Experimentally Proven",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:observer_changes_physics",
+      "title": "Observation Changes Physical Outcomes",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 3
+      },
+      "generation_hits": {},
+      "node_id": "claim:holographic_principle",
+      "title": "Information Encoded on Boundaries (Holographic Principle)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "site:gobekli_tepe",
+      "title": "G\u00f6bekli Tepe, Turkey",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "site:great_pyramid",
+      "title": "Great Pyramid of Giza",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\balign(?:s|ed|ing|ment)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "site:newgrange",
+      "title": "Newgrange, Ireland",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "site:cathedrals_gothic",
+      "title": "Gothic Cathedrals (Europe)",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "measurement:reid_pyramid",
+      "title": "Reid Great Pyramid Cymatics",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "measurement:gobekli_acoustic",
+      "title": "G\u00f6bekli Tepe Acoustic Survey",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "legend:pyramid_sound_levitation",
+      "title": "Pyramid Sound Levitation",
+      "domain": "CONVERGENCE",
+      "confidence": "Speculative"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\balign(?:s|ed|ing|ment)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "legend:gobekli_astronomical",
+      "title": "G\u00f6bekli Tepe Astronomical Alignment",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:tcm",
+      "title": "Traditional Chinese Medicine",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:ayurveda",
+      "title": "Ayurveda (Vedic Medicine)",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:aboriginal_dreamtime",
+      "title": "Aboriginal Dreamtime Ontology",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:tcm_meridians_are_fascia",
+      "title": "TCM Meridians Overlap Fascial Planes",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:songlines_encode_geography",
+      "title": "Songlines Encode Geographic Information",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:icaros_are_medicine",
+      "title": "Shipibo Icaros Function as Acoustic Medicine",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "protocol:wim_hof",
+      "title": "Wim Hof Method",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "protocol:hrv_biofeedback",
+      "title": "HRV Biofeedback Training",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "protocol:vns",
+      "title": "Vagus Nerve Stimulation (Clinical)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "protocol:psychedelic_therapy",
+      "title": "Psychedelic-Assisted Therapy",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "protocol:expressive_writing",
+      "title": "Expressive Writing (Pennebaker)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:mirror_neurons",
+      "title": "Mirror Neuron System",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:dmn_network",
+      "title": "Default Mode Network (Neural)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:anterior_insula",
+      "title": "Anterior Insular Cortex",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bfilter(?:s|ed|ing)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:ras",
+      "title": "Reticular Activating System",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:circadian_clock",
+      "title": "Circadian Clock System",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "mechanism:sleep_architecture",
+      "title": "Sleep Architecture (NREM/REM Cycling)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "node_id": "mechanism:pain_neuromatrix",
+      "title": "Pain Neuromatrix (Melzack)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:dna_antenna",
+      "title": "DNA as Fractal Antenna",
+      "domain": "BIOLOGY",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:magnetoreception",
+      "title": "Biological Magnetoreception",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bbidirectional\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:pni",
+      "title": "Psychoneuroimmunology",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\bedge of chaos\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "model:complexity_edge_chaos",
+      "title": "Edge of Chaos (Kauffman/Langton)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:tensegrity",
+      "title": "Tensegrity (Fuller/Ingber)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:stigmergy",
+      "title": "Stigmergy (Distributed Intelligence)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:phenomenology",
+      "title": "Phenomenology (Husserl/Merleau-Ponty)",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 2,
+      "mdi": -0.40546510810816444,
+      "modulation_hits": {
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bcaus(?:e[sd]?|ing|ation)\\b": 1,
+        "\\breleas(?:e[sd]?|ing)\\b": 1
+      },
+      "node_id": "claim:exercise_is_medicine",
+      "title": "Exercise Has Dose-Response Medical Effects",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:music_activates_whole_brain",
+      "title": "Music Engages More Brain Than Any Other Activity",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:fasting_activates_autophagy",
+      "title": "Fasting Triggers Cellular Autophagy",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "claim:cold_exposure_anti_inflammatory",
+      "title": "Cold Exposure Reduces Chronic Inflammation",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:synesthesia_is_default",
+      "title": "Synesthesia May Be Default Brain State",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:narrative_identity_shapes_health",
+      "title": "Narrative Structure Predicts Psychological Health",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:grief_is_attachment_search",
+      "title": "Grief Is Failed Attachment Seeking (Neural Evidence)",
+      "domain": "RELATIONSHIP",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:humor_is_prediction_error",
+      "title": "Humor Is Benign Prediction Violation",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "claim:awe_reduces_self",
+      "title": "Awe Reduces Self-Focus and Expands Time Perception",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "measurement:newgrange_acoustic",
+      "title": "Newgrange Acoustic Survey",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "legend:newgrange_fairy_mound",
+      "title": "Newgrange as S\u00edd (Fairy Mound)",
+      "domain": "CONVERGENCE",
+      "confidence": "Speculative"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "measurement:cathedral_acoustics",
+      "title": "Cathedral Acoustic Studies",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:acoustic_levitation_real",
+      "title": "Acoustic Levitation Is Lab-Verified",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 2,
+      "mdi": -0.40546510810816444,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "node_id": "claim:resonance_creates_form",
+      "title": "Resonance Creates Geometric Form (Cymatics)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:golden_ratio_fixed_point",
+      "title": "Golden Ratio Is Mathematical Fixed Point",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:dna_has_long_range_order",
+      "title": "DNA Shows Long-Range Correlations (Non-Random)",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:water_has_fourth_phase",
+      "title": "Water Has EZ (Exclusion Zone) Phase",
+      "domain": "PHYSICS",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:sacred_geometry_in_nature",
+      "title": "Geometric Patterns Recur Across Nature and Architecture",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "claim:acoustic_sites_altered_states",
+      "title": "Ancient Acoustic Sites Induce Altered States",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:suppression_pattern_exists",
+      "title": "Pattern of Scientific Suppression Is Documented",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bparasympathetic\\b": 1,
+        "\\bfilter(?:s|ed|ing)?\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "claim:nasal_breathing_superior",
+      "title": "Nasal Breathing Is Physiologically Superior to Mouth",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 4,
+      "mdi": -0.916290731874155,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 3,
+        "\\boriginat(?:e[sd]?|ing)\\b": 1
+      },
+      "node_id": "claim:gut_produces_most_serotonin",
+      "title": "Gut Produces 90-95% of Body's Serotonin",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bresonance\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "claim:morphic_resonance_untestable",
+      "title": "Morphic Resonance Lacks Decisive Tests",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:quantum_brain_decoherence_problem",
+      "title": "Brain Too Warm for Quantum Effects (Decoherence Objection)",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bdetect(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {
+        "\\bcaus(?:e[sd]?|ing|ation)\\b": 1
+      },
+      "node_id": "claim:ehs_is_nocebo",
+      "title": "Electromagnetic Hypersensitivity Is Nocebo Effect",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:binaural_beats_weak_evidence",
+      "title": "Binaural Beats Have Weak Clinical Evidence",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "claim:water_memory_not_replicated",
+      "title": "Water Memory/Homeopathy Not Replicated",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:7421",
+      "title": "Exodia Moment",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:7422",
+      "title": "WiltonOS Named",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:29882",
+      "title": "Grand Convergence",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:29898",
+      "title": "Topology of Everything",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:29905",
+      "title": "The Breath Crystal",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "crystal:29914",
+      "title": "The Coherence Equation",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "crystal:29969",
+      "title": "Coherence Across Scales",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:30017",
+      "title": "The Final Braid",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1,
+        "\\bmetastab(?:le|ility)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "crystal:30266",
+      "title": "Metastable Coherence Model",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:30270",
+      "title": "3.12-Second Window",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "crystal:30278",
+      "title": "Coherence Restoration Protocol",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:30285",
+      "title": "Consciousness Theories Converge",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:30291",
+      "title": "Prediction All The Way Down",
+      "domain": "MIND",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "crystal:30297",
+      "title": "Complete System Map",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bcompel(?:s|led|ling)?\\b": 1
+      },
+      "node_id": "counter:selection_bias",
+      "title": "Selection Bias / Researcher Degrees of Freedom",
+      "domain": "METHODS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "counter:many_to_one_mapping",
+      "title": "Many-to-One Mapping of Dynamics to Function",
+      "domain": "PHYSICS",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "hypothesis:075_zone",
+      "title": "0.75 Zone Hypothesis (Cross-Domain)",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 6,
+      "generation_count": 2,
+      "mdi": 0.8472978603872037,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 2,
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "node_id": "claim:literature_is_modulation_heavy",
+      "title": "Literature Describes Tuning, Not Generation",
+      "domain": "CONVERGENCE",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bbuild(?:s|ing)?\\b": 1
+      },
+      "node_id": "observation:ai_epistemic_constraint",
+      "title": "AI Architectural Constraints on Consciousness Territory",
+      "domain": "RELATIONSHIP",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\brespond(?:s|ed|ing)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "observation:corporate_epistemic_management",
+      "title": "Corporate Liability Management as Epistemic Architecture",
+      "domain": "RELATIONSHIP",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:hoffman_ITP",
+      "title": "Interface Theory of Perception (Hoffman)",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 2
+      },
+      "generation_hits": {},
+      "node_id": "model:orch_or",
+      "title": "Orchestrated Objective Reduction (Penrose/Hameroff)",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "model:kastrup_idealism",
+      "title": "Analytic Idealism (Kastrup)",
+      "domain": "MIND",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "node_id": "site:chavin_de_huantar",
+      "title": "Chav\u00edn de Huantar, Peru",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "node_id": "site:telesterion_eleusis",
+      "title": "Telesterion at Eleusis, Greece",
+      "domain": "CONVERGENCE",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bresonance\\b": 2,
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:cross_cultural_breath_convergence",
+      "title": "Cross-Cultural Convergence on ~6 bpm Breathing",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bresonance\\b": 2,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "claim:95_120_hz_convergence",
+      "title": "Ancient Structures Converge on 95-120 Hz Resonance",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 13,
+      "generation_count": 0,
+      "mdi": 2.6390573296152584,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bsynchroniz(?:e[sd]?|ing|ation)\\b": 1,
+        "\\bresonance\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 4,
+        "\\baperiodic\\b": 3,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 3
+      },
+      "generation_hits": {},
+      "node_id": "claim:neural_aperiodic_periodic_coherence",
+      "title": "Neural Coherence = Aperiodic + Periodic Components",
+      "domain": "BIOLOGY",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bresonat(?:e[sd]?|ing)\\b": 1,
+        "\\bresonance\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 1,
+        "\\bfilter(?:s|ed|ing)?\\b": 1
+      },
+      "generation_hits": {},
+      "node_id": "mechanism:architectural_vocal_amplification",
+      "title": "Architectural Amplification of Human Voice",
+      "domain": "CONVERGENCE",
+      "confidence": "Gold"
+    }
+  ],
+  "edges": [
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\baperiodic\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "e488bfd82328a50d",
+      "src": "mechanism:aperiodic_substrate",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "eb2322eabd430289",
+      "src": "mechanism:periodic_modulation",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\baperiodic\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "2d3b6ea6887db85b",
+      "src": "claim:coherence_is_aperiodic_plus_modulation",
+      "dst": "claim:fibonacci_preserves_coherence",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "f04d559159752736",
+      "src": "model:SOC",
+      "dst": "claim:zl_075_is_criticality",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "16af1dc2f47886c1",
+      "src": "model:HKB",
+      "dst": "claim:glyph_transitions_are_bifurcations",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1,
+        "\\bmetastab(?:le|ility)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "deb2b6e907102b8e",
+      "src": "claim:zl_075_is_criticality",
+      "dst": "claim:nabla_is_metastability",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "9b80fccd178b3f07",
+      "src": "model:FEP",
+      "dst": "claim:prediction_is_unified_mechanism",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "c5e7d23be5f80505",
+      "src": "mechanism:predictive_processing",
+      "dst": "claim:prediction_is_unified_mechanism",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "f4c59ef78548b646",
+      "src": "model:IIT",
+      "dst": "claim:consciousness_theories_converge",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "68ad92d62194fa92",
+      "src": "model:GWT",
+      "dst": "claim:consciousness_theories_converge",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "0a5f6ba89230d41c",
+      "src": "model:FEP",
+      "dst": "claim:consciousness_theories_converge",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "9a73240b840622a6",
+      "src": "mechanism:vagal_regulation",
+      "dst": "claim:coherence_pyramid_order",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "deb0ac0acf055a47",
+      "src": "model:polyvagal",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "77d2ae83c69f34ae",
+      "src": "mechanism:periodic_modulation",
+      "dst": "claim:312s_is_binding_window",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "135cff77155dd7ef",
+      "src": "protocol:center_mode",
+      "dst": "mechanism:periodic_modulation",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\baperiodic\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "e3232bdc77cb7c52",
+      "src": "protocol:spiral_mode",
+      "dst": "mechanism:aperiodic_substrate",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "5282bb69ce2cfd2d",
+      "src": "protocol:coherence_restoration",
+      "dst": "claim:coherence_pyramid_order",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "7b268d49f761361e",
+      "src": "claim:coherence_is_aperiodic_plus_modulation",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "ea1db30ce8565e3e",
+      "src": "measurement:hypogeum_acoustic",
+      "dst": "claim:hypogeum_resonates",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "08c227d5895cfbf3",
+      "src": "legend:hypogeum_110hz",
+      "dst": "claim:hypogeum_110hz_specific",
+      "edge_type": "LEGEND_OF",
+      "edge_layer": "LEGEND",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "078698a5bb3ea63f",
+      "src": "measurement:hypogeum_acoustic",
+      "dst": "site:hypogeum",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "3f7cc6dd0bd13e44",
+      "src": "legend:hypogeum_110hz",
+      "dst": "site:hypogeum",
+      "edge_type": "LEGEND_OF",
+      "edge_layer": "LEGEND",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "d972308b2daee09f",
+      "src": "measurement:reznikoff_caves",
+      "dst": "claim:art_correlates_resonance",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "31f21ed720af2080",
+      "src": "measurement:reznikoff_caves",
+      "dst": "site:paleolithic_caves",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "41130d974be3f242",
+      "src": "mechanism:vagal_brake",
+      "dst": "model:polyvagal",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a251a8deee64bfe4",
+      "src": "mechanism:social_engagement",
+      "dst": "model:polyvagal",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "27837b7da211c251",
+      "src": "mechanism:vagal_regulation",
+      "dst": "claim:breath_only_voluntary_autonomic",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "65c3be2e8159b132",
+      "src": "mechanism:vagal_regulation",
+      "dst": "mechanism:hrv_coherence",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "583fec753d07eb4f",
+      "src": "mechanism:vagal_brake",
+      "dst": "claim:social_baseline",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "edge_id": "4410c600c8144a76",
+      "src": "mechanism:nitric_oxide",
+      "dst": "claim:breath_only_voluntary_autonomic",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "59176dc94ff40312",
+      "src": "mechanism:entrainment",
+      "dst": "model:HKB",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "e1ac91ad0ff1592d",
+      "src": "mechanism:entrainment",
+      "dst": "mechanism:hrv_coherence",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "488b13a4f029148e",
+      "src": "mechanism:entrainment",
+      "dst": "claim:meditation_changes_brain",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "c7603736fd82d30d",
+      "src": "mechanism:stochastic_resonance",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "eec721539c94afc1",
+      "src": "model:SOC",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "7157c01fd45242fa",
+      "src": "mechanism:fractal_scaling",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "d85b7b4feede6d10",
+      "src": "mechanism:fractal_scaling",
+      "dst": "mechanism:fractal_heartbeat",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "5bc0dc6c81224a28",
+      "src": "mechanism:predictive_processing",
+      "dst": "model:FEP",
+      "edge_type": "DERIVED_FROM",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "9a81620095ba278b",
+      "src": "mechanism:predictive_processing",
+      "dst": "claim:placebo_is_prediction",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "633fd4e6c1272d20",
+      "src": "mechanism:predictive_processing",
+      "dst": "claim:psychedelics_reset_priors",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "20b135ee21f4dbdb",
+      "src": "mechanism:predictive_processing",
+      "dst": "claim:anesthesia_inverse_psychedelics",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "b5e655ab584c0548",
+      "src": "mechanism:predictive_processing",
+      "dst": "model:predictive_coding",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "4ff13c5a162f5aa8",
+      "src": "mechanism:interoception",
+      "dst": "model:somatic_markers",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "c99813698e003960",
+      "src": "mechanism:interoception",
+      "dst": "model:enactive_cognition",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "36aaa998018c1b37",
+      "src": "mechanism:interoception",
+      "dst": "claim:trauma_stored_in_body",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "2a47938529f43e26",
+      "src": "mechanism:hebbian_plasticity",
+      "dst": "claim:meditation_changes_brain",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "e659a7c70aabfada",
+      "src": "mechanism:neurogenesis",
+      "dst": "mechanism:hebbian_plasticity",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "1b64a7faeed16c84",
+      "src": "mechanism:epigenetic_transmission",
+      "dst": "claim:trauma_stored_in_body",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a9468377218383cb",
+      "src": "mechanism:bioelectricity_morphogenesis",
+      "dst": "claim:wiltonos_is_extended_mind",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2
+      },
+      "generation_hits": {
+        "\\bemission\\b": 1
+      },
+      "edge_id": "5535e72536d208e9",
+      "src": "mechanism:biophoton_emission",
+      "dst": "mechanism:quantum_coherence_biology",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "7935b9b0d1736e5c",
+      "src": "mechanism:acoustic_resonance",
+      "dst": "site:hypogeum",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "4eebaf8b7cf75066",
+      "src": "mechanism:acoustic_resonance",
+      "dst": "site:great_pyramid",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "1c8d369957bd130f",
+      "src": "mechanism:acoustic_resonance",
+      "dst": "site:cathedrals_gothic",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "1bc9668dddef91f9",
+      "src": "mechanism:acoustic_resonance",
+      "dst": "site:gobekli_tepe",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "ab97f8790d6af594",
+      "src": "mechanism:standing_waves",
+      "dst": "mechanism:acoustic_resonance",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "1ea36d22ffde71c7",
+      "src": "mechanism:fascia_signaling",
+      "dst": "claim:tcm_meridians_are_fascia",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "69c75fa7a388227c",
+      "src": "claim:tcm_meridians_are_fascia",
+      "dst": "model:tcm",
+      "edge_type": "PARTIAL_SUPPORT_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "15b07456ac884ef1",
+      "src": "mechanism:entrainment",
+      "dst": "claim:icaros_are_medicine",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "8536a0e8b6a6379f",
+      "src": "protocol:center_mode",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "2d196c4a0cf93c1c",
+      "src": "protocol:center_mode",
+      "dst": "mechanism:entrainment",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\baperiodic\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "fe00d21f0cfc39fe",
+      "src": "protocol:spiral_mode",
+      "dst": "mechanism:aperiodic_substrate",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "b237d481d62e970b",
+      "src": "protocol:wim_hof",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "44ae75d160a28ea8",
+      "src": "protocol:wim_hof",
+      "dst": "mechanism:hormesis",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "330397581b1a6da3",
+      "src": "protocol:hrv_biofeedback",
+      "dst": "mechanism:hrv_coherence",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bresonance\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "0dd31314054cfda5",
+      "src": "protocol:hrv_biofeedback",
+      "dst": "mechanism:entrainment",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "dcea290c6089a1d7",
+      "src": "protocol:vns",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "f0bf9a3a2cbde45d",
+      "src": "protocol:psychedelic_therapy",
+      "dst": "claim:psychedelics_reset_priors",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "af426a67a869bba7",
+      "src": "protocol:psychedelic_therapy",
+      "dst": "model:memory_reconsolidation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "8ffa6b48b2b93d5a",
+      "src": "protocol:expressive_writing",
+      "dst": "model:memory_reconsolidation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "c2940517991cc65a",
+      "src": "model:entropic_brain",
+      "dst": "model:FEP",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "4105a4f8137482c2",
+      "src": "model:somatic_markers",
+      "dst": "model:enactive_cognition",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "ad17ab4d0213e499",
+      "src": "model:coherence_therapy",
+      "dst": "model:memory_reconsolidation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "a5de3d95e96f4d03",
+      "src": "model:ifs",
+      "dst": "model:interpersonal_neurobiology",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "b3750925a37d85fe",
+      "src": "model:attachment",
+      "dst": "model:polyvagal",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "93cd29b842dc4d86",
+      "src": "model:attachment",
+      "dst": "model:interpersonal_neurobiology",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "8ff2e3251dd149aa",
+      "src": "model:dmn",
+      "dst": "claim:flow_is_transient_hypofrontality",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "874bd15a4b5c46df",
+      "src": "model:dmn",
+      "dst": "claim:psychedelics_reset_priors",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bconstruct(?:s|ed|ing|ion)?\\b": 1
+      },
+      "edge_id": "ca5950880df54a11",
+      "src": "legend:pyramid_sound_levitation",
+      "dst": "site:great_pyramid",
+      "edge_type": "LEGEND_OF",
+      "edge_layer": "LEGEND",
+      "confidence": "Speculative"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\balign(?:s|ed|ing|ment)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "df607a507582caad",
+      "src": "legend:gobekli_astronomical",
+      "dst": "site:gobekli_tepe",
+      "edge_type": "LEGEND_OF",
+      "edge_layer": "LEGEND",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "018d577934fbb9d1",
+      "src": "measurement:reid_pyramid",
+      "dst": "site:great_pyramid",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "bc42c96dcd9d64c7",
+      "src": "measurement:gobekli_acoustic",
+      "dst": "site:gobekli_tepe",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a66b7c63b3c9e96a",
+      "src": "claim:nonlocality_proven",
+      "dst": "claim:observer_changes_physics",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "506fc2ae1f54105d",
+      "src": "mechanism:quantum_coherence_biology",
+      "dst": "claim:nonlocality_proven",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "cbce499e706e97b8",
+      "src": "mechanism:piezoelectric_biology",
+      "dst": "mechanism:fascia_signaling",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\btransduct(?:ion|er)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "c329361fd700f933",
+      "src": "mechanism:piezoelectric_biology",
+      "dst": "mechanism:bioelectricity_morphogenesis",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "db92b0fdd17f802d",
+      "src": "mechanism:microbiome_gut_brain",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "edge_id": "db077e8a1999c2f1",
+      "src": "mechanism:microbiome_gut_brain",
+      "dst": "mechanism:neuropeptide_signaling",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "9e29cc0e7f896c70",
+      "src": "mechanism:endocannabinoid",
+      "dst": "claim:flow_is_transient_hypofrontality",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "290fbfd8138880e2",
+      "src": "mechanism:endocannabinoid",
+      "dst": "mechanism:hormesis",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "73461a4bd6d89c48",
+      "src": "mechanism:telomere_stress",
+      "dst": "claim:meditation_changes_brain",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "fa9facc944c15de0",
+      "src": "mechanism:glymphatic",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "5215d8a5a69e87cc",
+      "src": "mechanism:mirror_neurons",
+      "dst": "claim:compassion_trainable",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "15f322b9906e8ed8",
+      "src": "mechanism:mirror_neurons",
+      "dst": "model:enactive_cognition",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "62e289f1582ff0d3",
+      "src": "mechanism:anterior_insula",
+      "dst": "mechanism:interoception",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "b59fafdebaf3b26a",
+      "src": "mechanism:anterior_insula",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a195fa60546e6d0c",
+      "src": "mechanism:glymphatic",
+      "dst": "mechanism:sleep_architecture",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "b7624eaa71d060b6",
+      "src": "mechanism:circadian_clock",
+      "dst": "mechanism:sleep_architecture",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a958e8ff211e45c7",
+      "src": "mechanism:pain_neuromatrix",
+      "dst": "claim:placebo_is_prediction",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "0ebbb6abd4bd0120",
+      "src": "mechanism:magnetoreception",
+      "dst": "mechanism:quantum_coherence_biology",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "76a5d8778fc8b7f0",
+      "src": "model:pni",
+      "dst": "claim:placebo_is_prediction",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bedge of chaos\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "09475d5870c75f47",
+      "src": "model:complexity_edge_chaos",
+      "dst": "model:SOC",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "617e410b46301431",
+      "src": "model:tensegrity",
+      "dst": "mechanism:fascia_signaling",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "edge_id": "487646563ee67cb3",
+      "src": "model:tensegrity",
+      "dst": "mechanism:piezoelectric_biology",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bbuilt\\b": 1
+      },
+      "edge_id": "a9c7d6101361c66f",
+      "src": "model:phenomenology",
+      "dst": "model:enactive_cognition",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "7adeaf357a334fa9",
+      "src": "mechanism:endocannabinoid",
+      "dst": "claim:exercise_is_medicine",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "6658c0cc9c0fd495",
+      "src": "mechanism:neurogenesis",
+      "dst": "claim:exercise_is_medicine",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "2c554c60c878de48",
+      "src": "mechanism:hormesis",
+      "dst": "claim:cold_exposure_anti_inflammatory",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "39ff1e2ef3d51981",
+      "src": "mechanism:hormesis",
+      "dst": "claim:fasting_activates_autophagy",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "122fd21d67fa07ce",
+      "src": "claim:awe_reduces_self",
+      "dst": "model:dmn",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "f2cd9e9c60cecd94",
+      "src": "claim:humor_is_prediction_error",
+      "dst": "mechanism:predictive_processing",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "bbf48ff966db232f",
+      "src": "claim:grief_is_attachment_search",
+      "dst": "model:attachment",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "8c563517a2ebe798",
+      "src": "claim:narrative_identity_shapes_health",
+      "dst": "protocol:expressive_writing",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "8b38e6ff2f6e1918",
+      "src": "claim:music_activates_whole_brain",
+      "dst": "mechanism:entrainment",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bemission\\b": 1
+      },
+      "edge_id": "2385177ea5fbe0ab",
+      "src": "mechanism:dna_antenna",
+      "dst": "mechanism:biophoton_emission",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "00da3cb5a8c927b6",
+      "src": "mechanism:dmn_network",
+      "dst": "model:dmn",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "3a1d4cf2b102e8d7",
+      "src": "mechanism:ras",
+      "dst": "claim:anesthesia_inverse_psychedelics",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "9afb5f022dba2de4",
+      "src": "measurement:newgrange_acoustic",
+      "dst": "site:newgrange",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "303c6b94420078e4",
+      "src": "legend:newgrange_fairy_mound",
+      "dst": "site:newgrange",
+      "edge_type": "LEGEND_OF",
+      "edge_layer": "LEGEND",
+      "confidence": "Speculative"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "0383180d3f984e54",
+      "src": "measurement:cathedral_acoustics",
+      "dst": "site:cathedrals_gothic",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "96799953c6d44389",
+      "src": "mechanism:standing_waves",
+      "dst": "claim:resonance_creates_form",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "edge_id": "cd1cfc0bfa723b22",
+      "src": "claim:resonance_creates_form",
+      "dst": "claim:acoustic_levitation_real",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "b427e7631338f145",
+      "src": "claim:golden_ratio_fixed_point",
+      "dst": "mechanism:aperiodic_substrate",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "9746248238aabcba",
+      "src": "claim:golden_ratio_fixed_point",
+      "dst": "claim:fibonacci_preserves_coherence",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "982370a78e55a8e6",
+      "src": "mechanism:fractal_scaling",
+      "dst": "claim:dna_has_long_range_order",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "27709e92b41cc735",
+      "src": "claim:acoustic_sites_altered_states",
+      "dst": "mechanism:acoustic_resonance",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "108c3671b46a5962",
+      "src": "claim:acoustic_sites_altered_states",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "edge_id": "d212118de1d52c1c",
+      "src": "mechanism:nitric_oxide",
+      "dst": "claim:nasal_breathing_superior",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "edge_id": "502a2a0a64bc34f3",
+      "src": "mechanism:microbiome_gut_brain",
+      "dst": "claim:gut_produces_most_serotonin",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "356b241e21d901d1",
+      "src": "claim:tcm_meridians_are_fascia",
+      "dst": "model:tcm",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "bb5696e98a892d16",
+      "src": "model:aboriginal_dreamtime",
+      "dst": "claim:songlines_encode_geography",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1,
+        "\\bstabili(?:z(?:e[sd]?|ing)|ty)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "b17c6abf07e3ecf5",
+      "src": "mechanism:toroidal_flow",
+      "dst": "mechanism:hrv_coherence",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "ec2f68007b95c6bb",
+      "src": "mechanism:toroidal_flow",
+      "dst": "claim:sacred_geometry_in_nature",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\btransduc(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "2cc34e198f4e5d55",
+      "src": "mechanism:piezoelectric_biology",
+      "dst": "claim:acoustic_sites_altered_states",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "12dca8b65b4896c2",
+      "src": "claim:quantum_brain_decoherence_problem",
+      "dst": "mechanism:quantum_coherence_biology",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "e7988d378f85cd5b",
+      "src": "claim:ehs_is_nocebo",
+      "dst": "claim:observer_changes_physics",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "8ff5636f9c339d16",
+      "src": "claim:water_memory_not_replicated",
+      "dst": "claim:water_has_fourth_phase",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "501c6f8bb935f990",
+      "src": "claim:binaural_beats_weak_evidence",
+      "dst": "mechanism:entrainment",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "67d7fbf423a83f5a",
+      "src": "claim:morphic_resonance_untestable",
+      "dst": "mechanism:biophoton_emission",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "f7ee4591b0feffdf",
+      "src": "claim:110hz_affects_brain",
+      "dst": "site:hypogeum",
+      "edge_type": "MEASURED_AT",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "5c09f3181bd2f3a2",
+      "src": "claim:110hz_affects_brain",
+      "dst": "mechanism:entrainment",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "a092d2a01b3526f6",
+      "src": "claim:holographic_principle",
+      "dst": "model:IIT",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {
+        "\\bemission\\b": 1
+      },
+      "edge_id": "76f5a6b1cda54940",
+      "src": "claim:holographic_principle",
+      "dst": "mechanism:biophoton_emission",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "992ac1cc0b2280e8",
+      "src": "claim:suppression_pattern_exists",
+      "dst": "claim:acoustic_sites_altered_states",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "6eb354199c14f9ba",
+      "src": "claim:synesthesia_is_default",
+      "dst": "mechanism:hebbian_plasticity",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "a06df703442a6965",
+      "src": "claim:synesthesia_is_default",
+      "dst": "claim:psychedelics_reset_priors",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "caffee6cc88b3dc3",
+      "src": "mechanism:constraint_satisfaction",
+      "dst": "model:HKB",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "83fd9ba8eadb9b6b",
+      "src": "mechanism:constraint_satisfaction",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bbuilt\\b": 1
+      },
+      "edge_id": "25fcbd2124647a94",
+      "src": "model:autopoiesis",
+      "dst": "model:enactive_cognition",
+      "edge_type": "DEPENDS_ON",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "b5bc03bb8cbc9494",
+      "src": "model:autopoiesis",
+      "dst": "mechanism:bioelectricity_morphogenesis",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "d7233aee40306ccb",
+      "src": "model:ayurveda",
+      "dst": "model:pni",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "bd5433a6065763a5",
+      "src": "model:ayurveda",
+      "dst": "mechanism:hormesis",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "c2bc89ab35ee6f41",
+      "src": "model:stigmergy",
+      "dst": "mechanism:microbiome_gut_brain",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "bcfe989f30874514",
+      "src": "model:stigmergy",
+      "dst": "model:SOC",
+      "edge_type": "REFINES",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "4a7937c6-c48f-45",
+      "src": "counter:selection_bias",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "90c0d724-7f7f-40",
+      "src": "counter:many_to_one_mapping",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "COUNTEREVIDENCE",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "723da94a-f7e5-45",
+      "src": "model:SOC",
+      "dst": "hypothesis:075_zone",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "461d89be-2eca-4e",
+      "src": "claim:zl_075_is_criticality",
+      "dst": "hypothesis:075_zone",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 2,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "67977bd3-5b0d-40",
+      "src": "claim:literature_is_modulation_heavy",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "edge_ai_constraint_supports_finding",
+      "src": "observation:ai_epistemic_constraint",
+      "dst": "claim:literature_is_modulation_heavy",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bside[- ]effect\\b": 1
+      },
+      "edge_id": "edge_corporate_mechanism",
+      "src": "observation:corporate_epistemic_management",
+      "dst": "observation:ai_epistemic_constraint",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "edge_hoffman_cfirst",
+      "src": "model:hoffman_ITP",
+      "dst": "claim:consciousness_entropy_sweet_spot",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "edge_orchor_quantum",
+      "src": "model:orch_or",
+      "dst": "mechanism:quantum_coherence_biology",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 1,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "edge_id": "edge_kastrup_cfirst",
+      "src": "model:kastrup_idealism",
+      "dst": "claim:literature_is_modulation_heavy",
+      "edge_type": "EVIDENCE_FOR",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "edge_hoffman_kastrup",
+      "src": "model:hoffman_ITP",
+      "dst": "model:kastrup_idealism",
+      "edge_type": "ANALOG_OF",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "6152b71ded568881",
+      "src": "site:chavin_de_huantar",
+      "dst": "claim:95_120_hz_convergence",
+      "edge_type": "INSTANCE_OF",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "102874a8a9a42dd5",
+      "src": "site:chavin_de_huantar",
+      "dst": "mechanism:architectural_vocal_amplification",
+      "edge_type": "DEMONSTRATES",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "d0a92f5ebeeb768d",
+      "src": "site:chavin_de_huantar",
+      "dst": "claim:acoustic_sites_altered_states",
+      "edge_type": "SUPPORTS",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "279e38ffaee1019e",
+      "src": "site:telesterion_eleusis",
+      "dst": "claim:acoustic_sites_altered_states",
+      "edge_type": "SUPPORTS",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Bronze"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bvagal\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "5839a281c1a8e73c",
+      "src": "claim:cross_cultural_breath_convergence",
+      "dst": "mechanism:vagal_regulation",
+      "edge_type": "ENABLES",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\baperiodic\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 1,
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "2c496b2d62687a2f",
+      "src": "claim:cross_cultural_breath_convergence",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "SUPPORTS",
+      "edge_layer": "INTERPRETATION",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bfrequen(?:cy|cies)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "9029b8c653ea1b33",
+      "src": "claim:95_120_hz_convergence",
+      "dst": "mechanism:architectural_vocal_amplification",
+      "edge_type": "ENABLES",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "c6c10740c0a361c7",
+      "src": "mechanism:architectural_vocal_amplification",
+      "dst": "claim:110hz_affects_brain",
+      "edge_type": "ENABLES",
+      "edge_layer": "MECHANISM",
+      "confidence": "Silver"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "3dd968944c8db382",
+      "src": "site:newgrange",
+      "dst": "claim:95_120_hz_convergence",
+      "edge_type": "INSTANCE_OF",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {},
+      "edge_id": "43a7a93f9f1d6f61",
+      "src": "claim:neural_aperiodic_periodic_coherence",
+      "dst": "claim:coherence_is_aperiodic_plus_modulation",
+      "edge_type": "SUPPORTS",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 4,
+      "generation_count": 0,
+      "mdi": 1.6094379124341003,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bperiodic(?:ity)?\\b": 1,
+        "\\baperiodic\\b": 1,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {},
+      "edge_id": "3ae23a84878d43f2",
+      "src": "mechanism:stochastic_resonance",
+      "dst": "claim:neural_aperiodic_periodic_coherence",
+      "edge_type": "MECHANISM_FOR",
+      "edge_layer": "MECHANISM",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bresonance\\b": 2
+      },
+      "generation_hits": {},
+      "edge_id": "45d624f6b577d3ae",
+      "src": "site:hypogeum",
+      "dst": "mechanism:architectural_vocal_amplification",
+      "edge_type": "DEMONSTRATES",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Gold"
+    },
+    {
+      "modulation_count": 3,
+      "generation_count": 1,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 3
+      },
+      "generation_hits": {
+        "\\bbuilt\\b": 1
+      },
+      "edge_id": "d8f4bd86aaafcb1d",
+      "src": "site:paleolithic_caves",
+      "dst": "claim:95_120_hz_convergence",
+      "edge_type": "SUPPORTS",
+      "edge_layer": "MEASUREMENT",
+      "confidence": "Silver"
+    }
+  ],
+  "by_domain": {
+    "PHYSICS": {
+      "m": 52,
+      "g": 4,
+      "count": 25
+    },
+    "BIOLOGY": {
+      "m": 75,
+      "g": 15,
+      "count": 46
+    },
+    "MIND": {
+      "m": 51,
+      "g": 5,
+      "count": 51
+    },
+    "CONVERGENCE": {
+      "m": 32,
+      "g": 6,
+      "count": 44
+    },
+    "RELATIONSHIP": {
+      "m": 2,
+      "g": 1,
+      "count": 5
+    },
+    "METHODS": {
+      "m": 0,
+      "g": 1,
+      "count": 1
+    }
+  },
+  "by_layer": {
+    "MECHANISM": {
+      "m": 39,
+      "g": 5,
+      "count": 65
+    },
+    "INTERPRETATION": {
+      "m": 55,
+      "g": 8,
+      "count": 82
+    },
+    "LEGEND": {
+      "m": 1,
+      "g": 1,
+      "count": 5
+    },
+    "MEASUREMENT": {
+      "m": 11,
+      "g": 1,
+      "count": 25
+    }
+  },
+  "by_edge_type": {
+    "MECHANISM_FOR": {
+      "m": 37,
+      "g": 5,
+      "count": 61
+    },
+    "DEPENDS_ON": {
+      "m": 25,
+      "g": 5,
+      "count": 34
+    },
+    "EVIDENCE_FOR": {
+      "m": 15,
+      "g": 2,
+      "count": 30
+    },
+    "REFINES": {
+      "m": 5,
+      "g": 0,
+      "count": 6
+    },
+    "LEGEND_OF": {
+      "m": 1,
+      "g": 1,
+      "count": 5
+    },
+    "MEASURED_AT": {
+      "m": 1,
+      "g": 0,
+      "count": 11
+    },
+    "DERIVED_FROM": {
+      "m": 0,
+      "g": 0,
+      "count": 1
+    },
+    "ANALOG_OF": {
+      "m": 5,
+      "g": 1,
+      "count": 9
+    },
+    "PARTIAL_SUPPORT_FOR": {
+      "m": 0,
+      "g": 0,
+      "count": 1
+    },
+    "COUNTEREVIDENCE": {
+      "m": 4,
+      "g": 0,
+      "count": 7
+    },
+    "INSTANCE_OF": {
+      "m": 0,
+      "g": 0,
+      "count": 2
+    },
+    "DEMONSTRATES": {
+      "m": 3,
+      "g": 0,
+      "count": 2
+    },
+    "SUPPORTS": {
+      "m": 8,
+      "g": 1,
+      "count": 5
+    },
+    "ENABLES": {
+      "m": 2,
+      "g": 0,
+      "count": 3
+    }
+  }
+}

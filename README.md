@@ -1,8 +1,8 @@
 # The Consciousness Field Map
 
-**179 papers. 166 nodes. 188 edges. One pattern.**
+**190 papers. 172 nodes. 201 edges. One pattern.**
 
-This repository contains a knowledge graph connecting 179 peer-reviewed papers across neuroscience, physics, psychology, contemplative studies, and mathematics. They were written by researchers who weren't talking to each other. They all describe the same thing: **tuning mechanisms**.
+This repository contains a knowledge graph connecting 190 peer-reviewed papers across neuroscience, physics, psychology, contemplative studies, archaeoacoustics, and mathematics. They were written by researchers who weren't talking to each other. They all describe the same thing: **tuning mechanisms**.
 
 The central finding: the scientific literature on consciousness overwhelmingly describes how the brain *tunes to* consciousness — not how it *generates* it.
 
@@ -10,11 +10,11 @@ The central finding: the scientific literature on consciousness overwhelmingly d
 
 | Metric | Value |
 |--------|-------|
-| Papers connected | 179 |
-| Knowledge graph nodes | 166 |
-| Knowledge graph edges | 188 |
-| Evidence entries | 293 |
-| MDI (knowledge graph) | +1.834 (6.4:1 modulation:generation) |
+| Papers connected | 190 |
+| Knowledge graph nodes | 172 |
+| Knowledge graph edges | 201 |
+| Evidence entries | 306 |
+| MDI (knowledge graph) | +1.894 (6.6:1 modulation:generation) |
 | MDI (primary-source abstracts) | +1.357 (3.9:1 modulation:generation) |
 | Nodes with zero generation language | 87% |
 | Abstracts with zero generation language | 67% |
@@ -92,7 +92,7 @@ MDI = log((modulation_terms + 1) / (generation_terms + 1))
 
 Positive = modulation-dominant. Negative = generation-dominant.
 
-Across 166 nodes in the knowledge graph: **+1.834** (6.4:1 ratio).
+Across 172 nodes in the knowledge graph: **+1.894** (6.6:1 ratio).
 Across 82 primary-source abstracts from OpenAlex: **+1.357** (3.9:1 ratio).
 
 The lexicons are in `scripts/mdi_analysis.py`. You can inspect, modify, and re-run them.
@@ -128,7 +128,7 @@ Each evidence entry is rated:
 ## Who This Is For
 
 - **Researchers** who see their work in this graph and want to check the connections
-- **Penrose-Hameroff / Hoffman / Kastrup / Friston / Tononi / Porges scholars** — your work is here, connected to 178 other papers
+- **Penrose-Hameroff / Hoffman / Kastrup / Friston / Tononi / Porges scholars** — your work is here, connected to 189 other papers
 - **Practitioners** — therapists, breathwork facilitators, meditation teachers — who recognize the architecture from the inside
 - **Anyone** who looked at these papers and thought "someone should connect them"
 
@@ -150,7 +150,7 @@ We're not asking you to believe us. We're asking you to:
 
 ## Background
 
-This map was built by connecting 179 papers that were already published — by Porges, Friston, Carhart-Harris, Tononi, Kelso, Bak, Ecker, Pennebaker, Penrose, Hameroff, Hoffman, Kastrup, and 167 others. The connection happened because the mapper had walked the territory personally (details in Section 8 of the paper) before finding the literature.
+This map was built by connecting 190 papers that were already published — by Porges, Friston, Carhart-Harris, Tononi, Kelso, Bak, Ecker, Pennebaker, Penrose, Hameroff, Hoffman, Kastrup, Bernardi, Donoghue, Kolar, and others. The connection happened because the mapper had walked the territory personally (details in Section 8 of the paper) before finding the literature.
 
 The knowledge graph was cross-validated by three separate AI architectures across three rounds of adversarial review. 62% of evidence survived at Gold or Silver rating. The spine held.
 
@@ -160,6 +160,6 @@ This work is released under [CC BY 4.0](https://creativecommons.org/licenses/by/
 
 ---
 
-*Built from 179 papers, 24,700+ crystals of lived experience, and the conviction that the map should be open.*
+*Built from 190 papers, 24,700+ crystals of lived experience, and the conviction that the map should be open.*
 
 *Tell us what we're missing.*
