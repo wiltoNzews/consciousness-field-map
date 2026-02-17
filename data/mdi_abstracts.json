@@ -1,0 +1,1425 @@
+{
+  "method": "MDI on primary-source abstracts via OpenAlex API",
+  "papers_searched": 179,
+  "abstracts_found": 82,
+  "no_abstract": 47,
+  "not_found": 50,
+  "skipped": 0,
+  "total_modulation": 271,
+  "total_generation": 69,
+  "global_mdi": 1.3573068242466384,
+  "ratio": "271:69",
+  "ratio_numeric": 3.927536231884058,
+  "zero_generation_pct": 67.07317073170732,
+  "papers": [
+    {
+      "evidence_id": "ev:hebb1949",
+      "our_citation": "Hebb DO (1949) The Organization of Behavior. Wiley",
+      "fetched_title": "The Organization of Behavior",
+      "abstract": "The Vibrio vulnificus vuuA gene, of which expression is repressed by a complex of iron and ferric uptake regulator (Fur), was characterized to localize the Fur-binding site in its upstream regulatory region. In silico analysis suggested the presence of two possible Fur-binding sites; one is a classical Fur-box and the other is a previously reported distinct Fur-binding site. Site-directed mutagenesis and DNase I protection assays revealed the binding site for the iron-Fur complex, which includes an extended inverted repeat containing a homologous sequence to the classical Fur-box.",
+      "year": 2005,
+      "doi": "https://doi.org/10.4324/9781410612403",
+      "cited_by_count": 8454,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "0676d19fbe3270c2",
+      "our_citation": "Fukada E, Yasuda I (1957) On the Piezoelectric Effect of Bone. Journal of the Physical Society of Japan 12(10):1158-1162",
+      "fetched_title": "On the Piezoelectric Effect of Bone",
+      "abstract": "The piezoelectric effect of bone has been observed similarly to the case of wood or ramie. The specimens were cut out from the femur of man and ox, and dried completely by heating. The piezoelectric constants were measured by three different experiments, that is, measurements of the static direct effect, the dynamic direct effect and the dynamic converse effect. The piezoelectric effect appears only when the shearing force is applied to the collagen fibres to make them slip past erch other. The magnitude of piezoelectric constant depends on the angle between the applied pressure and the axis of the bone. The maximum value of piezoelectric constant amounts to 6\u00d710 -9 c.g.s. e.s.u., which is about one-tenth of a piezoelectric constant d 11 of quarts crystal. The specimens which were boiled in hot water and afterwards dried completely showed little change in the piezoelectric effect, the fact ascertaining that the effect is not of biological origin. The origin to piezoelectricity in bone may be ascribed to the piezoelectric effect of the crystalline micelle of collagen molecules. The consideration of the symmetry of the configulation of collagen fibres in the bone texture shows the existence of effects which are represented by only two piezoelectric constants d 14 and d 25 , which are the same in magnitude but opposite in sign.",
+      "year": 1957,
+      "doi": "https://doi.org/10.1143/jpsj.12.1158",
+      "cited_by_count": 1551,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:bell1964",
+      "our_citation": "Bell JS (1964) On the Einstein Podolsky Rosen paradox. Physics 1:195-200",
+      "fetched_title": "On the Einstein Podolsky Rosen paradox",
+      "abstract": "Received 4 November 1964DOI:https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195Copyright \u00a9 1964 Physics Publishing Co.",
+      "year": 1964,
+      "doi": "https://doi.org/10.1103/physicsphysiquefizika.1.195",
+      "cited_by_count": 11800,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\breceiv(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:maturana1972",
+      "our_citation": "Maturana HR, Varela FJ (1972) Autopoiesis and Cognition: The Realization of the Living. Reidel",
+      "fetched_title": "Autopoiesis and Cognition: The Realization of the Living",
+      "abstract": "Editorial Preface General Table Of Contents Foreword Introduction (by Professor Maturana) Biology Of Cognition Dedication Table of Contents I. Introduction II. The Problem III. Cognitive Function in General A. The Observer B. The Living System C. Evolution D. The Cognitive Process IV. Cognitive Function in Particular A. Nerve Cells B. Architecture C. Function D. Representation E. Description F. Thinking G. Natural Language H. Memory and Learning I. The Observer V. Problems in the Neurophysiology of Cognition VI. Conclusions VII. Post Scriptum Autopoiesis: The Organization Of The Living Preface (by Sir Stafford Beer) Introduction I. On Machines, living and Otherwise 1. Machines 2. Living Machines II. Dispensability of Teleonomy 1. Purposelessness 2. Individuality III. Embodiments of Autopoiesis 1. Descriptive and Causal Notions 2. Molecular Embodiments 3. Origin IV. Diversity of Autopoiesis 1. Subordination to the Condition of Unity 2. Plasticity of Ontogeny 3. Reproduction, a Complication of the Unity 4. Evolution, a Historical Network 5. Second and Third Order Autopoietic Systems V. Presence of Autopoiesis 1. Biological Implications 2. Epistemological Implications 3. Cognitive Implications Appendix: The Nervous System Glossary Bibliography Index Of Names",
+      "year": 1980,
+      "doi": null,
+      "cited_by_count": 4733,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:ader1975",
+      "our_citation": "Ader R, Cohen N (1975) Behaviorally conditioned immunosuppression. Psychosomatic Medicine 37:333-340",
+      "fetched_title": "Behaviorally Conditioned Immunosuppression",
+      "abstract": "An illness-induced taste aversion was conditioned in rats by pairing saccharin with cyclophosphamide, an immunosuppressive agent. Three days after conditioning, all animals were injected with sheep erythrocytes. Hemagglutinating antibody titers measured 6 days after antigen administration were high in placebo-treated rats. High titers were also observed in nonconditioned animals and in conditioned animals that were nor subsequently exposed to saccharin. No agglutinating antibody was detected in conditioned animals treated with cyclophosphamide at the time of antigen administration. Conditioned animals exposed to saccharin at the time of or following the injection of antigen were significantly immunosuppressed. An illness-induced taste aversion was also conditioned using LiCl, a nonimmunosuppressive agent. In this instance, however, there was no attenuation of hemagglutinating antibody titers in response to injection with antigen.",
+      "year": 1975,
+      "doi": "https://doi.org/10.1097/00006842-197507000-00007",
+      "cited_by_count": 1004,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bdetect(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "b0f3b86fabe78c66",
+      "our_citation": "Ader R, Cohen N (1975) Behaviorally conditioned immunosuppression. Psychosomatic Medicine 37(4):333-340",
+      "fetched_title": "Behaviorally Conditioned Immunosuppression",
+      "abstract": "An illness-induced taste aversion was conditioned in rats by pairing saccharin with cyclophosphamide, an immunosuppressive agent. Three days after conditioning, all animals were injected with sheep erythrocytes. Hemagglutinating antibody titers measured 6 days after antigen administration were high in placebo-treated rats. High titers were also observed in nonconditioned animals and in conditioned animals that were nor subsequently exposed to saccharin. No agglutinating antibody was detected in conditioned animals treated with cyclophosphamide at the time of antigen administration. Conditioned animals exposed to saccharin at the time of or following the injection of antigen were significantly immunosuppressed. An illness-induced taste aversion was also conditioned using LiCl, a nonimmunosuppressive agent. In this instance, however, there was no attenuation of hemagglutinating antibody titers in response to injection with antigen.",
+      "year": 1975,
+      "doi": "https://doi.org/10.1097/00006842-197507000-00007",
+      "cited_by_count": 1004,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bdetect(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:gibson1979",
+      "our_citation": "Gibson JJ (1979) The Ecological Approach to Visual Perception. Houghton Mifflin",
+      "fetched_title": "The Ecological Approach to Visual Perception",
+      "abstract": "Contents: Preface. Introduction. Part I: The Environment To Be Perceived.The Animal And The Environment. Medium, Substances, Surfaces. The Meaningful Environment. Part II: The Information For Visual Perception.The Relationship Between Stimulation And Stimulus Information. The Ambient Optic Array. Events And The Information For Perceiving Events. The Optical Information For Self-Perception. The Theory Of Affordances. Part III: Visual Perception.Experimental Evidence For Direct Perception: Persisting Layout. Experiments On The Perception Of Motion In The World And Movement Of The Self. The Discovery Of The Occluding Edge And Its Implications For Perception. Looking With The Head And Eyes. Locomotion And Manipulation. The Theory Of Information Pickup And Its Consequences. Part IV: Depiction.Pictures And Visual Awareness. Motion Pictures And Visual Awareness. Conclusion. Appendixes: The Principal Terms Used in Ecological Optics. The Concept of Invariants in Ecological Optics.",
+      "year": 1980,
+      "doi": "https://doi.org/10.2307/429816",
+      "cited_by_count": 23143,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "29ac7ced8eba05c9",
+      "our_citation": "Maturana HR, Varela FJ (1980) Autopoiesis and Cognition: The Realization of the Living. D. Reidel Publishing Company",
+      "fetched_title": "Autopoiesis and Cognition: The Realization of the Living",
+      "abstract": "Editorial Preface General Table Of Contents Foreword Introduction (by Professor Maturana) Biology Of Cognition Dedication Table of Contents I. Introduction II. The Problem III. Cognitive Function in General A. The Observer B. The Living System C. Evolution D. The Cognitive Process IV. Cognitive Function in Particular A. Nerve Cells B. Architecture C. Function D. Representation E. Description F. Thinking G. Natural Language H. Memory and Learning I. The Observer V. Problems in the Neurophysiology of Cognition VI. Conclusions VII. Post Scriptum Autopoiesis: The Organization Of The Living Preface (by Sir Stafford Beer) Introduction I. On Machines, living and Otherwise 1. Machines 2. Living Machines II. Dispensability of Teleonomy 1. Purposelessness 2. Individuality III. Embodiments of Autopoiesis 1. Descriptive and Causal Notions 2. Molecular Embodiments 3. Origin IV. Diversity of Autopoiesis 1. Subordination to the Condition of Unity 2. Plasticity of Ontogeny 3. Reproduction, a Complication of the Unity 4. Evolution, a Historical Network 5. Second and Third Order Autopoietic Systems V. Presence of Autopoiesis 1. Biological Implications 2. Epistemological Implications 3. Cognitive Implications Appendix: The Nervous System Glossary Bibliography Index Of Names",
+      "year": 1980,
+      "doi": null,
+      "cited_by_count": 4733,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:sheldrake1981",
+      "our_citation": "Sheldrake R (1981) A New Science of Life: The Hypothesis of Morphic Resonance. Blond & Briggs",
+      "fetched_title": "A New Science of Life: The Hypothesis of Morphic Resonance",
+      "abstract": "Why do many phenonmena defy explanations of conventional biology and physics? For instance, when laboratory rats in one place have learned how to navigate a new maze, why do rats elsewhere seem to learn it more easily? Rupert Sheldrake describes this process as morphic resonance: past forms and behaviors of organisms, he argues, influence organisms in present through direct connections across time and space. Calling into question many of our fundamental concepts about life and consciousness, Sheldrake reinterprets regularities of nature as being more like habits than immutable laws.The first edition of A New Science of Life created a furor when it appeared, provoking outrage of old-guard scientific community and approbation of new. The British journal Nature called it the best candidate for burning there has been for many years. A lively debate ensued, as researchers devised experiments testing Sheldrake's hypothesis, including some involving millions of people through medium of television. These developments are recorded in this revised and expanded edition.",
+      "year": 1981,
+      "doi": null,
+      "cited_by_count": 66,
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bresonance\\b": 2
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "e780f30d27edd733",
+      "our_citation": "Hopfield JJ (1982) Neural networks and physical systems with emergent collective computational abilities. Proceedings of the National Academy of Sciences 79(8):2554-2558",
+      "fetched_title": "Neural networks and physical systems with emergent collective computational abilities.",
+      "abstract": "Computational properties of use of biological organisms or to the construction of computers can emerge as collective properties of systems having a large number of simple equivalent components (or neurons). The physical meaning of content-addressable memory is described by an appropriate phase space flow of the state of a system. A model of such a system is given, based on aspects of neurobiology but readily adapted to integrated circuits. The collective properties of this model produce a content-addressable memory which correctly yields an entire memory from any subpart of sufficient size. The algorithm for the time evolution of the state of the system is based on asynchronous parallel processing. Additional emergent collective properties include some capacity for generalization, familiarity recognition, categorization, error correction, and time sequence retention. The collective properties are only weakly sensitive to details of the modeling or the failure of individual devices.",
+      "year": 1982,
+      "doi": "https://doi.org/10.1073/pnas.79.8.2554",
+      "cited_by_count": 19018,
+      "modulation_count": 3,
+      "generation_count": 2,
+      "mdi": 0.28768207245178085,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\bconstruct(?:s|ed|ing|ion)?\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:kelso1984",
+      "our_citation": "Kelso JAS (1984) Phase transitions and critical behavior in human bimanual coordination. Am J Physiol 246:R1000-R1004",
+      "fetched_title": "Phase transitions and critical behavior in human bimanual coordination",
+      "abstract": "Conditions that give rise to phase shifts among the limbs when an animal changes gait are poorly understood. Often a \u201cswitch mechanism\u201d is invoked that has a neural basis which remains speculative. Abrupt phase transitions also occur between the two hands in humans when movement-cycling frequency is continuously increased. The asymmetrical out-of-phase mode shifts suddenly to a symmetrical in-phase mode involving simultaneous activation of homologous muscle groups. The boundary between the two coordinative states is indexed by a dimensionless critical number, which remains constant regardless of whether the hands move freely or are subject to resistive loading. Coordinated shifts appear to arise because of continuous scaling influences that render the existing mode unstable. Then, at a critical point, bifurcation occurs and a new stable (and perhaps energetically more efficient) mode emerges.",
+      "year": 1984,
+      "doi": "https://doi.org/10.1152/ajpregu.1984.246.6.r1000",
+      "cited_by_count": 1499,
+      "modulation_count": 11,
+      "generation_count": 1,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 5,
+        "\\bfrequen(?:cy|cies)\\b": 1,
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\bcritical(?:ity)?\\b": 3,
+        "\\bbifurcat(?:e[sd]?|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgives? rise to\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:baars1988",
+      "our_citation": "Baars BJ (1988) A Cognitive Theory of Consciousness. Cambridge University Press",
+      "fetched_title": "A cognitive theory of consciousness",
+      "abstract": "List of figures and tables Preface Part I. Introduction: 1. What is to be explained? some preliminaries Part II. The Basic Model: 2. Model 1: conscious representations are internally consistent and globally distributed 3. The neural basis of conscious experience Part III. The Fundamental Role of Context: 4. Model 2: unconscious contexts shape conscious experience 5. Model 3: conscious experience is informative - it always demands some degree of adaptation Part IV. Goals and Voluntary Control: 6. Model 4: Goal contexts, spontaneous problem solving, and the stream of consciousness 7. Model 5: volition as ideomotor control of thought and action Part V. Attention, self, and conscious self-monitoring: 8. Model 6: attention as control of access to consciousness 9. Model 7. Self as the dominant context of experience and action Part VI. Consciousness is Functional: 10. The functions of consciousness Part VII. Conclusion: 11. A summary and some future directions Glossary and guide to theoretical claims References Name index, Subject index.",
+      "year": 1988,
+      "doi": null,
+      "cited_by_count": 3608,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:varela1991",
+      "our_citation": "Varela FJ, Thompson E, Rosch E (1991) The Embodied Mind: Cognitive Science and Human Experience. MIT Press",
+      "fetched_title": "The Embodied Mind: Cognitive Science and Human Experience",
+      "abstract": "Part 1 The departing ground: a fundamental circularity - in the mind of the reflective scientist - an already-given condition, what is cognitive science?, cognitive science within the circle, the theme of this book what do we mean Human Experience? - science and the phenomenological tradition, the breakdown of phenomenology, a non-western philosophical tradition, examining experience with a method - mindfulness/awareness, the role of reflection in the analysis of experience, experimentation and experiential analysis. Part 2 Varieties of cognitivism: symbols - the cognitivist hypothesis - the foundational cloud, defining the cognitivist hypothesis, manifestations of cognitivism, cognitivism and human experience, experience and the computational mind the I of the storm - what do we mean by Self?, looking for a self in the aggregates, momentariness and the brain, the aggregates without a self. Part 3 Varieties of emergence: emergent properties and connectionism - self-organization - the roots of an alternative, the connectionist strategy, emergence and self-organization, connectionism today, neuronal emergences, exeunt the symbols, linking symbols and emergence selfless minds - societies of mind, the society of object relations, co-dependent arising, basic element analysis, mindfulness and freedom, selfless minds, divided agents, minding the world. Part 4 Steps to a middle way: the Cartesian anxiety - a sense of dissatisfaction, representation revisited, the Cartesian anxiety, steps to a middle way, enaction - embodied cognition - recovering common sense, self-organization revisited, colour as a study case, cognition as embodied action, the retreat into natural selection evolutionary path making and natural drift - adaptationism - an idea in transition, a horizon of multiple mechanisms, beyond the best in evolution and cognition, evolution - ecology and development in congruence, lessons from evolution as natural drift, defining the enactive approach, enactive cognitive science. Part 5 Worlds without ground: the middle way - evocations of groundlessness, Nagarjuna and the Madhyamika tradition, the two truths, groundlessness in contemporary thought laying down a path in walking - science and experience in circulation, nihilism and the need for planetary thinking, Nishitani Keiji, ethics and human transformation. Appendices: meditation terminology categories of experiential events used in mindfulness/awareness works on Buddhism and mindfulness/awareness.",
+      "year": 2017,
+      "doi": null,
+      "cited_by_count": 5982,
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 2,
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 3
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:pribram1991",
+      "our_citation": "Pribram KH (1991) Brain and Perception: Holonomy and Structure in Figural Processing. Lawrence Erlbaum",
+      "fetched_title": "Brain and Perception: Holonomy and Structure in Figural Processing",
+      "abstract": "Contents: Preface. Acknowledgments. Viewpoint. Prolegomenon.Aims and Origins. Outlines of a Holonomic Brain Theory. Part I: Configural Aspects. Transformational Realism: The Optic Array, the Optical Image and the Retinal Process. Imaging: Cooperativity in Primary Sensory Systems. Object-Forms and Object Spaces: Sensory-Motor Reciprocity. Images of Achievement and Action Spaces: Somatic Processes in the Control of Action. Part II: Cognitive Aspects. Comprehension: Contributions of the Posterior Cerebral Convexity in Enhancing Processing Span. Familiarization and Valuation: The Contributions of the Amygdala System to the Demarcation of an Episode. Irrelevance and Innovation: The Contributions of the Hippocampus and Limbic Forebrain to the Processing of Context. Envisioning Proprieties and Priorities Practical Inference: The Far Frontal Cortex as Executive Processor. Epilogue. Appendices: Neurodynamics: A Theory of Nonlocal Cortical Processing. Symmetry, Invariance and Group Theory in Object Perception. The Definition of Context. Familiarization as Transfer Among Contexts. The Formation of Prototypes. Neurodynamics and Innovation. The Neurodynamics of Covariation and Inference.",
+      "year": 1991,
+      "doi": "https://doi.org/10.1177/003151259107303s01",
+      "cited_by_count": 430,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "84a61eef94bd3b49",
+      "our_citation": "Shariff K, Leonard A (1992) Vortex Rings. Annual Review of Fluid Mechanics 24:235-279",
+      "fetched_title": "Vortex Rings",
+      "abstract": "The field of fluid mechanics is rapidly advancing, driven by unprecedented volumes of data from experiments, field measurements, and large-scale simulations at multiple spatiotemporal scales. Machine learning (ML) offers a wealth of techniques to extract ...Read More",
+      "year": 1992,
+      "doi": "https://doi.org/10.1146/annurev.fl.24.010192.001315",
+      "cited_by_count": 513,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:porges1995",
+      "our_citation": "Porges SW (1995) Orienting in a defensive world: Mammalian modifications of our evolutionary heritage. Psychophysiology 32:301-318",
+      "fetched_title": "Orienting in a defensive world: Mammalian modifications of our evolutionary heritage. A Polyvagal Theory",
+      "abstract": "Abstract The vagus, the 10th cranial nerve, contains pathways that contribute to the regulation of the internal viscera, including the heart. Vagal efferent fibers do not originate in a common brainstem structure. The Polyvagal Theory is introduced to explain the different functions of the two primary medullary source nuclei of the vagus: the nucleus ambiguus (NA) and the dorsal motor nucleus (DMNX). Although vagal pathways from both nuclei terminate on the sinoatrial node, it is argued that the fibers originating in NA are uniquely responsible for respiratory sinus arrhythmia (RSA). Divergent shifts in RSA and heart rate are explained by independent actions of DMNX and NA. The theory emphasizes a phylogenetic perspective and speculates that mammalian, but not reptilian, brainstem organization is characterized by a ventral vagal complex (including NA) related to processes associated with attention, motion, emotion, and communication. Various clinical disorders, such as sudden infant death syndrome and asthma, may be related to the competition between DMNX and NA.",
+      "year": 1995,
+      "doi": "https://doi.org/10.1111/j.1469-8986.1995.tb01213.x",
+      "cited_by_count": 1581,
+      "modulation_count": 5,
+      "generation_count": 2,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\befferent\\b": 1,
+        "\\bvagal\\b": 3
+      },
+      "generation_hits": {
+        "\\boriginat(?:e[sd]?|ing)\\b": 2
+      }
+    },
+    {
+      "evidence_id": "eaa36e6aff016b5c",
+      "our_citation": "Dijk DJ, Czeisler CA (1995) Contribution of the circadian pacemaker and the sleep homeostat to sleep propensity, sleep structure, electroencephalographic slow waves, and sleep spindle activity in humans. Journal of Neuroscience 15(5):3526-3538",
+      "fetched_title": "Contribution of the circadian pacemaker and the sleep homeostat to sleep propensity, sleep structure, electroencephalographic slow waves, and sleep spindle activity in humans",
+      "abstract": "The role of the endogenous circadian pacemaker in the timing of the sleep-wake cycle and the regulation of the internal structure of sleep, including REM sleep, EEG slow-wave (0.75\u20134.5 Hz) and sleep spindle activity (12.75\u201315.0 Hz) was investigated. Eight men lived in an environment free of time cues for 33\u201336 d and were scheduled to a 28 hr rest-activity cycle so that sleep episodes (9.33 hr each) occurred at all phases of the endogenous circadian cycle and variations in wakefulness preceding sleep were minimized. The crest of the robust circadian rhythm of REM sleep, which was observed throughout the sleep episode, was positioned shortly after the minimum of the core body temperature rhythm. Furthermore, a sleep-dependent increase of REM sleep was present, which, interacting with the circadian modulation, resulted in highest values of REM sleep when the end of scheduled sleep episodes coincided with habitual wake-time. Slow-wave activity decreased and sleep spindle activity increased in the course of all sleep episodes. Slow-wave activity in non-REM sleep exhibited a low amplitude circadian modulation which did not parallel the circadian rhythm of sleep propensity. Sleep spindle activity showed a marked endogenous circadian rhythm; its crest coincident with the beginning of the habitual sleep episode. Analyses of the (nonadditive) interaction of the circadian and sleep-dependent components of sleep propensity and sleep structure revealed that the phase relation between the sleep-wake cycle and the circadian pacemaker during entrainment promotes the consolidation of sleep and wakefulness and facilitates the transitions between these vigilance states.",
+      "year": 1995,
+      "doi": "https://doi.org/10.1523/jneurosci.15-05-03526.1995",
+      "cited_by_count": 1332,
+      "modulation_count": 10,
+      "generation_count": 0,
+      "mdi": 2.3978952727983707,
+      "modulation_hits": {
+        "\\bmodulat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bphas(?:e[sd]?|ing)\\b": 2,
+        "\\brhythm(?:ic|s)?\\b": 4
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:ramachandran1996",
+      "our_citation": "Ramachandran VS, Rogers-Ramachandran D (1996) Synaesthesia in phantom limbs induced with mirrors. Proceedings of the Royal Society B 263:377-386",
+      "fetched_title": "Synaesthesia in phantom limbs induced with mirrors",
+      "abstract": "Although there is a vast clinical literature on phantom limbs, there have been no experimental studies on the effects of visual input on phantom sensations. We introduce an inexpensive new device--a 'virtual reality box'--to resurrect the phantom visually to study inter-sensory effects. A mirror is placed vertically on the table so that the mirror reflection of the patient's intact had is 'superimposed' on the felt position of the phantom. We used this procedure on ten patients and found the following results. 1. In six patients, when the normal hand was moved, so that the phantom was perceived to move in the mirror, it was also felt to move; i.e. kinesthetic sensations emerged in the phantom. In D.S. this effect occurred even though he had never experienced any movements in the phantom for ten years before we tested him. He found the return of sensations very enjoyable. 2. Repeated practice led to a permanent 'disappearance' of the phantom arm in patient D.S. and the hand became telescoped into the stump near the shoulder. 3. Using an optical trick, impossible postures--e.g. extreme hyperextension of the fingers--could be induced visually in the phantom. In one case this was felt as a transient 'painful tug' in the phantom. 4. Five patients experienced involuntary painful 'clenching spasms' in the phantom hand and in four of them the spasms were relieved when the mirror was used to facilitate 'opening' of the phantom hand; opening was not possible without the mirror. 5. In three patients, touching the normal hand evoked precisely localized touch sensations in the phantom. Interestingly, the referral was especially pronounced when the patients actually 'saw' their phantom being touched in the mirror. Indeed, in a fourth patient (R.L.) the referral occurred only if he saw his phantom being touched: a curious form of synaesthesia. These experiments lend themselves readily to imaging studies using PET and fMRI. Taken collectively, they suggest that there is a considerable amount of latent plasticity even in the adult human brain. For example, precisely organized new pathways, bridging the two cerebral hemispheres, can emerge in less than three weeks. Furthermore, there must be a great deal of back and forth interaction between vision and touch, so that the strictly modular, hierarchical model of the brain that is currently in vogue needs to be replaced with a more dynamic, interactive model, in which 're-entrant' signalling plays the main role.",
+      "year": 1996,
+      "doi": "https://doi.org/10.1098/rspb.1996.0058",
+      "cited_by_count": 1214,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "042c0e3369d99de6",
+      "our_citation": "Devereux P, Jahn RG (1996) Preliminary investigations and cognitive considerations of the acoustical resonances of selected archaeological sites. Antiquity 70(269):665-666",
+      "fetched_title": "Preliminary investigations and cognitive considerations of the acoustical resonances of selected archaeological sites",
+      "abstract": "Enclosed prehistoric spaces can have fine echoes. The Hypogeum, celebrated underground ossuary of Neolithic Malta, is the most resonant place to chant a rhythmic \u2018Oum\u2019. Are the acoustic features of structures like the megalithic chambers of northern Europe integral to their design? An expert description of their acoustic properties is the point to start.",
+      "year": 1996,
+      "doi": "https://doi.org/10.1017/s0003598x00083800",
+      "cited_by_count": 33,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\brhythm(?:ic|s)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:levine1997",
+      "our_citation": "Levine PA (1997) Waking the Tiger: Healing Trauma. North Atlantic Books",
+      "fetched_title": "Waking the Tiger, Healing Trauma",
+      "abstract": "University of California, San Diego; Department of Psychiatry; 9500 Gilman Drive; La Jolla, CA 92093-0804.",
+      "year": 1998,
+      "doi": "https://doi.org/10.1097/00006842-199803000-00022",
+      "cited_by_count": 343,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:pert1997",
+      "our_citation": "Pert CB (1997) Molecules of Emotion: Why You Feel the Way You Feel. Scribner",
+      "fetched_title": "Molecules of emotion : why you feel the way you feel",
+      "abstract": "Why do we feel the way we feel? How do our thoughts and emotions affect our health? Are our bodies and minds distinct from each other or do they function together as parts of an interconnected system? In her groundbreaking book Molecules of Emotion,  Candace Pert -- a neuroscientist whose extraordinary career began with her 1972 discovery of the opiate receptor -- provides startling and decisive answers to these and other challenging questions that scientists and philosophers have pondered for centuries.Her pioneering research on how the chemicals inside our bodies form a dynamic information network, linking mind and body, is not only provocative, it is revolutionary. By establishing the biomolecular basis for our emotions and explaining these new scientific developments in a clear and accessible way, Pert empowers us to understand ourselves, our feelings, and the connection between our minds and our bodies -- or bodyminds -- in ways we could never have imagined before. From explaining how there is a scientific basis to popular wisdom about phenomena such as 'gut feelings, ' to making recent breakthroughs in cancer and AIDS research comprehensible, Pert provides us with an intellectual adventure of the highest order.The journey Pert takes us on in Molecules of Emotion is one of personal as well as scientific discovery. Woven into her lucid explanations of the science underlying her work is the remarkable story of how, faced with personal and professional obstacles, she has grown as a woman and a mother and how her personal and spiritual development has made possible her remarkable scientific career. Molecules of Emotion is a landmark work, full of insight and wisdom andpossessing that rare power to change the way we see the world and ourselves. Pert's striking conclusion that it is our emotions and their biological components that establish the crucial link between mind and body does not, however, serve to repudiate modern medicine's gains; rather, her findings complement existing techniques by offering a new scientific understanding of the power of our minds and our feelings to affect our health and well-being.",
+      "year": 1997,
+      "doi": null,
+      "cited_by_count": 174,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:pennebaker1997",
+      "our_citation": "Pennebaker JW (1997) Writing about emotional experiences as a therapeutic process. Psychological Science 8:162-166",
+      "fetched_title": "Writing About Emotional Experiences as a Therapeutic Process",
+      "abstract": "For the past decade, an increasing number of studies have demonstrated that when individuals write about emotional experiences, significant physical and mental health improvements follow The basic paradigm and findings are summarized along with some boundary conditions Although a reduction in inhibition may contribute to the disclosure phenomenon changes in basic cognitive and linguistic processes during writing predict better health Implications for theory and treatment are discussed",
+      "year": 1997,
+      "doi": "https://doi.org/10.1111/j.1467-9280.1997.tb00403.x",
+      "cited_by_count": 2411,
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\binhibit(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:mccormick1992",
+      "our_citation": "McCormick DA, Bal T (1997) Sleep and arousal: thalamocortical mechanisms. Annual Review of Neuroscience 20:185-215",
+      "fetched_title": "SLEEP AND AROUSAL: Thalamocortical Mechanisms",
+      "abstract": "\u25aa Abstract Thalamocortical activity exhibits two distinct states: (a) synchronized rhythmic activity in the form of delta, spindle, and other slow waves during EEG-synchronized sleep and (b) tonic activity during waking and rapid-eye-movement sleep. Spindle waves are generated largely through a cyclical interaction between thalamocortical and thalamic reticular neurons involving both the intrinsic membrane properties of these cells and their anatomical interconnections. Specific alterations in the interactions between these cells can result in the generation of paroxysmal events resembling absence seizures in children. The release of several different neurotransmitters from the brain stem, hypothalamus, basal forebrain, and cerebral cortex results in a depolarization of thalamocortical and thalamic reticular neurons and an enhanced excitability in many cortical pyramidal cells, thereby suppressing the generation of sleep rhythms and promoting a state that is conducive to sensory processing and cognition.",
+      "year": 1997,
+      "doi": "https://doi.org/10.1146/annurev.neuro.20.1.185",
+      "cited_by_count": 1269,
+      "modulation_count": 4,
+      "generation_count": 4,
+      "mdi": 0.0,
+      "modulation_hits": {
+        "\\bsynchroniz(?:e[sd]?|ing|ation)\\b": 2,
+        "\\brhythm(?:ic|s)?\\b": 2
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 3,
+        "\\breleas(?:e[sd]?|ing)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "370155717842c109",
+      "our_citation": "Pennebaker JW (1997) Writing About Emotional Experiences as a Therapeutic Process. Psychological Science 8(3):162-166",
+      "fetched_title": "Writing About Emotional Experiences as a Therapeutic Process",
+      "abstract": "For the past decade, an increasing number of studies have demonstrated that when individuals write about emotional experiences, significant physical and mental health improvements follow The basic paradigm and findings are summarized along with some boundary conditions Although a reduction in inhibition may contribute to the disclosure phenomenon changes in basic cognitive and linguistic processes during writing predict better health Implications for theory and treatment are discussed",
+      "year": 1997,
+      "doi": "https://doi.org/10.1111/j.1467-9280.1997.tb00403.x",
+      "cited_by_count": 2411,
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bbound(?:s|ed|ing|ary|aries)?\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\binhibit(?:s|ed|ing|ion)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "5d30bd0e2ab5e302",
+      "our_citation": "Ingber DE (1997) Tensegrity: the architectural basis of cellular mechanotransduction. Annual Review of Physiology 59:575-599",
+      "fetched_title": "TENSEGRITY: THE ARCHITECTURAL BASIS OF CELLULAR MECHANOTRANSDUCTION",
+      "abstract": "\u25aa Abstract Physical forces of gravity, hemodynamic stresses, and movement play a critical role in tissue development. Yet, little is known about how cells convert these mechanical signals into a chemical response. This review attempts to place the potential molecular mediators of mechanotransduction (e.g. stretch-sensitive ion channels, signaling mollecules, cytoskeleton, integrins) within the context of the structural complexity of living cells. The model presented relies on recent experimental findings, which suggests that cells use tensegrity architecture for their organization. Tensegrity predicts that cells are hard-wired to respond immediately to mechanical stresses transmitted over cell surface receptors that physically couple the cytoskeleton to extracellular matrix (e.g. integrins) or to other cells (cadherins, selectins, CAMs). Many signal transducing molecules that are activated by cell binding to growth factors and extracellular matrix associate with cytoskeletal scaffolds within focal adhesion complexes. Mechanical signals, therefore, may be integrated with other environmental signals and transduced into a biochemical response through force-dependent changes in scaffold geometry or molecular mechanics. Tensegrity also provides a mechanism to focus mechanical energy on molecular transducers and to orchestrate and tune the cellular response.",
+      "year": 1997,
+      "doi": "https://doi.org/10.1146/annurev.physiol.59.1.575",
+      "cited_by_count": 1544,
+      "modulation_count": 8,
+      "generation_count": 0,
+      "mdi": 2.1972245773362196,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1,
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1,
+        "\\brespond(?:s|ed|ing)?\\b": 1,
+        "\\btransduc(?:e[sd]?|ing)\\b": 2,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:panksepp1998",
+      "our_citation": "Panksepp J (1998) Affective Neuroscience: The Foundations of Human and Animal Emotions. Oxford University Press",
+      "fetched_title": "Affective Neuroscience: The Foundations of Human and Animal Emotions",
+      "abstract": "PART I: CONCEPTUAL BACKGROUND 1. Affective neuroscience: history and major concepts 2. Emotional operating systems and subjectivity: methodological problems and a conceptual framework for the neurobiological analysis of affect 3. The varieties of emotional systems in the brain: theories, taxonomies, and semantics 4. Neurostatistics: the anatomy of the brain/mind 5. Neurodynamics: the electrical languages of the brain 6. Neurodynamics: neurochemical maps of the brain PART II: BASIC EMOTIONAL AND MOTIVATIONAL PROCESSES 7. Sleep, arousal, and mythmaking in the brain 8. SEEKING systems and anticipatory states of the nervous system 9. Energy is delight: the pleasures and pains of brain regulatory systems 10. Nature red in tooth and claw: the neurobiological sources of rage and anger 11. The sources of fear and anxiety in the brain PART III: THE SOCIAL EMOTIONS 12. The varieties of love and lust: neural control of sexuality 13. Love and the social bond: sources of nurturance and maternal behaviour 14. Loneliness and the social bond: the brain sources of sorrow and grief 15. Rough-and-tumble play: the brain sources of joy 16. Emotions, the higher cerebral processes and the SELF: some are born to sweet delight, some are born to endless night Appendix A: Bones, brains, and human origins Appendix B: Brain, language, and affective neuroscience Appendix C: Dualism and the neurosciences",
+      "year": 1998,
+      "doi": null,
+      "cited_by_count": 4058,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "123ebe840ca2bddb",
+      "our_citation": "Smyth JM (1998) Written emotional expression: Effect sizes, outcome types, and moderating variables. Journal of Consulting and Clinical Psychology 66(1):174-184",
+      "fetched_title": "Written emotional expression: Effect sizes, outcome types, and moderating variables.",
+      "abstract": "A research synthesis was conducted to examine the relationship between a written emotional expression task and subsequent health. This writing task was found to lead to significantly improved health outcomes in healthy participants. Health was enhanced in 4 outcome types--reported physical health, psychological well-being, physiological functioning, and general functioning--but health behaviors were not influenced. Writing also increased immediate (pre- to postwriting) distress, which was unrelated to health outcomes. The relation between written emotional expression and health was moderated by a number of variables, including the use of college students as participants, gender, duration of the manipulation, publication status of the study, and specific writing content instructions.",
+      "year": 1998,
+      "doi": "https://doi.org/10.1037//0022-006x.66.1.174",
+      "cited_by_count": 1048,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:oschman2000",
+      "our_citation": "Oschman JL (2000) Energy Medicine: The Scientific Basis. Churchill Livingstone",
+      "fetched_title": "Energy Medicine: The Scientific Basis",
+      "abstract": "Foreword. Preface. Introduction. 1. Historical background. 2. Measuring the fields of life. 3. The 'circuitry' of the body. 4. The living matrix: five views. 5. Acupuncture and related therapies. 6. Polarity, therapeutic touch, magnet therapy and related methods. 7. Silent pulses. 8. Therapeutic entrainment. 9. Vibrational medicines. 10. Homeopathy and related vibrational medicines. 11. Gravity, structure, emotions. 12. Structural integration (Rolfing), osteopathic, chiropractic, Feldenkrais, Alexander, myofascial release and related methods. 13. The electromagnetic environment. 14. The electromagnetic environment: biological effects. 15. Conclusions: is energy medicine the medicine of the future? 16. Energy circles. Afterword. Appendices. Index",
+      "year": 2000,
+      "doi": null,
+      "cited_by_count": 160,
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\breleas(?:e[sd]?|ing)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:tegmark2000",
+      "our_citation": "Tegmark M (2000) Importance of quantum decoherence in brain processes. Physical Review E 61:4194",
+      "fetched_title": "Importance of quantum decoherence in brain processes",
+      "abstract": "Based on a calculation of neural decoherence rates, we argue that the degrees of freedom of the human brain that relate to cognitive processes should be thought of as a classical rather than quantum system, i.e., that there is nothing fundamentally wrong with the current classical approach to neural network simulations. We find that the decoherence time scales ( approximately 10(-13)-10(-20) s) are typically much shorter than the relevant dynamical time scales ( approximately 10(-3)-10(-1) s), both for regular neuron firing and for kinklike polarization excitations in microtubules. This conclusion disagrees with suggestions by Penrose and others that the brain acts as a quantum computer, and that quantum coherence is related to consciousness in a fundamental way.",
+      "year": 2000,
+      "doi": "https://doi.org/10.1103/physreve.61.4194",
+      "cited_by_count": 726,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:raichle2001",
+      "our_citation": "Raichle ME et al (2001) A default mode of brain function. PNAS 98:676-682",
+      "fetched_title": "A default mode of brain function",
+      "abstract": "A baseline or control state is fundamental to the understanding of most complex systems. Defining a baseline state in the human brain, arguably our most complex system, poses a particular challenge. Many suspect that left unconstrained, its activity will vary unpredictably. Despite this prediction we identify a baseline state of the normal adult human brain in terms of the brain oxygen extraction fraction or OEF. The OEF is defined as the ratio of oxygen used by the brain to oxygen delivered by flowing blood and is remarkably uniform in the awake but resting state (e.g., lying quietly with eyes closed). Local deviations in the OEF represent the physiological basis of signals of changes in neuronal activity obtained with functional MRI during a wide variety of human behaviors. We used quantitative metabolic and circulatory measurements from positron-emission tomography to obtain the OEF regionally throughout the brain. Areas of activation were conspicuous by their absence. All significant deviations from the mean hemisphere OEF were increases, signifying deactivations, and resided almost exclusively in the visual system. Defining the baseline state of an area in this manner attaches meaning to a group of areas that consistently exhibit decreases from this baseline, during a wide variety of goal-directed behaviors monitored with positron-emission tomography and functional MRI. These decreases suggest the existence of an organized, baseline default mode of brain function that is suspended during specific goal-directed behaviors.",
+      "year": 2001,
+      "doi": "https://doi.org/10.1073/pnas.98.2.676",
+      "cited_by_count": 12238,
+      "modulation_count": 0,
+      "generation_count": 2,
+      "mdi": -1.0986122886681098,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bemission\\b": 2
+      }
+    },
+    {
+      "evidence_id": "ev:mcadams2001",
+      "our_citation": "McAdams DP (2001) The psychology of life stories. Review of General Psychology 5:100-122",
+      "fetched_title": "The Psychology of Life Stories",
+      "abstract": "Recent years have witnessed an upsurge of interest among theorists and researchers in autobiographical recollections, life stories, and narrative approaches to understanding human behavior and experience. An important development in this context is D. P. McAdams's life story model of identity ( 1985 , 1993 , 1996 ), which asserts that people living in modern societies provide their lives with unity and purpose by constructing internalized and evolving narratives of the self. The idea that identity is a life story resonates with a number of important themes in developmental, cognitive, personality, and cultural psychology. This article reviews and integrates recent theory and research on life stories as manifested in investigations of self-understanding, autobiographical memory, personality structure and change, and the complex relations between individual lives and cultural modernity.",
+      "year": 2001,
+      "doi": "https://doi.org/10.1037/1089-2680.5.2.100",
+      "cited_by_count": 2315,
+      "modulation_count": 2,
+      "generation_count": 1,
+      "mdi": 0.4054651081081644,
+      "modulation_hits": {
+        "\\bresonat(?:e[sd]?|ing)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bconstruct(?:s|ed|ing|ion)?\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:melzack2001",
+      "our_citation": "Melzack R (2001) Pain and the neuromatrix in the brain. J Dental Education 65:1378-1382",
+      "fetched_title": "Pain and the Neuromatrix in the Brain",
+      "abstract": "The neuromatrix theory of pain proposes that pain is a multidimensional experience produced by characteristic \u201cneurosignature\u201d patterns of nerve impulses generated by a widely distributed neural network\u2014the \u201cbody\u2010self neuromatrix\u201d\u2014in the brain. These neurosignature patterns may be triggered by sensory inputs, but they may also be generated independently of them. Acute pains evoked by brief noxious inputs have been meticulously investigated by neuroscientists, and their sensory transmission mechanisms are generally well understood. In contrast, chronic pain syndromes, which are often characterized by severe pain associated with little or no discernible injury or pathology, remain a mystery. Furthermore, chronic psychological or physical stress is often associated with chronic pain, but the relationship is poorly understood. The neuromatrix theory of pain provides a new conceptual framework to examine these problems. It proposes that the output patterns of the body\u2010self neuromatrix activate perceptual, homeostatic, and behavioral programs after injury, pathology, or chronic stress. Pain, then, is produced by the output of a widely distributed neural network in the brain rather than directly by sensory input evoked by injury, inflammation, or other pathology. The neuromatrix, which is genetically determined and modified by sensory experience, is the primary mechanism that generates the neural pattern that produces pain. Its output pattern is determined by multiple influences, of which the somatic sensory input is only a part, that converge on the neuromatrix.",
+      "year": 2001,
+      "doi": "https://doi.org/10.1002/j.0022-0337.2001.65.12.tb03497.x",
+      "cited_by_count": 870,
+      "modulation_count": 1,
+      "generation_count": 8,
+      "mdi": -1.5040773967762742,
+      "modulation_hits": {
+        "\\bhomeosta(?:sis|tic)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 3,
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 3,
+        "\\bdetermin(?:e[sd]?|ing|ism)\\b": 2
+      }
+    },
+    {
+      "evidence_id": "ev:goldberger2002",
+      "our_citation": "Goldberger AL et al (2002) Fractal dynamics in physiology: alterations with disease and aging. PNAS 99:2466-2472",
+      "fetched_title": "Fractal dynamics in physiology: Alterations with disease and aging",
+      "abstract": "According to classical concepts of physiologic control, healthy systems are self-regulated to reduce variability and maintain physiologic constancy. Contrary to the predictions of homeostasis, however, the output of a wide variety of systems, such as the normal human heartbeat, fluctuates in a complex manner, even under resting conditions. Scaling techniques adapted from statistical physics reveal the presence of long-range, power-law correlations, as part of multifractal cascades operating over a wide range of time scales. These scaling properties suggest that the nonlinear regulatory systems are operating far from equilibrium, and that maintaining constancy is not the goal of physiologic control. In contrast, for subjects at high risk of sudden death (including those with heart failure), fractal organization, along with certain nonlinear interactions, breaks down. Application of fractal analysis may provide new approaches to assessing cardiac risk and forecasting sudden cardiac death, as well as to monitoring the aging process. Similar approaches show promise in assessing other regulatory systems, such as human gait control in health and disease. Elucidating the fractal and nonlinear mechanisms involved in physiologic control and complex signaling networks is emerging as a major challenge in the postgenomic era.",
+      "year": 2002,
+      "doi": "https://doi.org/10.1073/pnas.012579499",
+      "cited_by_count": 2125,
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bhomeosta(?:sis|tic)\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:langevin2002",
+      "our_citation": "Langevin HM, Yandow JA (2002) Relationship of acupuncture points and meridians to connective tissue planes. Anat Rec 269:257-265",
+      "fetched_title": "Relationship of acupuncture points and meridians to connective tissue planes",
+      "abstract": "Abstract Acupuncture meridians traditionally are believed to constitute channels connecting the surface of the body to internal organs. We hypothesize that the network of acupuncture points and meridians can be viewed as a representation of the network formed by interstitial connective tissue. This hypothesis is supported by ultrasound images showing connective tissue cleavage planes at acupuncture points in normal human subjects. To test this hypothesis, we mapped acupuncture points in serial gross anatomical sections through the human arm. We found an 80% correspondence between the sites of acupuncture points and the location of intermuscular or intramuscular connective tissue planes in postmortem tissue sections. We propose that the anatomical relationship of acupuncture points and meridians to connective tissue planes is relevant to acupuncture's mechanism of action and suggests a potentially important integrative role for interstitial connective tissue. Anat Rec (New Anat) 269:257\u2013265, 2002. \u00a9 2002 Wiley\u2010Liss, Inc.",
+      "year": 2002,
+      "doi": "https://doi.org/10.1002/ar.10185",
+      "cited_by_count": 515,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:ernst2002",
+      "our_citation": "Ernst E (2002) A systematic review of systematic reviews of homeopathy. British Journal of Clinical Pharmacology 54:577-582",
+      "fetched_title": "A systematic review of systematic reviews of homeopathy",
+      "abstract": "Homeopathy remains one of the most controversial subjects in therapeutics. This article is an attempt to clarify its effectiveness based on recent systematic reviews. Electronic databases were searched for systematic reviews/meta\u2010analysis on the subject. Seventeen articles fulfilled the inclusion/exclusion criteria. Six of them related to re\u2010analyses of one landmark meta\u2010analysis. Collectively they implied that the overall positive result of this meta\u2010analysis is not supported by a critical analysis of the data. Eleven independent systematic reviews were located. Collectively they failed to provide strong evidence in favour of homeopathy. In particular, there was no condition which responds convincingly better to homeopathic treatment than to placebo or other control interventions. Similarly, there was no homeopathic remedy that was demonstrated to yield clinical effects that are convincingly different from placebo. It is concluded that the best clinical evidence for homeopathy available to date does not warrant positive recommendations for its use in clinical practice.",
+      "year": 2002,
+      "doi": "https://doi.org/10.1046/j.1365-2125.2002.01699.x",
+      "cited_by_count": 318,
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\brespond(?:s|ed|ing)?\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "e1ec45659714a6ae",
+      "our_citation": "Langevin HM, Yandow JA (2002) Relationship of acupuncture points and meridians to connective tissue planes. The Anatomical Record 269(6):257-265",
+      "fetched_title": "Relationship of acupuncture points and meridians to connective tissue planes",
+      "abstract": "Abstract Acupuncture meridians traditionally are believed to constitute channels connecting the surface of the body to internal organs. We hypothesize that the network of acupuncture points and meridians can be viewed as a representation of the network formed by interstitial connective tissue. This hypothesis is supported by ultrasound images showing connective tissue cleavage planes at acupuncture points in normal human subjects. To test this hypothesis, we mapped acupuncture points in serial gross anatomical sections through the human arm. We found an 80% correspondence between the sites of acupuncture points and the location of intermuscular or intramuscular connective tissue planes in postmortem tissue sections. We propose that the anatomical relationship of acupuncture points and meridians to connective tissue planes is relevant to acupuncture's mechanism of action and suggests a potentially important integrative role for interstitial connective tissue. Anat Rec (New Anat) 269:257\u2013265, 2002. \u00a9 2002 Wiley\u2010Liss, Inc.",
+      "year": 2002,
+      "doi": "https://doi.org/10.1002/ar.10185",
+      "cited_by_count": 515,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:beggs2003",
+      "our_citation": "Beggs JM, Plenz D (2003) Neuronal avalanches in neocortical circuits. J Neurosci 23:11167-11177",
+      "fetched_title": "Neuronal Avalanches in Neocortical Circuits",
+      "abstract": "Networks of living neurons exhibit diverse patterns of activity, including oscillations, synchrony, and waves. Recent work in physics has shown yet another mode of activity in systems composed of many nonlinear units interacting locally. For example, avalanches, earthquakes, and forest fires all propagate in systems organized into a critical state in which event sizes show no characteristic scale and are described by power laws. We hypothesized that a similar mode of activity with complex emergent properties could exist in networks of cortical neurons. We investigated this issue in mature organotypic cultures and acute slices of rat cortex by recording spontaneous local field potentials continuously using a 60 channel multielectrode array. Here, we show that propagation of spontaneous activity in cortical networks is described by equations that govern avalanches. As predicted by theory for a critical branching process, the propagation obeys a power law with an exponent of -3/2 for event sizes, with a branching parameter close to the critical value of 1. Simulations show that a branching parameter at this value optimizes information transmission in feedforward networks, while preventing runaway network excitation. Our findings suggest that \u201cneuronal avalanches\u201d may be a generic property of cortical networks, and represent a mode of activity that differs profoundly from oscillatory, synchronized, or wave-like network states. In the critical state, the network may satisfy the competing demands of information transmission and network stability.",
+      "year": 2003,
+      "doi": "https://doi.org/10.1523/jneurosci.23-35-11167.2003",
+      "cited_by_count": 2302,
+      "modulation_count": 6,
+      "generation_count": 0,
+      "mdi": 1.9459101490553132,
+      "modulation_hits": {
+        "\\bsynchroniz(?:e[sd]?|ing|ation)\\b": 1,
+        "\\bstabili(?:z(?:e[sd]?|ing)|ty)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 4
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:davidson2004",
+      "our_citation": "Davidson RJ et al (2003) Alterations in brain and immune function produced by mindfulness meditation. Psychosom Med 65:564-570",
+      "fetched_title": "Alterations in Brain and Immune Function Produced by Mindfulness Meditation",
+      "abstract": "These findings demonstrate that a short program in mindfulness meditation produces demonstrable effects on brain and immune function. These findings suggest that meditation may change brain and immune function in positive ways and underscore the need for additional research.",
+      "year": 2003,
+      "doi": "https://doi.org/10.1097/01.psy.0000077505.67574.e3",
+      "cited_by_count": 2885,
+      "modulation_count": 0,
+      "generation_count": 2,
+      "mdi": -1.0986122886681098,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 2
+      }
+    },
+    {
+      "evidence_id": "ev:keltner2003",
+      "our_citation": "Keltner D, Haidt J (2003) Approaching awe, a moral, spiritual, and aesthetic emotion. Cognition and Emotion 17:297-314",
+      "fetched_title": "Approaching awe, a moral, spiritual, and aesthetic emotion",
+      "abstract": "In this paper we present a prototype approach to awe. We suggest that two appraisals are central and are present in all clear cases of awe: perceived vastness, and a need for accommodation, defined as an inability to assimilate an experience into current mental structures. Five additional appraisals account for variation in the hedonic tone of awe experiences: threat, beauty, exceptional ability, virtue, and the supernatural. We derive this perspective from a review of what has been written about awe in religion, philosophy, sociology, and psychology, and then we apply this perspective to an analysis of awe and related states such as admiration, elevation, and the epiphanic experience.",
+      "year": 2003,
+      "doi": "https://doi.org/10.1080/02699930302297",
+      "cited_by_count": 1885,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "c31c35a87f2a19ae",
+      "our_citation": "Sparling PB, Giuffrida A, Piomelli D, Rosskopf L, Dietrich A (2003) Exercise activates the endocannabinoid system. NeuroReport 14(17):2209-2211",
+      "fetched_title": "Exercise activates the endocannabinoid system",
+      "abstract": "Extensive documentation exists showing that exercise induces analgesia and sedation. Despite decades of research attempting to explicate a neurochemical basis for these phenomena, the mechanism underlying these changes is unknown. Using trained male college students running on a treadmill or cycling on a stationary bike for 50 min at 70-80% of maximum heart rate, we report here the first evidence that exercise of moderate intensity activates the endocannabinoid system, suggesting a new mechanism for exercise-induced analgesia and possibly other physiological and psychological adaptations to exercise.",
+      "year": 2003,
+      "doi": "https://doi.org/10.1097/00001756-200312020-00015",
+      "cited_by_count": 301,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:tononi2004",
+      "our_citation": "Tononi G (2004) An information integration theory of consciousness. BMC Neuroscience 5:42",
+      "fetched_title": "An information integration theory of consciousness",
+      "abstract": "Abstract Background Consciousness poses two main problems. The first is understanding the conditions that determine to what extent a system has conscious experience. For instance, why is our consciousness generated by certain parts of our brain, such as the thalamocortical system, and not by other parts, such as the cerebellum? And why are we conscious during wakefulness and much less so during dreamless sleep? The second problem is understanding the conditions that determine what kind of consciousness a system has. For example, why do specific parts of the brain contribute specific qualities to our conscious experience, such as vision and audition? Presentation of the hypothesis This paper presents a theory about what consciousness is and how it can be measured. According to the theory, consciousness corresponds to the capacity of a system to integrate information. This claim is motivated by two key phenomenological properties of consciousness: differentiation \u2013 the availability of a very large number of conscious experiences; and integration \u2013 the unity of each such experience. The theory states that the quantity of consciousness available to a system can be measured as the \u03a6 value of a complex of elements. \u03a6 is the amount of causally effective information that can be integrated across the informational weakest link of a subset of elements. A complex is a subset of elements with \u03a6&gt;0 that is not part of a subset of higher \u03a6. The theory also claims that the quality of consciousness is determined by the informational relationships among the elements of a complex, which are specified by the values of effective information among them. Finally, each particular conscious experience is specified by the value, at any given time, of the variables mediating informational interactions among the elements of a complex. Testing the hypothesis The information integration theory accounts, in a principled manner, for several neurobiological observations concerning consciousness. As shown here, these include the association of consciousness with certain neural systems rather than with others; the fact that neural processes underlying consciousness can influence or be influenced by neural processes that remain unconscious; the reduction of consciousness during dreamless sleep and generalized seizures; and the time requirements on neural interactions that support consciousness. Implications of the hypothesis The theory entails that consciousness is a fundamental quantity, that it is graded, that it is present in infants and animals, and that it should be possible to build conscious artifacts.",
+      "year": 2004,
+      "doi": "https://doi.org/10.1186/1471-2202-5-42",
+      "cited_by_count": 1612,
+      "modulation_count": 6,
+      "generation_count": 5,
+      "mdi": 0.15415067982725836,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 5,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bbuild(?:s|ing)?\\b": 1,
+        "\\bdetermin(?:e[sd]?|ing|ism)\\b": 3
+      }
+    },
+    {
+      "evidence_id": "ev:singer2004",
+      "our_citation": "Singer T et al (2004) Empathy for pain involves the affective but not sensory components of pain. Science 303:1157-1162",
+      "fetched_title": "Empathy for Pain Involves the Affective but not Sensory Components of Pain",
+      "abstract": "Our ability to have an experience of another's pain is characteristic of empathy. Using functional imaging, we assessed brain activity while volunteers experienced a painful stimulus and compared it to that elicited when they observed a signal indicating that their loved one\u2014present in the same room\u2014was receiving a similar pain stimulus. Bilateral anterior insula (AI), rostral anterior cingulate cortex (ACC), brainstem, and cerebellum were activated when subjects received pain and also by a signal that a loved one experienced pain. AIand ACC activation correlated with individual empathy scores. Activity in the posterior insula/secondary somatosensory cortex, the sensorimotor cortex (SI/MI), and the caudal ACC was specific to receiving pain. Thus, a neural response in AIand rostral ACC, activated in common for \u201cself\u201d and \u201cother\u201d conditions, suggests that the neural substrate for empathic experience does not involve the entire \u201cpain matrix.\u201d We conclude that only that part of the pain network associated with its affective qualities, but not its sensory qualities, mediates empathy.",
+      "year": 2004,
+      "doi": "https://doi.org/10.1126/science.1093535",
+      "cited_by_count": 3868,
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\breceiv(?:e[sd]?|ing)\\b": 3
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "54d95079290c8329",
+      "our_citation": "Fadel PJ, Barman SM, Phillips SW, Gebber GL (2004) Fractal fluctuations in human respiration. Journal of Applied Physiology 97:2056-2064",
+      "fetched_title": "Fractal fluctuations in human respiration",
+      "abstract": "The present study was designed to characterize respiratory fluctuations in awake, healthy adult humans under resting conditions. For this purpose, we recorded respiratory movements with a strain-gauge pneumograph in 20 subjects. We then used Allan factor, Fano factor, and dispersional analysis to test whether the fluctuations in the number of breaths, respiratory period, and breath amplitude were fractal (i.e., time-scale-invariant) or random in occurrence. Specifically, we measured the slopes of the power laws in the Allan factor, Fano factor, and dispersional analysis curves for original time series and compared these with the slopes of the curves for surrogates (randomized data sets). In addition, the Hurst exponent was calculated from the slope of the power law in the Allan factor curve to determine whether the long-range correlations among the fluctuations in breath number were positively or negatively correlated. The results can be summarized as follows. Fluctuations in all three parameters were fractal in nine subjects. There were four subjects in whom only the fluctuations in number of breaths and breath amplitude were fractal, three subjects in whom only the fluctuations in number of breaths were fractal, and two subjects in whom only fluctuations in breath number and respiratory period were fractal. Time-scale-invariant behavior was absent in the two remaining subjects. The results indicate that, in most cases, apparently random fluctuations in respiratory pattern are, in fact, correlated over more than one time scale. Moreover, the data suggest that fractal fluctuations in breath number, respiratory period, and breath amplitude are controlled by separate processes.",
+      "year": 2004,
+      "doi": "https://doi.org/10.1152/japplphysiol.00657.2004",
+      "cited_by_count": 83,
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bdetermin(?:e[sd]?|ing|ism)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:lazar2005",
+      "our_citation": "Lazar SW et al (2005) Meditation experience is associated with increased cortical thickness. Neuroreport 16:1893-1897",
+      "fetched_title": "Meditation experience is associated with increased cortical thickness",
+      "abstract": "Previous research indicates that long-term meditation practice is associated with altered resting electroencephalogram patterns, suggestive of long lasting changes in brain activity. We hypothesized that meditation practice might also be associated with changes in the brain's physical structure. Magnetic resonance imaging was used to assess cortical thickness in 20 participants with extensive Insight meditation experience, which involves focused attention to internal experiences. Brain regions associated with attention, interoception and sensory processing were thicker in meditation participants than matched controls, including the prefrontal cortex and right anterior insula. Between-group differences in prefrontal cortical thickness were most pronounced in older participants, suggesting that meditation might offset age-related cortical thinning. Finally, the thickness of two regions correlated with meditation experience. These data provide the first structural evidence for experience-dependent cortical plasticity associated with meditation practice.",
+      "year": 2005,
+      "doi": "https://doi.org/10.1097/01.wnr.0000186598.66243.19",
+      "cited_by_count": 1680,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bresonance\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:rubin2005",
+      "our_citation": "Rubin GJ et al (2005) Electromagnetic hypersensitivity: a systematic review of provocation studies. Psychosomatic Medicine 67:224-232",
+      "fetched_title": "Electromagnetic Hypersensitivity: A Systematic Review of Provocation Studies",
+      "abstract": "The symptoms described by \"electromagnetic hypersensitivity\" sufferers can be severe and are sometimes disabling. However, it has proved difficult to show under blind conditions that exposure to EMF can trigger these symptoms. This suggests that \"electromagnetic hypersensitivity\" is unrelated to the presence of EMF, although more research into this phenomenon is required.",
+      "year": 2005,
+      "doi": "https://doi.org/10.1097/01.psy.0000155664.13300.64",
+      "cited_by_count": 194,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "5c48248bc476e1df",
+      "our_citation": "Dorrestijn M, Bietsch A, Acikalin T, Raman A, Hegner M, Meyer E, Gerber Ch (2007) Chladni Figures Revisited Based on Nanomechanics. Physical Review Letters 98(2):026102",
+      "fetched_title": "Chladni Figures Revisited Based on Nanomechanics",
+      "abstract": "Chladni patterns based on nanomechanics in the microfluidic environment are presented. In contrast with the macroscopic observations in the gaseous environment, nanoparticles are found to move to the nodes, whereas micron-sized particles move to the antinodes of the vibrating interface. This opens the door to size-based sorting of particles in microfluidic systems, and to highly parallel and controlled assembly of biosensors and nanoelectronic circuits.",
+      "year": 2007,
+      "doi": "https://doi.org/10.1103/physrevlett.98.026102",
+      "cited_by_count": 75,
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bassembl(?:e[sd]?|ing|y)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:tononi2008",
+      "our_citation": "Tononi G (2008) Consciousness as integrated information: a provisional manifesto. Biological Bulletin 215:216-242",
+      "fetched_title": "Consciousness as Integrated Information: a Provisional Manifesto",
+      "abstract": "The integrated information theory (IIT) starts from phenomenology and makes use of thought experiments to claim that consciousness is integrated information. Specifically: (i) the quantity of consciousness corresponds to the amount of integrated information generated by a complex of elements; (ii) the quality of experience is specified by the set of informational relationships generated within that complex. Integrated information (Phi) is defined as the amount of information generated by a complex of elements, above and beyond the information generated by its parts. Qualia space (Q) is a space where each axis represents a possible state of the complex, each point is a probability distribution of its states, and arrows between points represent the informational relationships among its elements generated by causal mechanisms (connections). Together, the set of informational relationships within a complex constitute a shape in Q that completely and univocally specifies a particular experience. Several observations concerning the neural substrate of consciousness fall naturally into place within the IIT framework. Among them are the association of consciousness with certain neural systems rather than with others; the fact that neural processes underlying consciousness can influence or be influenced by neural processes that remain unconscious; the reduction of consciousness during dreamless sleep and generalized seizures; and the distinct role of different cortical architectures in affecting the quality of experience. Equating consciousness with integrated information carries several implications for our view of nature.",
+      "year": 2008,
+      "doi": "https://doi.org/10.2307/25470707",
+      "cited_by_count": 1459,
+      "modulation_count": 7,
+      "generation_count": 5,
+      "mdi": 0.28768207245178085,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 6,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 5
+      }
+    },
+    {
+      "evidence_id": "d453c7a0f688606a",
+      "our_citation": "Alkire MT, Hudetz AG, Tononi G (2008) Consciousness and Anesthesia. Science 322(5903):876-880",
+      "fetched_title": "Consciousness and Anesthesia",
+      "abstract": "When we are anesthetized, we expect consciousness to vanish. But does it always? Although anesthesia undoubtedly induces unresponsiveness and amnesia, the extent to which it causes unconsciousness is harder to establish. For instance, certain anesthetics act on areas of the brain's cortex near the midline and abolish behavioral responsiveness, but not necessarily consciousness. Unconsciousness is likely to ensue when a complex of brain regions in the posterior parietal area is inactivated. Consciousness vanishes when anesthetics produce functional disconnection in this posterior complex, interrupting cortical communication and causing a loss of integration; or when they lead to bistable, stereotypic responses, causing a loss of information capacity. Thus, anesthetics seem to cause unconsciousness when they block the brain's ability to integrate information.",
+      "year": 2008,
+      "doi": "https://doi.org/10.1126/science.1149213",
+      "cited_by_count": 1242,
+      "modulation_count": 2,
+      "generation_count": 5,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\bcaus(?:e[sd]?|ing|ation)\\b": 4
+      }
+    },
+    {
+      "evidence_id": "f9fbe4a4dd3f80f0",
+      "our_citation": "Toni N, Bhatt DH et al (2008) Synaptic integration and plasticity of new neurons in the adult hippocampus. Journal of Physiology 586(16):3759-3765",
+      "fetched_title": "Synaptic integration and plasticity of new neurons in the adult hippocampus",
+      "abstract": "Adult neurogenesis, a developmental process encompassing the birth of new neurons from adult neural stem cells and their integration into the existing neuronal circuitry, highlights the plasticity and regenerative capacity of the adult mammalian brain. Substantial evidence suggests essential roles of newborn neurons in specific brain functions; yet it remains unclear how these new neurons make their unique contribution. Recently, a series of studies have delineated the basic steps of the adult neurogenesis process and shown that many of the distinct steps are dynamically regulated by the activity of the existing circuitry. Here we review recent findings on the synaptic integration and plasticity of newborn neurons in the adult hippocampus, including the basic biological process, unique characteristics, critical periods, and activity\u2010dependent regulation by the neurotransmitters GABA and glutamate. We propose that adult neurogenesis represents not merely a replacement mechanism for lost neurons, but also an ongoing developmental process in the adult brain that offers an expanded capacity for plasticity for shaping the existing circuitry in response to experience throughout life.",
+      "year": 2008,
+      "doi": "https://doi.org/10.1113/jphysiol.2008.155655",
+      "cited_by_count": 233,
+      "modulation_count": 6,
+      "generation_count": 0,
+      "mdi": 1.9459101490553132,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 3,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "45a660d6e70b957a",
+      "our_citation": "Cook IA, Pajot SK, Leuchter AF (2008) Ancient Architectural Acoustic Resonance Patterns and Regional Brain Activity. Time and Mind 1(1):95-104",
+      "fetched_title": "Ancient Architectural Acoustic Resonance Patterns and Regional Brain Activity",
+      "abstract": "Previous archaeoacoustic investigations of prehistoric, megalithic structures have identified acoustic resonances at frequencies of 95\u2013120 Hz, particularly near 110\u201312 Hz, all representing pitches in the human vocal range. These chambers may have served as centers for social or spiritual events, and the resonances of the chamber cavities might have been intended to support human ritual chanting. We evaluated the possibility that tones at these frequencies might specifically affect regional brain activity. In a pilot project, 30 healthy adults listened to tones at 90, 100, 110, 120, and 130 Hz while brain activity was monitored with electroencephalography (EEG). Activity in the left temporal region was found to be significantly lower at 110 Hz than at other frequencies. Additionally, the pattern of asymmetric activity over the prefrontal cortex shifted from one of higher activity on the left at most frequencies to right-sided dominance at 110 Hz. These findings are compatible with relative deactivation of language centers and a shift in prefrontal activity that may be related to emotional processing. These intriguing pilot findings suggest that the acoustic properties of ancient structures may influence human brain function, and suggest that a wider study of these interactions should be undertaken.",
+      "year": 2008,
+      "doi": "https://doi.org/10.2752/175169608783489099",
+      "cited_by_count": 29,
+      "modulation_count": 5,
+      "generation_count": 0,
+      "mdi": 1.791759469228055,
+      "modulation_hits": {
+        "\\bresonance\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 4
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "3af0953314935137",
+      "our_citation": "Calabrese EJ (2008) Hormesis and medicine. British Journal of Clinical Pharmacology 66(5):594-617",
+      "fetched_title": "Hormesis and medicine",
+      "abstract": "Evidence is presented which supports the conclusion that the hormetic dose\u2013response model is the most common and fundamental in the biological and biomedical sciences, being highly generalizable across biological model, endpoint measured and chemical class and physical agent. The paper provides a broad spectrum of applications of the hormesis concept for clinical medicine including anxiety, seizure, memory, stroke, cancer chemotherapy, dermatological processes such as hair growth, osteoporosis, ocular diseases, including retinal detachment, statin effects on cardiovascular function and tumour development, benign prostate enlargement, male sexual behaviours/dysfunctions, and prion diseases.",
+      "year": 2008,
+      "doi": "https://doi.org/10.1111/j.1365-2125.2008.03243.x",
+      "cited_by_count": 253,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "a0ffffbc9fd31afd",
+      "our_citation": "Kitzbichler MG, Smith ML, Christensen SR, Bullmore E (2009) Broadband criticality of human brain network synchronization. PLoS Computational Biology 5(3):e1000314",
+      "fetched_title": "Broadband Criticality of Human Brain Network Synchronization",
+      "abstract": "Self-organized criticality is an attractive model for human brain dynamics, but there has been little direct evidence for its existence in large-scale systems measured by neuroimaging. In general, critical systems are associated with fractal or power law scaling, long-range correlations in space and time, and rapid reconfiguration in response to external inputs. Here, we consider two measures of phase synchronization: the phase-lock interval, or duration of coupling between a pair of (neurophysiological) processes, and the lability of global synchronization of a (brain functional) network. Using computational simulations of two mechanistically distinct systems displaying complex dynamics, the Ising model and the Kuramoto model, we show that both synchronization metrics have power law probability distributions specifically when these systems are in a critical state. We then demonstrate power law scaling of both pairwise and global synchronization metrics in functional MRI and magnetoencephalographic data recorded from normal volunteers under resting conditions. These results strongly suggest that human brain functional systems exist in an endogenous state of dynamical criticality, characterized by a greater than random probability of both prolonged periods of phase-locking and occurrence of large rapid changes in the state of global synchronization, analogous to the neuronal \"avalanches\" previously described in cellular systems. Moreover, evidence for critical dynamics was identified consistently in neurophysiological systems operating at frequency intervals ranging from 0.05-0.11 to 62.5-125 Hz, confirming that criticality is a property of human brain functional network organization at all frequency intervals in the brain's physiological bandwidth.",
+      "year": 2009,
+      "doi": "https://doi.org/10.1371/journal.pcbi.1000314",
+      "cited_by_count": 542,
+      "modulation_count": 22,
+      "generation_count": 0,
+      "mdi": 3.1354942159291497,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bsynchroniz(?:e[sd]?|ing|ation)\\b": 6,
+        "\\bphas(?:e[sd]?|ing)\\b": 3,
+        "\\bphase[- ]lock(?:ed|ing)?\\b": 2,
+        "\\bfrequen(?:cy|cies)\\b": 2,
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 7
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "25276afbdd9f19d4",
+      "our_citation": "Minary-Jolandan M, Yu MF (2009) Uncovering nanoscale electromechanical heterogeneity in the subfibrillar structure of collagen fibrils responsible for the piezoelectricity of bone. ACS Nano 3(7):1859-1863",
+      "fetched_title": "Uncovering Nanoscale Electromechanical Heterogeneity in the Subfibrillar Structure of Collagen Fibrils Responsible for the Piezoelectricity of Bone",
+      "abstract": "Understanding piezoelectricity, the linear electromechanical transduction, in bone and tendon and its potential role in mechanoelectric transduction leading to their growth and remodeling remains a challenging subject. With high-resolution piezoresponse force microscopy, we probed piezoelectric behavior in relevant biological samples at different scale levels: from the subfibrillar structures of single isolated collagen fibrils to bone. We revealed that, beyond the general understanding of collagen fibril being a piezoelectric material, there existed an intrinsic piezoelectric heterogeneity within a collagen fibril coinciding with the periodic variation of its gap and overlap regions. This piezoelectric heterogeneity persisted even for the collagen fibrils embedded in bone, bringing about new implications for its possible roles in structural formation and remodeling of bone.",
+      "year": 2009,
+      "doi": "https://doi.org/10.1021/nn900472n",
+      "cited_by_count": 167,
+      "modulation_count": 3,
+      "generation_count": 0,
+      "mdi": 1.3862943611198906,
+      "modulation_hits": {
+        "\\btransduct(?:ion|er)\\b": 2,
+        "\\bperiodic(?:ity)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:kaptchuk2010",
+      "our_citation": "Kaptchuk TJ et al (2010) Placebos without deception: a randomized controlled trial in irritable bowel syndrome. PLoS One 5:e15591",
+      "fetched_title": "Placebos without Deception: A Randomized Controlled Trial in Irritable Bowel Syndrome",
+      "abstract": "ClinicalTrials.gov NCT01010191.",
+      "year": 2010,
+      "doi": "https://doi.org/10.1371/journal.pone.0015591",
+      "cited_by_count": 898,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "946b62d6d8b55442",
+      "our_citation": "Bai Y, Wang J, Wu JP et al (2011) Review of Evidence Suggesting That the Fascia Network Could Be the Anatomical Basis for Acupoints and Meridians in the Human Body. Evidence-Based Complementary and Alternative Medicine 2011:260510",
+      "fetched_title": "Review of Evidence Suggesting That the Fascia Network Could Be the Anatomical Basis for Acupoints and Meridians in the Human Body",
+      "abstract": "The anatomical basis for the concept of meridians in traditional Chinese medicine (TCM) has not been resolved. This paper reviews the evidence supporting a relationship between acupuncture points/meridians and fascia. The reviewed evidence supports the view that the human body\u2032s fascia network may be the physical substrate represented by the meridians of TCM. Specifically, this hypothesis is supported by anatomical observations of body scan data demonstrating that the fascia network resembles the theoretical meridian system in salient ways, as well as physiological, histological, and clinical observations. This view represents a theoretical basis and means for applying modern biomedical research to examining TCM principles and therapies, and it favors a holistic approach to diagnosis and treatment.",
+      "year": 2011,
+      "doi": "https://doi.org/10.1155/2011/260510",
+      "cited_by_count": 53,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "2febe5b20a54d421",
+      "our_citation": "Erickson KI, Voss MW, Prakash RS et al (2011) Exercise training increases size of hippocampus and improves memory. Proceedings of the National Academy of Sciences 108(7):3017-3022",
+      "fetched_title": "Exercise training increases size of hippocampus and improves memory",
+      "abstract": "The hippocampus shrinks in late adulthood, leading to impaired memory and increased risk for dementia. Hippocampal and medial temporal lobe volumes are larger in higher-fit adults, and physical activity training increases hippocampal perfusion, but the extent to which aerobic exercise training can modify hippocampal volume in late adulthood remains unknown. Here we show, in a randomized controlled trial with 120 older adults, that aerobic exercise training increases the size of the anterior hippocampus, leading to improvements in spatial memory. Exercise training increased hippocampal volume by 2%, effectively reversing age-related loss in volume by 1 to 2 y. We also demonstrate that increased hippocampal volume is associated with greater serum levels of BDNF, a mediator of neurogenesis in the dentate gyrus. Hippocampal volume declined in the control group, but higher preintervention fitness partially attenuated the decline, suggesting that fitness protects against volume loss. Caudate nucleus and thalamus volumes were unaffected by the intervention. These theoretically important findings indicate that aerobic exercise training is effective at reversing hippocampal volume loss in late adulthood, which is accompanied by improved memory function.",
+      "year": 2011,
+      "doi": "https://doi.org/10.1073/pnas.1015950108",
+      "cited_by_count": 4590,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:siegel2012",
+      "our_citation": "Siegel DJ (2012) The Developing Mind: How Relationships and the Brain Interact to Shape Who We Are. 2nd ed. Guilford",
+      "fetched_title": "The developing mind: how relationships and the brain interact to shape who we are",
+      "abstract": "1. Mind, Brain, and Relationships: The Interpersonal Neurobiology Perspective 2. Memory 3. Attachment 4. Emotion 5. States of Mind: Cohesion, Subjective Experience, and Complex Systems 6. Representations: Modes of Processing and the Construction of Reality 7. Self-Regulation 8. Interpersonal Connection 9. Integration Epilogue: A Framework for Cultivating Integration Glossary",
+      "year": 2012,
+      "doi": "https://doi.org/10.5860/choice.50-1164",
+      "cited_by_count": 1692,
+      "modulation_count": 3,
+      "generation_count": 1,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2
+      },
+      "generation_hits": {
+        "\\bconstruct(?:s|ed|ing|ion)?\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:pollack2013",
+      "our_citation": "Pollack GH (2013) The Fourth Phase of Water: Beyond Solid, Liquid, and Vapor. Ebner & Sons",
+      "fetched_title": "The fourth phase of water : beyond solid, liquid, and vapor",
+      "abstract": "Of particular significance is the observation that this fourth phase is charged; and, the water just beyond is oppositely charged, creating a battery that can produce current. We found that light charges this battery. Thus, water can receive and process electromagnetic energy drawn from the environment in much the same way as can plants. Absorbed electromagnetic (light) energy can then be exploited for performing work, including electrical and mechanical work. Recent experiments confirm the reality of such energy conversion.",
+      "year": 2016,
+      "doi": null,
+      "cited_by_count": 209,
+      "modulation_count": 3,
+      "generation_count": 2,
+      "mdi": 0.28768207245178085,
+      "modulation_hits": {
+        "\\bphas(?:e[sd]?|ing)\\b": 2,
+        "\\breceiv(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {
+        "\\bcreat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:weng2013",
+      "our_citation": "Weng HY et al (2013) Compassion training alters altruism and neural responses to suffering. Psychological Science 24:1171-1180",
+      "fetched_title": "Compassion Training Alters Altruism and Neural Responses to Suffering",
+      "abstract": "Compassion is a key motivator of altruistic behavior, but little is known about individuals\u2019 capacity to cultivate compassion through training. We examined whether compassion may be systematically trained by testing whether (a) short-term compassion training increases altruistic behavior and (b) individual differences in altruism are associated with training-induced changes in neural responses to suffering. In healthy adults, we found that compassion training increased altruistic redistribution of funds to a victim encountered outside of the training context. Furthermore, increased altruistic behavior after compassion training was associated with altered activation in brain regions implicated in social cognition and emotion regulation, including the inferior parietal cortex and dorsolateral prefrontal cortex (DLPFC), and in DLPFC connectivity with the nucleus accumbens. These results suggest that compassion can be cultivated with training and that greater altruistic behavior may emerge from increased engagement of neural systems implicated in understanding the suffering of other people, executive and emotional control, and reward processing.",
+      "year": 2013,
+      "doi": "https://doi.org/10.1177/0956797612469537",
+      "cited_by_count": 588,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:nedergaard2013",
+      "our_citation": "Xie L et al (2013) Sleep drives metabolite clearance from the adult brain. Science 342:373-377",
+      "fetched_title": "Sleep Drives Metabolite Clearance from the Adult Brain",
+      "abstract": "Taking Out the Trash The purpose of sleep remains mysterious. Using state-of-the-art in vivo two-photon imaging to directly compare two arousal states in the same mouse, Xie et al. (p. 373 ; see the Perspective by Herculano-Houzel ) found that metabolic waste products of neural activity were cleared out of the sleeping brain at a faster rate than during the awake state. This finding suggests a mechanistic explanation for how sleep serves a restorative function, in addition to its well-described effects on memory consolidation.",
+      "year": 2013,
+      "doi": "https://doi.org/10.1126/science.1241224",
+      "cited_by_count": 4989,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "f2cf76443347a5dd",
+      "our_citation": "Zatorre RJ, Salimpoor VN (2013) From perception to pleasure: Music and its neural substrates. Proceedings of the National Academy of Sciences 110(Supplement 2):10430-10437",
+      "fetched_title": "From perception to pleasure: Music and its neural substrates",
+      "abstract": "Music has existed in human societies since prehistory, perhaps because it allows expression and regulation of emotion and evokes pleasure. In this review, we present findings from cognitive neuroscience that bear on the question of how we get from perception of sound patterns to pleasurable responses. First, we identify some of the auditory cortical circuits that are responsible for encoding and storing tonal patterns and discuss evidence that cortical loops between auditory and frontal cortices are important for maintaining musical information in working memory and for the recognition of structural regularities in musical patterns, which then lead to expectancies. Second, we review evidence concerning the mesolimbic striatal system and its involvement in reward, motivation, and pleasure in other domains. Recent data indicate that this dopaminergic system mediates pleasure associated with music; specifically, reward value for music can be coded by activity levels in the nucleus accumbens, whose functional connectivity with auditory and frontal areas increases as a function of increasing musical reward. We propose that pleasure in music arises from interactions between cortical loops that enable predictions and expectancies to emerge from sound patterns and subcortical systems responsible for reward and valuation.",
+      "year": 2013,
+      "doi": "https://doi.org/10.1073/pnas.1301228110",
+      "cited_by_count": 547,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "c2ed086c1172ecf0",
+      "our_citation": "Xie L, Kang H, Xu Q et al (2013) Sleep drives metabolite clearance from the adult brain. Science 342(6156):373-377",
+      "fetched_title": "Sleep Drives Metabolite Clearance from the Adult Brain",
+      "abstract": "Taking Out the Trash The purpose of sleep remains mysterious. Using state-of-the-art in vivo two-photon imaging to directly compare two arousal states in the same mouse, Xie et al. (p. 373 ; see the Perspective by Herculano-Houzel ) found that metabolic waste products of neural activity were cleared out of the sleeping brain at a faster rate than during the awake state. This finding suggests a mechanistic explanation for how sleep serves a restorative function, in addition to its well-described effects on memory consolidation.",
+      "year": 2013,
+      "doi": "https://doi.org/10.1126/science.1241224",
+      "cited_by_count": 4989,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:carhart_harris2014",
+      "our_citation": "Carhart-Harris RL et al (2014) The entropic brain: a theory of conscious states informed by neuroimaging research with psychedelic drugs. Frontiers in Human Neuroscience 8:20",
+      "fetched_title": "The entropic brain: a theory of conscious states informed by neuroimaging research with psychedelic drugs",
+      "abstract": "Entropy is a dimensionless quantity that is used for measuring uncertainty about the state of a system but it can also imply physical qualities, where high entropy is synonymous with high disorder. Entropy is applied here in the context of states of consciousness and their associated neurodynamics, with a particular focus on the psychedelic state. The psychedelic state is considered an exemplar of a primitive or primary state of consciousness that preceded the development of modern, adult, human, normal waking consciousness. Based on neuroimaging data with psilocybin, a classic psychedelic drug, it is argued that the defining feature of \"primary states\" is elevated entropy in certain aspects of brain function, such as the repertoire of functional connectivity motifs that form and fragment across time. Indeed, since there is a greater repertoire of connectivity motifs in the psychedelic state than in normal waking consciousness, this implies that primary states may exhibit \"criticality,\" i.e., the property of being poised at a \"critical\" point in a transition zone between order and disorder where certain phenomena such as power-law scaling appear. Moreover, if primary states are critical, then this suggests that entropy is suppressed in normal waking consciousness, meaning that the brain operates just below criticality. It is argued that this entropy suppression furnishes normal waking consciousness with a constrained quality and associated metacognitive functions, including reality-testing and self-awareness. It is also proposed that entry into primary states depends on a collapse of the normally highly organized activity within the default-mode network (DMN) and a decoupling between the DMN and the medial temporal lobes (which are normally significantly coupled). These hypotheses can be tested by examining brain activity and associated cognition in other candidate primary states such as rapid eye movement (REM) sleep and early psychosis and comparing these with non-primary states such as normal waking consciousness and the anaesthetized state.",
+      "year": 2014,
+      "doi": "https://doi.org/10.3389/fnhum.2014.00020",
+      "cited_by_count": 1221,
+      "modulation_count": 6,
+      "generation_count": 0,
+      "mdi": 1.9459101490553132,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bconstrain(?:s|ed|ing|t)?\\b": 1,
+        "\\bcritical(?:ity)?\\b": 4
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:kox2014",
+      "our_citation": "Kox M et al (2014) Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans. PNAS 111:7379-7384",
+      "fetched_title": "Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans",
+      "abstract": "Significance Hitherto, both the autonomic nervous system and innate immune system were regarded as systems that cannot be voluntarily influenced. The present study demonstrates that, through practicing techniques learned in a short-term training program, the sympathetic nervous system and immune system can indeed be voluntarily influenced. Healthy volunteers practicing the learned techniques exhibited profound increases in the release of epinephrine, which in turn led to increased production of anti-inflammatory mediators and subsequent dampening of the proinflammatory cytokine response elicited by intravenous administration of bacterial endotoxin. This study could have important implications for the treatment of a variety of conditions associated with excessive or persistent inflammation, especially autoimmune diseases in which therapies that antagonize proinflammatory cytokines have shown great benefit.",
+      "year": 2014,
+      "doi": "https://doi.org/10.1073/pnas.1322174111",
+      "cited_by_count": 265,
+      "modulation_count": 3,
+      "generation_count": 2,
+      "mdi": 0.28768207245178085,
+      "modulation_hits": {
+        "\\bsympathetic\\b": 2,
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\breleas(?:e[sd]?|ing)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "15c6714ec87a59f6",
+      "our_citation": "Kox M, van Eijk LT, Zwaag J et al (2014) Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans. Proceedings of the National Academy of Sciences 111(20):7379-7384",
+      "fetched_title": "Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans",
+      "abstract": "Significance Hitherto, both the autonomic nervous system and innate immune system were regarded as systems that cannot be voluntarily influenced. The present study demonstrates that, through practicing techniques learned in a short-term training program, the sympathetic nervous system and immune system can indeed be voluntarily influenced. Healthy volunteers practicing the learned techniques exhibited profound increases in the release of epinephrine, which in turn led to increased production of anti-inflammatory mediators and subsequent dampening of the proinflammatory cytokine response elicited by intravenous administration of bacterial endotoxin. This study could have important implications for the treatment of a variety of conditions associated with excessive or persistent inflammation, especially autoimmune diseases in which therapies that antagonize proinflammatory cytokines have shown great benefit.",
+      "year": 2014,
+      "doi": "https://doi.org/10.1073/pnas.1322174111",
+      "cited_by_count": 265,
+      "modulation_count": 3,
+      "generation_count": 2,
+      "mdi": 0.28768207245178085,
+      "modulation_hits": {
+        "\\bsympathetic\\b": 2,
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\breleas(?:e[sd]?|ing)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "bf83d7a2c6aaa485",
+      "our_citation": "Levin M (2014) Molecular bioelectricity: how endogenous voltage potentials control cell behavior and instruct pattern regulation in vivo. Molecular Biology of the Cell 25(24):3835-3850",
+      "fetched_title": "Molecular bioelectricity: how endogenous voltage potentials control cell behavior and instruct pattern regulation in vivo",
+      "abstract": "In addition to biochemical gradients and transcriptional networks, cell behavior is regulated by endogenous bioelectrical cues originating in the activity of ion channels and pumps, operating in a wide variety of cell types. Instructive signals mediated by changes in resting potential control proliferation, differentiation, cell shape, and apoptosis of stem, progenitor, and somatic cells. Of importance, however, cells are regulated not only by their own V mem but also by the V mem of their neighbors, forming networks via electrical synapses known as gap junctions. Spatiotemporal changes in V mem distribution among nonneural somatic tissues regulate pattern formation and serve as signals that trigger limb regeneration, induce eye formation, set polarity of whole-body anatomical axes, and orchestrate craniofacial patterning. New tools for tracking and functionally altering V mem gradients in vivo have identified novel roles for bioelectrical signaling and revealed the molecular pathways by which V mem changes are transduced into cascades of downstream gene expression. Because channels and gap junctions are gated posttranslationally, bioelectrical networks have their own characteristic dynamics that do not reduce to molecular profiling of channel expression (although they couple functionally to transcriptional networks). The recent data provide an exciting opportunity to crack the bioelectric code, and learn to program cellular activity at the level of organs, not only cell types. The understanding of how patterning information is encoded in bioelectrical networks, which may require concepts from computational neuroscience, will have transformative implications for embryogenesis, regeneration, cancer, and synthetic bioengineering.",
+      "year": 2014,
+      "doi": "https://doi.org/10.1091/mbc.e13-12-0708",
+      "cited_by_count": 360,
+      "modulation_count": 8,
+      "generation_count": 1,
+      "mdi": 1.5040773967762742,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 4,
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\btransduc(?:e[sd]?|ing)\\b": 1,
+        "\\bgat(?:e[sd]?|ing)\\b": 1,
+        "\\breduc(?:e[sd]?|ing|tion)\\b": 1
+      },
+      "generation_hits": {
+        "\\boriginat(?:e[sd]?|ing)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "76683490b80cb699",
+      "our_citation": "Ecker B (2015) Memory Reconsolidation Understood and Misunderstood. International Journal of Neuropsychotherapy 3(1):2-46",
+      "fetched_title": "Memory reconsolidation understood and misunderstood",
+      "abstract": "Memory reconsolidation is the brain\u2019s natural, neural process that can produce transformational change: the full, permanent elimination of an acquired behavior or emotional response. This article identifies and examines 10 common misconceptions regarding memory reconsolidation research findings and their translation into clinical practice. The research findings are poised to drive significant advancements in both the theory and practice of psychotherapy, but these benefits depend on an accurate understanding of how memory reconsol idation functions, and misconceptions have been proliferating. This article also proposes a unified model of reconsolidation and extinction phenomena based on the brain\u2019s well-established requirement of memory mismatch (prediction error) for reconsolidation to be triggered. A reinterpretation of numerous studies published without reference to the mismatch requirement shows how the mismatch requirement and mismatch relativity (MRMR) model can account for diverse empirical findings, reveal unrecognized dynamics of memory change, and generate predictions testable by further research.",
+      "year": 2015,
+      "doi": "https://doi.org/10.12744/ijnpt.2015.0002-0046",
+      "cited_by_count": 50,
+      "modulation_count": 0,
+      "generation_count": 2,
+      "mdi": -1.0986122886681098,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "feec836eb05094e0",
+      "our_citation": "Debertolis P, Coimbra F, Eneix L (2015) Archaeoacoustic Analysis of the Hal Saflieni Hypogeum in Malta. Journal of Anthropology and Archaeology 3(1):59-79",
+      "fetched_title": "Archaeoacoustic Analysis of the Hal Saflieni Hypogeum in Malta",
+      "abstract": "Recently we studied the acoustic properties of the underground \u0126al Saflieni&#13;\\nHypogeum in Malta. Identified as \u201carchitecture in the negative\u201d, it is a unique&#13;\\nprehistoric complex, intentionally sculpted with features that mirror megalithic&#13;\\ntemples above ground. It is known that the Hypogeum was used in the Neolithic&#13;\\nnot only as a depository for bones, but also as a shrine for ritual use. In a room&#13;\\nknown as the \u201cOracle Room\u201d set in the second level of the hypogeum, we have&#13;\\nbeen able to detect the presence of a strong resonance effect: a double resonance&#13;\\nfrequency at 70Hz and 114Hz. With a male voice tuned to these frequencies it is&#13;\\npossible to stimulate the resonance phenomenon throughout the hypogeum. It was&#13;\\nfurther detected that percussion instruments can stimulate the resonance by their&#13;\\nharmonics. Laboratory testing indicates that these frequencies have a strong effect&#13;\\non human brain activity. Since it is likely that the chambers served as centers for&#13;\\nsocial or spiritual events, the resonance of the chamber cavities would have&#13;\\nsupported human ritual chanting and mystic consciousness.",
+      "year": 2015,
+      "doi": "https://doi.org/10.15640/jaa.v3n1a4",
+      "cited_by_count": 18,
+      "modulation_count": 10,
+      "generation_count": 0,
+      "mdi": 2.3978952727983707,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1,
+        "\\bresonance\\b": 5,
+        "\\bdetect(?:s|ed|ing|ion)?\\b": 2,
+        "\\bfrequen(?:cy|cies)\\b": 2
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:carhart_harris2016",
+      "our_citation": "Carhart-Harris RL et al (2016) Neural correlates of the LSD experience revealed by multimodal neuroimaging. PNAS 113:4853-4858",
+      "fetched_title": "Neural correlates of the LSD experience revealed by multimodal neuroimaging",
+      "abstract": "Significance Lysergic acid diethylamide (LSD), the prototypical \u201cpsychedelic,\u201d may be unique among psychoactive substances. In the decades that followed its discovery, the magnitude of its effect on science, the arts, and society was unprecedented. LSD produces profound, sometimes life-changing experiences in microgram doses, making it a particularly powerful scientific tool. Here we sought to examine its effects on brain activity, using cutting-edge and complementary neuroimaging techniques in the first modern neuroimaging study of LSD. Results revealed marked changes in brain blood flow, electrical activity, and network communication patterns that correlated strongly with the drug\u2019s hallucinatory and other consciousness-altering properties. These results have implications for the neurobiology of consciousness and for potential applications of LSD in psychological research.",
+      "year": 2016,
+      "doi": "https://doi.org/10.1073/pnas.1518377113",
+      "cited_by_count": 851,
+      "modulation_count": 0,
+      "generation_count": 1,
+      "mdi": -0.6931471805599453,
+      "modulation_hits": {},
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:ohsumi2016",
+      "our_citation": "Ohsumi Y (2016) Nobel Prize in Physiology or Medicine for discoveries of mechanisms for autophagy.",
+      "fetched_title": "The 2016 Nobel Prize in Physiology or Medicine: Yoshinori Ohsumi's Revolutionary Discoveries on Autophagy Mechanisms and Their Implications for Human Disease",
+      "abstract": "The 2016 Nobel Prize in Physiology or Medicine was awarded to Japanese scientist Yoshinori Ohsumi for his groundbreaking discoveries elucidating the molecular mechanisms underlying autophagy, a fundamental cellular process of self-degradation and recycling. Through elegant genetic screens in baker\u2019s yeast (Saccharomyces cerevisiae) conducted in the early 1990s, Ohsumi identified the key genes essential for autophagy, revealing a sophisticated intracellular machinery that enables cells to degrade and recycle their own components. This review provides a comprehensive analysis of Ohsumi\u2019s seminal contributions, the molecular architecture of the autophagy pathway, and its profound clinical implications for aging, cancer, neurodegenerative diseases, and metabolic disorders. We examine the dual role of autophagy as both a tumor suppressor and tumor promoter, its critical involvement in maintaining neuronal homeostasis, and its dysregulation in conditions such as diabetes. The discoveries honored by this Nobel Prize have fundamentally transformed our understanding of cellular quality control and opened new therapeutic avenues for the treatment of diverse human pathologies.",
+      "year": 2026,
+      "doi": "https://doi.org/10.5281/zenodo.18320128",
+      "cited_by_count": 0,
+      "modulation_count": 2,
+      "generation_count": 0,
+      "mdi": 1.0986122886681098,
+      "modulation_hits": {
+        "\\bhomeosta(?:sis|tic)\\b": 1,
+        "\\bcritical(?:ity)?\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "0270e4d9362316e4",
+      "our_citation": "Farmer AD, Albu-Soda A, Aziz Q (2016) Vagus nerve stimulation in clinical practice. British Journal of Hospital Medicine 77(11):645-651",
+      "fetched_title": "Vagus nerve stimulation in clinical practice",
+      "abstract": "The diverse array of end organ innervations of the vagus nerve, coupled with increased basic science evidence, has led to vagus nerve stimulation becoming a management option in a number of clinical disorders. This review discusses methods of electrically stimulating the vagus nerve and its current and potential clinical uses.",
+      "year": 2016,
+      "doi": "https://doi.org/10.12968/hmed.2016.77.11.645",
+      "cited_by_count": 35,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:dumitrescu2017",
+      "our_citation": "Dumitrescu etal (2017) Quantum quasicrystals. arXiv (experimental replication pending)",
+      "fetched_title": "Quantum Quasicrystals of Spin-Orbit-Coupled Dipolar Bosons",
+      "abstract": "We study quasi-two-dimensional dipolar Bose gases in which the bosons experience a Rashba spin-orbit coupling. We show that the degenerate dispersion minimum due to the spin-orbit coupling, combined with the long-range dipolar interaction, can stabilize a number of quantum crystalline and quasicrystalline ground states. Coupling the bosons to a fermionic species can further stabilize these phases. We estimate that the crystalline and quasicrystalline phases should be detectable in realistic dipolar condensates, e.g., dysprosium, and discuss their symmetries and excitations.",
+      "year": 2013,
+      "doi": "https://doi.org/10.1103/physrevlett.111.185304",
+      "cited_by_count": 78,
+      "modulation_count": 8,
+      "generation_count": 0,
+      "mdi": 2.1972245773362196,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 4,
+        "\\bphas(?:e[sd]?|ing)\\b": 2,
+        "\\bstabili(?:z(?:e[sd]?|ing)|ty)\\b": 2
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "2d063965a84484fc",
+      "our_citation": "Laborde S, Mosley E, Thayer JF (2017) Heart Rate Variability and Cardiac Vagal Tone in Psychophysiological Research. Frontiers in Psychology 8:213",
+      "fetched_title": "Heart Rate Variability and Cardiac Vagal Tone in Psychophysiological Research \u2013 Recommendations for Experiment Planning, Data Analysis, and Data Reporting",
+      "abstract": "Psychophysiological research integrating heart rate variability (HRV) has increased during the last two decades, particularly given the fact that HRV is able to index cardiac vagal tone. Cardiac vagal tone, which represents the contribution of the parasympathetic nervous system to cardiac regulation, is acknowledged to be linked with many phenomena relevant for psychophysiological research, including self-regulation at the cognitive, emotional, social, and health levels. The ease of HRV collection and measurement coupled with the fact it is relatively affordable, non-invasive and pain free makes it widely accessible to many researchers. This ease of access should not obscure the difficulty of interpretation of HRV findings that can be easily misconstrued, however, this can be controlled to some extent through correct methodological processes. Standards of measurement were developed two decades ago by a Task Force within HRV research, and recent reviews updated several aspects of the Task Force paper. However, many methodological aspects related to HRV in psychophysiological research have to be considered if one aims to be able to draw sound conclusions, which makes it difficult to interpret findings and to compare results across laboratories. Those methodological issues have mainly been discussed in separate outlets, making difficult to get a grasp on them, and thus this paper aims to address this issue. It will help to provide psychophysiological researchers with recommendations and practical advice concerning experimental designs, data analysis, and data reporting. This will ensure that researchers starting a project with HRV and cardiac vagal tone are well informed regarding methodological considerations in order for their findings to contribute to knowledge advancement in their field.",
+      "year": 2017,
+      "doi": "https://doi.org/10.3389/fpsyg.2017.00213",
+      "cited_by_count": 2041,
+      "modulation_count": 9,
+      "generation_count": 0,
+      "mdi": 2.302585092994046,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bvagal\\b": 4,
+        "\\bparasympathetic\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "c8b1f40fe573034e",
+      "our_citation": "Russo MA, Santarelli DM, O'Rourke D (2017) The physiological effects of slow breathing in the healthy human. Breathe 13(4):298-309",
+      "fetched_title": "The physiological effects of slow breathing in the healthy human",
+      "abstract": "Slow breathing practices have been adopted in the modern world across the globe due to their claimed health benefits. This has piqued the interest of researchers and clinicians who have initiated investigations into the physiological (and psychological) effects of slow breathing techniques and attempted to uncover the underlying mechanisms. The aim of this article is to provide a comprehensive overview of normal respiratory physiology and the documented physiological effects of slow breathing techniques according to research in healthy humans. The review focuses on the physiological implications to the respiratory, cardiovascular, cardiorespiratory and autonomic nervous systems, with particular focus on diaphragm activity, ventilation efficiency, haemodynamics, heart rate variability, cardiorespiratory coupling, respiratory sinus arrhythmia and sympathovagal balance. The review ends with a brief discussion of the potential clinical implications of slow breathing techniques. This is a topic that warrants further research, understanding and discussion. Key points Slow breathing practices have gained popularity in the western world due to their claimed health benefits, yet remain relatively untouched by the medical community. Investigations into the physiological effects of slow breathing have uncovered significant effects on the respiratory, cardiovascular, cardiorespiratory and autonomic nervous systems. Key findings include effects on respiratory muscle activity, ventilation efficiency, chemoreflex and baroreflex sensitivity, heart rate variability, blood flow dynamics, respiratory sinus arrhythmia, cardiorespiratory coupling, and sympathovagal balance. There appears to be potential for use of controlled slow breathing techniques as a means of optimising physiological parameters that appear to be associated with health and longevity, and that may extend to disease states; however, there is a dire need for further research into the area. Educational aims To provide a comprehensive overview of normal human respiratory physiology and the documented effects of slow breathing in healthy humans. To review and discuss the evidence and hypotheses regarding the mechanisms underlying slow breathing physiological effects in humans. To provide a definition of slow breathing and what may constitute \u201cautonomically optimised respiration\u201d. To open discussion on the potential clinical implications of slow breathing techniques and the need for further research.",
+      "year": 2017,
+      "doi": "https://doi.org/10.1183/20734735.009817",
+      "cited_by_count": 608,
+      "modulation_count": 7,
+      "generation_count": 0,
+      "mdi": 2.0794415416798357,
+      "modulation_hits": {
+        "\\bcoupl(?:e[sd]?|ing)\\b": 2,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1,
+        "\\bbalanc(?:e[sd]?|ing)\\b": 2,
+        "\\bautonomic\\b": 2
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "ev:carhart_harris2019",
+      "our_citation": "Carhart-Harris RL, Friston KJ (2019) REBUS and the anarchic brain: toward a unified model of the brain action of psychedelics. Pharmacological Reviews 71:316-344",
+      "fetched_title": "REBUS and the Anarchic Brain: Toward a Unified Model of the Brain Action of Psychedelics",
+      "abstract": "This paper formulates the action of psychedelics by integrating the free-energy principle and entropic brain hypothesis. We call this formulation relaxed beliefs under psychedelics (REBUS) and the anarchic brain, founded on the principle that-via their entropic effect on spontaneous cortical activity-psychedelics work to relax the precision of high-level priors or beliefs, thereby liberating bottom-up information flow, particularly via intrinsic sources such as the limbic system. We assemble evidence for this model and show how it can explain a broad range of phenomena associated with the psychedelic experience. With regard to their potential therapeutic use, we propose that psychedelics work to relax the precision weighting of pathologically overweighted priors underpinning various expressions of mental illness. We propose that this process entails an increased sensitization of high-level priors to bottom-up signaling (stemming from intrinsic sources), and that this heightened sensitivity enables the potential revision and deweighting of overweighted priors. We end by discussing further implications of the model, such as that psychedelics can bring about the revision of other heavily weighted high-level priors, not directly related to mental health, such as those underlying partisan and/or overly-confident political, religious, and/or philosophical perspectives. SIGNIFICANCE STATEMENT: Psychedelics are capturing interest, with efforts underway to bring psilocybin therapy to marketing authorisation and legal access within a decade, spearheaded by the findings of a series of phase 2 trials. In this climate, a compelling unified model of <i>how</i> psychedelics alter brain function to alter consciousness would have appeal. Towards this end, we have sought to integrate a leading model of global brain function, <i>hierarchical predictive coding</i>, with an often-cited model of the acute action of psychedelics, <i>the entropic brain hypothesis</i>. The resulting synthesis states that psychedelics work to relax high-level priors, sensitising them to liberated bottom-up information flow, which, with the right intention, care provision and context, can help guide and cultivate the revision of entrenched pathological priors.",
+      "year": 2019,
+      "doi": "https://doi.org/10.1124/pr.118.017160",
+      "cited_by_count": 1041,
+      "modulation_count": 4,
+      "generation_count": 3,
+      "mdi": 0.22314355131420976,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {
+        "\\bassembl(?:e[sd]?|ing|y)\\b": 1,
+        "\\bbrings? (?:about|forth|into being)\\b": 1,
+        "\\bcompel(?:s|led|ling)?\\b": 1
+      }
+    },
+    {
+      "evidence_id": "6b9456cd87c01816",
+      "our_citation": "Carhart-Harris RL, Friston KJ (2019) REBUS and the Anarchic Brain: Toward a Unified Model of the Brain Action of Psychedelics. Pharmacological Reviews 71(3):316-344",
+      "fetched_title": "REBUS and the Anarchic Brain: Toward a Unified Model of the Brain Action of Psychedelics",
+      "abstract": "This paper formulates the action of psychedelics by integrating the free-energy principle and entropic brain hypothesis. We call this formulation relaxed beliefs under psychedelics (REBUS) and the anarchic brain, founded on the principle that-via their entropic effect on spontaneous cortical activity-psychedelics work to relax the precision of high-level priors or beliefs, thereby liberating bottom-up information flow, particularly via intrinsic sources such as the limbic system. We assemble evidence for this model and show how it can explain a broad range of phenomena associated with the psychedelic experience. With regard to their potential therapeutic use, we propose that psychedelics work to relax the precision weighting of pathologically overweighted priors underpinning various expressions of mental illness. We propose that this process entails an increased sensitization of high-level priors to bottom-up signaling (stemming from intrinsic sources), and that this heightened sensitivity enables the potential revision and deweighting of overweighted priors. We end by discussing further implications of the model, such as that psychedelics can bring about the revision of other heavily weighted high-level priors, not directly related to mental health, such as those underlying partisan and/or overly-confident political, religious, and/or philosophical perspectives. SIGNIFICANCE STATEMENT: Psychedelics are capturing interest, with efforts underway to bring psilocybin therapy to marketing authorisation and legal access within a decade, spearheaded by the findings of a series of phase 2 trials. In this climate, a compelling unified model of <i>how</i> psychedelics alter brain function to alter consciousness would have appeal. Towards this end, we have sought to integrate a leading model of global brain function, <i>hierarchical predictive coding</i>, with an often-cited model of the acute action of psychedelics, <i>the entropic brain hypothesis</i>. The resulting synthesis states that psychedelics work to relax high-level priors, sensitising them to liberated bottom-up information flow, which, with the right intention, care provision and context, can help guide and cultivate the revision of entrenched pathological priors.",
+      "year": 2019,
+      "doi": "https://doi.org/10.1124/pr.118.017160",
+      "cited_by_count": 1041,
+      "modulation_count": 4,
+      "generation_count": 3,
+      "mdi": 0.22314355131420976,
+      "modulation_hits": {
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1
+      },
+      "generation_hits": {
+        "\\bassembl(?:e[sd]?|ing|y)\\b": 1,
+        "\\bbrings? (?:about|forth|into being)\\b": 1,
+        "\\bcompel(?:s|led|ling)?\\b": 1
+      }
+    },
+    {
+      "evidence_id": "ev:nestor2020",
+      "our_citation": "Nestor J (2020) Breath: The New Science of a Lost Art. Riverhead Books",
+      "fetched_title": "Breath, The new science of a lost art",
+      "abstract": "This book was written for people searching for answers to the myriad of health-related issues that seem to plague many advanced cultural populations around the world. One sentence sums up the pages...",
+      "year": 2020,
+      "doi": "https://doi.org/10.1080/08869634.2020.1823793",
+      "cited_by_count": 34,
+      "modulation_count": 0,
+      "generation_count": 0,
+      "mdi": 0.0,
+      "modulation_hits": {},
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "e034c6ae731a3a07",
+      "our_citation": "Safron A (2020) An Integrated World Modeling Theory (IWMT) of Consciousness: Combining Integrated Information and Global Neuronal Workspace Theories With the Free Energy Principle and Active Inference Framework. Frontiers in Artificial Intelligence 3:30",
+      "fetched_title": "An Integrated World Modeling Theory (IWMT) of Consciousness: Combining Integrated Information and Global Neuronal Workspace Theories With the Free Energy Principle and Active Inference Framework; Toward Solving the Hard Problem and Characterizing Agentic Causation",
+      "abstract": "The Free Energy Principle and Active Inference Framework (FEP-AI) begins with the understanding that persisting systems must regulate environmental exchanges and prevent entropic accumulation. In FEP-AI, minds and brains are predictive controllers for autonomous systems, where action-driven perception is realized as probabilistic inference. Integrated Information Theory (IIT) begins with considering the preconditions for a system to intrinsically exist, as well as axioms regarding the nature of consciousness. IIT has produced controversy because of its surprising entailments: quasi-panpsychism; subjectivity without referents or dynamics; and the possibility of fully-intelligent-yet-unconscious brain simulations. Here, I describe how these controversies might be resolved by integrating IIT with FEP-AI, where integrated information only entails consciousness for systems with perspectival reference frames capable of generating models with spatial, temporal, and causal coherence for self and world. Without that connection with external reality, systems could have arbitrarily high amounts of integrated information, but nonetheless would not entail subjective experience. I further describe how an integration of these frameworks may contribute to their evolution as unified systems theories and models of emergent causation. Then, inspired by both Global Neuronal Workspace Theory (GNWT) and the Harmonic Brain Modes framework, I describe how streams of consciousness may emerge as an evolving generation of sensorimotor predictions, with the precise composition of experiences depending on the integration abilities of synchronous complexes as self-organizing harmonic modes (SOHMs). These integrating dynamics may be particularly likely to occur via richly connected subnetworks affording body-centric sources of phenomenal binding and executive control. Along these connectivity backbones, SOHMs are proposed to implement turbo coding via loopy message-passing over predictive (autoencoding) networks, thus generating maximum a posteriori estimates as coherent vectors governing neural evolution, with alpha frequencies generating basic awareness, and cross-frequency phase-coupling within theta frequencies for access consciousness and volitional control. These dynamic cores of integrated information also function as global workspaces, centered on posterior cortices, but capable of being entrained with frontal cortices and interoceptive hierarchies, thus affording agentic causation. Integrated World Modeling Theory (IWMT) represents a synthetic approach to understanding minds that reveals compatibility between leading theories of consciousness, thus enabling inferential synergy.",
+      "year": 2020,
+      "doi": "https://doi.org/10.3389/frai.2020.00030",
+      "cited_by_count": 138,
+      "modulation_count": 23,
+      "generation_count": 8,
+      "mdi": 0.9808292530117262,
+      "modulation_hits": {
+        "\\bregulat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bcoupl(?:e[sd]?|ing)\\b": 1,
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bintegrat(?:e[sd]?|ing|ion)\\b": 11,
+        "\\bphas(?:e[sd]?|ing)\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 3,
+        "\\bharmonic(?:s)?\\b": 2,
+        "\\bcoher(?:e[sd]?|ence|ent)\\b": 2,
+        "\\bself[- ]organiz(?:e[sd]?|ing|ation|ed)\\b": 1
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 4,
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1,
+        "\\bcaus(?:e[sd]?|ing|ation)\\b": 3
+      }
+    },
+    {
+      "evidence_id": "90461b0d8bf81fe0",
+      "our_citation": "Orozco Perez HD, Dumas G, Bhatt Lehel A (2020) Binaural Beat: A Failure to Enhance EEG Power and Emotional Arousal. Frontiers in Human Neuroscience 11:557",
+      "fetched_title": "Binaural Beat: A Failure to Enhance EEG Power and Emotional Arousal",
+      "abstract": "When two pure tones of slightly different frequencies are delivered simultaneously to the two ears, is generated a beat whose frequency corresponds to the frequency difference between them. That beat is known as acoustic beat. If these two tones are presented one to each ear, they still produce the sensation of the same beat, although no physical combination of the tones occurs outside the auditory system. This phenomenon is called binaural beat. In the present study, we explored the potential contribution of binaural beats to the enhancement of specific electroencephalographic (EEG) bands, as previous studies suggest the potential usefulness of binaural beats as a brainwave entrainment tool. Additionally, we analyzed the effects of binaural-beat stimulation on two psychophysiological measures related to emotional arousal: heart rate and skin conductance. Beats of five different frequencies (4.53 Hz -theta-, 8.97 Hz -alpha-, 17.93 Hz -beta-, 34.49 Hz -gamma- or 57.3 Hz -upper-gamma) were presented binaurally and acoustically for epochs of 3 min (Beat epochs), preceded and followed by pink noise epochs of 90 s (Baseline and Post epochs, respectively). In each of these epochs, we analyzed the EEG spectral power, as well as calculated the heart rate and skin conductance response (SCR). For all the beat frequencies used for stimulation, no significant changes between Baseline and Beat epochs were observed within the corresponding EEG bands, neither with binaural or with acoustic beats. Additional analysis of spectral EEG topographies yielded negative results for the effect of binaural beats in the scalp distribution of EEG spectral power. In the psychophysiological measures, no changes in heart rate and skin conductance were observed for any of the beat frequencies presented. Our results do not support binaural-beat stimulation as a potential tool for the enhancement of EEG oscillatory activity, nor to induce changes in emotional arousal.",
+      "year": 2017,
+      "doi": "https://doi.org/10.3389/fnhum.2017.00557",
+      "cited_by_count": 69,
+      "modulation_count": 7,
+      "generation_count": 2,
+      "mdi": 0.9808292530117262,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 6
+      },
+      "generation_hits": {
+        "\\bgenerat(?:e[sd]?|ing|ion)\\b": 1,
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "157f5c430ed43702",
+      "our_citation": "Shaffer F, Meehan ZM (2020) A Practical Guide to Resonance Frequency Assessment for Heart Rate Variability Biofeedback. Frontiers in Neuroscience 14:570400",
+      "fetched_title": "A Practical Guide to Resonance Frequency Assessment for Heart Rate Variability Biofeedback",
+      "abstract": "Heart rate variability (HRV) represents fluctuations in the time intervals between successive heartbeats, which are termed interbeat intervals. HRV is an emergent property of complex cardiac-brain interactions and non-linear autonomic nervous system (ANS) processes. A healthy heart is not a metronome because it exhibits complex non-linear oscillations characterized by mathematical chaos. HRV biofeedback displays both heart rate and frequently, respiration, to individuals who can then adjust their physiology to improve affective, cognitive, and cardiovascular functioning. The central premise of the HRV biofeedback resonance frequency model is that the adult cardiorespiratory system has a fixed resonance frequency. Stimulation at rates near the resonance frequency produces large-amplitude blood pressure oscillations that can increase baroreflex sensitivity over time. The authors explain the rationale for the resonance frequency model and provide detailed instructions on how to monitor and assess the resonance frequency. They caution that patterns of physiological change must be compared across several breathing rates to evaluate candidate resonance frequencies. They describe how to fine-tune the resonance frequency following an initial assessment. Furthermore, the authors critically assess the minimum epochs required to measure key HRV indices, resonance frequency test-retest reliability, and whether rhythmic skeletal muscle tension can replace slow paced breathing in resonance frequency assessment.",
+      "year": 2020,
+      "doi": "https://doi.org/10.3389/fnins.2020.570400",
+      "cited_by_count": 120,
+      "modulation_count": 25,
+      "generation_count": 1,
+      "mdi": 2.5649493574615367,
+      "modulation_hits": {
+        "\\btun(?:e[sd]?|ing)\\b": 1,
+        "\\bresonance\\b": 10,
+        "\\badjust(?:s|ed|ing|ment)?\\b": 1,
+        "\\bsens(?:e[sd]?|ing|itiv(?:e|ity))\\b": 1,
+        "\\brhythm(?:ic|s)?\\b": 1,
+        "\\bfrequen(?:cy|cies)\\b": 10,
+        "\\bautonomic\\b": 1
+      },
+      "generation_hits": {
+        "\\bproduc(?:e[sd]?|ing|tion)\\b": 1
+      }
+    },
+    {
+      "evidence_id": "dcbb80c73eba99e6",
+      "our_citation": "Hodgdon HB, Anderson FG, Southwell E, Hrubec W, Schwartz R (2022) Internal Family Systems (IFS) Therapy for Posttraumatic Stress Disorder (PTSD) among Survivors of Multiple Childhood Trauma: A Pilot Effectiveness Study. Journal of Aggression, Maltreatment & Trauma 31(1):22-43",
+      "fetched_title": "Internal Family Systems (IFS) Therapy for Posttraumatic Stress Disorder (PTSD) among Survivors of Multiple Childhood Trauma: A Pilot Effectiveness Study",
+      "abstract": "Posttraumatic stress disorder (PTSD) is a debilitating condition and exposure to multiple types of childhood trauma contributes to higher co-occurring symptoms. This pilot research explores effectiveness of a novel intervention, Internal Family Systems (IFS) therapy, for treatment of PTSD and associated symptoms and problems, including depression, dissociation, somatization, affect dysregulation, and disrupted self-perception (i.e. shame/guilt) among adults exposed to multiple childhood trauma. Seventeen adults with PTSD and history of multiple childhood traumas participated in an uncontrolled trial of IFS, receiving 16, 90-min IFS sessions and completing four evaluations (pre-, mid-, and post-treatment, and 1-month follow-up) assessing PTSD symptoms and diagnosis, as well as multiple secondary outcomes (e.g., symptoms of depression, dissociation, and somatization, affect dysregulation, disrupted self-perception, interoceptive awareness, and self-compassion). Intent-to-treat analyses using multilevel growth curve modeling and examination of effect sizes demonstrated significant decreases in symptoms of PTSD (d = \u22124.46 and \u22123.05 as measured by the CAPS and DTS respectively), associated features of PTSD (e.g., total score on a measure of dissociation, somatization, affect dysregulation, self-perception; d = \u22121.27), and depression (d = \u22121.51) across the study period. A medium effect size in the expected direction was observed for self-compassion (d = .72). Small to large effect sizes in the expected direction were observed for multiple indicators of interoceptive awareness (range d = .27\u20131.21). Results provide preliminary support for IFS as a promising practice for the treatment of PTSD among adults with a history of childhood trauma.",
+      "year": 2021,
+      "doi": "https://doi.org/10.1080/10926771.2021.2013375",
+      "cited_by_count": 34,
+      "modulation_count": 1,
+      "generation_count": 0,
+      "mdi": 0.6931471805599453,
+      "modulation_hits": {
+        "\\breceiv(?:e[sd]?|ing)\\b": 1
+      },
+      "generation_hits": {}
+    },
+    {
+      "evidence_id": "4c4c32641be259e4",
+      "our_citation": "Ingendoh RM, Posny ES, Heine A (2023) Binaural beats to entrain the brain? A systematic review of the effects of binaural beat stimulation on brain oscillatory activity, and the implications for psychological research and intervention. PLOS ONE 18(5):e0286023",
+      "fetched_title": "Binaural beats to entrain the brain? A systematic review of the effects of binaural beat stimulation on brain oscillatory activity, and the implications for psychological research and intervention",
+      "abstract": "Binaural beats are an auditory phenomenon that occurs when two tones of different frequencies, which are presented separately to each ear, elicit the sensation of a third tone oscillating at the difference frequency of the two tones. Binaural beats can be perceived in the frequency range of about 1\u201330 Hz, a range that coincides with the main human EEG frequency bands. The brainwave entrainment hypothesis , which assumes that external stimulation at a certain frequency leads to the brain\u2019s electrocortical activity oscillating at the same frequency, provides the basis for research on the effects of binaural beat stimulation on cognitive and affective states. Studies, particularly in more applied fields, usually refer to neuroscientific research demonstrating that binaural beats elicit systematic changes in EEG parameters. At first glance, however, the available literature on brainwave entrainment effects due to binaural beat stimulation appears to be inconclusive at best. The aim of the present systematic review is, thus, to synthesize existing empirical research. A sample of fourteen published studies met our criteria for inclusion. The results corroborate the impression of an overall inconsistency of empirical outcomes, with five studies reporting results in line with the brainwave entrainment hypothesis, eight studies reporting contradictory, and one mixed results. What is to be noticed is that the fourteen studies included in this review were very heterogeneous regarding the implementation of the binaural beats, the experimental designs, and the EEG parameters and analyses. The methodological heterogeneity in this field of study ultimately limits the comparability of research outcomes. The results of the present systematic review emphasize the need for standardization in study approaches so as to allow for reliable insight into brainwave entrainment effects in the future.",
+      "year": 2023,
+      "doi": "https://doi.org/10.1371/journal.pone.0286023",
+      "cited_by_count": 67,
+      "modulation_count": 12,
+      "generation_count": 0,
+      "mdi": 2.5649493574615367,
+      "modulation_hits": {
+        "\\bentrain(?:ed|s|ing|ment)\\b": 4,
+        "\\boscillat(?:e[sd]?|ing|ion)\\b": 2,
+        "\\bfrequen(?:cy|cies)\\b": 6
+      },
+      "generation_hits": {}
+    }
+  ]
+}

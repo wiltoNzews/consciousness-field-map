@@ -1,0 +1,163 @@
+alias,node_id
+vagus nerve,mechanism:vagal_regulation
+vagus,mechanism:vagal_regulation
+vagal tone,mechanism:vagal_regulation
+polyvagal,model:polyvagal
+social engagement system,mechanism:social_engagement
+vagal brake,mechanism:vagal_brake
+HRV,mechanism:hrv_coherence
+heart rate variability,mechanism:hrv_coherence
+heart coherence,mechanism:hrv_coherence
+heartmath,mechanism:hrv_coherence
+interoception,mechanism:interoception
+body sensing,mechanism:interoception
+insula,mechanism:anterior_insula
+anterior insula,mechanism:anterior_insula
+predictive processing,mechanism:predictive_processing
+active inference,mechanism:predictive_processing
+bayesian brain,model:predictive_coding
+predictive coding,model:predictive_coding
+free energy principle,model:FEP
+FEP,model:FEP
+friston,model:FEP
+IIT,model:IIT
+phi,model:IIT
+integrated information,model:IIT
+tononi,model:IIT
+GWT,model:GWT
+global workspace,model:GWT
+baars,model:GWT
+autopoiesis,model:autopoiesis
+self-making,model:autopoiesis
+maturana,model:autopoiesis
+varela,model:enactive_cognition
+enactive,model:enactive_cognition
+embodied mind,model:enactive_cognition
+damasio,model:somatic_markers
+somatic markers,model:somatic_markers
+SOC,model:SOC
+self-organized criticality,model:SOC
+bak,model:SOC
+sandpile,model:SOC
+HKB,model:HKB
+kelso,model:HKB
+coordination dynamics,model:HKB
+DMN,model:dmn
+default mode network,model:dmn
+entrainment,mechanism:entrainment
+huygens,mechanism:entrainment
+coupling,mechanism:entrainment
+synchronization,mechanism:entrainment
+epigenetics,mechanism:epigenetic_transmission
+transgenerational,mechanism:epigenetic_transmission
+neurogenesis,mechanism:neurogenesis
+hebbian,mechanism:hebbian_plasticity
+LTP,mechanism:hebbian_plasticity
+plasticity,mechanism:hebbian_plasticity
+fractal,mechanism:fractal_scaling
+1/f noise,mechanism:fractal_scaling
+power law,mechanism:fractal_scaling
+standing waves,mechanism:standing_waves
+cymatics,mechanism:standing_waves
+chladni,mechanism:standing_waves
+torus,mechanism:toroidal_flow
+toroidal,mechanism:toroidal_flow
+vortex,mechanism:toroidal_flow
+biophotons,mechanism:biophoton_emission
+popp,mechanism:biophoton_emission
+photon emission,mechanism:biophoton_emission
+piezoelectric,mechanism:piezoelectric_biology
+piezo,mechanism:piezoelectric_biology
+bioelectricity,mechanism:bioelectricity_morphogenesis
+levin,mechanism:bioelectricity_morphogenesis
+morphogenesis,mechanism:bioelectricity_morphogenesis
+fascia,mechanism:fascia_signaling
+connective tissue,mechanism:fascia_signaling
+nitric oxide,mechanism:nitric_oxide
+NO,mechanism:nitric_oxide
+endocannabinoid,mechanism:endocannabinoid
+anandamide,mechanism:endocannabinoid
+ECS,mechanism:endocannabinoid
+glymphatic,mechanism:glymphatic
+brain cleaning,mechanism:glymphatic
+circadian,mechanism:circadian_clock
+SCN,mechanism:circadian_clock
+mirror neurons,mechanism:mirror_neurons
+rizzolatti,mechanism:mirror_neurons
+RAS,mechanism:ras
+reticular activating system,mechanism:ras
+neuromatrix,mechanism:pain_neuromatrix
+gate control,mechanism:pain_neuromatrix
+melzack,mechanism:pain_neuromatrix
+DNA antenna,mechanism:dna_antenna
+magnetoreception,mechanism:magnetoreception
+cryptochrome,mechanism:magnetoreception
+hormesis,mechanism:hormesis
+antifragility,mechanism:hormesis
+sleep,mechanism:sleep_architecture
+NREM,mechanism:sleep_architecture
+REM,mechanism:sleep_architecture
+telomere,mechanism:telomere_stress
+telomerase,mechanism:telomere_stress
+blackburn,mechanism:telomere_stress
+neuropeptides,mechanism:neuropeptide_signaling
+pert,mechanism:neuropeptide_signaling
+microbiome,mechanism:microbiome_gut_brain
+gut brain,mechanism:microbiome_gut_brain
+quantum coherence,mechanism:quantum_coherence_biology
+quantum biology,mechanism:quantum_coherence_biology
+entropic brain,model:entropic_brain
+carhart-harris,model:entropic_brain
+memory reconsolidation,model:memory_reconsolidation
+reconsolidation,model:memory_reconsolidation
+coherence therapy,model:coherence_therapy
+ecker,model:coherence_therapy
+IFS,model:ifs
+internal family systems,model:ifs
+schwartz,model:ifs
+attachment theory,model:attachment
+bowlby,model:attachment
+ainsworth,model:attachment
+IPNB,model:interpersonal_neurobiology
+siegel,model:interpersonal_neurobiology
+PNI,model:pni
+psychoneuroimmunology,model:pni
+edge of chaos,model:complexity_edge_chaos
+kauffman,model:complexity_edge_chaos
+tensegrity,model:tensegrity
+ingber,model:tensegrity
+fuller,model:tensegrity
+stigmergy,model:stigmergy
+phenomenology,model:phenomenology
+husserl,model:phenomenology
+merleau-ponty,model:phenomenology
+TCM,model:tcm
+acupuncture,model:tcm
+meridians,model:tcm
+ayurveda,model:ayurveda
+dreamtime,model:aboriginal_dreamtime
+songlines,model:aboriginal_dreamtime
+hypogeum,site:hypogeum
+malta,site:hypogeum
+gobekli tepe,site:gobekli_tepe
+gobekli,site:gobekli_tepe
+great pyramid,site:great_pyramid
+giza,site:great_pyramid
+newgrange,site:newgrange
+cathedrals,site:cathedrals_gothic
+paleolithic caves,site:paleolithic_caves
+wim hof,protocol:wim_hof
+cold exposure,protocol:wim_hof
+HRV biofeedback,protocol:hrv_biofeedback
+VNS,protocol:vns
+vagus nerve stimulation,protocol:vns
+psilocybin,protocol:psychedelic_therapy
+MDMA therapy,protocol:psychedelic_therapy
+psychedelic therapy,protocol:psychedelic_therapy
+expressive writing,protocol:expressive_writing
+pennebaker,protocol:expressive_writing
+center mode,protocol:center_mode
+3.12s,protocol:center_mode
+spiral mode,protocol:spiral_mode
+fibonacci breath,protocol:spiral_mode
+coherence restoration,protocol:coherence_restoration

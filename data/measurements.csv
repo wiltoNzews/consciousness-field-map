@@ -1,0 +1,4 @@
+measurement_id,site_node_id,method,instrument,raw_ref,peak_hz,replication_count,notes
+meas:hypogeum_acoustic_1,site:hypogeum,Acoustic impulse response,Loudspeaker + microphone array,Debertolis & Bisconti (2013),"70-114 Hz range, peak varies by chamber",2,Multiple surveys confirm strong low-frequency resonance
+meas:reznikoff_caves_1,site:paleolithic_caves,Voice resonance survey,Human voice + acoustic mapping,"Reznikoff (2006, 2008)",Varies by cave morphology,3,"Strong correlation between resonance points and painting locations in Arcy-sur-Cure, Niaux, Le Portel"
+meas:reid_pyramid_1,site:great_pyramid,Cymatics visualization,CymaScope in King's Chamber,Reid (SAS conference),"Varies, multiple harmonics reported",0,"Single researcher, no independent replication. Interesting but not peer-reviewed"
