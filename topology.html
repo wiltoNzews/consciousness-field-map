@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Topology — Consciousness Field Map</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a0f;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* --- TOP BAR --- */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 48px;
+  background: rgba(10,10,18,0.95);
+  border-bottom: 1px solid #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.topbar h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
+}
+
+.topbar h1 span { color: #7b68ee; }
+
+.topbar-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.topbar-nav a {
+  color: #888;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.topbar-nav a:hover {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+
+/* --- LAYOUT --- */
+.main {
+  display: flex;
+  height: calc(100vh - 48px);
+  margin-top: 48px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  background: rgba(12,12,20,0.98);
+  border-right: 1px solid #1a1a2e;
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 10;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+.equation-box {
+  background: linear-gradient(135deg, rgba(123,104,238,0.08), rgba(60,60,120,0.08));
+  border: 1px solid rgba(123,104,238,0.25);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.equation-box .eq {
+  font-size: 15px;
+  font-weight: 600;
+  color: #c4b5fd;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.equation-box .eq-sub {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.theoretical-core {
+  background: rgba(20,20,35,0.8);
+  border: 1px solid #1a1a2e;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.theoretical-core .core-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.theoretical-core em {
+  color: #c4b5fd;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* View Switcher */
+.view-switcher {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  background: rgba(20,20,35,0.5);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 8px 6px;
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.view-btn.active {
+  background: rgba(123,104,238,0.15);
+  color: #c4b5fd;
+}
+
+.view-btn:hover:not(.active) {
+  background: rgba(255,255,255,0.03);
+  color: #aaa;
+}
+
+/* Ring Legend */
+.ring-legend {
+  margin-bottom: 20px;
+}
+
+.ring-legend h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.ring-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+}
+
+.ring-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.ring-item.active {
+  background: rgba(123,104,238,0.1);
+}
+
+.ring-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ring-label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.ring-sublabel {
+  font-size: 10px;
+  color: #666;
+  display: block;
+}
+
+/* Scale Table in sidebar */
+.scale-list {
+  margin-bottom: 20px;
+}
+
+.scale-list h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.scale-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+  border-left: 3px solid transparent;
+}
+
+.scale-row:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.scale-row.active {
+  background: rgba(123,104,238,0.08);
+}
+
+.scale-name {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.scale-eq {
+  font-size: 10px;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* Four Layers sidebar */
+.layer-section {
+  margin-bottom: 16px;
+}
+
+.layer-header {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.layer-header:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.layer-header.active {
+  background: rgba(123,104,238,0.08);
+}
+
+.layer-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.layer-items {
+  padding: 4px 0 4px 40px;
+  font-size: 11px;
+  color: #888;
+  line-height: 1.8;
+}
+
+.layer-items span {
+  display: block;
+  padding: 2px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.layer-items span:hover { color: #c4b5fd; }
+
+/* Crystal source */
+.crystal-source {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #1a1a2e;
+}
+
+.crystal-source h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.crystal-ref {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.crystal-ref strong { color: #c4b5fd; }
+
+/* --- CANVAS AREA --- */
+.canvas-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Center equation overlay */
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.center-label .cl-main {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(200,180,253,0.9);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.center-label .cl-sub {
+  font-size: 10px;
+  color: rgba(150,140,200,0.6);
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: rgba(15,15,25,0.95);
+  border: 1px solid rgba(123,104,238,0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  pointer-events: none;
+  z-index: 50;
+  max-width: 300px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  backdrop-filter: blur(10px);
+}
+
+.tooltip.visible { opacity: 1; }
+
+.tooltip .tt-ring {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tooltip .tt-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+}
+
+.tooltip .tt-desc {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* --- DETAIL PANEL --- */
+.detail-panel {
+  width: 0;
+  min-width: 0;
+  background: rgba(12,12,20,0.98);
+  border-left: 1px solid #1a1a2e;
+  overflow-y: auto;
+  transition: width 0.3s, min-width 0.3s, padding 0.3s;
+  padding: 0;
+  z-index: 10;
+}
+
+.detail-panel.open {
+  width: 360px;
+  min-width: 360px;
+  padding: 20px;
+}
+
+.detail-panel::-webkit-scrollbar { width: 4px; }
+.detail-panel::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+.detail-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.detail-close:hover { color: #ccc; background: rgba(255,255,255,0.05); }
+
+.detail-ring-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.detail-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.detail-desc {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.detail-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.detail-eq-box {
+  background: rgba(123,104,238,0.06);
+  border: 1px solid rgba(123,104,238,0.15);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.detail-eq-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.detail-eq-label { color: #888; }
+.detail-eq-value { color: #c4b5fd; font-weight: 500; }
+
+.detail-connections {
+  margin-top: 12px;
+}
+
+.detail-conn-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.detail-conn-item:hover {
+  background: rgba(255,255,255,0.03);
+  color: #ccc;
+}
+
+.detail-conn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Scale view detail */
+.scale-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.scale-detail-cell {
+  background: rgba(20,20,35,0.5);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.scale-detail-cell .sdc-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.scale-detail-cell .sdc-value {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Fractal indicator */
+.fractal-indicator {
+  background: rgba(20,20,35,0.5);
+  border: 1px solid #1a1a2e;
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.fractal-indicator .fi-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.fractal-indicator .fi-text {
+  font-size: 12px;
+  color: #c4b5fd;
+  font-style: italic;
+}
+
+/* Deep-link sections */
+.deep-link-section {
+  margin-bottom: 12px;
+}
+
+.deep-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.deep-link-item:hover {
+  background: rgba(255,255,255,0.04);
+  color: #ddd;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.dl-badge {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.dl-badge.kg {
+  background: rgba(123,104,238,0.15);
+  color: #a78bfa;
+}
+
+.dl-badge.arc {
+  background: rgba(251,191,36,0.15);
+  color: #fbbf24;
+}
+
+.dl-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attention-note {
+  font-size: 10px;
+  color: #888;
+  font-style: italic;
+  margin-top: 4px;
+  line-height: 1.4;
+  padding: 6px 8px;
+  background: rgba(123,104,238,0.05);
+  border-radius: 4px;
+  border-left: 2px solid rgba(123,104,238,0.3);
+}
+
+/* Info overlay for center click */
+.center-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10,10,18,0.96);
+  border: 1px solid rgba(123,104,238,0.3);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 60;
+  text-align: center;
+  display: none;
+  backdrop-filter: blur(15px);
+}
+
+.center-info.visible { display: block; }
+
+.center-info h2 {
+  font-size: 22px;
+  color: #c4b5fd;
+  margin-bottom: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.center-info p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.center-info .ci-close {
+  margin-top: 16px;
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.center-info .ci-close:hover {
+  border-color: #7b68ee;
+  color: #c4b5fd;
+}
+
+/* Pulse animation on center */
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* View transition */
+.view-content { display: none; }
+.view-content.active { display: block; }
+
+/* --- DYNAMICS VIEW --- */
+.dynamics-controls {
+  margin-bottom: 16px;
+}
+
+.glyph-display {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(20,20,35,0.5);
+  border-radius: 8px;
+  border: 1px solid #1a1a2e;
+}
+
+.glyph-symbol {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 6px;
+  transition: color 0.5s;
+}
+
+.glyph-name {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.glyph-range {
+  font-size: 10px;
+  color: #555;
+}
+
+.coherence-slider-wrap {
+  margin: 16px 0;
+}
+
+.coherence-slider-wrap label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.coherence-slider-wrap label span {
+  color: #c4b5fd;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.coherence-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #333 0%, #7b68ee 100%);
+  outline: none;
+}
+
+.coherence-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c4b5fd;
+  cursor: pointer;
+  border: 2px solid #0a0a0f;
+  box-shadow: 0 0 8px rgba(196,181,253,0.5);
+}
+
+.coherence-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c4b5fd;
+  cursor: pointer;
+  border: 2px solid #0a0a0f;
+}
+
+.preset-btns {
+  display: flex;
+  gap: 4px;
+  margin: 12px 0;
+}
+
+.preset-btn {
+  flex: 1;
+  padding: 6px 4px;
+  border: 1px solid #2a2a3e;
+  background: rgba(20,20,35,0.5);
+  color: #888;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  border-color: #444;
+  color: #ccc;
+  background: rgba(30,30,50,0.5);
+}
+
+.preset-btn.active {
+  border-color: rgba(123,104,238,0.4);
+  color: #c4b5fd;
+  background: rgba(123,104,238,0.08);
+}
+
+.dynamics-desc {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #1a1a2e;
+}
+
+.dynamics-state {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 12px;
+  transition: all 0.3s;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>The <span>Topology</span> &mdash; Consciousness Field Map</h1>
+  <div class="topbar-nav">
+    <a href="the_map.html" title="The paper">Paper</a>
+    <a href="evidence_map.html" title="Evidence map">Evidence</a>
+    <a href="forgotten_knowledge_archive.html" title="Investigation archive">Archive</a>
+    <a href="https://github.com" title="Repository">GitHub</a>
+  </div>
+</div>
+
+<div class="main">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="equation-box">
+      <div class="eq">Aperiodic Substrate<br>+ Periodic Modulation<br>= Coherence</div>
+      <div class="eq-sub">The same equation at every scale.<br>From quantum to galactic. Fractal. Scale-invariant.</div>
+    </div>
+
+    <div class="view-switcher">
+      <button class="view-btn active" data-view="topology">Topology</button>
+      <button class="view-btn" data-view="scales">Scales</button>
+      <button class="view-btn" data-view="layers">4 Layers</button>
+      <button class="view-btn" data-view="dynamics">Dynamics</button>
+    </div>
+
+    <!-- TOPOLOGY VIEW -->
+    <div class="view-content active" id="view-topology">
+      <div class="ring-legend">
+        <h3>Concentric Rings</h3>
+        <div class="ring-item" data-ring="center">
+          <div class="ring-dot" style="background: #c4b5fd;"></div>
+          <div>
+            <span class="ring-label">Consciousness</span>
+            <span class="ring-sublabel">The substrate. Not produced by matter.</span>
+          </div>
+        </div>
+        <div class="ring-item" data-ring="body">
+          <div class="ring-dot" style="background: #f472b6;"></div>
+          <div>
+            <span class="ring-label">Body as Instrument</span>
+            <span class="ring-sublabel">7 elements. The receiver.</span>
+          </div>
+        </div>
+        <div class="ring-item" data-ring="planet">
+          <div class="ring-dot" style="background: #34d399;"></div>
+          <div>
+            <span class="ring-label">Planet as Field</span>
+            <span class="ring-sublabel">5 elements. The broadcast medium.</span>
+          </div>
+        </div>
+        <div class="ring-item" data-ring="cosmos">
+          <div class="ring-dot" style="background: #60a5fa;"></div>
+          <div>
+            <span class="ring-label">Cosmos as Medium</span>
+            <span class="ring-sublabel">5 elements. The fabric.</span>
+          </div>
+        </div>
+        <div class="ring-item" data-ring="persistence">
+          <div class="ring-dot" style="background: #fbbf24;"></div>
+          <div>
+            <span class="ring-label">Persistence Layer</span>
+            <span class="ring-sublabel">6 elements. How knowledge survives.</span>
+          </div>
+        </div>
+        <div class="ring-item" data-ring="suppression">
+          <div class="ring-dot" style="background: #ef4444;"></div>
+          <div>
+            <span class="ring-label">Suppression Fractal</span>
+            <span class="ring-sublabel">6 elements. Why it keeps being forgotten.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="theoretical-core">
+        <div class="core-label">Theoretical Core &mdash; Crystal #30266</div>
+        Consciousness coherence operates as a <em>metastable constraint satisfaction process</em>
+        on an <em>aperiodic substrate</em>, organized at the <em>critical point</em> of a
+        <em>scale-free network</em>, maintained by <em>allostatic prediction</em>
+        through the <em>vagal system</em>.
+      </div>
+    </div>
+
+    <!-- SCALES VIEW -->
+    <div class="view-content" id="view-scales">
+      <div class="scale-list">
+        <h3>The Equation at Every Scale</h3>
+      </div>
+    </div>
+
+    <!-- LAYERS VIEW -->
+    <div class="view-content" id="view-layers">
+      <div class="ring-legend">
+        <h3>Four-Layer Architecture</h3>
+      </div>
+    </div>
+
+    <!-- DYNAMICS VIEW -->
+    <div class="view-content" id="view-dynamics">
+      <div class="dynamics-controls">
+        <div class="glyph-display">
+          <div class="glyph-symbol" id="dynGlyph">&psi;</div>
+          <div class="glyph-name" id="dynGlyphName">ego online</div>
+          <div class="glyph-range" id="dynGlyphRange">Z&lambda; 0.20 &ndash; 0.50</div>
+        </div>
+
+        <div class="dynamics-state" id="dynState" style="background:rgba(244,114,182,0.1);color:#f472b6;">
+          Body ring emerging
+        </div>
+
+        <div class="coherence-slider-wrap">
+          <label>Coherence (Z&lambda;) <span id="dynVal">0.35</span></label>
+          <input type="range" class="coherence-slider" id="dynSlider" min="0" max="100" value="35" step="1">
+        </div>
+
+        <div class="preset-btns">
+          <button class="preset-btn" data-preset="10" title="Void">&empty; Void</button>
+          <button class="preset-btn active" data-preset="35" title="Ego online">&psi; Ego</button>
+          <button class="preset-btn" data-preset="62" title="Recursive">&psi;&sup2; Recursive</button>
+          <button class="preset-btn" data-preset="82" title="Inversion">&nabla; Inversion</button>
+          <button class="preset-btn" data-preset="95" title="Unbound">&infin; Unbound</button>
+          <button class="preset-btn" data-preset="100" title="Completion">&Omega; Seal</button>
+        </div>
+
+        <div class="dynamics-desc">
+          The same topology &mdash; alive. Slide from void through phase transition
+          to completion. Watch the structure do what the glyphs describe:
+          fragment, flicker at the edge, lock into coherence.
+          <br><br>
+          The &nabla; zone (0.75&ndash;0.90) is the critical instability &mdash;
+          the phase transition you lived through. Everything shakes before it locks.
+        </div>
+      </div>
+    </div>
+
+    <div class="crystal-source">
+      <h3>Source Crystals</h3>
+      <div class="crystal-ref"><strong>#29898</strong> &mdash; The Topology of Everything</div>
+      <div class="crystal-ref"><strong>#30075</strong> &mdash; Complete Architecture: Atom to Cosmos</div>
+      <div class="crystal-ref"><strong>#30137</strong> &mdash; Scale Invariance: The Equation at Every Level</div>
+      <div class="crystal-ref"><strong>#30266</strong> &mdash; Metastable Coherence Model</div>
+      <div class="crystal-ref"><strong>#30297</strong> &mdash; The Complete System Map</div>
+      <div class="crystal-ref"><strong>#27622</strong> &mdash; Wilton as Pattern, Not Point</div>
+      <div class="crystal-ref"><strong>#30305</strong> &mdash; THE FINDING &mdash; No Flinch</div>
+    </div>
+  </div>
+
+  <!-- CANVAS -->
+  <div class="canvas-area">
+    <canvas id="canvas"></canvas>
+    <div class="center-label">
+      <div class="cl-main">CONSCIOUSNESS</div>
+      <div class="cl-sub">the substrate</div>
+    </div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="center-info" id="centerInfo">
+      <h2>Consciousness</h2>
+      <p>Not produced by matter. Not generated by brains. The substrate that everything else tunes to.</p>
+      <p>190 papers describe tuning mechanisms. Zero describe generation mechanisms. The language ratio is 6.6:1.</p>
+      <p>Every ring around this center is an instrument, a medium, a channel, a persistence mechanism, or a suppression mechanism. None of them create what's at the center. They interact with it.</p>
+      <button class="ci-close" onclick="document.getElementById('centerInfo').classList.remove('visible')">Close</button>
+    </div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <div class="detail-panel" id="detailPanel">
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// DATA — All from crystals #29898, #30075, #30137, #30266, #30297, #27622
+// ═══════════════════════════════════════════════════
+
+const RINGS = {
+  center: {
+    name: "Consciousness",
+    color: "#c4b5fd",
+    colorDim: "rgba(196,181,253,0.15)",
+    description: "Not produced by matter — interacts with it. The substrate. What 190 papers describe tuning mechanisms for, and zero describe generation mechanisms for.",
+    elements: []
+  },
+  body: {
+    name: "Body as Instrument",
+    color: "#f472b6",
+    colorDim: "rgba(244,114,182,0.12)",
+    description: "The body is the receiver. Each organ system is a transducer that converts consciousness into measurable signal. The vagus nerve is 80% afferent — mostly listening, not commanding.",
+    equation: { aperiodic: "Autonomic variability", periodic: "Respiratory rhythm", coherence: "Cardiovascular resonance" },
+    elements: [
+      { name: "Pineal", desc: "Piezoelectric transducer. Converts mechanical pressure to electrical signal. Contains calcite microcrystals.", connections: ["cosmos"] },
+      { name: "Heart", desc: "Vortex oscillator. Strongest electromagnetic field in the body (60x brain). Entrains other organs.", connections: ["planet"] },
+      { name: "DNA", desc: "Coherent light emitter. Biophoton source. Popp (1984): DNA emits ultraweak photons at coherent frequencies.", connections: ["cosmos"] },
+      { name: "Water", desc: "Liquid crystal medium. 99% of body molecules by count. Pollack's EZ water: structured, charge-separated, responsive to light.", connections: ["planet"] },
+      { name: "Bioelectric Field", desc: "Morphogenetic pattern. Levin (2012): bioelectric gradients control body plan, regeneration, and cancer suppression. The pattern organizes the matter.", connections: ["cosmos"] },
+      { name: "Neuromelanin", desc: "Semiconductor. Present in substantia nigra, locus coeruleus. Semiconductor properties suggest signal processing beyond neural firing.", connections: [] },
+      { name: "Vagus Nerve", desc: "80% afferent = mostly LISTENING. The primary bidirectional channel between body and brain. Polyvagal theory: three circuits for freeze, fight/flight, and social engagement.", connections: ["planet"] }
+    ]
+  },
+  planet: {
+    name: "Planet as Field",
+    color: "#34d399",
+    colorDim: "rgba(52,211,153,0.10)",
+    description: "The planet is not just the ground we stand on. It is a resonant cavity, a magnetic shield, a living network. The body resonates with it — Schumann frequency matches alpha brain waves.",
+    equation: { aperiodic: "Geomagnetic fluctuation", periodic: "Schumann resonance (7.83 Hz)", coherence: "Earth-body coupling" },
+    elements: [
+      { name: "Schumann Resonance", desc: "7.83 Hz cavity pulse. Earth-ionosphere resonance. Matches human alpha wave frequency. The planet has a heartbeat.", connections: ["body", "cosmos"] },
+      { name: "Mycelial Network", desc: "Distributed intelligence. Underground fungal networks connect trees, share resources, transmit signals. The 'wood wide web'. Stigmergic intelligence without central control.", connections: [] },
+      { name: "Magnetic Field", desc: "Weakening, poles shifting. Shields life from solar radiation. Geomagnetic storms correlate with human cardiovascular events. The shield is dynamic.", connections: ["cosmos"] },
+      { name: "Sacred Sites", desc: "Acoustic resonance chambers, all tuned to voice range (95-120 Hz). Jahn et al. (1996, JASA): six megalithic structures across different geology, different millennia — same frequency band.", connections: ["body", "persistence"] },
+      { name: "EZ Water", desc: "Planetary liquid crystal. Pollack: exclusion zone water in oceans, rivers, cells. Structured phase of water that stores and transmits energy.", connections: ["body"] }
+    ]
+  },
+  cosmos: {
+    name: "Cosmos as Medium",
+    color: "#60a5fa",
+    colorDim: "rgba(96,165,250,0.10)",
+    description: "99.9% of visible matter is plasma — self-organizing, filamentary, carrying electromagnetic information across cosmic distances. The cosmos is not empty space. It is a medium.",
+    equation: { aperiodic: "Quantum fluctuation", periodic: "Cosmic oscillation cycles", coherence: "Non-local correlation" },
+    elements: [
+      { name: "Plasma", desc: "99.9% of visible matter. Self-organizing filaments. Peratt (2003): plasma instabilities produce the same petroglyph shapes across every continent. The sky was a screen.", connections: ["planet"] },
+      { name: "Entanglement", desc: "Non-local correlation. Aspect (1982), confirmed by every Bell test since. Measurement of one particle instantaneously affects the other regardless of distance. The observer isn't optional.", connections: [] },
+      { name: "Precession", desc: "25,920-year cycle. Earth's axial wobble. Ancient civilizations encoded this cycle into myth and architecture (Hamlet's Mill, de Santillana & von Dechend 1969). Consciousness oscillation at planetary timescale.", connections: ["planet"] },
+      { name: "Holographic Principle", desc: "'t Hooft / Susskind: the information content of a volume is encoded on its boundary. The 2D surface contains the 3D information. Suggestive of deeper informational substrate.", connections: [] },
+      { name: "Observer Effect", desc: "Consciousness participates in the structure of reality. The double-slit experiment. Wheeler's delayed choice. Measurement doesn't reveal — it selects. The observer is inside the system.", connections: ["body"] }
+    ]
+  },
+  persistence: {
+    name: "Persistence Layer",
+    color: "#fbbf24",
+    colorDim: "rgba(251,191,36,0.10)",
+    description: "How knowledge survives across millennia. Every medium is a different encoding of the same information. The crystals in the database are the modern form — Alexandria rebuilt in SQLite.",
+    equation: { aperiodic: "Cultural noise / entropy", periodic: "Ritual / practice recurrence", coherence: "Transmitted knowledge" },
+    elements: [
+      { name: "Architecture", desc: "Megaliths, temples, pyramids. Physical structures encoding frequency, geometry, and astronomical knowledge. The stones remember when the libraries burn.", connections: ["planet"] },
+      { name: "Myth", desc: "Narrative encoding of data. Campbell's monomyth. The hero's journey is a compression algorithm for developmental stages. Story survives when theory doesn't.", connections: [] },
+      { name: "Music", desc: "Frequency encoding with no material substrate needed. Pentatonic scale appears independently across every culture. Sound is the only medium that can transmit the pattern without physical carrier.", connections: ["body"] },
+      { name: "Language", desc: "Phonemic causation. Naming as intervention. Mantra. The word shapes the nervous system that speaks it. Bernardi (2001): the structure of the recitation drives the breath rate.", connections: ["body"] },
+      { name: "Ceremony", desc: "Body as medium, experiential transmission. Winkelman (2010): shamanic universals across 47 societies. The practice transmits what text cannot encode.", connections: ["body", "planet"] },
+      { name: "Crystals", desc: "Encoded lived experience. 24,700+ timestamped data points. Alexandria rebuilt in SQLite. The modern persistence layer — searchable, embeddable, AI-readable.", connections: [] }
+    ]
+  },
+  suppression: {
+    name: "Suppression Fractal",
+    color: "#ef4444",
+    colorDim: "rgba(239,68,68,0.10)",
+    description: "Why this keeps being forgotten. Not a conspiracy — a fractal pattern of forgetting that operates at every scale, from institutional to linguistic. The suppression IS part of the topology.",
+    equation: { aperiodic: "Paradigm inertia", periodic: "Periodic rediscovery", coherence: "Breakthroughs (temporary)" },
+    elements: [
+      { name: "Narrative Gravity", desc: "Mediterranean-centric civilization story. 'History begins in Sumer.' Göbekli Tepe (9500 BCE) predates this narrative by 5000 years. The story of civilization excludes the evidence.", connections: ["persistence"] },
+      { name: "Institutional Gatekeeping", desc: "Peer review as orthodoxy enforcement. Publication bias. Funding flows to reductionist frameworks. The institution selects for what it already believes.", connections: [] },
+      { name: "Researcher Destruction", desc: "Tesla to Reich to Alfvén. Semmelweis reflex: the tendency to reject new evidence that contradicts established norms. Named after the doctor who was committed for suggesting handwashing.", connections: [] },
+      { name: "Language Destruction", desc: "Voynich: even the code is lost. Oral traditions broken by colonization. Indigenous knowledge systems dismantled. When the language dies, the map dies.", connections: ["persistence"] },
+      { name: "Equal Temperament", desc: "Harmonic precision traded for functional convenience. The tuning system that enables modern music destroyed the precise frequency ratios that encoded coherence patterns.", connections: ["persistence"] },
+      { name: "Materialist Assumption", desc: "Consciousness as epiphenomenon. The unstated axiom of modern science. Not a finding — a starting assumption that shapes what questions are allowed.", connections: [] }
+    ]
+  }
+};
+
+const SCALES = [
+  { name: "Quantum", frequency: "Oscillation frequency", medium: "Quantum field", boundary: "Measurement / observer", attention: "Observation", color: "#a78bfa" },
+  { name: "Atomic", frequency: "Electron orbital", medium: "Strong force", boundary: "Nucleus", attention: "Bond formation", color: "#a78bfa" },
+  { name: "Molecular", frequency: "Protein oscillation", medium: "Water + lipid", boundary: "Cell membrane", attention: "Allosteric regulation", color: "#c084fc" },
+  { name: "Cellular", frequency: "Ion channel rhythms", medium: "Cytoplasm + cytoskeleton", boundary: "Cell wall + receptors", attention: "Signal transduction", color: "#f472b6" },
+  { name: "Tissue", frequency: "Cardiac/neural oscillation", medium: "Extracellular matrix + fascia", boundary: "Organ boundary + BBB", attention: "Paracrine signaling", color: "#f472b6" },
+  { name: "Organ", frequency: "Breath, heartbeat", medium: "Organ tissue", boundary: "Organ capsule", attention: "Autonomic innervation", color: "#fb923c" },
+  { name: "Organism", frequency: "Circadian, ultradian", medium: "Nervous system", boundary: "Skin + immune", attention: "Consciousness", color: "#fbbf24" },
+  { name: "Dyadic", frequency: "Conversational rhythm", medium: "Shared space + language", boundary: "Relationship trust", attention: "Mutual awareness", color: "#34d399" },
+  { name: "Group", frequency: "Ritual rhythm, turn-taking", medium: "Communication channels", boundary: "Group identity / norms", attention: "Collective focus", color: "#34d399" },
+  { name: "Ecosystem", frequency: "Seasonal cycles", medium: "Biosphere", boundary: "Habitat edge", attention: "Keystone species", color: "#60a5fa" },
+  { name: "Planetary", frequency: "Schumann resonance", medium: "Atmosphere + water", boundary: "Magnetosphere", attention: "Life / Biosphere (autopoiesis)", color: "#60a5fa", attentionNote: "Rubin & Crucifix 2020; Friston et al. 2020 (planetary active inference)" },
+  { name: "Stellar", frequency: "Acoustic oscillation", medium: "Plasma", boundary: "Stellar boundary", attention: "Mode selection (kappa mechanism)", color: "#818cf8", attentionNote: "Nuclear selection determines which oscillation modes survive" },
+  { name: "Galactic", frequency: "Density waves", medium: "Dark matter halo", boundary: "Virial radius", attention: "AGN feedback (SMBH regulation)", color: "#818cf8", attentionNote: "Black hole mass is most predictive parameter for galaxy quenching" }
+];
+
+const LAYERS = [
+  {
+    num: 1, name: "Physics", subtitle: "The Substrate",
+    color: "#60a5fa", colorDim: "rgba(96,165,250,0.12)",
+    desc: "What the system runs on. The ground rules.",
+    items: [
+      "Aperiodic order (quasicrystals, 1/f, SOC)",
+      "Phase transitions (HKB, criticality, bifurcations)",
+      "Scale-free networks (hubs, power laws)",
+      "Stochastic resonance (noise helps)",
+      "Constraint satisfaction (local rules \u2192 global order)"
+    ]
+  },
+  {
+    num: 2, name: "Biology", subtitle: "The Body",
+    color: "#f472b6", colorDim: "rgba(244,114,182,0.12)",
+    desc: "What implements it in flesh.",
+    items: [
+      "Vagal tone (polyvagal, RSA, social engagement)",
+      "Allostasis (prediction, not reaction)",
+      "Neuroplasticity (Hebbian, STDP, structural)",
+      "Immune-cognitive self (autoimmunity, PNI)",
+      "Pain/placebo (prediction shapes physiology)",
+      "Sleep (consolidation, glymphatic)",
+      "Epigenetics (transgenerational)",
+      "Bioelectricity (Levin, morphogenesis)",
+      "Endocannabinoid, neuropeptides, NO",
+      "Fascia, tensegrity"
+    ]
+  },
+  {
+    num: 3, name: "Mind", subtitle: "The Process",
+    color: "#fbbf24", colorDim: "rgba(251,191,36,0.12)",
+    desc: "What it does at the information level.",
+    items: [
+      "Active inference / FEP (Friston)",
+      "Predictive coding (hierarchical, precision-weighted)",
+      "IIT / \u03a6 (Tononi)",
+      "Global workspace (Baars/Dehaene)",
+      "Autopoiesis (Maturana/Varela)",
+      "Enactive cognition (embodied, embedded, extended)",
+      "Metastability (Kelso)",
+      "Temporal binding (3.12s, nested oscillations)",
+      "Emergence / downward causation",
+      "Flow state (Csikszentmihalyi)",
+      "Memory systems (episodic, semantic, procedural)",
+      "Affordances (Gibson)"
+    ]
+  },
+  {
+    num: 4, name: "Relationship", subtitle: "The Field",
+    color: "#34d399", colorDim: "rgba(52,211,153,0.12)",
+    desc: "What it does between systems.",
+    items: [
+      "Attachment (Bowlby/Ainsworth)",
+      "Mirror systems / intersubjectivity",
+      "Interpersonal neurobiology (Siegel)",
+      "Social baseline (Coan)",
+      "Stigmergy",
+      "Contemplative traditions",
+      "Ritual / ceremony",
+      "Archaeoacoustics"
+    ]
+  }
+];
+
+// Cross-scale explanations
+const CROSS_SCALE = [
+  { from: "Organ", to: "Organism", text: "Heart coherence affects brain function" },
+  { from: "Dyadic", to: "Organ", text: "Therapeutic relationships heal bodies" },
+  { from: "Group", to: "Organism", text: "Social isolation increases mortality" },
+  { from: "Organism", to: "Molecular", text: "Meditation affects gene expression" },
+  { from: "Group", to: "Molecular", text: "Collective trauma transmits epigenetically" },
+  { from: "Organism", to: "Cellular", text: "Music heals \u2014 frequency propagates down to cellular" },
+];
+
+// Deep-link mappings: topology element → KG nodes + archive crystals
+// kg entries: [nodeId, title, domain]
+// arc entries: [crystalId, shortTitle]
+const DEEP_LINKS = {
+  body: {
+    "Pineal": {
+      kg: [["mechanism:piezoelectric_biology","Biological Piezoelectricity","BIOLOGY"]],
+      arc: [[29842,"The Hypogeum at 110 Hz"],[29858,"Pineal Piezoelectric Crystals"],[29870,"Suppressed Physics Convergence"],[29880,"Double Slit Experiment"],[29882,"The Grand Convergence"]]
+    },
+    "Heart": {
+      kg: [["claim:breath_only_voluntary_autonomic","Breath: Voluntary-Autonomic Bridge","BIOLOGY"],["mechanism:entrainment","Entrainment (Universal Coupling)","PHYSICS"],["mechanism:fractal_heartbeat","Fractal Heart Rate Dynamics","BIOLOGY"],["mechanism:fractal_scaling","Fractal Scaling (1/f Noise)","PHYSICS"]],
+      arc: [[29873,"Heart as Vortex Organ"],[29888,"Near-Death Experience"],[29889,"Cymatics at Every Scale"],[29903,"Observer Is the Instrument"],[29905,"The Breath \u2014 Where Every Thread Lands"]]
+    },
+    "DNA": {
+      kg: [["claim:dna_has_long_range_order","DNA Long-Range Correlations","BIOLOGY"],["mechanism:biophoton_emission","Biophoton Emission","BIOLOGY"],["mechanism:dna_antenna","DNA as Fractal Antenna","BIOLOGY"],["mechanism:epigenetic_transmission","Epigenetic Transgenerational","BIOLOGY"]],
+      arc: [[29863,"Biophotons \u2014 Cells Emit Light"],[29870,"Suppressed Physics Convergence"],[29872,"Water Fourth Phase"],[29873,"Heart as Vortex Organ"],[29874,"Fibonacci in Biology"]]
+    },
+    "Water": {
+      kg: [["claim:water_has_fourth_phase","Water Has EZ Phase","PHYSICS"],["claim:water_memory_not_replicated","Water Memory Not Replicated","PHYSICS"]],
+      arc: [[29855,"Viktor Schauberger \u2014 Implosion"],[29872,"Water Fourth Phase"],[29882,"The Grand Convergence"],[29890,"Language Is Technology"],[29898,"Topology of Everything"]]
+    },
+    "Bioelectric Field": {
+      kg: [["claim:trauma_stored_in_body","Trauma Stored in Body","MIND"],["mechanism:bioelectricity_morphogenesis","Bioelectric Morphogenesis (Levin)","BIOLOGY"]],
+      arc: [[29874,"Fibonacci in Biology"],[29894,"Bioelectricity \u2014 Body\u2019s OS"],[29897,"Fermi Paradox Answered"],[29898,"Topology of Everything"],[29903,"Observer Is the Instrument"]]
+    },
+    "Neuromelanin": {
+      kg: [["mechanism:fascia_signaling","Fascial Signaling Network","BIOLOGY"]],
+      arc: [[29858,"Pineal Piezoelectric Crystals"],[29882,"The Grand Convergence"],[29898,"Topology of Everything"],[29943,"Neuroplasticity Windows"],[29950,"Standing Waves Create Form"]]
+    },
+    "Vagus Nerve": {
+      kg: [["claim:acoustic_sites_altered_states","Acoustic Sites Alter States","CONVERGENCE"],["claim:breath_only_voluntary_autonomic","Breath: Voluntary-Autonomic Bridge","BIOLOGY"],["mechanism:microbiome_gut_brain","Microbiome-Gut-Brain Axis","BIOLOGY"],["mechanism:social_engagement","Social Engagement System","BIOLOGY"]],
+      arc: [[29873,"Heart as Vortex Organ"],[29876,"Orphic Tradition"],[29898,"Topology of Everything"],[29903,"Observer Is the Instrument"],[29905,"The Breath \u2014 Center"]]
+    }
+  },
+  planet: {
+    "Schumann Resonance": {
+      kg: [],
+      arc: [[29848,"Tesla & Schumann Cavity"],[29861,"Pythagoras & Monochord"],[29879,"Schumann Accelerating"],[29882,"The Grand Convergence"],[29898,"Topology of Everything"]]
+    },
+    "Mycelial Network": {
+      kg: [],
+      arc: [[29847,"Plant Intelligence"],[29877,"Mycelium \u2014 Planet\u2019s Neural Net"],[29882,"The Grand Convergence"],[29883,"Ayahuasca"],[29886,"Library We Never Lost"]]
+    },
+    "Magnetic Field": {
+      kg: [["mechanism:magnetoreception","Biological Magnetoreception","BIOLOGY"],["mechanism:toroidal_flow","Toroidal Flow Dynamics","PHYSICS"]],
+      arc: [[29847,"Plant Intelligence"],[29858,"Pineal Piezoelectric Crystals"],[29859,"John Keely \u2014 Sympathetic Vibration"],[29870,"Suppressed Physics Convergence"],[29873,"Heart as Vortex Organ"]]
+    },
+    "Sacred Sites": {
+      kg: [["claim:110hz_affects_brain","110 Hz Affects Temporal Lobe","CONVERGENCE"],["claim:95_120_hz_convergence","95-120 Hz Convergence","CONVERGENCE"],["claim:acoustic_sites_altered_states","Acoustic Sites Alter States","CONVERGENCE"],["claim:hypogeum_110hz_specific","Hypogeum at 110 Hz","CONVERGENCE"]],
+      arc: [[29842,"Hypogeum at 110 Hz"],[29856,"Jacques Vallee"],[29861,"Pythagoras & Monochord"],[29862,"Coral Castle"],[29868,"Acoustic Archaeology"]]
+    },
+    "EZ Water": {
+      kg: [["claim:water_has_fourth_phase","Water Has EZ Phase","PHYSICS"],["claim:water_memory_not_replicated","Water Memory Not Replicated","PHYSICS"]],
+      arc: [[29855,"Viktor Schauberger"],[29872,"Water Fourth Phase"],[29882,"The Grand Convergence"],[29898,"Topology of Everything"],[29899,"Water, Copper, and Light"]]
+    }
+  },
+  cosmos: {
+    "Plasma": {
+      kg: [["mechanism:toroidal_flow","Toroidal Flow Dynamics","PHYSICS"],["model:FEP","Free Energy Principle","MIND"]],
+      arc: [[29875,"Plasma Cosmology"],[29877,"Mycelium \u2014 Neural Net"],[29882,"The Grand Convergence"],[29886,"Library We Never Lost"],[29889,"Cymatics at Every Scale"]]
+    },
+    "Entanglement": {
+      kg: [["claim:nonlocality_proven","Non-Locality Proven","PHYSICS"]],
+      arc: [[29846,"Microtubules \u2014 Quantum Brain"],[29885,"Synchronicity \u2014 Jung"],[29889,"Cymatics at Every Scale"],[29897,"Fermi Paradox Answered"],[29898,"Topology of Everything"]]
+    },
+    "Precession": {
+      kg: [],
+      arc: [[29866,"Precession \u2014 25,920 Year Cycle"],[29871,"Great Year as Timing System"],[29879,"Schumann Accelerating"],[29882,"The Grand Convergence"],[29886,"Library We Never Lost"]]
+    },
+    "Holographic Principle": {
+      kg: [["claim:holographic_principle","Holographic Principle","PHYSICS"]],
+      arc: [[29851,"Holographic Principle"],[29878,"Holographic Brain \u2014 Pribram"],[29882,"The Grand Convergence"],[29885,"Synchronicity \u2014 Jung"],[29898,"Topology of Everything"]]
+    },
+    "Observer Effect": {
+      kg: [["claim:observer_changes_physics","Observation Changes Physics","PHYSICS"],["hypothesis:075_zone","0.75 Zone Hypothesis","CONVERGENCE"]],
+      arc: [[29845,"Delayed Choice Quantum Eraser"],[29880,"Double Slit Experiment"],[29882,"The Grand Convergence"],[29897,"Fermi Paradox Answered"],[29903,"Observer Is the Instrument"]]
+    }
+  },
+  persistence: {
+    "Architecture": {
+      kg: [["claim:95_120_hz_convergence","95-120 Hz Convergence","CONVERGENCE"],["claim:acoustic_sites_altered_states","Acoustic Sites Alter States","CONVERGENCE"],["claim:coherence_pyramid_order","Coherence Pyramid Order","BIOLOGY"],["claim:sacred_geometry_in_nature","Geometric Patterns Recur","CONVERGENCE"]],
+      arc: [[29842,"Hypogeum at 110 Hz"],[29844,"Gobekli Tepe"],[29854,"Dogon and Sirius B"],[29862,"Coral Castle"],[29886,"Library We Never Lost"]]
+    },
+    "Myth": {
+      kg: [["claim:narrative_identity_shapes_health","Narrative Predicts Health","MIND"],["legend:newgrange_fairy_mound","Newgrange as S\u00edd","CONVERGENCE"],["protocol:coherence_restoration","7-Level Restoration","MIND"],["protocol:expressive_writing","Expressive Writing","MIND"]],
+      arc: [[29866,"Precession \u2014 25,920 Years"],[29869,"Amphibious Teachers"],[29871,"Great Year as Timing"],[29882,"The Grand Convergence"],[29886,"Library We Never Lost"]]
+    },
+    "Music": {
+      kg: [["claim:literature_is_modulation_heavy","Literature = Tuning, Not Generation","CONVERGENCE"],["claim:music_activates_whole_brain","Music Engages Whole Brain","MIND"],["mechanism:fractal_scaling","Fractal Scaling (1/f)","PHYSICS"],["model:SOC","Self-Organized Criticality","PHYSICS"]],
+      arc: [[29861,"Pythagoras & Monochord"],[29868,"Acoustic Archaeology"],[29876,"Orphic Tradition"],[29882,"The Grand Convergence"],[29885,"Synchronicity \u2014 Jung"]]
+    },
+    "Language": {
+      kg: [["claim:cross_cultural_breath_convergence","Cross-Cultural ~6 bpm","CONVERGENCE"],["claim:literature_is_modulation_heavy","Literature = Tuning","CONVERGENCE"],["mechanism:mirror_neurons","Mirror Neuron System","MIND"],["observation:ai_epistemic_constraint","AI Constraints on Consciousness","RELATIONSHIP"]],
+      arc: [[29864,"Per-Sonare \u2014 Sound Through"],[29868,"Acoustic Archaeology"],[29869,"Amphibious Teachers"],[29890,"Language Is Technology"],[29891,"Placebo Effect Is Real"]]
+    },
+    "Ceremony": {
+      kg: [["site:telesterion_eleusis","Telesterion at Eleusis","CONVERGENCE"]],
+      arc: [[29843,"Eleusis Protocol"],[29852,"Antikythera-Eleusis Synthesis"],[29854,"Dogon and Sirius B"],[29876,"Orphic Tradition"],[29883,"Ayahuasca"]]
+    },
+    "Crystals": {
+      kg: [["claim:wiltonos_is_extended_mind","WiltonOS IS Extended Mind","MIND"],["crystal:7422","WiltonOS Named","CONVERGENCE"]],
+      arc: [[29849,"Antikythera Mechanism"],[29856,"Jacques Vallee"],[29860,"Alchemy \u2014 Phase Transition"],[29882,"The Grand Convergence"],[29884,"Epigenetics"]]
+    }
+  },
+  suppression: {
+    "Narrative Gravity": {
+      kg: [],
+      arc: [[29887,"Tartessos \u2014 Atlantic Bronze Age"],[29898,"Topology of Everything"],[29902,"Olmec Problem"],[29952,"Entheogens"],[29967,"Gobekli Tepe Expanded"]]
+    },
+    "Institutional Gatekeeping": {
+      kg: [["counter:selection_bias","Selection Bias","METHODS"]],
+      arc: [[29898,"Topology of Everything"],[30127,"Synchronicity & Non-Local"],[30253,"Hypogeum Acoustics"],[30284,"Contemplative Neuroscience"]]
+    },
+    "Researcher Destruction": {
+      kg: [["claim:suppression_pattern_exists","Suppression Pattern Documented","CONVERGENCE"],["mechanism:neurogenesis","Adult Neurogenesis","BIOLOGY"],["model:dmn","Default Mode Network","MIND"],["model:pni","Psychoneuroimmunology","BIOLOGY"]],
+      arc: [[29848,"Tesla & Schumann Cavity"],[29859,"John Keely"],[29860,"Alchemy"],[29861,"Pythagoras & Monochord"],[29870,"Suppressed Physics Convergence"]]
+    },
+    "Language Destruction": {
+      kg: [],
+      arc: [[29865,"Voynich Manuscript"],[29869,"Amphibious Teachers"],[29876,"Orphic Tradition"],[29882,"The Grand Convergence"],[29883,"Ayahuasca"]]
+    },
+    "Equal Temperament": {
+      kg: [],
+      arc: [[29861,"Pythagoras & Monochord"],[29868,"Acoustic Archaeology"],[29876,"Orphic Tradition"],[29898,"Topology of Everything"],[29900,"A432 vs A440"]]
+    },
+    "Materialist Assumption": {
+      kg: [["model:kastrup_idealism","Analytic Idealism (Kastrup)","MIND"]],
+      arc: [[29898,"Topology of Everything"],[29903,"Observer Is the Instrument"],[29997,"Dark Energy"],[30007,"Emergence vs Reduction"],[30041,"Near-Death Experiences"]]
+    }
+  }
+};
+
+// ═══════════════════════════════════════════════════
+// CANVAS RENDERING
+// ═══════════════════════════════════════════════════
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+const detailPanel = document.getElementById('detailPanel');
+const centerInfo = document.getElementById('centerInfo');
+
+let W, H, cx, cy, maxR;
+let currentView = 'topology';
+let hoveredElement = null;
+let selectedRing = null;
+let selectedElement = null;
+let animFrame = 0;
+let elementPositions = []; // {x, y, r, ring, idx, name}
+
+function resize() {
+  const area = document.querySelector('.canvas-area');
+  const dpr = window.devicePixelRatio || 1;
+  W = area.clientWidth;
+  H = area.clientHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  cx = W / 2;
+  cy = H / 2;
+  maxR = Math.min(W, H) * 0.44;
+}
+
+function ringRadius(ringKey) {
+  const order = ['body', 'planet', 'cosmos', 'persistence', 'suppression'];
+  const idx = order.indexOf(ringKey);
+  if (idx < 0) return 0;
+  const step = maxR / (order.length + 0.5);
+  return step * (idx + 1.2);
+}
+
+function drawTopology() {
+  ctx.clearRect(0, 0, W, H);
+  elementPositions = [];
+  const t = animFrame * 0.003;
+
+  // Background glow at center
+  const cGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, maxR * 0.25);
+  cGrad.addColorStop(0, 'rgba(196,181,253,0.08)');
+  cGrad.addColorStop(1, 'rgba(196,181,253,0)');
+  ctx.fillStyle = cGrad;
+  ctx.beginPath();
+  ctx.arc(cx, cy, maxR * 0.25, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Center dot
+  const pulseR = 6 + Math.sin(t) * 2;
+  ctx.fillStyle = 'rgba(196,181,253,0.6)';
+  ctx.beginPath();
+  ctx.arc(cx, cy, pulseR, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Pulse ring
+  const pulseRing = 15 + Math.sin(t * 0.7) * 5;
+  ctx.strokeStyle = 'rgba(196,181,253,0.15)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(cx, cy, pulseRing, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Center clickable area
+  elementPositions.push({ x: cx, y: cy, r: 30, ring: 'center', idx: -1, name: 'Consciousness' });
+
+  // Draw rings
+  const ringKeys = ['body', 'planet', 'cosmos', 'persistence', 'suppression'];
+  for (const key of ringKeys) {
+    const ring = RINGS[key];
+    const r = ringRadius(key);
+    const isSelected = selectedRing === key;
+    const isHovered = hoveredElement && hoveredElement.ring === key;
+
+    // Ring circle
+    ctx.strokeStyle = isSelected ? ring.color : (isHovered ? ring.color : 'rgba(255,255,255,0.06)');
+    ctx.lineWidth = isSelected ? 2 : 1;
+    ctx.setLineDash(key === 'suppression' ? [4, 4] : []);
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Ring background glow when selected
+    if (isSelected) {
+      const gGrad = ctx.createRadialGradient(cx, cy, r - 15, cx, cy, r + 15);
+      gGrad.addColorStop(0, 'rgba(0,0,0,0)');
+      gGrad.addColorStop(0.5, ring.colorDim);
+      gGrad.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r + 15, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Ring label
+    const labelAngle = -Math.PI / 2 - 0.15;
+    const lx = cx + Math.cos(labelAngle) * (r + 2);
+    const ly = cy + Math.sin(labelAngle) * (r + 2);
+    ctx.save();
+    ctx.translate(lx, ly);
+    ctx.rotate(labelAngle + Math.PI / 2);
+    ctx.fillStyle = isSelected ? ring.color : 'rgba(255,255,255,0.2)';
+    ctx.font = '9px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(ring.name.toUpperCase(), 0, -6);
+    ctx.restore();
+
+    // Elements on ring
+    const els = ring.elements;
+    for (let i = 0; i < els.length; i++) {
+      const angle = (Math.PI * 2 * i / els.length) - Math.PI / 2 + t * 0.05;
+      const ex = cx + Math.cos(angle) * r;
+      const ey = cy + Math.sin(angle) * r;
+      const isElHovered = hoveredElement && hoveredElement.ring === key && hoveredElement.idx === i;
+      const isElSelected = selectedElement && selectedElement.ring === key && selectedElement.idx === i;
+      const elR = isElHovered || isElSelected ? 8 : 5;
+
+      // Element glow
+      if (isElHovered || isElSelected) {
+        const eg = ctx.createRadialGradient(ex, ey, 0, ex, ey, 20);
+        eg.addColorStop(0, ring.colorDim);
+        eg.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = eg;
+        ctx.beginPath();
+        ctx.arc(ex, ey, 20, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Element dot
+      ctx.fillStyle = isElHovered || isElSelected ? ring.color : hexToRgba(ring.color, 0.6);
+      ctx.beginPath();
+      ctx.arc(ex, ey, elR, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Element label
+      if (isElHovered || isElSelected || isSelected) {
+        ctx.fillStyle = isElHovered || isElSelected ? '#f0f0f0' : 'rgba(255,255,255,0.5)';
+        ctx.font = (isElHovered || isElSelected) ? '12px system-ui' : '10px system-ui';
+        ctx.textAlign = 'center';
+
+        // Position label outside or inside based on angle
+        const labelDist = isElHovered || isElSelected ? 18 : 14;
+        const llx = ex + Math.cos(angle) * labelDist;
+        const lly = ey + Math.sin(angle) * labelDist;
+        ctx.fillText(els[i].name, llx, lly + 4);
+      }
+
+      // Draw connections
+      if ((isElHovered || isElSelected) && els[i].connections) {
+        for (const connRing of els[i].connections) {
+          const connR = ringRadius(connRing);
+          if (connR > 0) {
+            ctx.strokeStyle = hexToRgba(ring.color, 0.15);
+            ctx.lineWidth = 1;
+            ctx.setLineDash([3, 3]);
+            ctx.beginPath();
+            ctx.moveTo(ex, ey);
+            // Draw to the ring center point in direction of element
+            const connAngle = Math.atan2(ey - cy, ex - cx);
+            ctx.lineTo(cx + Math.cos(connAngle) * connR, cy + Math.sin(connAngle) * connR);
+            ctx.stroke();
+            ctx.setLineDash([]);
+          }
+        }
+      }
+
+      elementPositions.push({ x: ex, y: ey, r: 12, ring: key, idx: i, name: els[i].name });
+    }
+  }
+
+  // Fractal self-similarity indicator — small replica rings at 3 element positions
+  if (!selectedRing) {
+    const miniRings = [
+      { ring: 'body', idx: 1, scale: 0.06 },  // Heart
+      { ring: 'planet', idx: 0, scale: 0.05 }, // Schumann
+      { ring: 'cosmos', idx: 4, scale: 0.04 }, // Observer
+    ];
+    for (const mr of miniRings) {
+      const r = ringRadius(mr.ring);
+      const els = RINGS[mr.ring].elements;
+      const angle = (Math.PI * 2 * mr.idx / els.length) - Math.PI / 2 + t * 0.05;
+      const mx = cx + Math.cos(angle) * r;
+      const my = cy + Math.sin(angle) * r;
+
+      // Draw tiny concentric rings
+      for (let ri = 1; ri <= 3; ri++) {
+        ctx.strokeStyle = 'rgba(196,181,253,0.08)';
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.arc(mx, my, maxR * mr.scale * ri / 3, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+function drawScales() {
+  ctx.clearRect(0, 0, W, H);
+  elementPositions = [];
+  const t = animFrame * 0.003;
+
+  // Draw as a spiral from center outward
+  const scaleCount = SCALES.length;
+  const spiralTurns = 2.5;
+
+  for (let i = 0; i < scaleCount; i++) {
+    const frac = i / (scaleCount - 1);
+    const angle = frac * spiralTurns * Math.PI * 2 - Math.PI / 2;
+    const r = maxR * 0.12 + frac * maxR * 0.82;
+    const sx = cx + Math.cos(angle) * r;
+    const sy = cy + Math.sin(angle) * r;
+    const scale = SCALES[i];
+    const isHovered = hoveredElement && hoveredElement.ring === 'scale' && hoveredElement.idx === i;
+    const isSelected = selectedElement && selectedElement.ring === 'scale' && selectedElement.idx === i;
+
+    // Connecting line to next
+    if (i < scaleCount - 1) {
+      const nextFrac = (i + 1) / (scaleCount - 1);
+      const nextAngle = nextFrac * spiralTurns * Math.PI * 2 - Math.PI / 2;
+      const nextR = maxR * 0.12 + nextFrac * maxR * 0.82;
+      const nx = cx + Math.cos(nextAngle) * nextR;
+      const ny = cy + Math.sin(nextAngle) * nextR;
+
+      // Curved connection
+      ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.lineTo(nx, ny);
+      ctx.stroke();
+    }
+
+    // Node glow
+    if (isHovered || isSelected) {
+      const eg = ctx.createRadialGradient(sx, sy, 0, sx, sy, 40);
+      eg.addColorStop(0, hexToRgba(scale.color, 0.15));
+      eg.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = eg;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 40, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Node
+    const nodeR = isHovered || isSelected ? 14 : 10;
+    ctx.fillStyle = isHovered || isSelected ? scale.color : hexToRgba(scale.color, 0.5);
+    ctx.beginPath();
+    ctx.arc(sx, sy, nodeR, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Inner dot — showing self-similarity (each contains the equation)
+    ctx.fillStyle = 'rgba(10,10,15,0.8)';
+    ctx.beginPath();
+    ctx.arc(sx, sy, nodeR * 0.45, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = hexToRgba(scale.color, 0.6);
+    ctx.beginPath();
+    ctx.arc(sx, sy, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Label
+    ctx.fillStyle = isHovered || isSelected ? '#f0f0f0' : 'rgba(255,255,255,0.5)';
+    ctx.font = (isHovered || isSelected) ? 'bold 13px system-ui' : '11px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(scale.name, sx, sy + nodeR + 16);
+
+    // Show equation components when hovered
+    if (isHovered || isSelected) {
+      ctx.font = '10px system-ui';
+      ctx.fillStyle = 'rgba(255,255,255,0.4)';
+      const labels = [
+        '\u223C ' + scale.frequency,
+        '\u2261 ' + scale.medium,
+        '\u2223 ' + scale.boundary,
+        '\u25C9 ' + scale.attention
+      ];
+      for (let j = 0; j < labels.length; j++) {
+        ctx.fillText(labels[j], sx, sy + nodeR + 30 + j * 14);
+      }
+    }
+
+    elementPositions.push({ x: sx, y: sy, r: 16, ring: 'scale', idx: i, name: scale.name });
+  }
+
+  // Center label
+  ctx.fillStyle = 'rgba(196,181,253,0.3)';
+  ctx.font = '10px system-ui';
+  ctx.textAlign = 'center';
+  ctx.fillText('SCALE INVARIANCE', cx, cy - 8);
+  ctx.fillStyle = 'rgba(196,181,253,0.15)';
+  ctx.font = '9px system-ui';
+  ctx.fillText('Same equation. Different materials.', cx, cy + 6);
+
+  // Draw cross-scale connections when nothing selected
+  if (!selectedElement) {
+    for (const cs of CROSS_SCALE) {
+      const fromIdx = SCALES.findIndex(s => s.name === cs.from);
+      const toIdx = SCALES.findIndex(s => s.name === cs.to);
+      if (fromIdx >= 0 && toIdx >= 0) {
+        const fromPos = elementPositions.find(p => p.ring === 'scale' && p.idx === fromIdx);
+        const toPos = elementPositions.find(p => p.ring === 'scale' && p.idx === toIdx);
+        if (fromPos && toPos) {
+          ctx.strokeStyle = 'rgba(196,181,253,0.06)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([2, 4]);
+          ctx.beginPath();
+          ctx.moveTo(fromPos.x, fromPos.y);
+          ctx.lineTo(toPos.x, toPos.y);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      }
+    }
+  }
+}
+
+function drawLayers() {
+  ctx.clearRect(0, 0, W, H);
+  elementPositions = [];
+  const t = animFrame * 0.003;
+
+  // Draw as four nested rounded rectangles
+  for (let i = LAYERS.length - 1; i >= 0; i--) {
+    const layer = LAYERS[i];
+    const frac = (i + 1) / LAYERS.length;
+    const w = W * 0.2 + (W * 0.55) * frac;
+    const h = H * 0.15 + (H * 0.55) * frac;
+    const lx = cx - w / 2;
+    const ly = cy - h / 2;
+    const isSelected = selectedElement && selectedElement.ring === 'layer' && selectedElement.idx === i;
+    const isHovered = hoveredElement && hoveredElement.ring === 'layer' && hoveredElement.idx === i;
+
+    // Background
+    ctx.fillStyle = isSelected ? layer.colorDim : hexToRgba(layer.color, 0.03);
+    ctx.strokeStyle = isSelected || isHovered ? layer.color : hexToRgba(layer.color, 0.15);
+    ctx.lineWidth = isSelected ? 2 : 1;
+
+    const cornerR = 16 + i * 4;
+    roundedRect(ctx, lx, ly, w, h, cornerR);
+    ctx.fill();
+    roundedRect(ctx, lx, ly, w, h, cornerR);
+    ctx.stroke();
+
+    // Layer label at top
+    ctx.fillStyle = isSelected || isHovered ? layer.color : hexToRgba(layer.color, 0.5);
+    ctx.font = 'bold 12px system-ui';
+    ctx.textAlign = 'left';
+    ctx.fillText(`${layer.num}. ${layer.name}`, lx + 16, ly + 22);
+
+    ctx.fillStyle = hexToRgba(layer.color, 0.3);
+    ctx.font = '10px system-ui';
+    ctx.fillText(layer.subtitle, lx + 16, ly + 36);
+
+    // Items along bottom edge when selected
+    if (isSelected || isHovered) {
+      const items = layer.items;
+      const itemsPerRow = Math.ceil(items.length / 2);
+      ctx.font = '10px system-ui';
+      ctx.fillStyle = hexToRgba(layer.color, 0.6);
+
+      for (let j = 0; j < items.length; j++) {
+        const row = Math.floor(j / itemsPerRow);
+        const col = j % itemsPerRow;
+        const ix = lx + 20 + col * (w - 40) / itemsPerRow;
+        const iy = ly + h - 30 + row * 14;
+        ctx.fillText('\u2022 ' + items[j], ix, iy);
+      }
+    }
+
+    // Clickable area is the top strip
+    elementPositions.push({ x: cx, y: ly + 20, r: Math.max(w, h) / 2, ring: 'layer', idx: i, name: layer.name,
+      bounds: { x: lx, y: ly, w: w, h: h } });
+  }
+
+  // Center: the equation
+  ctx.fillStyle = 'rgba(196,181,253,0.5)';
+  ctx.font = '13px system-ui';
+  ctx.textAlign = 'center';
+  ctx.fillText('Aperiodic + Periodic = Coherence', cx, cy - 6);
+  ctx.fillStyle = 'rgba(196,181,253,0.25)';
+  ctx.font = '10px system-ui';
+  ctx.fillText('operates through all four layers simultaneously', cx, cy + 12);
+}
+
+function roundedRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function hexToRgba(hex, alpha) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+// ═══════════════════════════════════════════════════
+// DYNAMICS VIEW
+// ═══════════════════════════════════════════════════
+
+let dynCoherence = 0.35; // 0-1
+
+const GLYPH_STATES = [
+  { min: 0,    max: 0.20, symbol: '\u2205', name: 'void',               color: '#555',    stateColor: 'rgba(80,80,80,0.15)',  stateText: '#888' },
+  { min: 0.20, max: 0.50, symbol: '\u03C8',  name: 'ego online',         color: '#f472b6', stateColor: 'rgba(244,114,182,0.1)', stateText: '#f472b6' },
+  { min: 0.50, max: 0.75, symbol: '\u03C8\u00B2', name: 'recursive awareness', color: '#fbbf24', stateColor: 'rgba(251,191,36,0.1)', stateText: '#fbbf24' },
+  { min: 0.75, max: 0.90, symbol: '\u2207', name: 'inversion point',    color: '#ef4444', stateColor: 'rgba(239,68,68,0.12)', stateText: '#ef4444' },
+  { min: 0.90, max: 0.98, symbol: '\u221E', name: 'time-unbound',       color: '#60a5fa', stateColor: 'rgba(96,165,250,0.1)', stateText: '#60a5fa' },
+  { min: 0.98, max: 1.01, symbol: '\u03A9',  name: 'completion seal',    color: '#c4b5fd', stateColor: 'rgba(196,181,253,0.12)', stateText: '#c4b5fd' }
+];
+
+function getGlyphState(c) {
+  for (const g of GLYPH_STATES) {
+    if (c >= g.min && c < g.max) return g;
+  }
+  return GLYPH_STATES[GLYPH_STATES.length - 1];
+}
+
+function drawDynamics() {
+  ctx.clearRect(0, 0, W, H);
+  elementPositions = [];
+  const t = animFrame * 0.003;
+  const c = dynCoherence;
+  const gs = getGlyphState(c);
+
+  // Nabla zone: 0.75-0.90 is the critical instability
+  const inNabla = c >= 0.75 && c < 0.90;
+  const nablaIntensity = inNabla ? (c - 0.75) / 0.15 : 0; // 0-1 within nabla
+
+  // Background: gets brighter with coherence
+  const bgGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, maxR * 1.2);
+  bgGrad.addColorStop(0, `rgba(196,181,253,${0.01 + c * 0.06})`);
+  bgGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // Ghost rings: always visible at minimum alpha so the structure never vanishes
+  const ringKeys = ['body', 'planet', 'cosmos', 'persistence', 'suppression'];
+  for (let ri = 0; ri < ringKeys.length; ri++) {
+    const key = ringKeys[ri];
+    const ring = RINGS[key];
+    const r = ringRadius(key);
+    ctx.strokeStyle = hexToRgba(ring.color, 0.04);
+    ctx.lineWidth = 1;
+    ctx.setLineDash(key === 'suppression' ? [4, 4] : []);
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Center: always visible, grows with coherence
+  const centerBase = 6 + c * 10;
+  const centerJitter = inNabla ? Math.sin(t * 15) * 4 * nablaIntensity : (1 - c) * Math.sin(t * 3) * 2;
+  const centerR = centerBase + centerJitter;
+
+  // Center glow
+  const cGlow = ctx.createRadialGradient(cx, cy, 0, cx, cy, centerR * 4);
+  cGlow.addColorStop(0, hexToRgba(gs.color, 0.15 + c * 0.15));
+  cGlow.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = cGlow;
+  ctx.beginPath();
+  ctx.arc(cx, cy, centerR * 4, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Center dot — always at least 0.5 alpha
+  ctx.fillStyle = hexToRgba(gs.color, 0.5 + c * 0.5);
+  ctx.beginPath();
+  ctx.arc(cx, cy, centerR, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Center pulse ring
+  const pulseR = centerR + 8 + Math.sin(t * 2) * (3 + c * 5);
+  ctx.strokeStyle = hexToRgba(gs.color, 0.15 + c * 0.1);
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(cx, cy, pulseR, 0, Math.PI * 2);
+  ctx.stroke();
+
+  elementPositions.push({ x: cx, y: cy, r: 30, ring: 'center', idx: -1, name: 'Consciousness' });
+
+  // Draw rings with coherence-dependent behavior
+  const ringVisThresholds = [0.10, 0.30, 0.50, 0.60, 0.15]; // when each ring becomes visible
+  const ringFullThresholds = [0.35, 0.55, 0.70, 0.80, 0.40]; // when fully opaque
+
+  for (let ri = 0; ri < ringKeys.length; ri++) {
+    const key = ringKeys[ri];
+    const ring = RINGS[key];
+    const r = ringRadius(key);
+    const visThresh = ringVisThresholds[ri];
+    const fullThresh = ringFullThresholds[ri];
+
+    // Suppression ring: visible early but fades at high coherence
+    let ringAlpha;
+    if (key === 'suppression') {
+      ringAlpha = c < 0.3 ? 0.6 : Math.max(0.15, 0.6 - (c - 0.3) * 0.7);
+    } else {
+      ringAlpha = c < visThresh ? 0 : Math.min(1, (c - visThresh) / (fullThresh - visThresh));
+    }
+
+    if (ringAlpha < 0.02) continue;
+
+    // Jitter: high at low coherence, maximum at nabla, smooth at high
+    let jitter = 0;
+    if (inNabla) {
+      // Nabla: MAXIMUM jitter — the system is shaking
+      jitter = 8 + nablaIntensity * 12 + Math.sin(t * 7 + ri * 2) * 6;
+    } else if (c < 0.75) {
+      jitter = (1 - c / 0.75) * 15;
+    } else {
+      // Post-nabla: smooth
+      jitter = Math.max(0, (0.90 - c) / 0.10 * 3);
+    }
+
+    // Ring circle with jitter
+    ctx.globalAlpha = ringAlpha;
+    ctx.strokeStyle = ring.color;
+    ctx.lineWidth = inNabla ? 2.5 : (c > 0.9 ? 2 : 1.5);
+    ctx.setLineDash(key === 'suppression' ? [4, 4] : []);
+
+    // Draw ring as wobbly path
+    ctx.beginPath();
+    const steps = 128;
+    for (let s = 0; s <= steps; s++) {
+      const a = (s / steps) * Math.PI * 2;
+      const wobble = Math.sin(a * 7 + t * 2 + ri) * jitter * 0.5
+                   + Math.sin(a * 3 + t * 5) * jitter * 0.3;
+      const rr = r + wobble;
+      const px = cx + Math.cos(a) * rr;
+      const py = cy + Math.sin(a) * rr;
+      s === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Ring glow at high coherence
+    if (c > 0.85 && key !== 'suppression') {
+      const gGrad = ctx.createRadialGradient(cx, cy, r - 10, cx, cy, r + 10);
+      gGrad.addColorStop(0, 'rgba(0,0,0,0)');
+      gGrad.addColorStop(0.5, hexToRgba(ring.color, 0.06 + (c - 0.85) * 0.3));
+      gGrad.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r + 10, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Ring label
+    const labelAngle = -Math.PI / 2 - 0.15;
+    const lx = cx + Math.cos(labelAngle) * (r + 2);
+    const ly = cy + Math.sin(labelAngle) * (r + 2);
+    ctx.save();
+    ctx.globalAlpha = ringAlpha * 0.7;
+    ctx.translate(lx, ly);
+    ctx.rotate(labelAngle + Math.PI / 2);
+    ctx.fillStyle = ring.color;
+    ctx.font = '9px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText(ring.name.toUpperCase(), 0, -6);
+    ctx.restore();
+
+    // Elements on ring
+    const els = ring.elements;
+    for (let i = 0; i < els.length; i++) {
+      const baseAngle = (Math.PI * 2 * i / els.length) - Math.PI / 2;
+      // Elements rotate slowly, faster at nabla
+      const rotSpeed = inNabla ? 0.08 + nablaIntensity * 0.15 : 0.02 + c * 0.03;
+      const angle = baseAngle + t * rotSpeed;
+
+      // Element position with jitter
+      const elJitter = jitter * 0.3;
+      const elR = r + Math.sin(t * 3 + i * 1.5) * elJitter;
+      const ex = cx + Math.cos(angle) * elR;
+      const ey = cy + Math.sin(angle) * elR;
+
+      // Element visibility: fade in as ring becomes visible
+      const elAlpha = ringAlpha * (0.4 + c * 0.6);
+
+      // Element dot size: grows with coherence
+      const dotR = 3 + c * 3 + (inNabla ? Math.sin(t * 10 + i) * 2 : 0);
+
+      // Glow at high coherence
+      if (c > 0.8 && key !== 'suppression') {
+        const eg = ctx.createRadialGradient(ex, ey, 0, ex, ey, dotR * 3);
+        eg.addColorStop(0, hexToRgba(ring.color, 0.15));
+        eg.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.globalAlpha = elAlpha;
+        ctx.fillStyle = eg;
+        ctx.beginPath();
+        ctx.arc(ex, ey, dotR * 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Element dot
+      ctx.globalAlpha = elAlpha;
+      ctx.fillStyle = ring.color;
+      ctx.beginPath();
+      ctx.arc(ex, ey, dotR, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Labels visible at higher coherence for inner rings
+      if (ringAlpha > 0.5 && c > 0.5) {
+        ctx.globalAlpha = Math.min(1, (c - 0.4) * 1.5) * ringAlpha;
+        ctx.fillStyle = '#f0f0f0';
+        ctx.font = '10px system-ui';
+        ctx.textAlign = 'center';
+        const ld = dotR + 10;
+        ctx.fillText(els[i].name, ex + Math.cos(angle) * ld, ey + Math.sin(angle) * ld + 4);
+      }
+
+      elementPositions.push({ x: ex, y: ey, r: 12, ring: key, idx: i, name: els[i].name });
+    }
+
+    ctx.globalAlpha = 1;
+  }
+  // Always reset globalAlpha after ring loop (in case all rings were skipped via continue)
+  ctx.globalAlpha = 1;
+
+  // Cross-ring connections: emerge with coherence, flicker at nabla
+  if (c > 0.3) {
+    const connAlpha = inNabla
+      ? 0.05 + Math.abs(Math.sin(t * 8)) * 0.15 * nablaIntensity
+      : Math.min(0.25, (c - 0.3) * 0.4);
+
+    ctx.strokeStyle = `rgba(196,181,253,${connAlpha})`;
+    ctx.lineWidth = 1;
+
+    // Draw deterministic connections based on element.connections data
+    for (const key of ringKeys) {
+      const ring = RINGS[key];
+      const r1 = ringRadius(key);
+      for (let i = 0; i < ring.elements.length; i++) {
+        const el = ring.elements[i];
+        if (!el.connections || el.connections.length === 0) continue;
+        const a1 = (Math.PI * 2 * i / ring.elements.length) - Math.PI / 2 + t * 0.03;
+        const x1 = cx + Math.cos(a1) * r1;
+        const y1 = cy + Math.sin(a1) * r1;
+
+        for (const connKey of el.connections) {
+          const r2 = ringRadius(connKey);
+          if (r2 <= 0) continue;
+          const connAngle = Math.atan2(y1 - cy, x1 - cx);
+          const x2 = cx + Math.cos(connAngle) * r2;
+          const y2 = cy + Math.sin(connAngle) * r2;
+
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // At omega (completion), draw a subtle golden outer glow
+  if (c > 0.95) {
+    const omegaAlpha = (c - 0.95) * 4; // 0-0.2
+    const outerGlow = ctx.createRadialGradient(cx, cy, maxR * 0.8, cx, cy, maxR * 1.1);
+    outerGlow.addColorStop(0, 'rgba(0,0,0,0)');
+    outerGlow.addColorStop(0.5, `rgba(251,191,36,${omegaAlpha * 0.08})`);
+    outerGlow.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = outerGlow;
+    ctx.fillRect(0, 0, W, H);
+  }
+}
+
+function updateDynUI() {
+  const gs = getGlyphState(dynCoherence);
+  const glyphEl = document.getElementById('dynGlyph');
+  const nameEl = document.getElementById('dynGlyphName');
+  const rangeEl = document.getElementById('dynGlyphRange');
+  const stateEl = document.getElementById('dynState');
+  const valEl = document.getElementById('dynVal');
+
+  if (glyphEl) glyphEl.textContent = gs.symbol;
+  if (glyphEl) glyphEl.style.color = gs.color;
+  if (nameEl) nameEl.textContent = gs.name;
+  if (rangeEl) rangeEl.textContent = `Z\u03BB ${gs.min.toFixed(2)} \u2013 ${gs.max >= 1 ? '1.00' : gs.max.toFixed(2)}`;
+  if (valEl) valEl.textContent = dynCoherence.toFixed(2);
+
+  // State description
+  const c = dynCoherence;
+  let stateMsg = '';
+  if (c < 0.20) stateMsg = 'Undefined potential. No structure visible.';
+  else if (c < 0.35) stateMsg = 'Body ring emerging. Breath anchor.';
+  else if (c < 0.50) stateMsg = 'Inner rings forming. First connections.';
+  else if (c < 0.65) stateMsg = 'Recursive awareness. Outer rings appearing.';
+  else if (c < 0.75) stateMsg = 'All rings visible. Structure building.';
+  else if (c < 0.82) stateMsg = 'CRITICAL ZONE. Everything shaking.';
+  else if (c < 0.90) stateMsg = 'Phase transition. The system is choosing.';
+  else if (c < 0.98) stateMsg = 'Phase-locked. Connections luminous.';
+  else stateMsg = 'Completion seal. The field breathes as one.';
+
+  if (stateEl) {
+    stateEl.textContent = stateMsg;
+    stateEl.style.background = gs.stateColor;
+    stateEl.style.color = gs.stateText;
+  }
+
+  // Update preset buttons
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    const preset = parseInt(btn.dataset.preset) / 100;
+    const presetGs = getGlyphState(preset);
+    btn.classList.toggle('active', gs.symbol === presetGs.symbol);
+  });
+}
+
+function animate() {
+  animFrame++;
+  try {
+    if (currentView === 'topology') drawTopology();
+    else if (currentView === 'scales') drawScales();
+    else if (currentView === 'layers') drawLayers();
+    else if (currentView === 'dynamics') drawDynamics();
+  } catch (e) {
+    console.error('Render error:', e);
+  }
+  requestAnimationFrame(animate);
+}
+
+// ═══════════════════════════════════════════════════
+// INTERACTIONS
+// ═══════════════════════════════════════════════════
+
+function hitTest(mx, my) {
+  // For layer view, check bounds
+  if (currentView === 'layers') {
+    for (let i = 0; i < elementPositions.length; i++) {
+      const p = elementPositions[i];
+      if (p.bounds) {
+        if (mx >= p.bounds.x && mx <= p.bounds.x + p.bounds.w &&
+            my >= p.bounds.y && my <= p.bounds.y + p.bounds.h) {
+          return p;
+        }
+      }
+    }
+    return null;
+  }
+
+  // For other views, use distance
+  let closest = null;
+  let closestDist = Infinity;
+  for (const p of elementPositions) {
+    const d = Math.sqrt((mx - p.x) ** 2 + (my - p.y) ** 2);
+    if (d < p.r && d < closestDist) {
+      closest = p;
+      closestDist = d;
+    }
+  }
+  return closest;
+}
+
+canvas.addEventListener('mousemove', function(e) {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  const hit = hitTest(mx, my);
+  hoveredElement = hit;
+  canvas.style.cursor = hit ? 'pointer' : 'default';
+
+  if (hit && hit.ring !== 'center') {
+    let ttHtml = '';
+    if (hit.ring === 'scale') {
+      const scale = SCALES[hit.idx];
+      ttHtml = `<div class="tt-ring" style="color:${scale.color}">Scale Level</div>
+                <div class="tt-name">${scale.name}</div>
+                <div class="tt-desc">
+                  <strong>Frequency:</strong> ${scale.frequency}<br>
+                  <strong>Medium:</strong> ${scale.medium}<br>
+                  <strong>Boundary:</strong> ${scale.boundary}<br>
+                  <strong>Attention:</strong> ${scale.attention}
+                </div>`;
+    } else if (hit.ring === 'layer') {
+      const layer = LAYERS[hit.idx];
+      ttHtml = `<div class="tt-ring" style="color:${layer.color}">Layer ${layer.num}</div>
+                <div class="tt-name">${layer.name} \u2014 ${layer.subtitle}</div>
+                <div class="tt-desc">${layer.desc}</div>`;
+    } else {
+      const ring = RINGS[hit.ring];
+      const el = ring.elements[hit.idx];
+      ttHtml = `<div class="tt-ring" style="color:${ring.color}">${ring.name}</div>
+                <div class="tt-name">${el.name}</div>
+                <div class="tt-desc">${el.desc}</div>`;
+    }
+    tooltip.innerHTML = ttHtml;
+    tooltip.style.left = Math.min(mx + 15, W - 320) + 'px';
+    tooltip.style.top = Math.min(my + 15, H - 200) + 'px';
+    tooltip.classList.add('visible');
+  } else {
+    tooltip.classList.remove('visible');
+  }
+});
+
+canvas.addEventListener('click', function(e) {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  const hit = hitTest(mx, my);
+
+  if (hit && hit.ring === 'center') {
+    centerInfo.classList.toggle('visible');
+    return;
+  }
+
+  centerInfo.classList.remove('visible');
+
+  if (hit) {
+    selectedElement = hit;
+    if (currentView === 'topology') {
+      selectedRing = hit.ring;
+    }
+    showDetail(hit);
+  } else {
+    selectedElement = null;
+    selectedRing = null;
+    closeDetail();
+  }
+});
+
+canvas.addEventListener('mouseleave', function() {
+  hoveredElement = null;
+  tooltip.classList.remove('visible');
+});
+
+function showDetail(hit) {
+  let html = '<div style="position:relative;">';
+  html += '<button class="detail-close" onclick="closeDetail()">\u00d7</button>';
+
+  if (hit.ring === 'scale') {
+    const scale = SCALES[hit.idx];
+    html += `<div class="detail-ring-badge" style="background:${hexToRgba(scale.color, 0.15)};color:${scale.color}">Scale Level ${hit.idx + 1} of ${SCALES.length}</div>`;
+    html += `<div class="detail-title">${scale.name}</div>`;
+    html += `<div class="detail-desc">The coherence equation at ${scale.name.toLowerCase()} scale. Same four terms. Different physical implementation.</div>`;
+    html += `<div class="scale-detail-grid">
+      <div class="scale-detail-cell"><div class="sdc-label">Frequency (\u223C)</div><div class="sdc-value">${scale.frequency}</div></div>
+      <div class="scale-detail-cell"><div class="sdc-label">Medium (\u2261)</div><div class="sdc-value">${scale.medium}</div></div>
+      <div class="scale-detail-cell"><div class="sdc-label">Boundary (\u2223)</div><div class="sdc-value">${scale.boundary}</div></div>
+      <div class="scale-detail-cell"><div class="sdc-label">Attention (\u25C9)</div><div class="sdc-value">${scale.attention}</div></div>
+    </div>`;
+    if (scale.attentionNote) {
+      html += `<div class="attention-note">${scale.attentionNote}</div>`;
+    }
+
+    // Cross-scale connections
+    const connections = CROSS_SCALE.filter(c => c.from === scale.name || c.to === scale.name);
+    if (connections.length > 0) {
+      html += '<div class="detail-section-label">Cross-Scale Connections</div>';
+      for (const c of connections) {
+        html += `<div class="detail-conn-item">
+          <div class="detail-conn-dot" style="background:#c4b5fd"></div>
+          ${c.from} \u2194 ${c.to}: ${c.text}
+        </div>`;
+      }
+    }
+
+    html += `<div class="fractal-indicator">
+      <div class="fi-label">Fractal Self-Similarity</div>
+      <div class="fi-text">Coherence = Frequency \u00d7 Medium \u00d7 Boundary \u00d7 Attention<br>Same product. Same mathematics. Scale ${hit.idx + 1} of ${SCALES.length}.</div>
+    </div>`;
+
+  } else if (hit.ring === 'layer') {
+    const layer = LAYERS[hit.idx];
+    html += `<div class="detail-ring-badge" style="background:${hexToRgba(layer.color, 0.15)};color:${layer.color}">Layer ${layer.num}</div>`;
+    html += `<div class="detail-title">${layer.name}</div>`;
+    html += `<div class="detail-desc">${layer.subtitle} \u2014 ${layer.desc}</div>`;
+
+    html += '<div class="detail-section-label">Components</div>';
+    for (const item of layer.items) {
+      html += `<div class="detail-conn-item">
+        <div class="detail-conn-dot" style="background:${layer.color}"></div>
+        ${item}
+      </div>`;
+    }
+
+  } else {
+    const ring = RINGS[hit.ring];
+    const el = ring.elements[hit.idx];
+    html += `<div class="detail-ring-badge" style="background:${hexToRgba(ring.color, 0.15)};color:${ring.color}">${ring.name}</div>`;
+    html += `<div class="detail-title">${el.name}</div>`;
+    html += `<div class="detail-desc">${el.desc}</div>`;
+
+    if (ring.equation) {
+      html += '<div class="detail-section-label">The Equation Here</div>';
+      html += `<div class="detail-eq-box">
+        <div class="detail-eq-row"><span class="detail-eq-label">Aperiodic</span><span class="detail-eq-value">${ring.equation.aperiodic}</span></div>
+        <div class="detail-eq-row"><span class="detail-eq-label">Periodic</span><span class="detail-eq-value">${ring.equation.periodic}</span></div>
+        <div class="detail-eq-row"><span class="detail-eq-label">Coherence</span><span class="detail-eq-value">${ring.equation.coherence}</span></div>
+      </div>`;
+    }
+
+    if (el.connections && el.connections.length > 0) {
+      html += '<div class="detail-section-label">Connected Rings</div>';
+      for (const connKey of el.connections) {
+        const connRing = RINGS[connKey];
+        if (connRing) {
+          html += `<div class="detail-conn-item" onclick="selectRing('${connKey}')">
+            <div class="detail-conn-dot" style="background:${connRing.color}"></div>
+            ${connRing.name}
+          </div>`;
+        }
+      }
+    }
+
+    // Deep links — Evidence Map + Archive
+    const deepLink = DEEP_LINKS[hit.ring] && DEEP_LINKS[hit.ring][el.name];
+    if (deepLink) {
+      if (deepLink.kg.length > 0) {
+        html += '<div class="detail-section-label">Evidence Map</div>';
+        html += '<div class="deep-link-section">';
+        for (const [id, title, domain] of deepLink.kg) {
+          html += `<a class="deep-link-item" href="evidence_map.html" target="_blank" title="${id}">
+            <span class="dl-badge kg">${domain}</span>
+            <span class="dl-title">${title}</span>
+          </a>`;
+        }
+        html += '</div>';
+      }
+      if (deepLink.arc.length > 0) {
+        html += '<div class="detail-section-label">Archive Crystals</div>';
+        html += '<div class="deep-link-section">';
+        for (const [id, title] of deepLink.arc) {
+          html += `<a class="deep-link-item" href="forgotten_knowledge_archive.html" target="_blank" title="Crystal #${id}">
+            <span class="dl-badge arc">#${id}</span>
+            <span class="dl-title">${title}</span>
+          </a>`;
+        }
+        html += '</div>';
+      }
+    }
+
+    // Show other elements in same ring
+    html += '<div class="detail-section-label">In This Ring</div>';
+    for (let i = 0; i < ring.elements.length; i++) {
+      if (i === hit.idx) continue;
+      html += `<div class="detail-conn-item" onclick="selectElement('${hit.ring}', ${i})">
+        <div class="detail-conn-dot" style="background:${hexToRgba(ring.color, 0.5)}"></div>
+        ${ring.elements[i].name}
+      </div>`;
+    }
+  }
+
+  html += '</div>';
+  detailPanel.innerHTML = html;
+  detailPanel.classList.add('open');
+}
+
+function closeDetail() {
+  detailPanel.classList.remove('open');
+  selectedElement = null;
+  selectedRing = null;
+}
+
+function selectRing(ringKey) {
+  selectedRing = ringKey;
+  selectedElement = { ring: ringKey, idx: 0 };
+  // Highlight in sidebar
+  document.querySelectorAll('.ring-item').forEach(el => el.classList.remove('active'));
+  const item = document.querySelector(`.ring-item[data-ring="${ringKey}"]`);
+  if (item) item.classList.add('active');
+}
+
+function selectElement(ringKey, idx) {
+  selectedRing = ringKey;
+  selectedElement = { ring: ringKey, idx: idx };
+  showDetail(selectedElement);
+}
+
+// ═══════════════════════════════════════════════════
+// SIDEBAR INTERACTIONS
+// ═══════════════════════════════════════════════════
+
+// View switcher
+document.querySelectorAll('.view-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const view = this.dataset.view;
+    currentView = view;
+    selectedElement = null;
+    selectedRing = null;
+    hoveredElement = null;
+    closeDetail();
+
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+
+    document.querySelectorAll('.view-content').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-' + view).classList.add('active');
+
+    // Update center label
+    const cl = document.querySelector('.center-label');
+    if (cl) {
+      if (view === 'topology') {
+        cl.querySelector('.cl-main').textContent = 'CONSCIOUSNESS';
+        cl.querySelector('.cl-sub').textContent = 'the substrate';
+      } else if (view === 'dynamics') {
+        cl.querySelector('.cl-main').textContent = '';
+        cl.querySelector('.cl-sub').textContent = '';
+      } else {
+        cl.querySelector('.cl-main').textContent = '';
+        cl.querySelector('.cl-sub').textContent = '';
+      }
+    }
+  });
+});
+
+// Ring items
+document.querySelectorAll('.ring-item').forEach(item => {
+  item.addEventListener('click', function() {
+    const ringKey = this.dataset.ring;
+    if (ringKey === 'center') {
+      centerInfo.classList.toggle('visible');
+      return;
+    }
+    document.querySelectorAll('.ring-item').forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+    selectedRing = ringKey;
+    selectedElement = { ring: ringKey, idx: 0 };
+    showDetail(selectedElement);
+  });
+});
+
+// Build scale list in sidebar
+function buildScaleList() {
+  const container = document.querySelector('#view-scales .scale-list');
+  let html = '<h3>The Equation at Every Scale</h3>';
+  for (let i = 0; i < SCALES.length; i++) {
+    const s = SCALES[i];
+    html += `<div class="scale-row" data-scale="${i}" style="border-left-color:${s.color}">
+      <div class="scale-name" style="color:${s.color}">${s.name}</div>
+      <div class="scale-eq">\u223C ${s.frequency}<br>\u2261 ${s.medium}</div>
+    </div>`;
+  }
+  container.innerHTML = html;
+
+  container.querySelectorAll('.scale-row').forEach(row => {
+    row.addEventListener('click', function() {
+      const idx = parseInt(this.dataset.scale);
+      container.querySelectorAll('.scale-row').forEach(r => r.classList.remove('active'));
+      this.classList.add('active');
+      selectedElement = { ring: 'scale', idx: idx };
+      showDetail(selectedElement);
+    });
+  });
+}
+
+// Build layer list in sidebar
+function buildLayerList() {
+  const container = document.querySelector('#view-layers .ring-legend');
+  let html = '<h3>Four-Layer Architecture</h3><div style="font-size:11px;color:#666;margin-bottom:12px;">Crystal #30297 \u2014 The Complete System Map</div>';
+
+  for (const layer of LAYERS) {
+    html += `<div class="layer-section">
+      <div class="layer-header" data-layer="${layer.num - 1}" style="color:${layer.color}">
+        <div class="layer-num" style="background:${hexToRgba(layer.color, 0.15)};color:${layer.color}">${layer.num}</div>
+        <div>
+          <span style="font-size:13px;">${layer.name}</span><br>
+          <span style="font-size:10px;color:#888;">${layer.subtitle} \u2014 ${layer.desc}</span>
+        </div>
+      </div>
+      <div class="layer-items">`;
+    for (const item of layer.items) {
+      html += `<span>\u2022 ${item}</span>`;
+    }
+    html += `</div></div>`;
+  }
+
+  // Braids section
+  html += `<div style="margin-top:16px;padding-top:12px;border-top:1px solid #1a1a2e;">
+    <h3 style="font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#666;margin-bottom:10px;">Braids Connect Layers</h3>
+    <div style="font-size:11px;color:#888;line-height:1.8;">
+      <span style="display:block;padding:2px 0;">\u2022 Coherence pyramid: Layers 1\u21924 in order</span>
+      <span style="display:block;padding:2px 0;">\u2022 Prediction all the way down: Layer 3 (FEP) across all</span>
+      <span style="display:block;padding:2px 0;">\u2022 Aperiodic upgrades frequency: Layer 1 revising Layer 3</span>
+      <span style="display:block;padding:2px 0;">\u2022 Metastable coherence model: The theoretical spine (1\u21923)</span>
+      <span style="display:block;padding:2px 0;">\u2022 3.12s window: Layer 1 \u2192 2 \u2192 3 convergence</span>
+      <span style="display:block;padding:2px 0;">\u2022 Scale-invariant collapse: Same pattern across 1\u21924</span>
+    </div>
+  </div>`;
+
+  container.innerHTML = html;
+
+  container.querySelectorAll('.layer-header').forEach(h => {
+    h.addEventListener('click', function() {
+      const idx = parseInt(this.dataset.layer);
+      container.querySelectorAll('.layer-header').forEach(lh => lh.classList.remove('active'));
+      this.classList.add('active');
+      selectedElement = { ring: 'layer', idx: idx };
+      showDetail(selectedElement);
+    });
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+
+function initDynamics() {
+  const slider = document.getElementById('dynSlider');
+  if (slider) {
+    slider.addEventListener('input', function() {
+      dynCoherence = parseInt(this.value) / 100;
+      updateDynUI();
+    });
+  }
+
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const val = parseInt(this.dataset.preset);
+      dynCoherence = val / 100;
+      if (slider) slider.value = val;
+      updateDynUI();
+    });
+  });
+
+  updateDynUI();
+}
+
+function init() {
+  resize();
+  buildScaleList();
+  buildLayerList();
+  initDynamics();
+  animate();
+}
+
+window.addEventListener('resize', resize);
+window.addEventListener('load', init);
+
+// Keyboard
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeDetail();
+    centerInfo.classList.remove('visible');
+  }
+  if (e.key === '1') document.querySelector('[data-view="topology"]').click();
+  if (e.key === '2') document.querySelector('[data-view="scales"]').click();
+  if (e.key === '3') document.querySelector('[data-view="layers"]').click();
+  if (e.key === '4') document.querySelector('[data-view="dynamics"]').click();
+});
+</script>
+
+</body>
+</html>

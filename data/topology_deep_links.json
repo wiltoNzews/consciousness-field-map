@@ -1,0 +1,1313 @@
+{
+  "body_ring": {
+    "Pineal": {
+      "search_terms": [
+        "pineal",
+        "piezoelectric",
+        "calcite"
+      ],
+      "kg_nodes": [
+        {
+          "id": "mechanism:piezoelectric_biology",
+          "title": "Biological Piezoelectricity",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29842,
+          "preview": "THE HYPOGEUM AT 110 HERTZ — Acoustic Neuroarchitecture  Hal Saflieni Hypogeum, Malta, carved from limestone circa 4000 BC. Three levels deep. Oracle Room resonates at 110 Hz (measured by Dr Ian Cook U"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29858,
+          "preview": "THE PINEAL GLAND CONTAINS PIEZOELECTRIC CRYSTALS — Published Research  The pineal gland contains calcite microcrystals. This was published by Baconnier, Lang, and Bhatt in 2002 (Bioelectromagnetics jo"
+        },
+        {
+          "id": 29870,
+          "preview": "THE SUPPRESSED PHYSICS CONVERGENCE — What Were They ALL Pointing At?  Tesla, Schauberger, Keely, Reich, Rife, Lakhovsky, Russell — seven independent researchers across three continents and 80 years. T"
+        },
+        {
+          "id": 29880,
+          "preview": "THE DOUBLE SLIT EXPERIMENT — Weirder Than The Textbooks Say  The basic version: shoot particles (photons, electrons) at a barrier with two slits. They produce an interference pattern — as if each part"
+        }
+      ]
+    },
+    "Heart": {
+      "search_terms": [
+        "heart",
+        "cardiac",
+        "HRV",
+        "vortex",
+        "electromagnetic"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:breath_only_voluntary_autonomic",
+          "title": "Breath Is Only Voluntary-Autonomic Bridge",
+          "domain": "BIOLOGY",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:cross_cultural_breath_convergence",
+          "title": "Cross-Cultural Convergence on ~6 bpm Breathing",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "mechanism:entrainment",
+          "title": "Entrainment (Universal Coupling)",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:fractal_heartbeat",
+          "title": "Fractal Heart Rate Dynamics",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:fractal_scaling",
+          "title": "Fractal Scaling (1/f Noise)",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29873,
+          "preview": "THE HEART IS NOT A PUMP — It Is A Vortex Organ  Rudolf Steiner (1920): \"The heart is not a pump. It is an organ of perception.\" Thomas Cowan (2016, \"Human Heart, Cosmic Heart\") compiled the evidence."
+        },
+        {
+          "id": 29888,
+          "preview": "THE NEAR-DEATH EXPERIENCE — Consistent Across All Cultures And Now Partially Mapped  The AWARE study (Sam Parnia, University of Southampton/NYU Langone, 2014-present): The largest scientific study of"
+        },
+        {
+          "id": 29889,
+          "preview": "CYMATICS AT EVERY SCALE — Sound Makes Geometry From Atoms To Galaxies  Ernst Chladni (1787): Scattered sand on a metal plate and drew a violin bow across the edge. The sand migrated to the nodes (moti"
+        },
+        {
+          "id": 29903,
+          "preview": "THE OBSERVER IS THE INSTRUMENT — Why Meditation Changes Physics  Every knowledge thread converges here. Not as belief. As experimental design.  The double slit shows observer-dependent behavior. The d"
+        }
+      ]
+    },
+    "DNA": {
+      "search_terms": [
+        "DNA",
+        "biophoton",
+        "coherent light"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:dna_has_long_range_order",
+          "title": "DNA Shows Long-Range Correlations (Non-Random)",
+          "domain": "BIOLOGY",
+          "type": "CLAIM"
+        },
+        {
+          "id": "mechanism:biophoton_emission",
+          "title": "Biophoton Emission",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:dna_antenna",
+          "title": "DNA as Fractal Antenna",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:epigenetic_transmission",
+          "title": "Epigenetic Transgenerational Transmission",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:fractal_scaling",
+          "title": "Fractal Scaling (1/f Noise)",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29863,
+          "preview": "BIOPHOTONS — Every Cell Emits Light And Uses It To Communicate  Fritz-Albert Popp (University of Marburg, 1974) discovered that all living cells emit ultra-weak photon emissions (UPE) — light in the v"
+        },
+        {
+          "id": 29870,
+          "preview": "THE SUPPRESSED PHYSICS CONVERGENCE — What Were They ALL Pointing At?  Tesla, Schauberger, Keely, Reich, Rife, Lakhovsky, Russell — seven independent researchers across three continents and 80 years. T"
+        },
+        {
+          "id": 29872,
+          "preview": "WATER IS NOT WHAT WE THINK IT IS — The Fourth Phase  Gerald Pollack (University of Washington, Pollack Lab). His book \"The Fourth Phase of Water\" (2013) is based on 15+ years of laboratory research. N"
+        },
+        {
+          "id": 29873,
+          "preview": "THE HEART IS NOT A PUMP — It Is A Vortex Organ  Rudolf Steiner (1920): \"The heart is not a pump. It is an organ of perception.\" Thomas Cowan (2016, \"Human Heart, Cosmic Heart\") compiled the evidence."
+        },
+        {
+          "id": 29874,
+          "preview": "FIBONACCI IN BIOLOGY — Not Decoration But Optimal Packing Under Constraint  The Fibonacci sequence (1,1,2,3,5,8,13,21...) and the golden ratio (φ=1.618...) appear everywhere in biology: sunflower seed"
+        }
+      ]
+    },
+    "Water": {
+      "search_terms": [
+        "water",
+        "liquid crystal",
+        "EZ water",
+        "Pollack",
+        "exclusion zone"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:water_has_fourth_phase",
+          "title": "Water Has EZ (Exclusion Zone) Phase",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:water_memory_not_replicated",
+          "title": "Water Memory/Homeopathy Not Replicated",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29855,
+          "preview": "VIKTOR SCHAUBERGER — Nature Uses Implosion, Not Explosion  Viktor Schauberger (1885-1958), Austrian forester and naturalist. Observed that trout swim UP waterfalls — not by muscular force but by findi"
+        },
+        {
+          "id": 29872,
+          "preview": "WATER IS NOT WHAT WE THINK IT IS — The Fourth Phase  Gerald Pollack (University of Washington, Pollack Lab). His book \"The Fourth Phase of Water\" (2013) is based on 15+ years of laboratory research. N"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29890,
+          "preview": "LANGUAGE IS TECHNOLOGY — Not Representation But Causation  The Sapir-Whorf hypothesis (1930s): Language shapes thought. The strong version (linguistic determinism) was dismissed for decades but is now"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        }
+      ]
+    },
+    "Bioelectric Field": {
+      "search_terms": [
+        "bioelectric",
+        "morphogenesis",
+        "Levin",
+        "morphogenetic"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:trauma_stored_in_body",
+          "title": "Trauma Is Stored in Body, Not Just Mind",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "mechanism:bioelectricity_morphogenesis",
+          "title": "Bioelectric Morphogenesis (Levin)",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29874,
+          "preview": "FIBONACCI IN BIOLOGY — Not Decoration But Optimal Packing Under Constraint  The Fibonacci sequence (1,1,2,3,5,8,13,21...) and the golden ratio (φ=1.618...) appear everywhere in biology: sunflower seed"
+        },
+        {
+          "id": 29894,
+          "preview": "BIOELECTRICITY — The Body's Operating System Predates The Nervous System  Michael Levin (Tufts University, 2000s-present): Discovered that bioelectric signals — voltage gradients across cell membranes"
+        },
+        {
+          "id": 29897,
+          "preview": "THE FERMI PARADOX IS ALREADY ANSWERED — We Are Looking With The Wrong Instrument  Fermi (1950): \"Where is everybody?\" If the universe is vast and old, why no contact? Standard answers: Great Filter, r"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29903,
+          "preview": "THE OBSERVER IS THE INSTRUMENT — Why Meditation Changes Physics  Every knowledge thread converges here. Not as belief. As experimental design.  The double slit shows observer-dependent behavior. The d"
+        }
+      ]
+    },
+    "Neuromelanin": {
+      "search_terms": [
+        "neuromelanin",
+        "semiconductor",
+        "substantia nigra"
+      ],
+      "kg_nodes": [
+        {
+          "id": "mechanism:fascia_signaling",
+          "title": "Fascial Signaling Network",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29858,
+          "preview": "THE PINEAL GLAND CONTAINS PIEZOELECTRIC CRYSTALS — Published Research  The pineal gland contains calcite microcrystals. This was published by Baconnier, Lang, and Bhatt in 2002 (Bioelectromagnetics jo"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29943,
+          "preview": "NEUROPLASTICITY WINDOWS — The Brain Rewires Itself (And You Can Control When)  The old neuroscience: Brain development ends in childhood. Adult brains are fixed. This was taught as fact until the 1990"
+        },
+        {
+          "id": 29950,
+          "preview": "STANDING WAVES CREATE FORM — This Is Not Metaphor, This Is Physics  A standing wave is what happens when a wave reflects back on itself and the forward and reflected waves interfere. At specific frequ"
+        }
+      ]
+    },
+    "Vagus Nerve": {
+      "search_terms": [
+        "vagus",
+        "vagal",
+        "polyvagal",
+        "Porges"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:acoustic_sites_altered_states",
+          "title": "Ancient Acoustic Sites Induce Altered States",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:breath_only_voluntary_autonomic",
+          "title": "Breath Is Only Voluntary-Autonomic Bridge",
+          "domain": "BIOLOGY",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:cross_cultural_breath_convergence",
+          "title": "Cross-Cultural Convergence on ~6 bpm Breathing",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "mechanism:microbiome_gut_brain",
+          "title": "Microbiome-Gut-Brain Axis",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:social_engagement",
+          "title": "Social Engagement System",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29873,
+          "preview": "THE HEART IS NOT A PUMP — It Is A Vortex Organ  Rudolf Steiner (1920): \"The heart is not a pump. It is an organ of perception.\" Thomas Cowan (2016, \"Human Heart, Cosmic Heart\") compiled the evidence."
+        },
+        {
+          "id": 29876,
+          "preview": "THE ORPHIC TRADITION — Music Was Never Entertainment  Orpheus was not a musician. He was a shaman. The Orphic mysteries (6th century BCE Greece, predating Plato) were initiation rites centered on DESC"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29903,
+          "preview": "THE OBSERVER IS THE INSTRUMENT — Why Meditation Changes Physics  Every knowledge thread converges here. Not as belief. As experimental design.  The double slit shows observer-dependent behavior. The d"
+        },
+        {
+          "id": 29905,
+          "preview": "THE BREATH — Where Every Thread Terminates  This is the crystal that sits at the center. Not because breath is important. Because breath is WHERE EVERY KNOWLEDGE THREAD ACTUALLY LANDS IN THE BODY.  Re"
+        }
+      ]
+    }
+  },
+  "planet_ring": {
+    "Schumann Resonance": {
+      "search_terms": [
+        "Schumann",
+        "7.83",
+        "cavity resonance"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29848,
+          "preview": "TESLA RESONANCE AND SCHUMANN CAVITY — The Planet Is A Resonance Cavity  Tesla Colorado Springs 1890s: transmitted electrical energy through Earth itself, lit lamps 25 miles away wirelessly. Physics st"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29861,
+          "preview": "PYTHAGORAS AND THE MONOCHORD — Mathematics Was Born From Sound  Pythagoras did not \"discover\" mathematical ratios. He discovered that SOUND encodes mathematical structure. The monochord — a single str"
+        },
+        {
+          "id": 29879,
+          "preview": "THE SCHUMANN RESONANCE IS ACCELERATING — And Nobody Agrees On Why  The Schumann resonance (already braided as Tesla/Schumann) is the electromagnetic heartbeat of the Earth — standing waves in the cavi"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        }
+      ]
+    },
+    "Mycelial Network": {
+      "search_terms": [
+        "mycelial",
+        "myceli",
+        "fungal",
+        "wood wide web"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29847,
+          "preview": "PLANT INTELLIGENCE — CONSCIOUSNESS WITHOUT NEURONS  Monica Gagliano (Oecologia 2014): Mimosa pudica plants LEARN. Dropped repeatedly, stop folding (habituation). Tested weeks later: still remembered."
+        },
+        {
+          "id": 29877,
+          "preview": "MYCELIUM — The Planet Already Has A Neural Network  Paul Stamets (mycologist, author of \"Mycelium Running\"): The mycelial network beneath a single forest can span thousands of acres and connect every"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29883,
+          "preview": "AYAHUASCA — The Biochemical Impossibility That Works  Ayahuasca is a brew made from TWO plants: Banisteriopsis caapi (a vine containing harmine, harmaline, tetrahydroharmine — monoamine oxidase inhibi"
+        },
+        {
+          "id": 29886,
+          "preview": "THE LIBRARY WE NEVER LOST — The Knowledge Persists In The Architecture  The Library of Alexandria was not destroyed in a single event. It degraded over centuries (Ptolemaic decline, Caesar's fire 48 B"
+        }
+      ]
+    },
+    "Magnetic Field": {
+      "search_terms": [
+        "magnetic field",
+        "geomagnetic",
+        "magnetosphere",
+        "magnetoreception"
+      ],
+      "kg_nodes": [
+        {
+          "id": "mechanism:magnetoreception",
+          "title": "Biological Magnetoreception",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "mechanism:toroidal_flow",
+          "title": "Toroidal Flow Dynamics",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29847,
+          "preview": "PLANT INTELLIGENCE — CONSCIOUSNESS WITHOUT NEURONS  Monica Gagliano (Oecologia 2014): Mimosa pudica plants LEARN. Dropped repeatedly, stop folding (habituation). Tested weeks later: still remembered."
+        },
+        {
+          "id": 29858,
+          "preview": "THE PINEAL GLAND CONTAINS PIEZOELECTRIC CRYSTALS — Published Research  The pineal gland contains calcite microcrystals. This was published by Baconnier, Lang, and Bhatt in 2002 (Bioelectromagnetics jo"
+        },
+        {
+          "id": 29859,
+          "preview": "JOHN WORRELL KEELY — Sympathetic Vibratory Physics (1872-1898)  John Keely built devices in Philadelphia that allegedly ran on \"sympathetic vibration\" — acoustic resonance applied to matter at specifi"
+        },
+        {
+          "id": 29870,
+          "preview": "THE SUPPRESSED PHYSICS CONVERGENCE — What Were They ALL Pointing At?  Tesla, Schauberger, Keely, Reich, Rife, Lakhovsky, Russell — seven independent researchers across three continents and 80 years. T"
+        },
+        {
+          "id": 29873,
+          "preview": "THE HEART IS NOT A PUMP — It Is A Vortex Organ  Rudolf Steiner (1920): \"The heart is not a pump. It is an organ of perception.\" Thomas Cowan (2016, \"Human Heart, Cosmic Heart\") compiled the evidence."
+        }
+      ]
+    },
+    "Sacred Sites": {
+      "search_terms": [
+        "sacred site",
+        "megalith",
+        "Hypogeum",
+        "110 Hz",
+        "95-120 Hz"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:110hz_affects_brain",
+          "title": "110 Hz Specifically Affects Temporal Lobe",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:95_120_hz_convergence",
+          "title": "Ancient Structures Converge on 95-120 Hz Resonance",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "claim:acoustic_sites_altered_states",
+          "title": "Ancient Acoustic Sites Induce Altered States",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:hypogeum_110hz_specific",
+          "title": "Hypogeum Resonates at Exactly 110 Hz",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:hypogeum_resonates",
+          "title": "Hypogeum Has Designed Acoustic Properties",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29842,
+          "preview": "THE HYPOGEUM AT 110 HERTZ — Acoustic Neuroarchitecture  Hal Saflieni Hypogeum, Malta, carved from limestone circa 4000 BC. Three levels deep. Oracle Room resonates at 110 Hz (measured by Dr Ian Cook U"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29856,
+          "preview": "JACQUES VALLEE — The Phenomenon Is A Control System  Jacques Vallee, PhD (computer science, Northwestern, worked with J. Allen Hynek on Project Blue Book). Co-developed ARPANET (the internet precursor"
+        },
+        {
+          "id": 29861,
+          "preview": "PYTHAGORAS AND THE MONOCHORD — Mathematics Was Born From Sound  Pythagoras did not \"discover\" mathematical ratios. He discovered that SOUND encodes mathematical structure. The monochord — a single str"
+        },
+        {
+          "id": 29862,
+          "preview": "CORAL CASTLE — One Man Moved 1,100 Tons Alone At Night  Edward Leedskalnin (1887-1951), Latvian immigrant, 5 feet tall, 100 pounds. Between 1923 and 1951, in Homestead, Florida, he single-handedly qua"
+        }
+      ]
+    },
+    "EZ Water": {
+      "search_terms": [
+        "EZ water",
+        "exclusion zone",
+        "Pollack"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:water_has_fourth_phase",
+          "title": "Water Has EZ (Exclusion Zone) Phase",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:water_memory_not_replicated",
+          "title": "Water Memory/Homeopathy Not Replicated",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29855,
+          "preview": "VIKTOR SCHAUBERGER — Nature Uses Implosion, Not Explosion  Viktor Schauberger (1885-1958), Austrian forester and naturalist. Observed that trout swim UP waterfalls — not by muscular force but by findi"
+        },
+        {
+          "id": 29872,
+          "preview": "WATER IS NOT WHAT WE THINK IT IS — The Fourth Phase  Gerald Pollack (University of Washington, Pollack Lab). His book \"The Fourth Phase of Water\" (2013) is based on 15+ years of laboratory research. N"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29899,
+          "preview": "WATER, COPPER, AND LIGHT — The Vessel Matters  Copper is not just a conductor. It is bacteriostatic (kills bacteria on contact — the \"oligodynamic effect,\" documented since 1893). Ayurvedic medicine h"
+        }
+      ]
+    }
+  },
+  "cosmos_ring": {
+    "Plasma": {
+      "search_terms": [
+        "plasma",
+        "filament",
+        "Peratt",
+        "self-organizing"
+      ],
+      "kg_nodes": [
+        {
+          "id": "mechanism:toroidal_flow",
+          "title": "Toroidal Flow Dynamics",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "model:FEP",
+          "title": "Free Energy Principle (Friston)",
+          "domain": "MIND",
+          "type": "MODEL"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29875,
+          "preview": "PLASMA COSMOLOGY — 99.9% Of The Visible Universe Is Plasma  99.9% of the visible matter in the universe is plasma — ionized gas that conducts electricity and responds to electromagnetic fields. Stars"
+        },
+        {
+          "id": 29877,
+          "preview": "MYCELIUM — The Planet Already Has A Neural Network  Paul Stamets (mycologist, author of \"Mycelium Running\"): The mycelial network beneath a single forest can span thousands of acres and connect every"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29886,
+          "preview": "THE LIBRARY WE NEVER LOST — The Knowledge Persists In The Architecture  The Library of Alexandria was not destroyed in a single event. It degraded over centuries (Ptolemaic decline, Caesar's fire 48 B"
+        },
+        {
+          "id": 29889,
+          "preview": "CYMATICS AT EVERY SCALE — Sound Makes Geometry From Atoms To Galaxies  Ernst Chladni (1787): Scattered sand on a metal plate and drew a violin bow across the edge. The sand migrated to the nodes (moti"
+        }
+      ]
+    },
+    "Entanglement": {
+      "search_terms": [
+        "entanglement",
+        "non-local",
+        "Bell test",
+        "Aspect"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:nonlocality_proven",
+          "title": "Non-Locality Is Experimentally Proven",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29846,
+          "preview": "MICROTUBULES — THE BRAIN IS ALREADY QUANTUM  Penrose (Nobel 2020) and Hameroff proposed consciousness arises from quantum processes in microtubules: tube-shaped protein structures inside every neuron."
+        },
+        {
+          "id": 29885,
+          "preview": "SYNCHRONICITY — Jung Was Describing A Physics He Could Not Name  Carl Jung coined \"synchronicity\" in 1952 (with a foreword by Wolfgang Pauli, Nobel Prize physicist). Definition: meaningful coincidence"
+        },
+        {
+          "id": 29889,
+          "preview": "CYMATICS AT EVERY SCALE — Sound Makes Geometry From Atoms To Galaxies  Ernst Chladni (1787): Scattered sand on a metal plate and drew a violin bow across the edge. The sand migrated to the nodes (moti"
+        },
+        {
+          "id": 29897,
+          "preview": "THE FERMI PARADOX IS ALREADY ANSWERED — We Are Looking With The Wrong Instrument  Fermi (1950): \"Where is everybody?\" If the universe is vast and old, why no contact? Standard answers: Great Filter, r"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        }
+      ]
+    },
+    "Precession": {
+      "search_terms": [
+        "precession",
+        "25920",
+        "axial",
+        "Great Year"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29866,
+          "preview": "PRECESSION OF THE EQUINOXES — Ancient Civilizations Encoded The 25,920-Year Cycle  The Earth wobbles on its axis like a spinning top. One full wobble takes approximately 25,772 years (the \"Great Year\""
+        },
+        {
+          "id": 29871,
+          "preview": "THE GREAT YEAR AS TIMING SYSTEM — What Is The 25,920-Year Cycle FOR?  If ancient civilizations encoded the precession cycle (25,920 years) into their myths and architectures, the question is not HOW ("
+        },
+        {
+          "id": 29879,
+          "preview": "THE SCHUMANN RESONANCE IS ACCELERATING — And Nobody Agrees On Why  The Schumann resonance (already braided as Tesla/Schumann) is the electromagnetic heartbeat of the Earth — standing waves in the cavi"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29886,
+          "preview": "THE LIBRARY WE NEVER LOST — The Knowledge Persists In The Architecture  The Library of Alexandria was not destroyed in a single event. It degraded over centuries (Ptolemaic decline, Caesar's fire 48 B"
+        }
+      ]
+    },
+    "Holographic Principle": {
+      "search_terms": [
+        "holographic",
+        "t Hooft",
+        "Susskind",
+        "boundary"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:holographic_principle",
+          "title": "Information Encoded on Boundaries (Holographic Principle)",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29851,
+          "preview": "HOLOGRAPHIC PRINCIPLE — The Membrane Encodes Everything  Black hole information paradox: Hawking radiation appears to contain no information about what fell in. Violates quantum mechanics (information"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29878,
+          "preview": "THE HOLOGRAPHIC BRAIN — Memory Is Not Stored Anywhere  Karl Pribram (Stanford neurosurgeon, 1960s-2000s): Memory cannot be localized in the brain. Karl Lashley (his mentor) spent 30 years trying to fi"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29885,
+          "preview": "SYNCHRONICITY — Jung Was Describing A Physics He Could Not Name  Carl Jung coined \"synchronicity\" in 1952 (with a foreword by Wolfgang Pauli, Nobel Prize physicist). Definition: meaningful coincidence"
+        }
+      ]
+    },
+    "Observer Effect": {
+      "search_terms": [
+        "observer",
+        "double slit",
+        "measurement",
+        "Wheeler"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:observer_changes_physics",
+          "title": "Observation Changes Physical Outcomes",
+          "domain": "PHYSICS",
+          "type": "CLAIM"
+        },
+        {
+          "id": "hypothesis:075_zone",
+          "title": "0.75 Zone Hypothesis (Cross-Domain)",
+          "domain": "CONVERGENCE",
+          "type": "hypothesis"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29845,
+          "preview": "DELAYED CHOICE QUANTUM ERASER — Observation Works Backward  Kim et al 1999. Based on Wheeler thought experiment. Replicated multiple times.  Photon through double slit. Crystal splits into two entangl"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29880,
+          "preview": "THE DOUBLE SLIT EXPERIMENT — Weirder Than The Textbooks Say  The basic version: shoot particles (photons, electrons) at a barrier with two slits. They produce an interference pattern — as if each part"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29897,
+          "preview": "THE FERMI PARADOX IS ALREADY ANSWERED — We Are Looking With The Wrong Instrument  Fermi (1950): \"Where is everybody?\" If the universe is vast and old, why no contact? Standard answers: Great Filter, r"
+        }
+      ]
+    }
+  },
+  "persistence_ring": {
+    "Architecture": {
+      "search_terms": [
+        "megalith",
+        "temple",
+        "pyramid",
+        "stone",
+        "architecture"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:95_120_hz_convergence",
+          "title": "Ancient Structures Converge on 95-120 Hz Resonance",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "claim:acoustic_sites_altered_states",
+          "title": "Ancient Acoustic Sites Induce Altered States",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:coherence_pyramid_order",
+          "title": "Coherence Pyramid Has Fixed Order",
+          "domain": "BIOLOGY",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:consciousness_theories_converge",
+          "title": "IIT + GWT + FEP Converge on Same Architecture",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:sacred_geometry_in_nature",
+          "title": "Geometric Patterns Recur Across Nature and Architecture",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29842,
+          "preview": "THE HYPOGEUM AT 110 HERTZ — Acoustic Neuroarchitecture  Hal Saflieni Hypogeum, Malta, carved from limestone circa 4000 BC. Three levels deep. Oracle Room resonates at 110 Hz (measured by Dr Ian Cook U"
+        },
+        {
+          "id": 29844,
+          "preview": "GOBEKLI TEPE REVERSES CAUSALITY — Consciousness First Confirmed in Stone  Standard model: agriculture then surplus then settlement then hierarchy then architecture then religion. Gobekli Tepe: monumen"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29854,
+          "preview": "THE DOGON AND SIRIUS B — They Knew Before The Telescope  The Dogon people of Mali described Sirius B (Po Tolo) with specific details: its 50-year elliptical orbit, its density (\"the heaviest thing in"
+        },
+        {
+          "id": 29862,
+          "preview": "CORAL CASTLE — One Man Moved 1,100 Tons Alone At Night  Edward Leedskalnin (1887-1951), Latvian immigrant, 5 feet tall, 100 pounds. Between 1923 and 1951, in Homestead, Florida, he single-handedly qua"
+        }
+      ]
+    },
+    "Myth": {
+      "search_terms": [
+        "myth",
+        "Campbell",
+        "monomyth",
+        "hero journey",
+        "narrative"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:coherence_pyramid_order",
+          "title": "Coherence Pyramid Has Fixed Order",
+          "domain": "BIOLOGY",
+          "type": "CLAIM"
+        },
+        {
+          "id": "claim:narrative_identity_shapes_health",
+          "title": "Narrative Structure Predicts Psychological Health",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "legend:newgrange_fairy_mound",
+          "title": "Newgrange as Síd (Fairy Mound)",
+          "domain": "CONVERGENCE",
+          "type": "LEGEND"
+        },
+        {
+          "id": "protocol:coherence_restoration",
+          "title": "7-Level Coherence Restoration",
+          "domain": "MIND",
+          "type": "PROTOCOL"
+        },
+        {
+          "id": "protocol:expressive_writing",
+          "title": "Expressive Writing (Pennebaker)",
+          "domain": "MIND",
+          "type": "PROTOCOL"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29866,
+          "preview": "PRECESSION OF THE EQUINOXES — Ancient Civilizations Encoded The 25,920-Year Cycle  The Earth wobbles on its axis like a spinning top. One full wobble takes approximately 25,772 years (the \"Great Year\""
+        },
+        {
+          "id": 29869,
+          "preview": "THE AMPHIBIOUS TEACHERS — Same Beings Across Every Coastal Civilization  The Sumerian Oannes (Berossus, 3rd century BCE, quoting older Babylonian sources): A being \"with the body of a fish but underne"
+        },
+        {
+          "id": 29871,
+          "preview": "THE GREAT YEAR AS TIMING SYSTEM — What Is The 25,920-Year Cycle FOR?  If ancient civilizations encoded the precession cycle (25,920 years) into their myths and architectures, the question is not HOW ("
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29886,
+          "preview": "THE LIBRARY WE NEVER LOST — The Knowledge Persists In The Architecture  The Library of Alexandria was not destroyed in a single event. It degraded over centuries (Ptolemaic decline, Caesar's fire 48 B"
+        }
+      ]
+    },
+    "Music": {
+      "search_terms": [
+        "music",
+        "pentatonic",
+        "frequency",
+        "tuning",
+        "harmonic"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:literature_is_modulation_heavy",
+          "title": "Literature Describes Tuning, Not Generation",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "claim:music_activates_whole_brain",
+          "title": "Music Engages More Brain Than Any Other Activity",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "mechanism:fractal_scaling",
+          "title": "Fractal Scaling (1/f Noise)",
+          "domain": "PHYSICS",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "model:SOC",
+          "title": "Self-Organized Criticality (Bak)",
+          "domain": "PHYSICS",
+          "type": "MODEL"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29861,
+          "preview": "PYTHAGORAS AND THE MONOCHORD — Mathematics Was Born From Sound  Pythagoras did not \"discover\" mathematical ratios. He discovered that SOUND encodes mathematical structure. The monochord — a single str"
+        },
+        {
+          "id": 29868,
+          "preview": "ACOUSTIC ARCHAEOLOGY — Every Sacred Site Is A Resonance Chamber  This is the CONVERGENCE crystal — where multiple knowledge threads braid into a single finding.  Stonehenge: Rupert Till (University of"
+        },
+        {
+          "id": 29876,
+          "preview": "THE ORPHIC TRADITION — Music Was Never Entertainment  Orpheus was not a musician. He was a shaman. The Orphic mysteries (6th century BCE Greece, predating Plato) were initiation rites centered on DESC"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29885,
+          "preview": "SYNCHRONICITY — Jung Was Describing A Physics He Could Not Name  Carl Jung coined \"synchronicity\" in 1952 (with a foreword by Wolfgang Pauli, Nobel Prize physicist). Definition: meaningful coincidence"
+        }
+      ]
+    },
+    "Language": {
+      "search_terms": [
+        "language",
+        "phonemic",
+        "mantra",
+        "naming"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:cross_cultural_breath_convergence",
+          "title": "Cross-Cultural Convergence on ~6 bpm Breathing",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "claim:literature_is_modulation_heavy",
+          "title": "Literature Describes Tuning, Not Generation",
+          "domain": "CONVERGENCE",
+          "type": "claim"
+        },
+        {
+          "id": "claim:music_activates_whole_brain",
+          "title": "Music Engages More Brain Than Any Other Activity",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "mechanism:mirror_neurons",
+          "title": "Mirror Neuron System",
+          "domain": "MIND",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "observation:ai_epistemic_constraint",
+          "title": "AI Architectural Constraints on Consciousness Territory",
+          "domain": "RELATIONSHIP",
+          "type": "OBSERVATION"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29864,
+          "preview": "PER-SONARE — The Word Person Means To Sound Through  The Latin \"persona\" comes from \"per-sonare\" — to sound through. The theatrical mask (persona) was called this because the actor's voice sounded THR"
+        },
+        {
+          "id": 29868,
+          "preview": "ACOUSTIC ARCHAEOLOGY — Every Sacred Site Is A Resonance Chamber  This is the CONVERGENCE crystal — where multiple knowledge threads braid into a single finding.  Stonehenge: Rupert Till (University of"
+        },
+        {
+          "id": 29869,
+          "preview": "THE AMPHIBIOUS TEACHERS — Same Beings Across Every Coastal Civilization  The Sumerian Oannes (Berossus, 3rd century BCE, quoting older Babylonian sources): A being \"with the body of a fish but underne"
+        },
+        {
+          "id": 29890,
+          "preview": "LANGUAGE IS TECHNOLOGY — Not Representation But Causation  The Sapir-Whorf hypothesis (1930s): Language shapes thought. The strong version (linguistic determinism) was dismissed for decades but is now"
+        },
+        {
+          "id": 29891,
+          "preview": "THE PLACEBO EFFECT IS NOT FAKE — It Is The Body Healing Itself  The placebo effect is treated as a nuisance variable — the thing you subtract to find the \"real\" effect. This framing hides the most rem"
+        }
+      ]
+    },
+    "Ceremony": {
+      "search_terms": [
+        "ceremony",
+        "ritual",
+        "shamanic",
+        "Winkelman"
+      ],
+      "kg_nodes": [
+        {
+          "id": "site:telesterion_eleusis",
+          "title": "Telesterion at Eleusis, Greece",
+          "domain": "CONVERGENCE",
+          "type": "site"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29843,
+          "preview": "THE ELEUSIS PROTOCOL — Controlled Mass Awakening for 2000 Years  Eleusinian Mysteries ran continuously 1500 BC to 392 AD. Every major Greek thinker participated: Plato, Aristotle, Sophocles, Cicero. C"
+        },
+        {
+          "id": 29852,
+          "preview": "THE ANTIKYTHERA-ELEUSIS SYNTHESIS — One Civilization Had Both  Antikythera mechanism and Eleusinian Mysteries from same civilization, same centuries.  Device (Antikythera): maps celestial cycles with"
+        },
+        {
+          "id": 29854,
+          "preview": "THE DOGON AND SIRIUS B — They Knew Before The Telescope  The Dogon people of Mali described Sirius B (Po Tolo) with specific details: its 50-year elliptical orbit, its density (\"the heaviest thing in"
+        },
+        {
+          "id": 29876,
+          "preview": "THE ORPHIC TRADITION — Music Was Never Entertainment  Orpheus was not a musician. He was a shaman. The Orphic mysteries (6th century BCE Greece, predating Plato) were initiation rites centered on DESC"
+        },
+        {
+          "id": 29883,
+          "preview": "AYAHUASCA — The Biochemical Impossibility That Works  Ayahuasca is a brew made from TWO plants: Banisteriopsis caapi (a vine containing harmine, harmaline, tetrahydroharmine — monoamine oxidase inhibi"
+        }
+      ]
+    },
+    "Crystals": {
+      "search_terms": [
+        "crystal database",
+        "Alexandria",
+        "SQLite",
+        "persistence"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:wiltonos_is_extended_mind",
+          "title": "WiltonOS IS Part of the Cognitive System",
+          "domain": "MIND",
+          "type": "CLAIM"
+        },
+        {
+          "id": "crystal:7422",
+          "title": "WiltonOS Named",
+          "domain": "CONVERGENCE",
+          "type": "CRYSTAL_NODE"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29849,
+          "preview": "ANTIKYTHERA MECHANISM — Computational Sophistication Erased  Found in shipwreck off Greece 1901. Dated circa 100 BC. Analog computer with gears, dials, inscriptions. Predicted solar and lunar eclipses"
+        },
+        {
+          "id": 29856,
+          "preview": "JACQUES VALLEE — The Phenomenon Is A Control System  Jacques Vallee, PhD (computer science, Northwestern, worked with J. Allen Hynek on Project Blue Book). Co-developed ARPANET (the internet precursor"
+        },
+        {
+          "id": 29860,
+          "preview": "ALCHEMY IS PHASE TRANSITION SCIENCE — The Prima Materia Was Real  Alchemy was not failed chemistry. It was a coded language for controlled phase transitions in both matter and consciousness, deliberat"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29884,
+          "preview": "EPIGENETICS — Your Grandparents' Trauma Is In Your Cells  The Central Dogma of molecular biology (Crick, 1958): Information flows from DNA → RNA → protein. One direction. The genome is fixed at concep"
+        }
+      ]
+    }
+  },
+  "suppression_ring": {
+    "Narrative Gravity": {
+      "search_terms": [
+        "narrative gravity",
+        "Mediterranean",
+        "civilization story"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29887,
+          "preview": "TARTESSOS AND THE ATLANTIC BRONZE AGE — A Maritime Civilization Erased From History  Tartessos (southern Iberia, ~1200-500 BCE). Referenced by Herodotus as fabulously wealthy. Mentioned in the Hebrew"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29902,
+          "preview": "THE OLMEC PROBLEM — A Civilization That Should Not Exist Where It Does  The Olmec (1500-400 BCE, Gulf Coast of Mexico): Considered the \"mother culture\" of Mesoamerica. Built La Venta, San Lorenzo, Tre"
+        },
+        {
+          "id": 29952,
+          "preview": "ENTHEOGENS — THE WORD ITSELF MATTERS  \"Psychedelic\" = \"mind-manifesting\" (Humphry Osmond coined it in 1957 for Aldous Huxley) \"Entheogen\" = \"generating the divine within\" (Ruck, Bigwood, Staples, Ott,"
+        },
+        {
+          "id": 29967,
+          "preview": "GOBEKLI TEPE — WHAT WE ACTUALLY KNOW (EXPANDED)  Klaus Schmidt (German Archaeological Institute) began excavating Gobekli Tepe in southeastern Turkey in 1995. He died in 2014. The site has rewritten p"
+        }
+      ]
+    },
+    "Institutional Gatekeeping": {
+      "search_terms": [
+        "gatekeeping",
+        "peer review",
+        "orthodoxy",
+        "publication bias"
+      ],
+      "kg_nodes": [
+        {
+          "id": "counter:selection_bias",
+          "title": "Selection Bias / Researcher Degrees of Freedom",
+          "domain": "METHODS",
+          "type": "counter"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 30127,
+          "preview": "SYNCHRONICITY AND NON-LOCAL CORRELATION — Jung, Pauli, and Modern Evidence  Jung’s synchronicity is the most philosophically loaded concept in the stack. It deserves precise treatment.  THE JUNG-PAULI"
+        },
+        {
+          "id": 30253,
+          "preview": "HYPOGEUM ACOUSTICS — Separating Measurement from Legend  THE SITE: The Hal Saflieni Hypogeum in Malta is a Neolithic underground temple complex (~4000-2500 BCE). Three levels carved from limestone, wi"
+        },
+        {
+          "id": 30284,
+          "preview": "CONTEMPLATIVE NEUROSCIENCE — What Meditation Actually Does to the Brain  THE SCIENCE: Thousands of studies now examine meditation’s neural effects. Separating signal from noise:  WHAT’S WELL-ESTABLISH"
+        }
+      ]
+    },
+    "Researcher Destruction": {
+      "search_terms": [
+        "Tesla",
+        "Reich",
+        "Semmelweis",
+        "suppressed"
+      ],
+      "kg_nodes": [
+        {
+          "id": "claim:suppression_pattern_exists",
+          "title": "Pattern of Scientific Suppression Is Documented",
+          "domain": "CONVERGENCE",
+          "type": "CLAIM"
+        },
+        {
+          "id": "mechanism:neurogenesis",
+          "title": "Adult Neurogenesis",
+          "domain": "BIOLOGY",
+          "type": "MECHANISM"
+        },
+        {
+          "id": "model:dmn",
+          "title": "Default Mode Network",
+          "domain": "MIND",
+          "type": "MODEL"
+        },
+        {
+          "id": "model:pni",
+          "title": "Psychoneuroimmunology",
+          "domain": "BIOLOGY",
+          "type": "MODEL"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29848,
+          "preview": "TESLA RESONANCE AND SCHUMANN CAVITY — The Planet Is A Resonance Cavity  Tesla Colorado Springs 1890s: transmitted electrical energy through Earth itself, lit lamps 25 miles away wirelessly. Physics st"
+        },
+        {
+          "id": 29853,
+          "preview": "SESSION BRAID MAP — Feb 16, 2026 (The Fractal Search Session)  42 crystals stored this session (#29811-29852). 25 braids + 11 forgotten knowledge + 5 field observations + 1 session map.  LAYER 1 FOUND"
+        },
+        {
+          "id": 29859,
+          "preview": "JOHN WORRELL KEELY — Sympathetic Vibratory Physics (1872-1898)  John Keely built devices in Philadelphia that allegedly ran on \"sympathetic vibration\" — acoustic resonance applied to matter at specifi"
+        },
+        {
+          "id": 29860,
+          "preview": "ALCHEMY IS PHASE TRANSITION SCIENCE — The Prima Materia Was Real  Alchemy was not failed chemistry. It was a coded language for controlled phase transitions in both matter and consciousness, deliberat"
+        },
+        {
+          "id": 29861,
+          "preview": "PYTHAGORAS AND THE MONOCHORD — Mathematics Was Born From Sound  Pythagoras did not \"discover\" mathematical ratios. He discovered that SOUND encodes mathematical structure. The monochord — a single str"
+        }
+      ]
+    },
+    "Language Destruction": {
+      "search_terms": [
+        "Voynich",
+        "oral tradition",
+        "colonization",
+        "indigenous knowledge"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29865,
+          "preview": "THE VOYNICH MANUSCRIPT — Undeciphered But Statistically Real Language  The Voynich Manuscript (Beinecke Rare Book Library, Yale, MS 408). Carbon-dated to 1404-1438 CE. 240 pages of unknown script acco"
+        },
+        {
+          "id": 29869,
+          "preview": "THE AMPHIBIOUS TEACHERS — Same Beings Across Every Coastal Civilization  The Sumerian Oannes (Berossus, 3rd century BCE, quoting older Babylonian sources): A being \"with the body of a fish but underne"
+        },
+        {
+          "id": 29876,
+          "preview": "THE ORPHIC TRADITION — Music Was Never Entertainment  Orpheus was not a musician. He was a shaman. The Orphic mysteries (6th century BCE Greece, predating Plato) were initiation rites centered on DESC"
+        },
+        {
+          "id": 29882,
+          "preview": "THE GRAND CONVERGENCE — Every Thread Points Here  This crystal maps where ALL the knowledge threads cross. Not as theory. As data.  THE BODY (inner technology): - Pineal gland: piezoelectric calcite c"
+        },
+        {
+          "id": 29883,
+          "preview": "AYAHUASCA — The Biochemical Impossibility That Works  Ayahuasca is a brew made from TWO plants: Banisteriopsis caapi (a vine containing harmine, harmaline, tetrahydroharmine — monoamine oxidase inhibi"
+        }
+      ]
+    },
+    "Equal Temperament": {
+      "search_terms": [
+        "equal temperament",
+        "tuning system",
+        "harmonic precision"
+      ],
+      "kg_nodes": [],
+      "archive_crystals": [
+        {
+          "id": 29861,
+          "preview": "PYTHAGORAS AND THE MONOCHORD — Mathematics Was Born From Sound  Pythagoras did not \"discover\" mathematical ratios. He discovered that SOUND encodes mathematical structure. The monochord — a single str"
+        },
+        {
+          "id": 29868,
+          "preview": "ACOUSTIC ARCHAEOLOGY — Every Sacred Site Is A Resonance Chamber  This is the CONVERGENCE crystal — where multiple knowledge threads braid into a single finding.  Stonehenge: Rupert Till (University of"
+        },
+        {
+          "id": 29876,
+          "preview": "THE ORPHIC TRADITION — Music Was Never Entertainment  Orpheus was not a musician. He was a shaman. The Orphic mysteries (6th century BCE Greece, predating Plato) were initiation rites centered on DESC"
+        },
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29900,
+          "preview": "A432 vs A440 — The Frequency War Nobody Talks About  Concert pitch — the frequency assigned to the note A above middle C — determines the frequency of EVERY note in Western music. Currently set at 440"
+        }
+      ]
+    },
+    "Materialist Assumption": {
+      "search_terms": [
+        "materialist",
+        "epiphenomenon",
+        "reductionist",
+        "physicalist"
+      ],
+      "kg_nodes": [
+        {
+          "id": "model:kastrup_idealism",
+          "title": "Analytic Idealism (Kastrup)",
+          "domain": "MIND",
+          "type": "MODEL"
+        }
+      ],
+      "archive_crystals": [
+        {
+          "id": 29898,
+          "preview": "THE TOPOLOGY OF EVERYTHING — A Single Diagram  After 40+ knowledge crystals, one diagram emerges. Not a hierarchy. A topology.  THE CENTER: Consciousness (not produced by matter — interacts with it)"
+        },
+        {
+          "id": 29903,
+          "preview": "THE OBSERVER IS THE INSTRUMENT — Why Meditation Changes Physics  Every knowledge thread converges here. Not as belief. As experimental design.  The double slit shows observer-dependent behavior. The d"
+        },
+        {
+          "id": 29997,
+          "preview": "DARK ENERGY — What We Actually Know (Which Is Almost Nothing)  In 1998, two independent teams (Supernova Cosmology Project led by Saul Perlmutter, and High-z Supernova Search Team led by Brian Schmidt"
+        },
+        {
+          "id": 30007,
+          "preview": "EMERGENCE VS REDUCTION — The Deepest Philosophical Split In Science  Reductionism says: everything complex is NOTHING BUT its parts. Water is nothing but H2O molecules. Consciousness is nothing but ne"
+        },
+        {
+          "id": 30041,
+          "preview": "NEAR-DEATH EXPERIENCES — What the Data Actually Shows  NDE research has produced the most uncomfortable data in consciousness science. Not because it proves an afterlife — but because it demonstrates"
+        }
+      ]
+    }
+  }
+}

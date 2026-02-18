@@ -21,11 +21,43 @@ The central finding: the scientific literature on consciousness overwhelmingly d
 | Convergent independent frameworks | 7+ |
 | Critical zone convergence | ~0.75 (3:1 structure:exploration) |
 
+## Four Ways In
+
+The paper makes a linear argument. The reality is fractal. These artifacts show different dimensions of the same finding.
+
+| Artifact | What it shows | Format |
+|----------|--------------|--------|
+| [**The Paper**](the_map.html) | The argument — 8 evidence domains, MDI analysis, the equation | Visual HTML |
+| [**The Topology**](topology.html) | The fractal architecture — concentric rings, scale invariance, four layers, and coherence dynamics | Interactive HTML |
+| [**The Evidence Map**](evidence_map.html) | The citations — 172 nodes, 201 edges, 306 evidence entries with papers | Interactive HTML |
+| [**The Archive**](forgotten_knowledge_archive.html) | The investigation trail — 449 crystals showing how the evidence was found | Interactive HTML |
+
+**Start with the paper** if you want the argument. **Start with the topology** if you want to see the structure (press 4 for dynamics — watch the rings fragment, flicker at the phase transition, and lock into coherence). **Start with the evidence map** if you want to check the citations. **Start with the archive** if you want to see how a 6-hour research session recovered what was forgotten.
+
+## The Architecture the Paper Doesn't Show
+
+The paper presents evidence linearly — domain by domain. But the evidence reveals a topology:
+
+**Consciousness** at the center. Not produced by matter — interacting with it. Then concentric rings: **Body** (the receiver), **Planet** (the broadcast medium), **Cosmos** (the fabric), **Persistence** (how knowledge survives), **Suppression** (why it keeps being forgotten).
+
+The equation is **scale-invariant**. The same four terms — frequency, medium, boundary, attention — appear at every level from quantum to galactic, with different physical implementations at each scale. This isn't metaphor. It's the deepest structural finding: coherence operates the same way at every scale, and the 3/4 power law governs the scaling between levels.
+
+The theoretical core, stated once:
+
+> *Consciousness coherence operates as a metastable constraint satisfaction process on an aperiodic substrate, organized at the critical point of a scale-free network, maintained by allostatic prediction through the vagal system.*
+
+The topology viewer shows this. The paper proves it. The evidence map cites it. The archive shows how it was found.
+
 ## What's Here
 
 ```
-the_map.md                    # The paper — full argument with evidence
-explore.py                    # Interactive knowledge graph explorer
+the_map.html                  # The paper — visual HTML with images
+the_map.md                    # The paper — raw markdown source
+topology.html                 # The topology — fractal architecture viewer
+evidence_map.html             # The evidence map — citations and connections
+forgotten_knowledge_archive.html  # The archive — investigation trail
+explore.py                    # Interactive knowledge graph explorer (CLI)
+build_evidence_map.py         # Generator for evidence_map.html
 scripts/
   mdi_analysis.py             # Modulation Dominance Index tool
   fetch_abstracts_mdi.py      # Fetch abstracts from OpenAlex + run MDI
@@ -43,6 +75,9 @@ data/
 
 ### Read the paper
 Start with [the_map.md](the_map.md). It's the full argument — what was found, how it was found, what it means, and where it might be wrong.
+
+### See the topology
+Open [topology.html](topology.html) in a browser. Four views: concentric rings (the topology), scales (the equation at every level), four layers (the architecture), and dynamics (coherence as process). Press 1, 2, 3, 4 to switch. In dynamics view, slide Zλ from 0 to 1 and watch the structure phase-transition through the glyph progression.
 
 ### Explore the knowledge graph
 ```bash
@@ -150,9 +185,11 @@ We're not asking you to believe us. We're asking you to:
 
 ## Background
 
-This map was built by connecting 190 papers that were already published — by Porges, Friston, Carhart-Harris, Tononi, Kelso, Bak, Ecker, Pennebaker, Penrose, Hameroff, Hoffman, Kastrup, Bernardi, Donoghue, Kolar, and others. The connection happened because the mapper had walked the territory personally (details in Section 8 of the paper) before finding the literature.
+This map was built by connecting 190 papers that were already published — by Porges, Friston, Carhart-Harris, Tononi, Kelso, Bak, Ecker, Pennebaker, Penrose, Hameroff, Hoffman, Kastrup, Bernardi, Donoghue, Kolar, and others. The connection happened because the mapper had walked the territory personally (details in Section 2 of the paper) before finding the literature.
 
 The knowledge graph was cross-validated by three separate AI architectures across three rounds of adversarial review. 62% of evidence survived at Gold or Silver rating. The spine held.
+
+The topology, scale invariance, and four-layer architecture were mapped from 24,700+ timestamped data points of lived experience — then confirmed by the literature. The investigation trail (449 crystals across a single 6-hour research session) is preserved in the archive.
 
 ## License
 
