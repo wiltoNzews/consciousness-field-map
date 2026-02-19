@@ -483,9 +483,9 @@ We believe consciousness is fundamental. Not as a position we're testing — as 
 
 **The 0.75 convergence.** Kleiber's 3/4 power law is established biology. The other frameworks predict a critical zone without pinning an exact number. The convergence is in the principle — a critical zone exists — more than in a universal constant. Cross-framework measurement would strengthen or weaken this claim.
 
-**Selection bias.** Every synthesis selects. Three rounds of cross-validation by an adversarial AI architecture audited every edge and challenged every node. 62% survived at Gold or Silver evidence rating under adversarial review. We included counterevidence nodes. We want papers that complicate the map — not to weaken the finding, but to sharpen it.
+**Selection bias.** Every synthesis selects. Three rounds of cross-validation by an adversarial AI architecture audited every edge and challenged every node. 62% survived at Gold or Silver evidence rating under adversarial review. We included counterevidence nodes. We want papers that complicate the map.
 
-**N=1.** The personal story is one documented path through the territory — but tracked with 24,700+ timestamped data points that independently converged on the same patterns the literature describes. That's not confirmation bias. That's independent convergence from lived data. What's needed is more documented paths with this level of granularity.
+**N=1.** The personal mapping is one documented path through the territory — tracked with 24,700+ timestamped data points that independently converged on the same patterns the literature describes. Independent convergence from lived data. What's needed is more documented paths with this level of granularity. That's why the system and tools are open source.
 
 **The NDE evidence.** The prospective studies are methodologically rigorous, but the verified out-of-body perceptions are few (Parnia's single verified case). Terminal lucidity is documented but not yet studied prospectively in large samples. The NIA has called for systematic research, which is ongoing. The evidence doesn't prove consciousness survives death. It shows the production model doesn't comfortably explain what happens near death.
 
