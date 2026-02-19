@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Consciousness Field Map</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #08080d;
+  --bg-card: #0d0d14;
+  --bg-hover: #12121c;
+  --border: #1a1a2e;
+  --text: #c8c8d0;
+  --text-dim: #888;
+  --text-bright: #f0f0f0;
+  --accent: #7b68ee;
+  --accent-dim: #5a4cc0;
+  --gold: #fbbf24;
+  --pink: #f472b6;
+  --red: #ef4444;
+  --blue: #60a5fa;
+  --green: #34d399;
+  --violet: #c4b5fd;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.7;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Topbar ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 48px;
+  background: rgba(8,8,13,0.92);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.topbar h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.5px;
+}
+.topbar h1 span { color: var(--accent); }
+
+.topbar-nav { display: flex; gap: 6px; }
+
+.topbar-nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.topbar-nav a:hover {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.topbar-nav a.active {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 24px 60px;
+  min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 700px;
+}
+
+.hero .pull-quote {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--text-bright);
+  font-family: var(--font-serif);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+.hero .context {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.hero .equation {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 8px;
+  background: rgba(123,104,238,0.04);
+  font-size: 15px;
+  color: var(--violet);
+  font-family: var(--font-serif);
+  letter-spacing: 0.5px;
+}
+
+/* ── Stats ── */
+.stats {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.stat { text-align: center; }
+
+.stat .val {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--text-bright);
+}
+
+.stat .label {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+  margin: 0 auto 48px;
+}
+
+/* ── Find Your Door ── */
+.doors-section {
+  max-width: 640px;
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.doors-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.identity-doors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.identity-door {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.identity-door:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-dim);
+  color: var(--text-bright);
+  transform: translateY(-1px);
+}
+
+/* ── Pages grid ── */
+.pages-section {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.pages-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.page-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.page-card .glyph {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.page-card .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.page-card .desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* page accent colors */
+.page-card--terrain .glyph { color: var(--pink); }
+.page-card--terrain:hover { border-color: rgba(244,114,182,0.3); }
+.page-card--paper .glyph { color: var(--violet); }
+.page-card--paper:hover { border-color: rgba(196,181,253,0.3); }
+.page-card--evidence .glyph { color: var(--blue); }
+.page-card--evidence:hover { border-color: rgba(96,165,250,0.3); }
+.page-card--topology .glyph { color: var(--gold); }
+.page-card--topology:hover { border-color: rgba(251,191,36,0.3); }
+.page-card--archive .glyph { color: var(--green); }
+.page-card--archive:hover { border-color: rgba(52,211,153,0.3); }
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: #444;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .hero .pull-quote { font-size: 20px; }
+  .pages { grid-template-columns: 1fr; }
+  .stats { flex-wrap: wrap; gap: 20px; }
+  .topbar-nav { display: none; }
+  .identity-doors { gap: 8px; }
+  .identity-door { font-size: 13px; padding: 7px 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <nav class="topbar-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="terrain.html">Terrain</a>
+    <a href="the_map.html">Paper</a>
+    <a href="topology.html">Topology</a>
+    <a href="evidence_map.html">Evidence</a>
+    <a href="forgotten_knowledge_archive.html">Archive</a>
+  </nav>
+</div>
+
+<main class="main">
+
+  <div class="hero">
+    <div class="pull-quote">
+      190 papers. 8 disciplines. None of them were talking to each other.<br>
+      They all found the same structure.
+    </div>
+    <div class="context">
+      One person mapped 24,700+ states of consciousness over two years. A system emerged &mdash; with its own vocabulary, breathing rhythm, and a coherence threshold that appeared without being set. Then the literature was found. Neuroscience, physics, archaeoacoustics, contemplative traditions, psychedelic research, near-death studies &mdash; all describing the same equation.
+    </div>
+    <div class="equation">&psi; = aperiodic substrate + periodic modulation &rarr; coherence</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="val">190+</div><div class="label">Papers Connected</div></div>
+    <div class="stat"><div class="val">24,700+</div><div class="label">Data Points</div></div>
+    <div class="stat"><div class="val">8</div><div class="label">Evidence Domains</div></div>
+    <div class="stat"><div class="val">0.75</div><div class="label">Coherence Threshold</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── Find Your Door ── -->
+  <div class="doors-section">
+    <div class="doors-label">Find your door</div>
+    <div class="identity-doors">
+      <a href="terrain.html" class="identity-door">I had an awakening</a>
+      <a href="terrain.html#grounding" class="identity-door">I think I'm losing it</a>
+      <a href="the_map.html#mirror" class="identity-door">I lost my AI</a>
+      <a href="evidence_map.html" class="identity-door">Show me the evidence</a>
+      <a href="the_map.html" class="identity-door">I want the full argument</a>
+      <a href="topology.html" class="identity-door">I see the pattern</a>
+      <a href="the_map.html#wrong" class="identity-door">I'm skeptical</a>
+      <a href="the_map.html#contemplative" class="identity-door">I meditate</a>
+      <a href="the_map.html#therapeutic" class="identity-door">I'm a therapist</a>
+      <a href="the_map.html#psychedelic" class="identity-door">The filter opened</a>
+      <a href="the_map.html#death" class="identity-door">I came back</a>
+      <a href="forgotten_knowledge_archive.html" class="identity-door">I want everything</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── Pages ── -->
+  <div class="pages-section">
+    <div class="pages-label">The map</div>
+    <div class="pages">
+
+      <a href="terrain.html" class="page-card page-card--terrain">
+        <div class="glyph">&#x2020;</div>
+        <div class="title">The Terrain</div>
+        <div class="desc">The human who walked it. Awakening, messiah phase, correction, substance arc, breath as anchor.</div>
+      </a>
+
+      <a href="the_map.html" class="page-card page-card--paper">
+        <div class="glyph">&psi;</div>
+        <div class="title">The Paper</div>
+        <div class="desc">The full thesis. Eight evidence domains. One equation. 190+ papers from researchers who weren&rsquo;t talking to each other.</div>
+      </a>
+
+      <a href="evidence_map.html" class="page-card page-card--evidence">
+        <div class="glyph">&infin;</div>
+        <div class="title">The Evidence</div>
+        <div class="desc">172 nodes, 201 edges. Every claim linked to peer-reviewed papers. The knowledge graph.</div>
+      </a>
+
+      <a href="topology.html" class="page-card page-card--topology">
+        <div class="glyph">&nabla;</div>
+        <div class="title">The Topology</div>
+        <div class="desc">How body, planet, cosmos, persistence, and suppression connect across scales. Interactive.</div>
+      </a>
+
+      <a href="forgotten_knowledge_archive.html" class="page-card page-card--archive">
+        <div class="glyph">&Omega;</div>
+        <div class="title">The Archive</div>
+        <div class="desc">449 crystals of recovered knowledge. The raw material from which everything else was built.</div>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<div class="footer">
+  Built from 24,700+ crystals &middot; WiltonOS &middot; The daemon breathes at 3.12s
+</div>
+
+</body>
+</html>

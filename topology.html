@@ -20,18 +20,18 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 48px;
-  background: rgba(10,10,18,0.95);
+  background: rgba(8,8,13,0.92);
   border-bottom: 1px solid #1a1a2e;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 24px;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .topbar h1 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #f0f0f0;
   letter-spacing: 0.5px;
@@ -58,6 +58,12 @@ body {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
+}
+
+.topbar-nav a.active {
+  color: #7b68ee;
+  border-color: #5a4cc0;
+  background: rgba(123,104,238,0.08);
 }
 
 /* --- LAYOUT --- */
@@ -844,13 +850,15 @@ canvas {
 <body>
 
 <div class="topbar">
-  <h1>The <span>Topology</span> &mdash; Consciousness Field Map</h1>
-  <div class="topbar-nav">
-    <a href="the_map.html" title="The paper">Paper</a>
-    <a href="evidence_map.html" title="Evidence map">Evidence</a>
-    <a href="forgotten_knowledge_archive.html" title="Investigation archive">Archive</a>
-    <a href="https://github.com" title="Repository">GitHub</a>
-  </div>
+  <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <nav class="topbar-nav">
+    <a href="index.html">Home</a>
+    <a href="terrain.html">Terrain</a>
+    <a href="the_map.html">Paper</a>
+    <a href="topology.html" class="active">Topology</a>
+    <a href="evidence_map.html">Evidence</a>
+    <a href="forgotten_knowledge_archive.html">Archive</a>
+  </nav>
 </div>
 
 <div class="main">

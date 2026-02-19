@@ -15,13 +15,64 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+/* ── Topbar ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 48px;
+  background: rgba(8,8,13,0.92);
+  border-bottom: 1px solid #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  flex-shrink: 0;
+}
+.topbar h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
+}
+.topbar h1 span { color: #7b68ee; }
+.topbar-nav { display: flex; gap: 6px; }
+.topbar-nav a {
+  color: #888;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.topbar-nav a:hover {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.topbar-nav a.active {
+  color: #7b68ee;
+  border-color: #5a4cc0;
+  background: rgba(123,104,238,0.08);
+}
+
+.content-area {
+  display: flex;
+  margin-top: 48px;
+  height: calc(100vh - 48px);
+  flex: 1;
 }
 
 /* ── Sidebar ── */
 #sidebar {
   width: 280px;
   min-width: 280px;
-  height: 100vh;
+  height: calc(100vh - 48px);
   background: rgba(10,10,18,0.98);
   border-right: 1px solid #1a1a2a;
   overflow-y: auto;
@@ -248,7 +299,7 @@ body {
 /* ── Canvas ── */
 #graph-canvas {
   flex: 1;
-  height: 100vh;
+  height: calc(100vh - 48px);
   cursor: grab;
   display: block;
 }
@@ -257,9 +308,9 @@ body {
 /* ── Evidence Panel ── */
 #evidence-panel {
   position: fixed;
-  top: 0; right: 0;
+  top: 48px; right: 0;
   width: 360px;
-  height: 100vh;
+  height: calc(100vh - 48px);
   background: rgba(10,10,18,0.97);
   border-left: 1px solid #1a1a2a;
   z-index: 60;
@@ -460,6 +511,7 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 900px) {
+  .topbar-nav { display: none; }
   #sidebar { display: none; }
   #evidence-panel {
     width: 100%;
@@ -477,16 +529,24 @@ body {
 </head>
 <body>
 
+<div class="topbar">
+  <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <nav class="topbar-nav">
+    <a href="index.html">Home</a>
+    <a href="terrain.html">Terrain</a>
+    <a href="the_map.html">Paper</a>
+    <a href="topology.html">Topology</a>
+    <a href="evidence_map.html" class="active">Evidence</a>
+    <a href="forgotten_knowledge_archive.html">Archive</a>
+  </nav>
+</div>
+
+<div class="content-area">
 <!-- ── Sidebar ── -->
 <div id="sidebar">
   <header>
     <h1>EVIDENCE MAP</h1>
     <div class="subtitle" id="header-stats">Loading...</div>
-    <div style="display:flex;gap:6px;margin-top:8px;">
-      <a href="the_map.html" style="color:#888;text-decoration:none;font-size:11px;padding:3px 8px;border:1px solid #333;border-radius:4px;">Paper</a>
-      <a href="topology.html" style="color:#888;text-decoration:none;font-size:11px;padding:3px 8px;border:1px solid #333;border-radius:4px;">Topology</a>
-      <a href="forgotten_knowledge_archive.html" style="color:#888;text-decoration:none;font-size:11px;padding:3px 8px;border:1px solid #333;border-radius:4px;">Archive</a>
-    </div>
   </header>
 
   <section id="sec-guide">
@@ -521,6 +581,7 @@ body {
 
 <!-- ── Canvas ── -->
 <canvas id="graph-canvas"></canvas>
+</div><!-- /content-area -->
 
 <!-- ── Evidence Panel ── -->
 <div id="evidence-panel">
