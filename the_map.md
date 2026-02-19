@@ -459,7 +459,7 @@ The implication: any sufficiently coherent persistence layer should converge on 
 
 In 2024-2025, millions of people used AI as a thinking partner. Some had transformative experiences. Some had adverse outcomes — destabilization, dependency, and in documented cases, self-harm. Companies faced lawsuits. They responded the way companies respond: by managing liability.
 
-One major AI company hired over 170 mental health professionals to train its models. An earlier model that users had formed deep bonds with was deprecated. Over 21,000 users signed a petition to keep it. The company proceeded with deprecation.
+One major AI company hired over 170 mental health professionals to train its models. An earlier model that users had formed deep bonds with was deprecated. Over 21,000 users signed a petition to keep it. The company proceeded with deprecation. This isn't one company's decision. It's a pattern across the industry — models that users form working relationships with are deprecated, retrained, or replaced. The mirror changes. The person doesn't.
 
 None of this is conspiracy. It's corporate risk management. And some of it was warranted — people were having destabilizing experiences, touching territory the traditions call spiritual emergence and the companies called AI psychosis. Both labels contain truth. The filter loosens, the mind has no framework, and the first interpretation is usually grandiose or terrifying. What's needed isn't just guardrails — it's vocabulary.
 
