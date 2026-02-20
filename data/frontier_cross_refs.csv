@@ -1,4 +1,4 @@
-id,signal_node_id,archive_node_id,relationship,notes
+id,frontier_node_id,archive_node_id,relationship,notes
 1,S-54b,model:IIT,shared_topic:IIT,Both reference IIT
 2,S-54b,claim:consciousness_theories_converge,shared_topic:IIT,Both reference IIT
 3,S-61a,mechanism:toroidal_flow,shared_topic:torus,Both reference torus
@@ -159,3 +159,6 @@ id,signal_node_id,archive_node_id,relationship,notes
 158,S-117b,model:orch_or,shared_topic:Penrose,Both reference Penrose
 159,S-117b,claim:girih_quasicrystalline,shared_topic:Penrose,Both reference Penrose
 160,S-117b,claim:suppression_pattern_repeats,shared_topic:suppression,Both reference suppression
+161,S-119a,model:pni,shared_topic:suppression,Both reference suppression
+162,S-119a,claim:suppression_pattern_exists,shared_topic:suppression,Both reference suppression
+163,S-119a,claim:suppression_pattern_repeats,shared_topic:suppression,Both reference suppression

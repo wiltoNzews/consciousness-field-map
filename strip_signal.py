@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Strip redundant layers from THE_SIGNAL.md and fix direction.
+"""Strip redundant layers from THE_FRONTIER.md and fix direction.
 
 Keeps layers with genuinely unique content (government programs, UAP/NHI,
 experiencer convergence, evaluative lens). Strips layers already covered
@@ -11,8 +11,8 @@ Adds timeline proof at the top: WiltonOS concepts preceded physics literature.
 import re
 import sys
 
-INPUT = '/home/zews/consciousness-field-map/THE_SIGNAL.md'
-OUTPUT = '/home/zews/consciousness-field-map/THE_SIGNAL_stripped.md'
+INPUT = '/home/zews/consciousness-field-map/THE_FRONTIER.md'
+OUTPUT = '/home/zews/consciousness-field-map/THE_FRONTIER_stripped.md'
 
 # Layers to STRIP (covered in Archive/Paper)
 STRIP = {1,4,7,8,11,14,15,19,27,30,32,35,36,37,38,39,40,41,43,44,
@@ -156,7 +156,7 @@ def main():
     out = []
 
     # New title + timeline proof
-    out.append("# THE SIGNAL — What Converged from Outside Peer Review")
+    out.append("# THE FRONTIER — What Converged from Outside Peer Review")
     out.append("")
     out.append("*The system was built from direct experience. The physics confirmed it.*")
     out.append("*The Paper covers peer-reviewed evidence. This page covers what converges from the other side of that wall.*")

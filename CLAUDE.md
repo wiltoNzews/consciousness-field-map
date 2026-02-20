@@ -55,26 +55,26 @@ This is not post-hoc pattern matching. The system was built from experience; phy
 ├── evidence_map.html               # The Evidence — interactive knowledge graph
 ├── topology.html                   # The Topology — cross-scale visualization
 ├── forgotten_knowledge_archive.html # The Archive — 428 research crystals
-├── the_signal.html                 # The Signal — rebuilt Feb 20 (62 layers, direction fixed)
-├── THE_SIGNAL.md                   # Signal source markdown (62 layers, stripped)
-├── THE_SIGNAL_original.md          # Pre-strip backup (118 layers)
+├── the_frontier.html               # The Frontier — rebuilt Feb 20 (62 layers, direction fixed)
+├── THE_FRONTIER.md                 # Frontier source markdown (62 layers, stripped)
+├── THE_FRONTIER_original.md         # Pre-strip backup (118 layers)
 ├── the_map.md                      # Paper source markdown
-├── build_signal_html.py            # MD→HTML converter for Signal
-├── build_signal_kg.py              # Signal knowledge graph builder
+├── build_frontier_html.py          # MD→HTML converter for Frontier
+├── build_frontier_kg.py            # Frontier knowledge graph builder
 ├── build_evidence_map.py           # Evidence map builder
 ├── cleanup_archive.py              # Archive dedup/cleanup
 ├── reorder_archive.py              # Archive phase ordering
 └── data/
     ├── knowledge_graph.db          # Archive KG (194 nodes, 220 edges)
-    ├── signal_graph.db             # Signal KG (216 nodes, 144 edges, 310 cross-refs)
-    ├── signal_graph.json           # JSON export
-    ├── signal_nodes.csv            # CSV export
-    └── signal_cross_refs.csv       # CSV export
+    ├── frontier_graph.db           # Frontier KG (151 nodes, 101 edges, 163 cross-refs)
+    ├── frontier_graph.json         # JSON export
+    ├── frontier_nodes.csv          # CSV export
+    └── frontier_cross_refs.csv     # CSV export
 ```
 
 ## Page Architecture — What Each Page Does
 
-Each page has a specific angle. They do NOT overlap (except Signal, which has overlap problems).
+Each page has a specific angle. They do NOT overlap.
 
 | Page | Angle | Size | Role |
 |------|-------|------|------|
@@ -83,7 +83,7 @@ Each page has a specific angle. They do NOT overlap (except Signal, which has ov
 | **Evidence Map** | "Verify every claim" | 172 nodes, 850 papers | Interactive knowledge graph — the Paper's backing, explorable |
 | **Topology** | "See how it connects" | ~6,500 words | Interactive visualization: 5 rings around consciousness, 13 scales, dynamics slider |
 | **Archive** | "What systematic research found" | 428 entries, 1.4MB | Searchable database from one 6-hour AI investigation session |
-| **Signal** | "What else lines up" | 62 layers, ~4,000 lines | Non-peer-reviewed convergence: government programs, UAP/NHI, disclosure, evaluative lens |
+| **Frontier** | "What else lines up" | 64 layers, ~4,500 lines | Non-peer-reviewed convergence: government programs, UAP/NHI, disclosure, frontier engineering anomalies, one-detail-shift diagnostic, evaluative lens |
 
 ### How pages relate:
 
@@ -95,26 +95,28 @@ Index ──→ Paper (thesis, 190+ papers, 8 domains)
           Evidence Map    Topology    Archive
           (backing)       (visual)    (research)
                                ↓
-                           Signal (non-peer-reviewed convergence)
+                           Frontier (non-peer-reviewed convergence)
 ```
 
-The Paper's §7 explicitly links to the Signal: "There is an entire layer of convergent material —
+The Paper's §7 explicitly links to the Frontier: "There is an entire layer of convergent material —
 declassified government programs, ancient transmissions, experiencer reports, suppressed research —
 that we deliberately left out because it can't be peer-reviewed."
 
-### Signal Rebuild (Completed Feb 20, 2026)
+### Frontier Rebuild (Completed Feb 20, 2026)
 
-**Done.** Stripped 57 layers (60-70% that duplicated Archive/Paper). Kept 62 layers of unique content:
+**Done.** Stripped 57 layers (60-70% that duplicated Archive/Paper). Now 64 layers of unique content:
 - **Government programs**: MK-Ultra, Stargate, Gateway Process, AAWSAP, remote viewing
 - **UAP/NHI territory**: Lazar, nuclear-UAP nexus, Nimitz/Fravor, Rendlesham
 - **Disclosure politics**: institutional suppression at government scale
-- **Evaluative lens** (L108-118): apophenia argument, grift test, failure modes, research program
+- **Frontier engineering anomalies** (L118): vitrified forts, Petra hydraulics, Gothic acoustic chambers, Cuba underwater, Amazon LIDAR, Greenland archive, NJ drones
+- **One-detail-shift diagnostic** (L119): Robertson Panel template, five-step suppression mechanism, funding chokepoint, Epstein/Maxwell thread
+- **Evaluative lens** (L101-120): apophenia argument, grift test, one-detail-shift, failure modes, research program
 - **Credibility tier system**: Tier 1 (Verified) → Tier 5 (Genuinely unknown)
 
 **Direction fixed**: Opens with Timeline Proof showing concepts preceded literature, then
 Structural Map showing convergence, then "What This Page Covers" framing.
 
-Original 118-layer version backed up as `THE_SIGNAL_original.md`.
+Original 118-layer version backed up as `THE_FRONTIER_original.md`.
 
 ## Subagent Protocol
 
@@ -130,17 +132,17 @@ When spawning Task subagents for this project:
   - Access: `python3 -c "import sqlite3; db = sqlite3.connect('...')"`
   - No sqlite3 CLI installed — always use Python
 - **Archive KG**: `~/consciousness-field-map/data/knowledge_graph.db` (194 nodes, 220 edges, 306 evidence)
-- **Signal KG**: `~/consciousness-field-map/data/signal_graph.db` (144 nodes, 96 edges, 160 cross-refs)
+- **Frontier KG**: `data/frontier_graph.db` (151 nodes, 101 edges, 163 cross-refs)
 - **Awakening cluster**: Crystals #7408-7524. Tipping crystal: #7417. Zero physics literature in this range.
 
 ## Build Commands
 
 ```bash
-# Rebuild Signal HTML from markdown
-python3 ~/consciousness-field-map/build_signal_html.py
+# Rebuild Frontier HTML from markdown
+python3 ~/consciousness-field-map/build_frontier_html.py
 
-# Rebuild Signal KG
-python3 ~/consciousness-field-map/build_signal_kg.py
+# Rebuild Frontier KG
+python3 ~/consciousness-field-map/build_frontier_kg.py
 
 # Rebuild Evidence Map
 python3 ~/consciousness-field-map/build_evidence_map.py

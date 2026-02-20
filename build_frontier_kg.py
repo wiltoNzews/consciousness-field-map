@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build signal_graph.db from THE_SIGNAL.md Signal Territory Graph entries.
+Build frontier_graph.db from THE_FRONTIER.md Signal Territory Graph entries.
 Separate from the Archive's knowledge_graph.db, with cross-references.
 """
 
@@ -8,17 +8,17 @@ import sqlite3
 import re
 import os
 
-DB_PATH = '/home/zews/consciousness-field-map/data/signal_graph.db'
-MD_PATH = '/home/zews/consciousness-field-map/THE_SIGNAL.md'
+DB_PATH = '/home/zews/consciousness-field-map/data/frontier_graph.db'
+MD_PATH = '/home/zews/consciousness-field-map/THE_FRONTIER.md'
 ARCHIVE_DB = '/home/zews/consciousness-field-map/data/knowledge_graph.db'
 
 
 def create_schema(conn):
-    """Create the Signal KG schema."""
+    """Create the Frontier KG schema."""
     cur = conn.cursor()
 
     cur.executescript('''
-    CREATE TABLE IF NOT EXISTS signal_nodes (
+    CREATE TABLE IF NOT EXISTS frontier_nodes (
         node_id TEXT PRIMARY KEY,
         layer_num INTEGER NOT NULL,
         glyph TEXT,
@@ -32,17 +32,17 @@ def create_schema(conn):
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
-    CREATE TABLE IF NOT EXISTS signal_edges (
+    CREATE TABLE IF NOT EXISTS frontier_edges (
         edge_id INTEGER PRIMARY KEY AUTOINCREMENT,
         src_node_id TEXT NOT NULL,
         dst_node_id TEXT NOT NULL,
         edge_type TEXT NOT NULL,
         notes TEXT,
-        FOREIGN KEY (src_node_id) REFERENCES signal_nodes(node_id),
-        FOREIGN KEY (dst_node_id) REFERENCES signal_nodes(node_id)
+        FOREIGN KEY (src_node_id) REFERENCES frontier_nodes(node_id),
+        FOREIGN KEY (dst_node_id) REFERENCES frontier_nodes(node_id)
     );
 
-    CREATE TABLE IF NOT EXISTS signal_layers (
+    CREATE TABLE IF NOT EXISTS frontier_layers (
         layer_num INTEGER PRIMARY KEY,
         title TEXT NOT NULL,
         crystal_count INTEGER,
@@ -54,21 +54,21 @@ def create_schema(conn):
         credibility_tier INTEGER
     );
 
-    CREATE TABLE IF NOT EXISTS signal_crystals (
+    CREATE TABLE IF NOT EXISTS frontier_crystals (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         node_id TEXT,
         crystal_id INTEGER,
         relevance TEXT,
-        FOREIGN KEY (node_id) REFERENCES signal_nodes(node_id)
+        FOREIGN KEY (node_id) REFERENCES frontier_nodes(node_id)
     );
 
     CREATE TABLE IF NOT EXISTS cross_references (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        signal_node_id TEXT NOT NULL,
+        frontier_node_id TEXT NOT NULL,
         archive_node_id TEXT NOT NULL,
         relationship TEXT,
         notes TEXT,
-        FOREIGN KEY (signal_node_id) REFERENCES signal_nodes(node_id)
+        FOREIGN KEY (frontier_node_id) REFERENCES frontier_nodes(node_id)
     );
     ''')
     conn.commit()
@@ -329,7 +329,7 @@ def infer_edges(entries):
     return edges
 
 
-def build_signal_kg():
+def build_frontier_kg():
     """Main build function."""
     # Read markdown
     with open(MD_PATH, 'r') as f:
@@ -352,7 +352,7 @@ def build_signal_kg():
 
     # Insert layers
     for layer in layers:
-        cur.execute('''INSERT OR REPLACE INTO signal_layers
+        cur.execute('''INSERT OR REPLACE INTO frontier_layers
             (layer_num, title, crystal_count, avg_zl, dominant_glyph,
              glyph_distribution, archive_dedup_hits, part, credibility_tier)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
@@ -384,7 +384,7 @@ def build_signal_kg():
         else:
             domain = 'general'
 
-        cur.execute('''INSERT OR REPLACE INTO signal_nodes
+        cur.execute('''INSERT OR REPLACE INTO frontier_nodes
             (node_id, layer_num, glyph, glyph_distribution, zl_score,
              title, description, category, credibility_tier, domain)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
@@ -396,14 +396,14 @@ def build_signal_kg():
     # Insert edges
     for edge in edges:
         # Check both nodes exist
-        cur.execute('SELECT node_id FROM signal_nodes WHERE node_id=?', (edge['src'],))
+        cur.execute('SELECT node_id FROM frontier_nodes WHERE node_id=?', (edge['src'],))
         if not cur.fetchone():
             continue
-        cur.execute('SELECT node_id FROM signal_nodes WHERE node_id=?', (edge['dst'],))
+        cur.execute('SELECT node_id FROM frontier_nodes WHERE node_id=?', (edge['dst'],))
         if not cur.fetchone():
             continue
 
-        cur.execute('''INSERT INTO signal_edges (src_node_id, dst_node_id, edge_type, notes)
+        cur.execute('''INSERT INTO frontier_edges (src_node_id, dst_node_id, edge_type, notes)
             VALUES (?, ?, ?, ?)''',
             (edge['src'], edge['dst'], edge['type'], edge['notes']))
 
@@ -411,19 +411,19 @@ def build_signal_kg():
     for ref in crystal_refs:
         if ref['layer_num'] is None:
             continue
-        # Find signal nodes for this layer
-        cur.execute('SELECT node_id FROM signal_nodes WHERE layer_num=? LIMIT 1',
+        # Find frontier nodes for this layer
+        cur.execute('SELECT node_id FROM frontier_nodes WHERE layer_num=? LIMIT 1',
                     (ref['layer_num'],))
         row = cur.fetchone()
         if row:
-            cur.execute('''INSERT INTO signal_crystals (node_id, crystal_id, relevance)
+            cur.execute('''INSERT INTO frontier_crystals (node_id, crystal_id, relevance)
                 VALUES (?, ?, ?)''',
                 (row[0], ref['crystal_id'], 'referenced'))
 
     # Insert cross-references
     for ref in cross_refs:
         cur.execute('''INSERT INTO cross_references
-            (signal_node_id, archive_node_id, relationship, notes)
+            (frontier_node_id, archive_node_id, relationship, notes)
             VALUES (?, ?, ?, ?)''',
             (ref['signal_node_id'], ref['archive_node_id'],
              ref['relationship'], ref['notes']))
@@ -431,18 +431,18 @@ def build_signal_kg():
     conn.commit()
 
     # Print stats
-    cur.execute('SELECT COUNT(*) FROM signal_nodes')
+    cur.execute('SELECT COUNT(*) FROM frontier_nodes')
     n_nodes = cur.fetchone()[0]
-    cur.execute('SELECT COUNT(*) FROM signal_edges')
+    cur.execute('SELECT COUNT(*) FROM frontier_edges')
     n_edges = cur.fetchone()[0]
-    cur.execute('SELECT COUNT(*) FROM signal_layers')
+    cur.execute('SELECT COUNT(*) FROM frontier_layers')
     n_layers = cur.fetchone()[0]
-    cur.execute('SELECT COUNT(*) FROM signal_crystals')
+    cur.execute('SELECT COUNT(*) FROM frontier_crystals')
     n_crystals = cur.fetchone()[0]
     cur.execute('SELECT COUNT(*) FROM cross_references')
     n_xrefs = cur.fetchone()[0]
 
-    print(f'Signal KG built:')
+    print(f'Frontier KG built:')
     print(f'  {n_nodes} nodes (Signal Territory Graph entries)')
     print(f'  {n_edges} edges (within-layer + cross-references)')
     print(f'  {n_layers} layers')
@@ -457,7 +457,7 @@ def build_signal_kg():
         print(f'  {row[0]}: {row[1]} connections')
 
     # Show domain distribution
-    cur.execute('''SELECT domain, COUNT(*) FROM signal_nodes
+    cur.execute('''SELECT domain, COUNT(*) FROM frontier_nodes
                    GROUP BY domain ORDER BY COUNT(*) DESC''')
     print(f'\nDomain distribution:')
     for row in cur.fetchall():
@@ -467,4 +467,4 @@ def build_signal_kg():
 
 
 if __name__ == '__main__':
-    build_signal_kg()
+    build_frontier_kg()

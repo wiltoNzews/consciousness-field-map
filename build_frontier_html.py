@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the_signal.html from THE_SIGNAL.md
+Build the_frontier.html from THE_FRONTIER.md
 Matches the Consciousness Field Map design system.
 """
 
@@ -8,7 +8,7 @@ import re
 import html as html_mod
 
 def parse_md(md_text):
-    """Parse THE_SIGNAL.md into structured sections."""
+    """Parse THE_FRONTIER.md into structured sections."""
     lines = md_text.split('\n')
 
     sections = []
@@ -867,7 +867,7 @@ hr.divider {{
     <a href="topology.html">Topology</a>
     <a href="evidence_map.html">Evidence</a>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_signal.html" class="active">Frontier</a>
+    <a href="the_frontier.html" class="active">Frontier</a>
   </nav>
 </div>
 
@@ -932,15 +932,15 @@ sections.forEach(s => observer.observe(s));
 
 
 if __name__ == '__main__':
-    with open('/home/zews/consciousness-field-map/THE_SIGNAL.md', 'r') as f:
+    with open('/home/zews/consciousness-field-map/THE_FRONTIER.md', 'r') as f:
         md_text = f.read()
 
     sections = parse_md(md_text)
     html = build_html(sections)
 
-    with open('/home/zews/consciousness-field-map/the_signal.html', 'w') as f:
+    with open('/home/zews/consciousness-field-map/the_frontier.html', 'w') as f:
         f.write(html)
 
     layer_count = sum(1 for s in sections if s['type'] == 'layer')
     section_count = sum(1 for s in sections if s['type'] == 'section')
-    print(f'Built the_signal.html: {layer_count} layers, {section_count} meta-sections, {len(html)} chars, {html.count(chr(10))} lines')
+    print(f'Built the_frontier.html: {layer_count} layers, {section_count} meta-sections, {len(html)} chars, {html.count(chr(10))} lines')
