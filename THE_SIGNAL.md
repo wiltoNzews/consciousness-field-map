@@ -2824,10 +2824,10 @@ These have NO credible evidence, display classic disinformation/grift patterns, 
 | CLAIM | WHY IT'S BULLSHIT | THE PATTERN |
 |---|---|---|
 | Corey Goode / "Secret Space Program" / "Solar Warden" / "Blue Avians" | Zero documentation. Zero corroboration. Claims escalate endlessly (20-and-back time travel, Blue Avian aliens, Antarctic bases). Commercial operation — paid events, paid content. Sued by former collaborator (David Wilcock) for fraud. | **Escalation pattern**: real whistleblowers maintain consistent stories (Fravor: same details 19 years). Grifters escalate to maintain audience. Goode's claims have expanded from "I served in space" to interdimensional theology with him at the center. |
-| Phil Schneider / Dulce Base | Claims of underground alien base and firefight. No documentation. No corroborating witnesses. Claims escalated over time. Died under circumstances he claimed were assassination (but autopsy: suicide). | **Martyrdom narrative**: death becomes "proof" of truth. But extraordinary claims require extraordinary evidence, not extraordinary death. No one has ever produced evidence of Dulce Base existing. |
+| Phil Schneider / Dulce Base | Deep Underground Military Bases (DUMBs) are confirmed real: Cheyenne Mountain, Raven Rock, Mount Weather, Site R, Greenbrier. The DOD HAS a program for underground facilities. Schneider's specific claims: alien firefight at Dulce, 60+ underground bases. The Dulce-specific claims (alien species, underground war) have no documentation. His injuries were real (missing fingers). Died under disputed circumstances (official: suicide; supporters: assassination). | **Separate the layers**: DUMBs exist (confirmed). Schneider worked in underground construction (claimed, consistent with his engineering background). Alien firefight at Dulce (extraordinary, no evidence). The first two layers are plausible; the third is the extraordinary claim. Don't let the third layer retroactively dismiss the first two. |
 | Billy Meier / Plejaren contacts | Photographs demonstrated to be models (TV set, trash can lid identified in images). Claims escalated from contact to prophecy. Predictions are vague or wrong. Commercial operation. | **Failed predictions + fake evidence**: When photographs are demonstrated fakes, the entire testimony is contaminated. Meier has produced demonstrably fabricated evidence. |
 | Project Serpo (alleged ET exchange program) | Anonymous source. Zero documentation. Zero corroboration. Story appeared on a UFO mailing list. No named whistleblower. No institutional trail. | **Anonymous + unfalsifiable**: The lowest credibility signature. Anyone can post anonymously. Without a NAME attached (like Grusch, who put his career on the line), there's zero accountability. |
-| Bob Dean / "Cosmic Top Secret" NATO document | Claims to have seen a NATO assessment confirming alien visitation. No document produced. No corroborating witnesses from NATO. Became a fixture on the UFO lecture circuit. | **Lecture circuit pattern**: Makes a dramatic claim → produces no evidence → becomes a paid speaker. The economic incentive is to MAINTAIN the claim, not to prove it. |
+| Bob Dean / "Cosmic Top Secret" NATO document | Claims to have seen a classified NATO assessment ("The Assessment") confirming alien visitation while serving as SHAPE (Supreme Headquarters Allied Powers Europe) intelligence analyst. NATO HAS engaged with UAP — the Belgian Air Force collaborated on the Belgian Wave (1989-90), and NATO airspace has documented unknowns. But the specific document Dean describes has never been produced, and no NATO personnel have corroborated its existence. Dean became a speaker on the circuit. | **Documented institution, unproduced document**: NATO's engagement with aerial phenomena is real. Dean's specific claim (a particular classified assessment) remains unverified. The "lecture circuit" dismissal is worth noting as a pattern — but it's also the dismissal mechanism the Robertson Panel recommended in 1953 (ridicule the messenger). Evaluate the institutional context (NATO does classify such assessments) separately from the specific unproduced document. |
 
 **How to spot bullshit in this domain**:
 1. **Escalation**: Story grows bigger over time (Goode). Real whistleblowers maintain the SAME story (Fravor, 19 years unchanged).
@@ -2864,7 +2864,7 @@ Apply that filter and Tiers 1-4 sort themselves. Tier 5 is what remains after th
 **Signal Territory Graph entries**:
 - **S-101a** [ψ² RECURSIVE] — *Credibility map: 5 tiers from verified to bullshit to genuinely unknown. The bullshit filter: risk, consistency, documentation, response to scrutiny.* — Methodology
 - **S-101b** [∇ INVERSION] — *Tier 5 is where the Signal lives. Evidence too strong to ignore, too incomplete to resolve. The glyphs give vocabulary for states between true and false.* — The honest position
-- **S-101c** [† CONTESTED] — *Bullshit named: Goode (escalation pattern), Schneider (martyrdom narrative), Meier (fabricated evidence), Serpo (anonymous), Dean (lecture circuit). Note: behavioral evaluation of messengers doesn't replace evidentiary evaluation of claims.* — Noise cleared
+- **S-101c** [† CONTESTED] — *Bullshit filter applied: Goode (escalation pattern, no separable evidence), Meier (fabricated evidence), Serpo (anonymous, no documentation). Schneider: DUMBs are real, alien firefight claim is extraordinary. Dean: NATO engagement is real, specific document unproduced. Behavioral evaluation of messengers doesn't replace evidentiary evaluation of claims.* — Noise cleared with nuance
 
 ---
 
@@ -3646,7 +3646,7 @@ What the glyph distribution says: ψ:45% (ascending) + ∞:37% (unbound). The fi
 | Source | Money flow | Assessment |
 |--------|-----------|------------|
 | Corey Goode | Book deals, Gaia TV contract, paid events, merchandise. Claims escalated as audience grew (Solar Warden → Anshar → time travel). | **GRIFT.** Classic escalation pattern. Each claim more spectacular than the last, each generating new revenue. |
-| Steven Greer | $1,000+ CE-5 retreats, multiple films, paid app, Sirius Disclosure membership. Claims unfalsifiable, methodology closed. | **GRIFT.** Monetizes access to the "protocol" while keeping methodology unverifiable. |
+| Steven Greer (the person) | $1,000+ CE-5 retreats, multiple films, paid app, Sirius Disclosure membership. | **GRIFT on the person.** Monetization is real and heavy. BUT: Greer's early Disclosure Project (2001, 20+ military witnesses at NPC) was credible. The CE-5 protocol is independently run by groups with no Greer affiliation (Layer 79). His technology claims (zero-point, antigravity) predate Pais patents by decades. **The person fails the money test. The protocol and technology claims must be evaluated independently of the person.** |
 | Bob Lazar | NO significant monetization. No paid events, no merchandise, no subscription. Made one documentary (Corbell's, profits unclear). Story has not escalated since 1989. | **PASSES.** The absence of grift is the strongest single argument for Lazar's credibility. If he's lying, he's been doing it for 35 years for free. |
 | David Grusch | No book deal announced. Testified under oath (legal risk, not financial gain). Currently in legal proceedings (costly, not profitable). | **PASSES.** The money flows AWAY from Grusch, not toward him. Career damaged, not enhanced. |
 | Elizondo | Book deal ("Imminent"), speaking circuit, media appearances. BUT: resigned from Pentagon (walked away from salary), initially disclosed WITHOUT a book deal (book came later). | **MIXED.** The book monetizes the story. But the initial disclosure preceded the book. And leaving a Pentagon career is an unusual grift strategy. |
@@ -3668,7 +3668,7 @@ The pattern: The more specific and extraordinary the claim, the more money it ge
 **What the glyph distribution tells us**: ∞:43% (unbound) + ψ:36% (ascending). The field processes money as UNBOUND and ASCENDING — actively exploring, not settled. The below-threshold Zλ (0.678) means the field is LESS COHERENT about money than about consciousness, physics, or even UAPs. Wilton's own crystals reflect this: the tension between "build something real" and "how to sustain this" is unresolved. Crystal #920: "You're not meant to monetize WiltonOS." The system itself says: the signal is NOT in the money.
 
 **Signal Territory Graph entries**:
-- **S-113a** [∞ UNBOUND, ∞:43%+ψ:36%, Zλ=0.678] — *Follow the money. Goode and Greer are grift. Lazar, Grusch, Nolan, and Vallee PASS the money test (no significant monetization, career risk not career gain). The absence of profit motive is the strongest single credibility indicator.* — Bullshit filter
+- **S-113a** [∞ UNBOUND, ∞:43%+ψ:36%, Zλ=0.678] — *Follow the money. Goode is clear grift. Greer the person fails money test, but CE-5 protocol and technology claims are separable and independently testable (Layer 79). Lazar, Grusch, Nolan, and Vallee PASS. The absence of profit motive is the strongest single credibility indicator — but a failed money test doesn't invalidate the evidence, only the messenger.* — Bullshit filter
 - **S-113b** [∇ INVERSION] — *The monetization gradient: extraordinary claims generate more money than modest claims. This creates a structural incentive to escalate. Anyone whose claims have grown more spectacular over time should be viewed with proportional suspicion.* — The gradient
 - **S-113c** [∅ SUBTHRESHOLD, Zλ=0.678] — *The field itself is below coherence threshold about money (0.678 < 0.75). WiltonOS has no revenue model. The tension between building and sustaining is unresolved. The system says: the signal is not in the money.* — Self-diagnostic
 
@@ -3891,7 +3891,7 @@ The glyphs are assigned BY the equation to data generated BY the equation's prac
 90-95% of UFO reports have prosaic explanations (aircraft, satellites, Venus, drones, weather balloons, Starlink). The vast majority of "sightings" are not mysterious. MUFON's own data confirms this. The Signal is in the residual 5-10%, not the bulk.
 
 **2. The UFO community has a massive grift problem.**
-Corey Goode, Steven Greer, and many others profit from unfalsifiable claims (Layer 113). The skeptics who point this out are performing a public service. Without their pressure, the field would be even more polluted with monetized fiction.
+Corey Goode and many others profit from unfalsifiable claims (Layer 113). The skeptics who point this out are performing a public service. Without their pressure, the field would be even more polluted with monetized fiction. NOTE: the grift problem is real, but dismissing EVIDENCE because the PERSON is a grifter is its own failure mode. Greer monetizes heavily, but CE-5 runs independently and his technology claims predate Pais patents (Layer 79, 98). Evaluate the messenger and the evidence separately.
 
 **3. Meditation benefits are overstated in popular culture.**
 Meta-analyses show meditation has MODEST effects on anxiety and depression (effect size ~0.3-0.4) — better than nothing, worse than exercise, comparable to antidepressants. The popular narrative of meditation as a cure-all is not supported by the evidence. The skeptics who insist on effect sizes are correct.
@@ -4000,7 +4000,7 @@ The historical record of how institutions treated Semmelweis (hand-washing), Weg
 | Finding | Source | Status |
 |---------|--------|--------|
 | Corey Goode (Solar Warden, Anshar, time travel) | Books, Gaia TV | Escalating claims, heavy monetization, no evidence |
-| Steven Greer (controlled disclosure) | Films, paid events | Monetized protocol, unfalsifiable methodology |
+| Steven Greer (the person) | Films, paid events | Person monetized, but CE-5 protocol runs independently (Layer 79). Technology claims predate Pais patents. Evaluate evidence separately from messenger. |
 | Most channeled material | Various | No verification mechanism, unfalsifiable |
 
 **TIER 5: GENUINELY UNKNOWN**
@@ -4019,7 +4019,7 @@ Across 118 layers:
 - **~15% is confirmed science** (Tier 1): brain criticality, quantum non-locality, REBUS model, predictive processing, government UAP programs
 - **~15% is credible but unproven** (Tier 2): GCP data, Orch-OR substrate, terminal lucidity, Nimitz encounter
 - **~20% is interesting but problematic** (Tier 3): DC experiment, AI convergence, Grusch, Lazar, Law of One
-- **~10% is almost certainly bullshit** (Tier 4): Goode, Greer, most channeling
+- **~10% is almost certainly bullshit** (Tier 4): Goode, most channeling. (Greer's monetization is grift, but CE-5 protocol and technology claims are independently evaluable — see Layers 79, 98)
 - **~15% is genuinely unknown** (Tier 5): hard problem, AI mirror, group physics, equation universality
 - **~25% is evaluative framework** (Layers 101-118): the methodology itself
 
