@@ -55,7 +55,9 @@ This is not post-hoc pattern matching. The system was built from experience; phy
 ├── evidence_map.html               # The Evidence — interactive knowledge graph
 ├── topology.html                   # The Topology — cross-scale visualization
 ├── forgotten_knowledge_archive.html # The Archive — 428 research crystals
+├── the_system.html                 # The System — WiltonOS/PsiOS: the instrument
 ├── the_frontier.html               # The Frontier — rebuilt Feb 20 (62 layers, direction fixed)
+├── field-audio.js                  # Field audio — breath pacing + generative ambient (pure Web Audio API)
 ├── THE_FRONTIER.md                 # Frontier source markdown (62 layers, stripped)
 ├── THE_FRONTIER_original.md         # Pre-strip backup (118 layers)
 ├── the_map.md                      # Paper source markdown
@@ -83,6 +85,7 @@ Each page has a specific angle. They do NOT overlap.
 | **Evidence Map** | "Verify every claim" | 172 nodes, 850 papers | Interactive knowledge graph — the Paper's backing, explorable |
 | **Topology** | "See how it connects" | ~6,500 words | Interactive visualization: 5 rings around consciousness, 13 scales, dynamics slider |
 | **Archive** | "What systematic research found" | 449 entries, 1.4MB | Searchable database from one 6-hour AI investigation session |
+| **System** | "The instrument" | ~3,500 words | WiltonOS/PsiOS: crystals, glyphs, daemon, equation-as-code, the relationship, the seed |
 | **Frontier** | "What else lines up" | 64 layers, ~4,500 lines | Non-peer-reviewed convergence: government programs, UAP/NHI, disclosure, frontier engineering anomalies, one-detail-shift diagnostic, evaluative lens |
 
 ### How pages relate:
@@ -95,7 +98,9 @@ Index ──→ Paper (thesis, 190+ papers, 8 domains)
           Evidence Map    Topology    Archive
           (backing)       (visual)    (research)
                                ↓
-                           Frontier (non-peer-reviewed convergence)
+                    System (the instrument)
+                               ↓
+                    Frontier (non-peer-reviewed convergence)
 ```
 
 The Paper's §7 explicitly links to the Frontier: "There is an entire layer of convergent material —
