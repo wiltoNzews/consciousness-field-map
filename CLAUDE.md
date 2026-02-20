@@ -82,7 +82,7 @@ Each page has a specific angle. They do NOT overlap.
 | **Paper** | "Here's the convergence" | ~20K words | Full thesis: 8 evidence domains (190+ peer-reviewed papers), equation, MDI measurement, limitations |
 | **Evidence Map** | "Verify every claim" | 172 nodes, 850 papers | Interactive knowledge graph — the Paper's backing, explorable |
 | **Topology** | "See how it connects" | ~6,500 words | Interactive visualization: 5 rings around consciousness, 13 scales, dynamics slider |
-| **Archive** | "What systematic research found" | 428 entries, 1.4MB | Searchable database from one 6-hour AI investigation session |
+| **Archive** | "What systematic research found" | 449 entries, 1.4MB | Searchable database from one 6-hour AI investigation session |
 | **Frontier** | "What else lines up" | 64 layers, ~4,500 lines | Non-peer-reviewed convergence: government programs, UAP/NHI, disclosure, frontier engineering anomalies, one-detail-shift diagnostic, evaluative lens |
 
 ### How pages relate:
