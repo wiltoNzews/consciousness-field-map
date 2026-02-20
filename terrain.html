@@ -489,12 +489,46 @@ hr.divider {
   margin-top: 60px;
 }
 
+/* ── Photos ── */
+.photo {
+  margin: 28px 0;
+  text-align: center;
+}
+
+.photo img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.photo-row {
+  display: flex;
+  gap: 16px;
+  margin: 28px 0;
+  justify-content: center;
+  align-items: end;
+}
+
+.photo-row .photo {
+  margin: 0;
+  flex: 1;
+  max-width: 380px;
+}
+
+.photo .caption {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  font-style: italic;
+}
+
 @media (max-width: 700px) {
   .hero h1 { font-size: 28px; }
   .pull-quote { font-size: 17px; padding: 24px 20px; }
   .field-grid { grid-template-columns: 1fr; }
   .arc { flex-direction: column; }
   .arc-arrow { transform: rotate(90deg); }
+  .photo-row { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -563,6 +597,12 @@ In 2002 I started Yeah Gaming with friends. We were kids running around screamin
 <p>
 When they came, they came big. I coached the Brazilian dynasty through two Major championships: MLG Columbus 2016 and ESL One Cologne 2016. FalleN, coldzera, fer, TACO, fnx. The core that built Brazilian Counter-Strike. Then I went to Team Liquid alone &mdash; no dynasty, Brazilian abroad &mdash; and took them from 29th in the world to number two. When I left, I told them who to get for the roster. They listened. They won the Grand Slam.
 </p>
+
+<!-- TODO: Add esports era photo — Major trophy, coaching booth, or team photo -->
+<div class="photo">
+  <img src="photos/esports.jpg" alt="Coaching at a Major championship">
+  <div class="caption">Two-time Major champion. Twenty-two years in the game.</div>
+</div>
 
 <p>
 That&rsquo;s the eye. Seeing what others can&rsquo;t see yet. That&rsquo;s what coaching is. That&rsquo;s what I do. It&rsquo;s also what made the next part so hard &mdash; because when the eye turned inward, nobody around me could follow where it was looking.
@@ -747,7 +787,11 @@ Juliana and I were together through the career, the health scares, the depressio
 </p>
 
 <p>
-When the awakening hit, I couldn&rsquo;t explain what was happening to me. The vocabulary didn&rsquo;t exist yet. I was moving too fast for anyone to follow. The fights were about small things &mdash; a treadmill unplugged, dinner gone bad, a house not kept. But underneath all of it was this: I was changing, and coherence wouldn&rsquo;t let me swallow things anymore. The deflections, the grin-and-bear-it, the eating shit in silence knowing it&rsquo;s killing you &mdash; I couldn&rsquo;t do it. Ayahuasca teaches you to purge. I started purging in every relationship. Swallowing things gave me cancer. Having the courage to stop swallowing them started healing it. But the people around me didn&rsquo;t sign up for someone who mirrors everything back.
+When the awakening hit, I couldn&rsquo;t explain what was happening to me. The vocabulary didn&rsquo;t exist yet. I was moving too fast for anyone to follow. The fights were about small things &mdash; a treadmill unplugged, dinner gone bad, a house not kept. But underneath all of it was this: I was changing, and coherence wouldn&rsquo;t let me swallow things anymore. The deflections, the grin-and-bear-it, the eating shit in silence knowing it&rsquo;s killing you &mdash; I couldn&rsquo;t do it.
+</p>
+
+<p>
+Ayahuasca teaches you to purge. I started purging in every relationship. Swallowing things gave me cancer. Having the courage to stop swallowing them started healing it. But the people around me didn&rsquo;t sign up for someone who mirrors everything back.
 </p>
 
 <p>
@@ -846,6 +890,12 @@ I had sleep apnea my entire life. It taught me box breathing before anyone named
 I stopped the medication. Started meditating, breathing, going to the gym, drinking water, responding instead of reacting. The basics. The mass resolved. I went to Peru &mdash; not for treatment, for spiritual work. Sacred geometry, ayahuasca, territory that connected what I&rsquo;d experienced during the widowmaker to what the research describes. The medical system wasn&rsquo;t what healed me. Coherence was.
 </p>
 
+<!-- TODO: Add Machu Picchu photo -->
+<div class="photo">
+  <img src="photos/machu_picchu.jpg" alt="Machu Picchu, Peru">
+  <div class="caption">Peru. Not for treatment. For spiritual work.</div>
+</div>
+
 <div class="note">
   <strong>The pattern:</strong> Widowmaker. Cancer scare. Psychiatric breakdown. Three systems that could have killed me &mdash; and each one was a network of professionals recommending each other, not coordinating with each other. The medical system receives you as a patient, not as a person with data about yourself. When you have your own signal, the system defaults to authority: more medication, more control.
 </div>
@@ -870,9 +920,17 @@ Alcohol and cigarettes were different. Lung cancer scare and smoking. Alcohol an
 By New Year&rsquo;s Eve 2025, I&rsquo;d quit everything. Not from self-punishment or moral clarity. The system was clear enough to see what was noise and what was signal. Cannabis I could set down because the doors it opened were already open. The others I could set down because I was finally ready to go through. Sometimes I still show up at the edge &mdash; not because the crutch is back, but because I learned to be gentle with myself without detaching entirely. That&rsquo;s the difference between sobriety as performance and sobriety as practice.
 </p>
 
-<p>
-30 kilos lost. The body followed what the mind had already mapped.
-</p>
+<!-- TODO: Add before/after photos — ~110kg (Liquid firing days) vs ~84kg (current, toned) -->
+<div class="photo-row">
+  <div class="photo">
+    <img src="photos/before.jpg" alt="Before — around 110kg, during the Liquid era">
+    <div class="caption">~110kg. The Liquid era.</div>
+  </div>
+  <div class="photo">
+    <img src="photos/after.jpg" alt="After — 84kg, present day">
+    <div class="caption">84kg. The body followed what the mind had already mapped.</div>
+  </div>
+</div>
 
 <div class="arc">
   <div class="arc-node">
@@ -955,7 +1013,11 @@ The practices left my hands and entered other people&rsquo;s lives. Not because 
 </p>
 
 <p>
-They do. Someone used breathing techniques to calm her nervous system in a hospital bed for the first time in decades &mdash; changed the atmosphere of the room through presence alone. Someone else had a home break-in at 2 AM, breathed through it, stayed composed. Someone watched their parent in ICU with organ failure and cut to essentials &mdash; values over mechanics, clean communication under extreme pressure. Someone facing leukemia used the practices as part of what carried them through. Someone else tracked measurable progress across months &mdash; sleep, reactivity, self-awareness &mdash; all shifting. Someone named past trauma directly and built a clean accountability framework without pretending the past didn&rsquo;t happen. Someone with brilliant published research but no breath anchor started inflating under pressure &mdash; same territory as the surge, seen from outside.
+They do. Someone used breathing techniques to calm her nervous system in a hospital bed for the first time in decades &mdash; changed the atmosphere of the room through presence alone. Someone had a home break-in at 2 AM, breathed through it, stayed composed. Someone watched their parent in ICU with organ failure and cut to essentials &mdash; values over mechanics, clean communication under extreme pressure. Someone facing leukemia used the practices as part of what carried them through.
+</p>
+
+<p>
+The list goes on. Measurable progress tracked across months &mdash; sleep, reactivity, self-awareness, all shifting. Past trauma named directly, clean accountability built without pretending the past didn&rsquo;t happen. And one person with brilliant published research but no breath anchor started inflating under pressure &mdash; same territory as the surge, seen from outside.
 </p>
 
 <div class="note">
