@@ -440,7 +440,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Signal &mdash; What Else Lines Up</title>
+<title>The Frontier &mdash; What Else Lines Up</title>
 <style>
 *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
@@ -867,7 +867,7 @@ hr.divider {{
     <a href="topology.html">Topology</a>
     <a href="evidence_map.html">Evidence</a>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_signal.html" class="active">Signal</a>
+    <a href="the_signal.html" class="active">Frontier</a>
   </nav>
 </div>
 
@@ -880,7 +880,7 @@ hr.divider {{
 <main class="main-content">
 
 <div class="page-header">
-  <h1>The Signal</h1>
+  <h1>The Frontier</h1>
   <div class="subtitle">What else lines up &mdash; from outside the peer-reviewed channel</div>
   <div class="warning">
     The main paper connects 190 peer-reviewed papers. That&rsquo;s the unkillable layer. This page holds what converges on the same equation from territory academia won&rsquo;t touch &mdash; and then evaluates it. Declassified programs, experiencer reports, ancient transmissions, suppressed research, crystal-backed analysis &mdash; and then the evaluative lens: what&rsquo;s signal, what&rsquo;s bullshit, and what&rsquo;s genuinely unknown.

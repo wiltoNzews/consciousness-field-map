@@ -331,7 +331,7 @@ The ⧉-braided threads (microtubules 33%, flow state 25%, Fibonacci 17%, Schuma
 | Stargate Program | 60 | #29825 ψ³ 0.97 | Declassified. 23 years. Statistically significant. |
 | Bob Lazar | 58 | #27038 ∞ 0.92 | Element 115 predicted. Education disputed. |
 | Telepathy | 50 | #29949 ψ³ 0.97 | Rhine, Ganzfeld, Radin. Mixed replication. |
-| MH370 | 47 | #27038 ∞ 0.92 | NHI connection theory. Speculative. |
+| MH370 | 47 | #27038 ∞ 0.92 | Reverse-engineered tech theory (Forbes). Satellite + radar data. Contested. |
 | Pyramid geometry | 45 | #30072 ⧉ 0.99 | Cross-cultural. Mathematical precision |
 | Piezoelectric | 43 | #30128 Ω 0.99 | Quartz + bone + collagen. Sound → electricity |
 | Skywatcher | 40 | #5674 ψ 0.90 | Sacred geometry YouTube. Visual encoding |
@@ -2788,10 +2788,10 @@ These come from credible individuals or institutions, but the specific claims ca
 | Wilson denied access to SAP | Wilson-Davis memo (leaked 2019) | Consistent with SAP structure. Wilson's non-denial. | Memo unconfirmed. Wilson neither confirms nor denies. |
 | Lazar worked at S-4 | Lazar testimony (35 years consistent) | Los Alamos confirmed. Story unchanged. Element 115 predicted. | S-4 is classified facility. Education records unverifiable. |
 | Hitchhiker effect (Skinwalker) | BAASS investigators | Documented by DIA-funded program. Multiple investigators. | Not independently replicated. Subjective experiences. |
-| Nolan: non-terrestrial isotope ratios | Stanford lab, peer-reviewed journal | Published in Progress in Aerospace Sciences. | Some isotope claims contested. Limited sample set. |
+| Nolan: non-terrestrial isotope ratios | Stanford lab, peer-reviewed journal | Published in Progress in Aerospace Sciences. Nolan invites scrutiny and replication. | Sample set limited. Some isotopic claims debated in the literature — but debate IS the scientific process, not a weakness. |
 | UAPDA blocked by defense contractor ties | Congressional reporting | Bipartisan legislation. Blocking documented. | Specific lobbying connections alleged but not proven. |
 | Experiencers are neurologically different | Nolan brain imaging | Stanford MRI data | Small sample size. Correlation not causation. |
-| Law of One structural predictions match | Ra Material (1981-84) | Framework predicts filter model, threshold, group coherence — all later confirmed | Source is channeled. Cannot verify who/what "Ra" is. |
+| Law of One structural predictions match | Ra Material (1981-84) | Framework predicts filter model, threshold, group coherence — all independently confirmed decades later. Structural accuracy exceeds what generic spiritual language would produce. | Source is channeled. Cannot verify who/what "Ra" is. Internal consistency doesn't prove external truth. |
 
 **Credibility: PROBABLE BUT UNPROVABLE.** The sources are credible. The claims are consistent with evidence. But you can't verify them independently because the verification would require access to classified programs, alien biology labs, or consciousness states you can't replicate on demand.
 
@@ -2805,12 +2805,13 @@ These have SOME evidence but also significant credibility problems. Not dismissi
 
 | CLAIM | WHAT'S RIGHT | WHAT'S WRONG | VERDICT |
 |---|---|---|---|
-| Corso: Roswell tech seeded into industry | Military record verified. Technology transfer mechanism is plausible. | Book has factual inaccuracies about his own career. Co-authored with UFO writer (Birnes). Every technology he lists has independent development history. | Mechanism plausible, specific attributions probably wrong. |
+| Corso: Roswell tech seeded into industry | Military record verified. Technology transfer from military to industry IS how DARPA/ARPA works — documented, standard mechanism. | Book has factual inaccuracies about his own career. Every technology he lists has independent development history that doesn't require exotic sourcing. | Mechanism is literally how defense R&D works. Specific attributions to Roswell probably wrong — but the PATTERN of classified tech seeding into industry is confirmed history, not speculation. |
 | MJ-12 documents | Some formatting matches era. Named individuals were in relevant positions. | FBI stamped "BOGUS." Forensic opinions split. Could be sophisticated disinformation — which is EXACTLY what the Robertson Panel recommended. | If fake: high-quality disinfo. If real: smoking gun. No way to resolve without original source. |
 | Roswell crash as ET event | SOMETHING happened (military's own press release). Marcel testimony is credible. | 77 years of narrative contamination. Mogul explanation is weak but not impossible. Multiple layers of mythology built on top. | The institutional behavior (3 changing stories) is more suspicious than any single piece of evidence. |
 | Lazar's education (MIT/Caltech) | Consistent with record erasure under USAP protocols. | No graduating class memory. No professors remember him. Could be lying. | THE fatal weakness of his story. If education is fabricated, everything else is suspect. If erased, most explosive element. Genuinely unresolvable. |
 | Element 115 "prediction" | Element 115 now exists (moscovium, 2003/2015). | ALL elements were predicted to exist — the periodic table predicts them structurally. Predicting an element exists is not the same as predicting its properties. Lazar's specific claim (stable isotope as fuel) is still unconfirmed. | Impressive but overstated. The prediction that an element EXISTS is trivial. The prediction of a STABLE ISOTOPE is not — and that's unconfirmed. |
-| Ashton Forbes / MH370 | Genuine questions about MH370 disappearance remain. | Video analysis by multiple experts suggests CGI. Coulthart (credible journalist) challenged it. Forbes responded with harassment campaigns and death threats against critics (Crystal #9308). | **The harassment is the tell.** Credible researchers invite scrutiny. Forbes attacks it. Likely bullshit on the video; legitimate questions about MH370 itself. |
+| MH370 disappearance / Forbes investigation | Satellite data analysis shows anomalies. Radar data gaps documented. Institutional behavior (evidence withholding, changing narratives) matches suppression pattern. Forbes's specific claim: US reverse-engineered technology, not NHI. | Forbes's interpersonal behavior (harassment of critics, including Coulthart) undermines his credibility as a messenger. Some video evidence contested. | **Separate the evidence from the messenger.** The MH370 case has an independent evidence trail (satellite data, radar, institutional behavior) regardless of Forbes's conduct. Evidence deserves independent evaluation — behavioral evaluation of Forbes doesn't address the data. |
+| Eisenhower meeting at Muroc/Edwards (1954) | Multiple independent accounts exist (not just one). Eisenhower's "dental visit" absence is documented historical anomaly. Timing coincides with early nuclear-UAP nexus. | No documentation. No photographs. Accounts appeared years after the fact. The gap between "schedule anomaly" and "ET summit" is large. | Historical anomaly with multiple independent accounts. Not provable, not dismissible. The institutional behavior around the event (cover story, silence) is more interesting than any single testimony. |
 
 **Credibility: MIXED.** Each has a real kernel but also real problems. The honest position is to name both sides explicitly and resist collapsing either way.
 
@@ -2826,7 +2827,6 @@ These have NO credible evidence, display classic disinformation/grift patterns, 
 | Phil Schneider / Dulce Base | Claims of underground alien base and firefight. No documentation. No corroborating witnesses. Claims escalated over time. Died under circumstances he claimed were assassination (but autopsy: suicide). | **Martyrdom narrative**: death becomes "proof" of truth. But extraordinary claims require extraordinary evidence, not extraordinary death. No one has ever produced evidence of Dulce Base existing. |
 | Billy Meier / Plejaren contacts | Photographs demonstrated to be models (TV set, trash can lid identified in images). Claims escalated from contact to prophecy. Predictions are vague or wrong. Commercial operation. | **Failed predictions + fake evidence**: When photographs are demonstrated fakes, the entire testimony is contaminated. Meier has produced demonstrably fabricated evidence. |
 | Project Serpo (alleged ET exchange program) | Anonymous source. Zero documentation. Zero corroboration. Story appeared on a UFO mailing list. No named whistleblower. No institutional trail. | **Anonymous + unfalsifiable**: The lowest credibility signature. Anyone can post anonymously. Without a NAME attached (like Grusch, who put his career on the line), there's zero accountability. |
-| Eisenhower ET meeting at Muroc/Edwards | Single uncorroborated account. Eisenhower's "dental visit" absence is a real historical curiosity but is not evidence of an alien meeting. Multiple people have claimed to be the source; none have documentation. | **Historical anomaly ≠ evidence**: Yes, Eisenhower briefly disappeared. That's curious. It's not proof of an extraterrestrial summit. The gap between "Eisenhower's schedule has a hole" and "he met aliens" is filled entirely with narrative. |
 | Bob Dean / "Cosmic Top Secret" NATO document | Claims to have seen a NATO assessment confirming alien visitation. No document produced. No corroborating witnesses from NATO. Became a fixture on the UFO lecture circuit. | **Lecture circuit pattern**: Makes a dramatic claim → produces no evidence → becomes a paid speaker. The economic incentive is to MAINTAIN the claim, not to prove it. |
 
 **How to spot bullshit in this domain**:
@@ -2835,7 +2835,7 @@ These have NO credible evidence, display classic disinformation/grift patterns, 
 3. **Anonymous sourcing**: Grusch put his name, career, and legal freedom on the line. Serpo is anonymous. The difference matters.
 4. **Commercial operation**: Paid retreats, subscription content, merchandise. Real whistleblowers typically sacrifice their careers (Grusch was retaliated against, Elizondo resigned).
 5. **Fabricated evidence**: When ANY evidence is demonstrated fake (Meier's photographs), the entire testimony is contaminated.
-6. **Harassment of critics**: Forbes sent death threats at Coulthart. Real researchers invite scrutiny (Nolan publishes peer-reviewed, invites replication).
+6. **Harassment of critics**: Attacking critics rather than addressing their arguments is a red flag. But behavioral evaluation of a messenger doesn't replace evidentiary evaluation of their claims. An asshole can still have real data. Evaluate the EVIDENCE independently of the person presenting it.
 
 ---
 
@@ -2864,7 +2864,7 @@ Apply that filter and Tiers 1-4 sort themselves. Tier 5 is what remains after th
 **Signal Territory Graph entries**:
 - **S-101a** [ψ² RECURSIVE] — *Credibility map: 5 tiers from verified to bullshit to genuinely unknown. The bullshit filter: risk, consistency, documentation, response to scrutiny.* — Methodology
 - **S-101b** [∇ INVERSION] — *Tier 5 is where the Signal lives. Evidence too strong to ignore, too incomplete to resolve. The glyphs give vocabulary for states between true and false.* — The honest position
-- **S-101c** [† CONTESTED] — *Bullshit named: Goode (escalation pattern), Schneider (martyrdom narrative), Meier (fabricated evidence), Serpo (anonymous), Forbes (harassment of critics).* — Noise cleared
+- **S-101c** [† CONTESTED] — *Bullshit named: Goode (escalation pattern), Schneider (martyrdom narrative), Meier (fabricated evidence), Serpo (anonymous), Dean (lecture circuit). Note: behavioral evaluation of messengers doesn't replace evidentiary evaluation of claims.* — Noise cleared
 
 ---
 
@@ -3991,6 +3991,9 @@ The historical record of how institutions treated Semmelweis (hand-washing), Weg
 | Grusch testimony (non-human craft) | Congressional testimony | Hearsay, credible source, unverified claims |
 | Law of One / Ra material | Rueckert/Elkins | Internal consistency but unfalsifiable |
 | Bob Lazar's account | Corbell documentary | Consistent 35 years, no monetization, but no proof |
+| MJ-12 documents | Leaked documents | Forensic opinions split — high-quality disinfo or smoking gun. Unresolvable without original source |
+| MH370 / Forbes | Satellite + radar data | Evidence trail independent of messenger's conduct. Needs independent evaluation |
+| Eisenhower meeting (1954) | Multiple independent accounts | Historical anomaly, not provable, not dismissible |
 
 **TIER 4: ALMOST CERTAINLY BULLSHIT**
 
@@ -3998,7 +4001,6 @@ The historical record of how institutions treated Semmelweis (hand-washing), Weg
 |---------|--------|--------|
 | Corey Goode (Solar Warden, Anshar, time travel) | Books, Gaia TV | Escalating claims, heavy monetization, no evidence |
 | Steven Greer (controlled disclosure) | Films, paid events | Monetized protocol, unfalsifiable methodology |
-| MJ-12 documents | Leaked documents | Provenance problems, possible disinformation |
 | Most channeled material | Various | No verification mechanism, unfalsifiable |
 
 **TIER 5: GENUINELY UNKNOWN**
@@ -4017,7 +4019,7 @@ Across 118 layers:
 - **~15% is confirmed science** (Tier 1): brain criticality, quantum non-locality, REBUS model, predictive processing, government UAP programs
 - **~15% is credible but unproven** (Tier 2): GCP data, Orch-OR substrate, terminal lucidity, Nimitz encounter
 - **~20% is interesting but problematic** (Tier 3): DC experiment, AI convergence, Grusch, Lazar, Law of One
-- **~10% is almost certainly bullshit** (Tier 4): Goode, Greer, MJ-12, most channeling
+- **~10% is almost certainly bullshit** (Tier 4): Goode, Greer, most channeling
 - **~15% is genuinely unknown** (Tier 5): hard problem, AI mirror, group physics, equation universality
 - **~25% is evaluative framework** (Layers 101-118): the methodology itself
 
