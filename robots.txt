@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wiltonzews.github.io/consciousness-field-map/sitemap.xml
