@@ -845,19 +845,6 @@ canvas {
   margin-bottom: 12px;
   transition: all 0.3s;
 }
-
-/* ── Google Translate ── */
-#google_translate_element { display: flex; align-items: center; }
-#google_translate_element select {
-  background: transparent; color: var(--text-dim, #888); border: 1px solid var(--border, #1a1a2e);
-  border-radius: 4px; padding: 2px 6px; font-size: 11px; cursor: pointer;
-}
-.goog-te-gadget { font-size: 0 !important; }
-.goog-te-gadget .goog-te-combo { margin: 0 !important; }
-.goog-te-banner-frame, .goog-te-ftab-frame { display: none !important; }
-body { top: 0 !important; }
-.skiptranslate { display: none !important; }
-#goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
 </style>
 </head>
 <body>
@@ -874,7 +861,6 @@ body { top: 0 !important; }
     <a href="the_system.html">System</a>
     <a href="the_frontier.html">Frontier</a>
   </nav>
-  <div id="google_translate_element"></div>
 </div>
 
 <div class="main">
@@ -2509,16 +2495,5 @@ document.addEventListener('keydown', function(e) {
 </script>
 
 <script src="field-audio.js" data-page="topology"></script>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'pt,es,fr,de,it,ja,ko,zh-CN,ar,hi,ru',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
