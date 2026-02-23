@@ -28,9 +28,9 @@ def parse_md(md_text):
     while i < len(lines):
         line = lines[i]
 
-        # Detect layer headers
-        layer_match = re.match(r'^###\s+Layer\s+(\d+):\s*(.*)', line)
-        layer_match2 = re.match(r'^##\s+LAYER\s+(\d+):\s*(.*)', line)
+        # Detect layer headers (supports "119b" style suffixes)
+        layer_match = re.match(r'^###\s+Layer\s+(\d+[a-z]?):\s*(.*)', line)
+        layer_match2 = re.match(r'^##\s+LAYER\s+(\d+[a-z]?):\s*(.*)', line)
 
         if layer_match or layer_match2:
             # Save previous section
@@ -39,7 +39,9 @@ def parse_md(md_text):
                 sections.append(current_section)
 
             m = layer_match or layer_match2
-            num = int(m.group(1))
+            num_str = m.group(1)
+            # Extract numeric part for sorting/grouping, keep full string for display
+            num = int(re.match(r'(\d+)', num_str).group(1))
             title = m.group(2).strip()
 
             # Skip stripped layers
@@ -52,8 +54,9 @@ def parse_md(md_text):
             current_section = {
                 'type': 'layer',
                 'num': num,
+                'num_str': num_str,
                 'title': title,
-                'id': f'layer-{num}',
+                'id': f'layer-{num_str}',
             }
             current_content = []
             i += 1
@@ -161,6 +164,27 @@ def md_to_html_block(content):
             i += 1
             continue
 
+        # Signal Territory Graph entry (check BEFORE list items — STG lines start with "- " too)
+        stg_match = re.match(r'^-\s+\*\*S-(\d+[a-z]?)\*\*\s+\[(.+?)\]\s*—\s*\*(.+?)\*\s*—\s*(.*)', line)
+        if stg_match:
+            # Close any open list first
+            if in_list:
+                html_parts.append(render_list(list_items))
+                list_items = []
+                in_list = False
+            sig_id = stg_match.group(1)
+            glyph_info = stg_match.group(2)
+            description = stg_match.group(3)
+            category = stg_match.group(4)
+            html_parts.append(f'''<div class="stg-entry">
+  <span class="stg-id">S-{html_mod.escape(sig_id)}</span>
+  <span class="stg-glyph">{md_inline(glyph_info)}</span>
+  <p class="stg-desc">{md_inline(description)}</p>
+  <span class="stg-cat">{md_inline(category)}</span>
+</div>''')
+            i += 1
+            continue
+
         # List item
         if re.match(r'^[\s]*[-*]\s', line) or re.match(r'^[\s]*\d+\.\s', line):
             if in_table:
@@ -204,22 +228,6 @@ def md_to_html_block(content):
         # Horizontal rule
         if line.strip() == '---':
             html_parts.append('<hr class="divider">')
-            i += 1
-            continue
-
-        # Signal Territory Graph entry
-        stg_match = re.match(r'^-\s+\*\*S-(\d+[a-z]?)\*\*\s+\[(.+?)\]\s*—\s*\*(.+?)\*\s*—\s*(.*)', line)
-        if stg_match:
-            sig_id = stg_match.group(1)
-            glyph_info = stg_match.group(2)
-            description = stg_match.group(3)
-            category = stg_match.group(4)
-            html_parts.append(f'''<div class="stg-entry">
-  <span class="stg-id">S-{html_mod.escape(sig_id)}</span>
-  <span class="stg-glyph">{md_inline(glyph_info)}</span>
-  <p class="stg-desc">{md_inline(description)}</p>
-  <span class="stg-cat">{md_inline(category)}</span>
-</div>''')
             i += 1
             continue
 
@@ -377,7 +385,7 @@ def build_html(sections):
         sidebar_items.append(f'<div class="nav-label">{part_title}</div>')
         for s in part_sections:
             if s['type'] == 'layer':
-                label = f'L{s["num"]}: {s["title"][:30]}{"..." if len(s["title"]) > 30 else ""}'
+                label = f'L{s.get("num_str", s["num"])}: {s["title"][:30]}{"..." if len(s["title"]) > 30 else ""}'
                 sidebar_items.append(f'<a href="#{s["id"]}" class="nav-link">{html_mod.escape(label)}</a>')
             else:
                 label = s['title'][:35]
@@ -402,7 +410,7 @@ def build_html(sections):
                 content_parts.append(f'''
 <section id="{s['id']}" class="layer-section">
   <div class="section-header">
-    <span class="section-num" style="color:{color};">L{s['num']}</span>
+    <span class="section-num" style="color:{color};">L{s.get('num_str', s['num'])}</span>
     <h3>{md_inline(s['title'])}</h3>
   </div>
   <div class="layer-content">
