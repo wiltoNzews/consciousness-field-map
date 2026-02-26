@@ -623,25 +623,29 @@ body {
 
     <label for="selProvider">AI Provider</label>
     <select id="selProvider">
-      <option value="groq">Groq (free tier, needs key)</option>
+      <option value="groq">Groq (free, works now)</option>
+      <option value="custom">Local (Ollama on your machine)</option>
       <option value="openrouter">OpenRouter (bring your key)</option>
-      <option value="custom">Custom endpoint (Ollama, etc.)</option>
-      <option value="webllm">Browser-local (fully sovereign, no network)</option>
+      <option value="webllm">Browser-only (experimental, needs WebGPU)</option>
     </select>
-
-    <label for="inpApiKey">API Key</label>
-    <input type="password" id="inpApiKey" placeholder="Paste your API key">
     <div class="hint" id="keyHint">Groq: free at <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a></div>
+
+    <div id="keyRow">
+      <label for="inpApiKey">API Key</label>
+      <input type="password" id="inpApiKey" placeholder="Paste your API key">
+    </div>
 
     <div id="customEndpointRow" style="display:none">
       <label for="inpEndpoint">Endpoint URL</label>
-      <input type="text" id="inpEndpoint" placeholder="http://localhost:11434/v1">
+      <input type="text" id="inpEndpoint" placeholder="http://localhost:11434/v1/chat/completions">
     </div>
 
-    <label for="selModel">Model</label>
-    <select id="selModel">
-      <option value="auto">Auto (recommended)</option>
-    </select>
+    <div id="modelRow" style="display:none">
+      <label for="selModel">Model</label>
+      <select id="selModel">
+        <option value="auto">Auto (recommended)</option>
+      </select>
+    </div>
 
     <div class="export-import">
       <label>Your crystals</label>
@@ -1634,37 +1638,37 @@ async function loadSettings() {
   document.getElementById('selProvider').value = provider;
   document.getElementById('inpApiKey').value = apiKey;
   document.getElementById('inpEndpoint').value = endpoint;
-  document.getElementById('selModel').value = model;
-  updateProviderUI(provider);
+  updateProviderUI(provider); // rebuild model list FIRST
+  document.getElementById('selModel').value = model; // THEN set the saved value
 }
 
 function updateProviderUI(provider) {
   const customRow = document.getElementById('customEndpointRow');
   const keyHint = document.getElementById('keyHint');
-  const keyInput = document.getElementById('inpApiKey');
-  const keyLabel = keyInput.previousElementSibling;
+  const keyRow = document.getElementById('keyRow');
+  const modelRow = document.getElementById('modelRow');
 
   customRow.style.display = provider === 'custom' ? '' : 'none';
 
   if (provider === 'groq') {
-    keyHint.innerHTML = 'Groq: free at <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a>';
-    keyInput.style.display = '';
-    keyLabel.style.display = '';
+    keyHint.innerHTML = 'Free tier — works out of the box. <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">Get your own key</a> for unlimited use.';
+    keyRow.style.display = 'none'; // hidden by default, auto-configured
+    modelRow.style.display = 'none';
   } else if (provider === 'openrouter') {
-    keyHint.innerHTML = 'OpenRouter: <a href="https://openrouter.ai/keys" target="_blank" style="color:var(--accent)">openrouter.ai/keys</a>';
-    keyInput.style.display = '';
-    keyLabel.style.display = '';
+    keyHint.innerHTML = 'Get a key at <a href="https://openrouter.ai/keys" target="_blank" style="color:var(--accent)">openrouter.ai/keys</a> — DeepSeek V3 costs ~$0.28 per million tokens.';
+    keyRow.style.display = '';
+    modelRow.style.display = '';
   } else if (provider === 'webllm') {
     const gpuNote = HAS_WEBGPU
-      ? 'WebGPU detected. Models download once (~2-4GB), then run fully local.'
-      : '<span style="color:var(--red)">WebGPU not detected. Requires Chrome 113+ or Edge. Firefox Nightly has experimental support.</span>';
+      ? 'WebGPU detected. Model downloads once (~2-4GB), then runs fully local. No data leaves your machine.'
+      : '<span style="color:var(--red)">WebGPU not detected. Requires Chrome 113+ or Edge.</span>';
     keyHint.innerHTML = gpuNote;
-    keyInput.style.display = 'none';
-    keyLabel.style.display = 'none';
+    keyRow.style.display = 'none';
+    modelRow.style.display = '';
   } else {
-    keyHint.innerHTML = 'Ollama: <code>ollama pull hermes3:8b</code> or <code>dolphin3:8b</code> — no key needed for local.';
-    keyInput.style.display = '';
-    keyLabel.style.display = '';
+    keyHint.innerHTML = 'Run AI locally: <code style="color:var(--accent)">ollama pull dolphin3:8b</code> then it just works. No key needed.';
+    keyRow.style.display = 'none';
+    modelRow.style.display = '';
   }
 
   // Update model options
