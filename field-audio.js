@@ -20,7 +20,8 @@
     topology: { drone: 92,  ratios: [1, 1.5, 2.0, 3.01],    filter: 800,  vol: 0.20 },
     archive:  { drone: 75,  ratios: [1, 1.5, 2.0],           filter: 500,  vol: 0.22 },
     frontier: { drone: 100, ratios: [1, 1.06, 1.5, 2.01],   filter: 950,  vol: 0.20 },
-    system:   { drone: 90,  ratios: [1, 1.5, 2.0, 2.99],    filter: 750,  vol: 0.20 }
+    system:   { drone: 90,  ratios: [1, 1.5, 2.0, 2.99],    filter: 750,  vol: 0.20 },
+    psios:    { drone: 93,  ratios: [1, 1.5, 2.0],           filter: 800,  vol: 0.20 }
   };
 
   // ── Detect page ──

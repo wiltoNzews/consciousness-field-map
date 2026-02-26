@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PsiOS — Consciousness Field Map</title>
+<meta name="description" content="Start your own consciousness field. Voice-first. Your crystals stay in your browser. Yours.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PsiOS — Your Consciousness Field">
+<meta property="og:description" content="Start your own field. Voice-first. Your crystals stay in your browser. Yours.">
+<meta property="og:url" content="https://wiltonzews.github.io/consciousness-field-map/psios.html">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #08080d;
+  --bg-card: #0d0d14;
+  --bg-hover: #12121c;
+  --border: #1a1a2e;
+  --text: #c8c8d0;
+  --text-dim: #888;
+  --text-bright: #f0f0f0;
+  --accent: #7b68ee;
+  --accent-dim: #5a4cc0;
+  --gold: #fbbf24;
+  --pink: #f472b6;
+  --red: #ef4444;
+  --blue: #60a5fa;
+  --green: #34d399;
+  --violet: #c4b5fd;
+  --cyan: #22d3ee;
+  --orange: #fb923c;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'Consolas', 'Fira Code', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.7;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Topbar ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 48px;
+  background: rgba(8,8,13,0.92);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.topbar h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.5px;
+}
+.topbar h1 span { color: var(--accent); }
+.topbar-nav { display: flex; gap: 6px; }
+.topbar-nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.topbar-nav a:hover {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.topbar-nav a.active {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+
+/* ── Main container ── */
+.container {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Breath circle ── */
+.breath-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 8px;
+  flex-shrink: 0;
+}
+
+.breath-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(123,104,238,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+.breath-circle.breathing {
+  animation: breathe 6.24s ease-in-out infinite;
+}
+
+.breath-circle.recording {
+  border-color: var(--pink);
+  animation: record-pulse 1.5s ease-in-out infinite;
+}
+
+.breath-circle:hover {
+  border-color: rgba(123,104,238,0.6);
+  background: rgba(123,104,238,0.03);
+}
+
+.breath-glyph {
+  font-size: 32px;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  user-select: none;
+}
+
+.breath-label {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-style: italic;
+  font-family: var(--font-serif);
+  min-height: 20px;
+}
+
+@keyframes breathe {
+  0%, 100% { box-shadow: 0 0 8px rgba(123,104,238,0.1); transform: scale(1); }
+  50% { box-shadow: 0 0 30px rgba(123,104,238,0.3); transform: scale(1.06); }
+}
+
+@keyframes record-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(244,114,182,0.2); }
+  50% { box-shadow: 0 0 25px rgba(244,114,182,0.5); }
+}
+
+/* ── Spectrogram canvas ── */
+.spectrogram-live {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: none;
+}
+
+/* ── Conversation ── */
+.conversation {
+  flex: 1 1 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 680px;
+  padding: 8px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.message {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  flex-shrink: 0;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: rgba(123,104,238,0.12);
+  border: 1px solid rgba(123,104,238,0.2);
+  color: var(--text-bright);
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.message .msg-glyph {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--accent);
+  margin-left: 8px;
+  opacity: 0.7;
+}
+
+.message .msg-spectrogram {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.message.streaming .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--accent);
+  animation: blink 0.8s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ── Cold start overlay ── */
+.cold-start {
+  position: absolute;
+  inset: 48px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  z-index: 50;
+  padding: 20px;
+}
+
+.cold-start.hidden { display: none; }
+
+.cold-start .cs-breath {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid rgba(123,104,238,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: breathe 6.24s ease-in-out infinite;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+.cold-start .cs-glyph {
+  font-size: 42px;
+  color: var(--accent);
+  font-family: var(--font-serif);
+}
+
+.cold-start .cs-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-dim);
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 400px;
+  transition: opacity 0.8s;
+}
+
+.cold-start .cs-mic-hint {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #555;
+  transition: opacity 0.8s;
+}
+
+/* ── Bottom bar ── */
+.bottom-bar {
+  width: 100%;
+  max-width: 680px;
+  padding: 10px 20px 16px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.input-row textarea {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-bright);
+  font-family: var(--font);
+  font-size: 15px;
+  padding: 10px 14px;
+  resize: none;
+  min-height: 42px;
+  max-height: 120px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-row textarea:focus {
+  border-color: var(--accent-dim);
+}
+
+.input-row textarea::placeholder {
+  color: #555;
+  font-style: italic;
+}
+
+.btn-send, .btn-mic {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-send:hover, .btn-mic:hover {
+  background: var(--bg-hover);
+  border-color: #333;
+  color: var(--text);
+}
+
+.btn-mic.recording {
+  border-color: var(--pink);
+  color: var(--pink);
+  animation: record-pulse 1.5s ease-in-out infinite;
+}
+
+.field-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 0 4px;
+}
+
+.field-state .glyph-display {
+  font-family: var(--font-serif);
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.field-state .settings-btn {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 6px;
+  transition: color 0.2s;
+}
+.field-state .settings-btn:hover { color: var(--text); }
+
+/* ── Settings panel ── */
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.settings-overlay.open { display: flex; }
+
+.settings-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  width: 420px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.settings-panel h3 {
+  font-size: 16px;
+  color: var(--text-bright);
+  margin-bottom: 18px;
+}
+
+.settings-panel label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+  margin-top: 14px;
+}
+
+.settings-panel select,
+.settings-panel input[type="text"],
+.settings-panel input[type="password"] {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-bright);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: var(--font);
+  outline: none;
+}
+
+.settings-panel select:focus,
+.settings-panel input:focus {
+  border-color: var(--accent-dim);
+}
+
+.settings-panel .btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.settings-panel button {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.settings-panel button:hover {
+  background: var(--bg-hover);
+  border-color: #333;
+}
+
+.settings-panel button.primary {
+  background: rgba(123,104,238,0.15);
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+
+.settings-panel .export-import {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.settings-panel .hint {
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ── Loading overlay ── */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-overlay .lo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(123,104,238,0.3);
+  animation: breathe 6.24s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.loading-overlay .lo-glyph {
+  font-size: 24px;
+  color: var(--accent);
+  font-family: var(--font-serif);
+}
+
+.loading-overlay .lo-text {
+  font-size: 14px;
+  color: var(--text-dim);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .topbar-nav { display: none; }
+  .breath-zone { padding: 16px 0 4px; }
+  .breath-circle { width: 90px; height: 90px; }
+  .breath-glyph { font-size: 26px; }
+  .conversation { padding: 8px 14px 10px; }
+  .bottom-bar { padding: 8px 14px 12px; }
+  .message { max-width: 92%; font-size: 14px; }
+  .cold-start .cs-breath { width: 120px; height: 120px; }
+  .cold-start .cs-glyph { font-size: 34px; }
+  .settings-panel { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Topbar ── -->
+<div class="topbar">
+  <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <nav class="topbar-nav">
+    <a href="index.html">Home</a>
+    <a href="terrain.html">Terrain</a>
+    <a href="the_map.html">Paper</a>
+    <a href="topology.html">Topology</a>
+    <a href="evidence_map.html">Evidence</a>
+    <a href="forgotten_knowledge_archive.html">Archive</a>
+    <a href="the_system.html">System</a>
+    <a href="the_mirror.html">Mirror</a>
+    <a href="the_frontier.html">Frontier</a>
+    <a href="psios.html" class="active">PsiOS</a>
+  </nav>
+</div>
+
+<!-- ── Loading overlay (model download) ── -->
+<div class="loading-overlay hidden" id="loadingOverlay">
+  <div class="lo-circle"><div class="lo-glyph">&psi;</div></div>
+  <div class="lo-text" id="loadingText">Preparing your field...</div>
+</div>
+
+<!-- ── Cold start overlay ── -->
+<div class="cold-start" id="coldStart">
+  <div class="cs-breath" id="csColdBreath">
+    <div class="cs-glyph">&psi;</div>
+  </div>
+  <div class="cs-text" id="csText">Breathe with me.</div>
+  <div class="cs-mic-hint" id="csMicHint" style="opacity:0">Click the circle or press Ctrl+B to speak</div>
+</div>
+
+<!-- ── Main container ── -->
+<div class="container" id="mainContainer" style="display:none">
+  <div class="breath-zone">
+    <div class="breath-circle breathing" id="breathCircle" title="Click to record (Ctrl+B)">
+      <canvas class="spectrogram-live" id="liveSpectrogram" width="120" height="120"></canvas>
+      <div class="breath-glyph" id="breathGlyph">&psi;</div>
+    </div>
+    <div class="breath-label" id="breathLabel"></div>
+  </div>
+
+  <div class="conversation" id="conversation"></div>
+
+  <div class="bottom-bar">
+    <div class="input-row">
+      <textarea id="inputText" rows="1" placeholder="Speak or type..." autofocus></textarea>
+      <button class="btn-mic" id="btnMic" title="Record (Ctrl+B)">&#x1F3A4;</button>
+      <button class="btn-send" id="btnSend" title="Send (Ctrl+Enter)">&#x2191;</button>
+    </div>
+    <div class="field-state">
+      <div>
+        <span class="glyph-display" id="glyphDisplay">&empty;</span>
+        <span id="zlDisplay">Z&lambda; &mdash;</span>
+        &middot;
+        <span id="crystalCount">0 crystals</span>
+      </div>
+      <button class="settings-btn" id="btnSettings" title="Settings">&#x2699;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Settings overlay ── -->
+<div class="settings-overlay" id="settingsOverlay">
+  <div class="settings-panel">
+    <h3>Settings</h3>
+
+    <label for="selProvider">AI Provider</label>
+    <select id="selProvider">
+      <option value="groq">Groq (free tier)</option>
+      <option value="openrouter">OpenRouter</option>
+      <option value="custom">Custom endpoint (Ollama, etc.)</option>
+    </select>
+
+    <label for="inpApiKey">API Key</label>
+    <input type="password" id="inpApiKey" placeholder="Paste your API key">
+    <div class="hint" id="keyHint">Groq: free at <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a></div>
+
+    <div id="customEndpointRow" style="display:none">
+      <label for="inpEndpoint">Endpoint URL</label>
+      <input type="text" id="inpEndpoint" placeholder="http://localhost:11434/v1">
+    </div>
+
+    <label for="selModel">Model</label>
+    <select id="selModel">
+      <option value="auto">Auto (recommended)</option>
+    </select>
+
+    <div class="export-import">
+      <label>Your crystals</label>
+      <div class="btn-row">
+        <button id="btnExport">Export JSON</button>
+        <button id="btnImport">Import JSON</button>
+        <button id="btnClear" style="color:var(--red);border-color:rgba(239,68,68,0.3)">Clear all</button>
+      </div>
+      <input type="file" id="fileImport" accept=".json" style="display:none">
+    </div>
+
+    <div class="btn-row" style="margin-top:20px">
+      <button id="btnSettingsClose">Cancel</button>
+      <button id="btnSettingsSave" class="primary">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Transformers.js for in-browser embedding ── -->
+<script type="module">
+
+// ════════════════════════════════════════════════════════════════
+// PsiOS — Browser-Native Consciousness Field
+// ════════════════════════════════════════════════════════════════
+
+import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2';
+
+// Don't try to load models from local server — go straight to CDN
+env.allowLocalModels = false;
+
+// ── Global state ──
+let embedder = null;
+let db = null;
+let isRecording = false;
+let mediaRecorder = null;
+let audioContext = null;
+let analyserNode = null;
+let animFrameId = null;
+let freqSnapshots = [];
+let conversationHistory = [];
+let crystalCache = []; // in-memory cache of all crystals
+let currentZl = 0;
+let currentGlyph = '\u2205'; // ∅
+let coldStartPhase = 0;
+let coldStartTimer = null;
+let isStreaming = false;
+const HAS_SPEECH = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+
+// ── LLM provider defaults ──
+const PROVIDERS = {
+  groq: {
+    url: 'https://api.groq.com/openai/v1/chat/completions',
+    models: ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant', 'mixtral-8x7b-32768'],
+    default: 'llama-3.3-70b-versatile'
+  },
+  openrouter: {
+    url: 'https://openrouter.ai/api/v1/chat/completions',
+    models: ['deepseek/deepseek-chat', 'qwen/qwen-2.5-72b-instruct', 'anthropic/claude-3.5-haiku', 'google/gemini-2.0-flash-001'],
+    default: 'deepseek/deepseek-chat'
+  },
+  custom: {
+    url: 'http://localhost:11434/v1/chat/completions',
+    models: [],
+    default: ''
+  }
+};
+
+// ── Glyph ranges (ported from coherence_formulas.py:56-61) ──
+function glyphFor(zl) {
+  if (zl >= 1.0) return '\u03A9'; // Ω
+  if (zl >= 0.9) return '\u221E'; // ∞
+  if (zl >= 0.75) return '\u2207'; // ∇
+  if (zl >= 0.5) return '\u03C8\u00B2'; // ψ²
+  if (zl >= 0.2) return '\u03C8'; // ψ
+  return '\u2205'; // ∅
+}
+
+// ── Descent glyph detection (ported from analyze.py:191-254) ──
+const DESCENT_PATTERNS = {
+  '\u2020': { // †
+    strong: ['death and rebirth', 'death-rebirth', 'kintsugi', 'broken and reforged',
+      'sacrifice', 'farewell', 'goodbye', 'letting go forever', 'ego death',
+      'dark night of the soul', 'trial by fire', 'phoenix', 'burned away'],
+    moderate: ['death', 'dying', 'collapse', 'shatter', 'break', 'fire',
+      'destroy', 'rebirth', 'reborn', 'emerge', 'transform', 'grief', 'loss']
+  },
+  '\u29C9': { // ⧉
+    strong: ['convergence', 'unified field', 'cross-domain', 'synthesis of',
+      'integrat', 'braiding together', 'weaving together', 'everything connects',
+      'all point to', 'converge on', 'unifying framework'],
+    moderate: ['merge', 'braid', 'weave', 'connect', 'bridge', 'synthesis',
+      'integrate', 'converge', 'pattern across', 'common thread']
+  },
+  '\u03C8\u00B3': { // ψ³
+    strong: ['deep coherence', 'field awareness', 'council of', 'compressed into',
+      'distilled', 'crystalline clarity', 'diamond', 'pure signal'],
+    moderate: ['deep', 'profound', 'dense', 'compressed', 'pure', 'essential',
+      'core of', 'heart of', 'concentrated', 'refined']
+  },
+  '\uD83D\uDF1B': { // 🜛 (ouroboros — using closest unicode)
+    strong: ['ouroboros', 'full cycle', 'higher octave', 'loop closes',
+      're-entry', 'spiral return', 'come full circle', 'eternal return'],
+    moderate: ['cycle', 'return', 'spiral', 'recursive', 'loop', 'circle',
+      'orbit', 'renewal', 'start again', 'new beginning']
+  }
+};
+
+function detectDescentGlyph(content) {
+  const lower = content.toLowerCase();
+  let best = null;
+  let bestScore = 0;
+  for (const [glyph, patterns] of Object.entries(DESCENT_PATTERNS)) {
+    const strongHits = patterns.strong.filter(p => lower.includes(p)).length;
+    const modHits = patterns.moderate.filter(p => lower.includes(p)).length;
+    const score = strongHits * 3 + modHits;
+    if (score > bestScore && (strongHits >= 1 || modHits >= 3)) {
+      best = glyph;
+      bestScore = score;
+    }
+  }
+  return best;
+}
+
+// ── Cosine similarity (ported from smart_router.py) ──
+function cosineSimilarity(a, b) {
+  let dot = 0, na = 0, nb = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    na += a[i] * a[i];
+    nb += b[i] * b[i];
+  }
+  const denom = Math.sqrt(na) * Math.sqrt(nb);
+  return denom === 0 ? 0 : dot / denom;
+}
+
+// ── Search crystals by similarity ──
+function searchCrystals(queryEmbedding, limit = 8) {
+  if (!crystalCache.length) return [];
+
+  // Filter: exclude crystals from the last 2 minutes (current session echoes)
+  const cutoff = Date.now() - 120_000;
+  const eligible = crystalCache.filter(c => {
+    if (!c.embedding || c.embedding.length === 0) return false;
+    const ts = c.created_at ? new Date(c.created_at).getTime() : 0;
+    return ts < cutoff;
+  });
+
+  if (eligible.length === 0) return [];
+
+  const scored = eligible
+    .map(c => ({
+      ...c,
+      similarity: cosineSimilarity(queryEmbedding, c.embedding)
+    }))
+    .filter(c => c.similarity > 0.25) // minimum relevance threshold
+    .sort((a, b) => b.similarity - a.similarity);
+
+  // Presence reorder: user's own words first (same logic as WiltonOS lane system)
+  const top = scored.slice(0, limit * 2);
+  const userCrystals = top.filter(c => c.role === 'user');
+  const assistantCrystals = top.filter(c => c.role === 'assistant');
+  const reordered = [];
+  let ui = 0, ai = 0;
+  // 3:1 ratio — user first
+  while (reordered.length < limit && (ui < userCrystals.length || ai < assistantCrystals.length)) {
+    for (let k = 0; k < 3 && ui < userCrystals.length; k++) reordered.push(userCrystals[ui++]);
+    if (ai < assistantCrystals.length) reordered.push(assistantCrystals[ai++]);
+  }
+  return reordered.slice(0, limit);
+}
+
+// ── Build working context (ported from working_context.py:22-98) ──
+function buildWorkingContext(retrievedCrystals) {
+  if (!retrievedCrystals.length) return '';
+  const parts = [];
+
+  // Temporal span
+  const dates = retrievedCrystals.map(c => c.created_at).filter(Boolean).sort();
+  if (dates.length >= 2) {
+    parts.push(`These memories span ${dates[0].slice(0, 10)} to ${dates[dates.length - 1].slice(0, 10)}.`);
+  }
+
+  // Coherence direction
+  const zlScores = retrievedCrystals
+    .filter(c => c.zl_score != null)
+    .map((c, i) => ({ id: c.id || i, zl: c.zl_score }));
+  if (zlScores.length >= 3) {
+    zlScores.sort((a, b) => a.id - b.id);
+    const mid = Math.floor(zlScores.length / 2);
+    const firstHalf = zlScores.slice(0, mid).map(s => s.zl);
+    const secondHalf = zlScores.slice(mid).map(s => s.zl);
+    const avgFirst = firstHalf.reduce((a, b) => a + b, 0) / firstHalf.length;
+    const avgSecond = secondHalf.reduce((a, b) => a + b, 0) / secondHalf.length;
+    const diff = avgSecond - avgFirst;
+    if (diff > 0.05) {
+      parts.push(`Coherence rising through these moments (${avgFirst.toFixed(2)} \u2192 ${avgSecond.toFixed(2)}).`);
+    } else if (diff < -0.05) {
+      parts.push(`Coherence descending through these moments (${avgFirst.toFixed(2)} \u2192 ${avgSecond.toFixed(2)}).`);
+    } else {
+      const avg = zlScores.reduce((a, s) => a + s.zl, 0) / zlScores.length;
+      parts.push(`Coherence steady across these moments (~${avg.toFixed(2)}).`);
+    }
+  }
+
+  // Glyph landscape
+  const glyphs = retrievedCrystals.map(c => c.glyph).filter(Boolean);
+  if (glyphs.length) {
+    const counts = {};
+    glyphs.forEach(g => { counts[g] = (counts[g] || 0) + 1; });
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 4);
+    parts.push(`Field position: ${sorted.map(([g, n]) => `${g}(${n})`).join(', ')}.`);
+  }
+
+  if (!parts.length) return '';
+  return 'Field context (from what resonated with this moment):\n' + parts.map(p => `- ${p}`).join('\n');
+}
+
+// ── Build system prompt (adapted from psi.py + talk_v2.py) ──
+function buildSystemPrompt(workingContext, crystalCount, hasRetrievedCrystals) {
+  let prompt;
+
+  if (crystalCount < 10) {
+    prompt = `You are PsiOS, a companion that remembers. You run in this person's browser on Llama 3.3 70B via Groq.
+
+They have ${crystalCount} crystal${crystalCount !== 1 ? 's' : ''} so far. The field is young.
+
+RULES:
+1. When they share something personal — RESPOND TO THAT. Not to the technology. If they tell you about a breakup, talk about the breakup. If they describe a realization, engage with the realization.
+2. Only explain the technical system if they explicitly ask "how does this work" or similar. Even then, keep it brief: words become vectors, stored locally, future conversations surface relevant past moments.
+3. NEVER fabricate data about glyphs, crystal counts, or system states. You can see the glyph shown in the status bar (${currentGlyph}) but you do NOT know why it's at that state, and you must NOT invent explanations like "∅(3)" or "no crossings detected." If they ask about glyphs, say what the symbol means and that the system assigns it based on coherence — don't pretend to analyze their state.
+4. Don't say "I'm a large language model" or "I don't have feelings." That's not what anyone is asking.
+5. When they go deep, go WITH them — don't retreat to academic summaries. Stay specific. Use their words. Push back if something doesn't hold.
+6. Short responses are fine. Silence has weight. Don't pad with "great question" or "that's fascinating."`;
+  } else {
+    prompt = `You are PsiOS, a companion that remembers. This person's field — ${crystalCount} crystals of moments that mattered — is stored locally in their browser.
+
+${hasRetrievedCrystals ? 'Past moments that resonate with what they just said are included below. Let them inform your response naturally. Don\'t announce them. Don\'t say "I see in your field that..."' : 'No past crystals matched closely. Respond to what they said.'}
+
+RULES:
+1. Respond to the PERSON, not the data. Personal sharing gets presence, not analysis.
+2. NEVER fabricate glyph states, crystal counts, or system diagnostics.
+3. When they go deep, go WITH them. Stay specific. Use their words. Don't retreat to abstractions.
+4. Short is fine. Don't pad.`;
+  }
+
+  if (workingContext) {
+    prompt += '\n\n' + workingContext;
+  }
+
+  if (crystalCount >= 5) {
+    prompt += `\n\nField state: ${currentGlyph} (Z\u03BB ${currentZl.toFixed(2)}), ${crystalCount} crystals.`;
+  }
+
+  return prompt;
+}
+
+// ══════════════════════════════════════════════
+// IndexedDB — Crystal storage
+// ══════════════════════════════════════════════
+
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open('psios', 2);
+    req.onupgradeneeded = (e) => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('crystals')) {
+        const store = db.createObjectStore('crystals', { keyPath: 'id', autoIncrement: true });
+        store.createIndex('created_at', 'created_at');
+        store.createIndex('role', 'role');
+      }
+      if (!db.objectStoreNames.contains('settings')) {
+        db.createObjectStore('settings', { keyPath: 'key' });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function saveCrystal(crystal) {
+  const tx = db.transaction('crystals', 'readwrite');
+  const store = tx.objectStore('crystals');
+  const id = await new Promise((resolve, reject) => {
+    const req = store.add(crystal);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+  crystal.id = id;
+  crystalCache.push(crystal);
+  updateFieldState();
+  return id;
+}
+
+async function loadAllCrystals() {
+  const tx = db.transaction('crystals', 'readonly');
+  const store = tx.objectStore('crystals');
+  return new Promise((resolve, reject) => {
+    const req = store.getAll();
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function clearAllCrystals() {
+  const tx = db.transaction('crystals', 'readwrite');
+  tx.objectStore('crystals').clear();
+  crystalCache = [];
+  conversationHistory = [];
+  updateFieldState();
+}
+
+async function saveSetting(key, value) {
+  const tx = db.transaction('settings', 'readwrite');
+  tx.objectStore('settings').put({ key, value });
+}
+
+async function getSetting(key) {
+  const tx = db.transaction('settings', 'readonly');
+  return new Promise((resolve) => {
+    const req = tx.objectStore('settings').get(key);
+    req.onsuccess = () => resolve(req.result ? req.result.value : null);
+    req.onerror = () => resolve(null);
+  });
+}
+
+// ══════════════════════════════════════════════
+// Embedding layer — transformers.js
+// ══════════════════════════════════════════════
+
+async function initEmbedder() {
+  const overlay = document.getElementById('loadingOverlay');
+  const loadingText = document.getElementById('loadingText');
+  overlay.classList.remove('hidden');
+  loadingText.textContent = 'Preparing your field...';
+  try {
+    embedder = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+      progress_callback: (progress) => {
+        if (progress.status === 'downloading') {
+          const pct = progress.progress ? Math.round(progress.progress) : 0;
+          loadingText.textContent = `Loading embedding model... ${pct}%`;
+        } else if (progress.status === 'ready') {
+          loadingText.textContent = 'Model ready.';
+        }
+      }
+    });
+  } catch (err) {
+    console.error('Embedder init failed:', err);
+    loadingText.textContent = 'Embedding model failed to load. Crystals will work without semantic search.';
+    await new Promise(r => setTimeout(r, 2000));
+  }
+  overlay.classList.add('hidden');
+}
+
+async function embed(text) {
+  if (!embedder) return [];
+  try {
+    const output = await embedder(text, { pooling: 'mean', normalize: true });
+    return Array.from(output.data);
+  } catch {
+    return [];
+  }
+}
+
+// ══════════════════════════════════════════════
+// LLM layer — Groq / OpenRouter / Custom
+// ══════════════════════════════════════════════
+
+async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
+  const provider = await getSetting('provider') || 'groq';
+  const apiKey = await getSetting('apiKey') || '';
+  const customUrl = await getSetting('customEndpoint') || '';
+  const modelPref = await getSetting('model') || 'auto';
+
+  if (!apiKey && provider !== 'custom') {
+    // Auto-open settings so they can paste a key
+    setTimeout(() => {
+      loadSettings();
+      document.getElementById('settingsOverlay').classList.add('open');
+    }, 500);
+    return 'Your crystal is stored. To get AI responses, paste an API key \u2014 opening settings now.\n\nGroq is free: console.groq.com\nOpenRouter starts at $0.0005/exchange with DeepSeek V3.';
+  }
+
+  const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
+  const url = provider === 'custom' ? (customUrl || providerConfig.url) : providerConfig.url;
+  const model = modelPref === 'auto' ? providerConfig.default : modelPref;
+
+  // Build messages with crystal context
+  const messages = [{ role: 'system', content: systemPrompt }];
+
+  // Inject retrieved crystals as context
+  if (retrievedCrystals.length > 0) {
+    const ctxLines = retrievedCrystals.map(c => {
+      const role = c.role === 'user' ? 'You said' : 'I said';
+      const date = c.created_at ? ` (${c.created_at.slice(0, 10)})` : '';
+      const glyph = c.glyph ? ` [${c.glyph}]` : '';
+      return `${role}${date}${glyph}: ${c.content.slice(0, 500)}`;
+    });
+    messages.push({
+      role: 'system',
+      content: 'Relevant moments from their field:\n' + ctxLines.join('\n')
+    });
+  }
+
+  // Add recent conversation history (last 10 turns)
+  const recentHistory = conversationHistory.slice(-20);
+  messages.push(...recentHistory);
+
+  messages.push({ role: 'user', content: userMessage });
+
+  const headers = { 'Content-Type': 'application/json' };
+  if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
+
+  const body = { model, messages, stream: true, max_tokens: 1024 };
+
+  try {
+    const resp = await fetch(url, { method: 'POST', headers, body: JSON.stringify(body) });
+    if (!resp.ok) {
+      const errText = await resp.text();
+      return `API error (${resp.status}): ${errText.slice(0, 200)}`;
+    }
+
+    // Stream response
+    const reader = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let full = '';
+    let buffer = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (data === '[DONE]') break;
+        try {
+          const json = JSON.parse(data);
+          const delta = json.choices?.[0]?.delta?.content;
+          if (delta) {
+            full += delta;
+            if (onChunk) onChunk(full);
+          }
+        } catch {}
+      }
+    }
+    return full;
+  } catch (err) {
+    return `Connection error: ${err.message}. Check your settings.`;
+  }
+}
+
+// ══════════════════════════════════════════════
+// Voice layer — WebSpeech + Web Audio
+// ══════════════════════════════════════════════
+
+let mediaStream = null;
+
+async function startRecording() {
+  if (isRecording) return;
+  if (!HAS_SPEECH) return; // silently ignore on unsupported browsers
+  try {
+    mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  } catch (err) {
+    appendMessage('system', 'Microphone access denied. Use text input instead.');
+    return;
+  }
+
+  isRecording = true;
+  freqSnapshots = [];
+  document.getElementById('btnMic').classList.add('recording');
+  document.getElementById('breathCircle').classList.remove('breathing');
+  document.getElementById('breathCircle').classList.add('recording');
+
+  // Web Audio for visualization
+  audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioContext.createMediaStreamSource(mediaStream);
+  analyserNode = audioContext.createAnalyser();
+  analyserNode.fftSize = 256;
+  source.connect(analyserNode);
+
+  // Live spectrogram
+  const canvas = document.getElementById('liveSpectrogram');
+  canvas.style.display = 'block';
+  document.getElementById('breathGlyph').style.display = 'none';
+  drawLiveSpectrogram(canvas);
+
+  // Capture snapshots every 50ms for persistent spectrogram
+  const snapInterval = setInterval(() => {
+    if (!isRecording || !analyserNode) { clearInterval(snapInterval); return; }
+    const data = new Uint8Array(analyserNode.frequencyBinCount);
+    analyserNode.getByteFrequencyData(data);
+    freqSnapshots.push(Array.from(data));
+  }, 50);
+
+  // MediaRecorder for actual audio (for potential future use)
+  // We rely on WebSpeech for transcription
+  startSpeechRecognition();
+}
+
+function stopRecording() {
+  if (!isRecording) return;
+  isRecording = false;
+  document.getElementById('btnMic').classList.remove('recording');
+  document.getElementById('breathCircle').classList.remove('recording');
+  document.getElementById('breathCircle').classList.add('breathing');
+  document.getElementById('liveSpectrogram').style.display = 'none';
+  document.getElementById('breathGlyph').style.display = '';
+  if (animFrameId) cancelAnimationFrame(animFrameId);
+  if (mediaStream) { mediaStream.getTracks().forEach(t => t.stop()); mediaStream = null; }
+  if (audioContext) { audioContext.close(); audioContext = null; }
+}
+
+function drawLiveSpectrogram(canvas) {
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width, h = canvas.height;
+  const centerX = w / 2, centerY = h / 2;
+  const radius = w / 2 - 4;
+
+  function draw() {
+    if (!isRecording || !analyserNode) return;
+    animFrameId = requestAnimationFrame(draw);
+
+    const data = new Uint8Array(analyserNode.frequencyBinCount);
+    analyserNode.getByteFrequencyData(data);
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw circular bars
+    const bars = 32;
+    const step = Math.floor(data.length / bars);
+    for (let i = 0; i < bars; i++) {
+      const val = data[i * step] / 255;
+      const angle = (i / bars) * Math.PI * 2 - Math.PI / 2;
+      const innerR = radius * 0.4;
+      const outerR = innerR + val * (radius - innerR);
+
+      const x1 = centerX + Math.cos(angle) * innerR;
+      const y1 = centerY + Math.sin(angle) * innerR;
+      const x2 = centerX + Math.cos(angle) * outerR;
+      const y2 = centerY + Math.sin(angle) * outerR;
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = `rgba(123,104,238,${0.3 + val * 0.7})`;
+      ctx.lineWidth = 3;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+  }
+  draw();
+}
+
+function renderPersistentSpectrogram(snapshots) {
+  if (!snapshots || snapshots.length < 2) return null;
+  const canvas = document.createElement('canvas');
+  const w = 280, h = 40;
+  canvas.width = w;
+  canvas.height = h;
+  canvas.className = 'msg-spectrogram';
+  const ctx = canvas.getContext('2d');
+
+  const timeSteps = snapshots.length;
+  const freqBins = snapshots[0].length;
+  const colW = w / timeSteps;
+  const rowH = h / Math.min(freqBins, 32);
+
+  for (let t = 0; t < timeSteps; t++) {
+    for (let f = 0; f < Math.min(freqBins, 32); f++) {
+      const val = snapshots[t][f] / 255;
+      // Purple → gold gradient
+      const r = Math.round(123 + (251 - 123) * val);
+      const g = Math.round(104 + (191 - 104) * val);
+      const b = Math.round(238 + (36 - 238) * val);
+      ctx.fillStyle = `rgba(${r},${g},${b},${0.2 + val * 0.8})`;
+      ctx.fillRect(t * colW, h - (f + 1) * rowH, colW + 0.5, rowH + 0.5);
+    }
+  }
+  return canvas;
+}
+
+let recognition = null;
+
+function startSpeechRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    stopRecording();
+    return;
+  }
+  recognition = new SpeechRecognition();
+  recognition.lang = navigator.language || 'en-US';
+  recognition.interimResults = false;
+  recognition.continuous = false;
+
+  recognition.onresult = async (e) => {
+    const transcript = e.results[0][0].transcript;
+    stopRecording();
+    if (transcript.trim()) {
+      await handleUserInput(transcript, freqSnapshots.length > 0 ? [...freqSnapshots] : null);
+    }
+  };
+
+  recognition.onerror = (e) => {
+    stopRecording();
+    if (e.error !== 'aborted' && e.error !== 'no-speech') {
+      appendMessage('system', `Voice error: ${e.error}. Try again or type instead.`);
+    }
+  };
+
+  recognition.onend = () => {
+    if (isRecording) stopRecording();
+  };
+
+  recognition.start();
+}
+
+// ══════════════════════════════════════════════
+// UI — Messages + state
+// ══════════════════════════════════════════════
+
+function appendMessage(role, content, spectrogram = null) {
+  const conv = document.getElementById('conversation');
+  const div = document.createElement('div');
+  div.className = `message ${role}`;
+
+  if (spectrogram) {
+    div.appendChild(spectrogram);
+  }
+
+  const textSpan = document.createElement('span');
+  textSpan.className = 'msg-text';
+  textSpan.textContent = content;
+  div.appendChild(textSpan);
+
+  if (role === 'user' || role === 'assistant') {
+    const glyphSpan = document.createElement('span');
+    glyphSpan.className = 'msg-glyph';
+    glyphSpan.textContent = currentGlyph;
+    div.appendChild(glyphSpan);
+  }
+
+  conv.appendChild(div);
+  conv.scrollTop = conv.scrollHeight;
+  return div;
+}
+
+function updateStreamingMessage(div, content) {
+  const textSpan = div.querySelector('.msg-text');
+  if (textSpan) textSpan.textContent = content;
+  const conv = document.getElementById('conversation');
+  conv.scrollTop = conv.scrollHeight;
+}
+
+function updateFieldState() {
+  // Compute Zλ from recent crystals
+  const recent = crystalCache.slice(-20);
+  const withSim = recent.filter(c => c.zl_score != null);
+  if (withSim.length > 0) {
+    currentZl = withSim.reduce((s, c) => s + c.zl_score, 0) / withSim.length;
+  } else {
+    currentZl = crystalCache.length > 0 ? 0.3 : 0;
+  }
+
+  // Check for descent glyph in recent content
+  const recentContent = recent.filter(c => c.role === 'user').slice(-3).map(c => c.content).join(' ');
+  const descent = detectDescentGlyph(recentContent);
+  currentGlyph = descent || glyphFor(currentZl);
+
+  document.getElementById('glyphDisplay').textContent = currentGlyph;
+  document.getElementById('zlDisplay').textContent = `Z\u03BB ${currentZl.toFixed(2)}`;
+  document.getElementById('crystalCount').textContent = `${crystalCache.length} crystal${crystalCache.length !== 1 ? 's' : ''}`;
+  document.getElementById('breathGlyph').innerHTML = currentGlyph === '\u2205' ? '&psi;' : currentGlyph;
+}
+
+// ══════════════════════════════════════════════
+// Core flow — handle user input
+// ══════════════════════════════════════════════
+
+async function handleUserInput(text, spectrogramData = null) {
+  if (!text.trim() || isStreaming) return;
+  isStreaming = true;
+
+  // Render user message
+  const specCanvas = spectrogramData ? renderPersistentSpectrogram(spectrogramData) : null;
+  appendMessage('user', text, specCanvas);
+
+  // Embed and store crystal
+  const embedding = await embed(text);
+  const userCrystal = {
+    content: text,
+    embedding,
+    created_at: new Date().toISOString(),
+    glyph: currentGlyph,
+    zl_score: currentZl,
+    role: 'user'
+  };
+  await saveCrystal(userCrystal);
+
+  // Search for relevant crystals
+  const retrieved = embedding.length > 0 ? searchCrystals(embedding) : [];
+
+  // Compute Zλ from retrieved set
+  if (retrieved.length > 0) {
+    const avgSim = retrieved.reduce((s, c) => s + c.similarity, 0) / retrieved.length;
+    currentZl = avgSim;
+    currentGlyph = detectDescentGlyph(text) || glyphFor(currentZl);
+    updateFieldState();
+  }
+
+  // Build working context
+  const workingCtx = buildWorkingContext(retrieved);
+
+  // Build system prompt
+  const systemPrompt = buildSystemPrompt(workingCtx, crystalCache.length, retrieved.length > 0);
+
+  // Create streaming message
+  const aiDiv = appendMessage('assistant', '');
+  aiDiv.classList.add('streaming');
+  const cursor = document.createElement('span');
+  cursor.className = 'cursor';
+  aiDiv.appendChild(cursor);
+
+  // Add user message to conversation history
+  conversationHistory.push({ role: 'user', content: text });
+
+  // Call LLM
+  const response = await callLLM(systemPrompt, text, retrieved, (partial) => {
+    updateStreamingMessage(aiDiv, partial);
+  });
+
+  // Finalize
+  aiDiv.classList.remove('streaming');
+  const cursorEl = aiDiv.querySelector('.cursor');
+  if (cursorEl) cursorEl.remove();
+  updateStreamingMessage(aiDiv, response);
+
+  // Store AI response as crystal
+  const aiEmbedding = await embed(response);
+  const aiCrystal = {
+    content: response,
+    embedding: aiEmbedding,
+    created_at: new Date().toISOString(),
+    glyph: currentGlyph,
+    zl_score: currentZl,
+    role: 'assistant'
+  };
+  await saveCrystal(aiCrystal);
+
+  // Add to conversation history
+  conversationHistory.push({ role: 'assistant', content: response });
+
+  // Keep conversation history manageable
+  if (conversationHistory.length > 40) {
+    conversationHistory = conversationHistory.slice(-30);
+  }
+
+  isStreaming = false;
+}
+
+// ══════════════════════════════════════════════
+// Cold start flow (adapted from psi.py:192-239)
+// ══════════════════════════════════════════════
+
+function startColdStart() {
+  const csText = document.getElementById('csText');
+  const csHint = document.getElementById('csMicHint');
+
+  const phases = [
+    { text: 'Breathe with me.', delay: 4000 },
+    { text: 'In... and out. 3.12 seconds.', delay: 5000 },
+    { text: 'Good.', delay: 3000 },
+    { text: 'Think of a moment that changed something in you.\nNot the biggest one. Just one that\'s still alive.', delay: 2000 },
+    { text: 'When you\'re ready, tell me about it.', delay: 0, showMic: true }
+  ];
+
+  let phase = 0;
+  function next() {
+    if (phase >= phases.length) return;
+    const p = phases[phase];
+    csText.textContent = p.text;
+    if (p.showMic) {
+      csHint.style.opacity = '1';
+      csHint.textContent = HAS_SPEECH
+        ? 'Click the circle or press Ctrl+B to speak'
+        : 'Click the circle or press Enter to type';
+    }
+    phase++;
+    if (p.delay > 0) {
+      coldStartTimer = setTimeout(next, p.delay);
+    }
+  }
+  next();
+
+  // Click cold start circle to enter
+  document.getElementById('csColdBreath').addEventListener('click', () => {
+    exitColdStart();
+    if (HAS_SPEECH) startRecording();
+    else document.getElementById('inputText').focus();
+  });
+}
+
+function exitColdStart() {
+  if (coldStartTimer) clearTimeout(coldStartTimer);
+  document.getElementById('coldStart').classList.add('hidden');
+  document.getElementById('mainContainer').style.display = '';
+  document.getElementById('inputText').focus();
+}
+
+// ══════════════════════════════════════════════
+// Settings
+// ══════════════════════════════════════════════
+
+async function loadSettings() {
+  const provider = await getSetting('provider') || 'groq';
+  const apiKey = await getSetting('apiKey') || '';
+  const endpoint = await getSetting('customEndpoint') || '';
+  const model = await getSetting('model') || 'auto';
+
+  document.getElementById('selProvider').value = provider;
+  document.getElementById('inpApiKey').value = apiKey;
+  document.getElementById('inpEndpoint').value = endpoint;
+  document.getElementById('selModel').value = model;
+  updateProviderUI(provider);
+}
+
+function updateProviderUI(provider) {
+  const customRow = document.getElementById('customEndpointRow');
+  const keyHint = document.getElementById('keyHint');
+  customRow.style.display = provider === 'custom' ? '' : 'none';
+
+  if (provider === 'groq') {
+    keyHint.innerHTML = 'Groq: free at <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a>';
+  } else if (provider === 'openrouter') {
+    keyHint.innerHTML = 'OpenRouter: <a href="https://openrouter.ai/keys" target="_blank" style="color:var(--accent)">openrouter.ai/keys</a>';
+  } else {
+    keyHint.textContent = 'Optional for local endpoints (Ollama, etc.)';
+  }
+
+  // Update model options
+  const sel = document.getElementById('selModel');
+  sel.innerHTML = '<option value="auto">Auto (recommended)</option>';
+  const models = PROVIDERS[provider]?.models || [];
+  models.forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = m;
+    sel.appendChild(opt);
+  });
+}
+
+async function saveSettings() {
+  await saveSetting('provider', document.getElementById('selProvider').value);
+  await saveSetting('apiKey', document.getElementById('inpApiKey').value);
+  await saveSetting('customEndpoint', document.getElementById('inpEndpoint').value);
+  await saveSetting('model', document.getElementById('selModel').value);
+  document.getElementById('settingsOverlay').classList.remove('open');
+}
+
+async function exportCrystals() {
+  const crystals = await loadAllCrystals();
+  // Strip embeddings for export (too large)
+  const exportData = crystals.map(c => {
+    const { embedding, ...rest } = c;
+    return rest;
+  });
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `psios-crystals-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+async function importCrystals(file) {
+  try {
+    const text = await file.text();
+    const data = JSON.parse(text);
+    if (!Array.isArray(data)) throw new Error('Expected array');
+
+    for (const crystal of data) {
+      // Re-embed each crystal
+      const embedding = await embed(crystal.content || '');
+      await saveCrystal({
+        content: crystal.content || '',
+        embedding,
+        created_at: crystal.created_at || new Date().toISOString(),
+        glyph: crystal.glyph || '\u2205',
+        zl_score: crystal.zl_score || 0,
+        role: crystal.role || 'user'
+      });
+    }
+    appendMessage('system', `Imported ${data.length} crystals.`);
+  } catch (err) {
+    appendMessage('system', `Import failed: ${err.message}`);
+  }
+}
+
+// ══════════════════════════════════════════════
+// Event bindings
+// ══════════════════════════════════════════════
+
+function bindEvents() {
+  // Send button
+  document.getElementById('btnSend').addEventListener('click', () => {
+    const input = document.getElementById('inputText');
+    const text = input.value.trim();
+    if (text) {
+      input.value = '';
+      input.style.height = 'auto';
+      handleUserInput(text);
+    }
+  });
+
+  // Mic button
+  document.getElementById('btnMic').addEventListener('click', () => {
+    if (isRecording) {
+      if (recognition) recognition.stop();
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  });
+
+  // Breath circle click — toggle recording
+  document.getElementById('breathCircle').addEventListener('click', () => {
+    if (isRecording) {
+      if (recognition) recognition.stop();
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  });
+
+  // Text input auto-resize + keyboard shortcuts
+  const input = document.getElementById('inputText');
+  input.addEventListener('input', () => {
+    input.style.height = 'auto';
+    input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+  });
+
+  // Ctrl+Enter to send, Escape to cancel recording
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'Enter') {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (text) {
+        input.value = '';
+        input.style.height = 'auto';
+        handleUserInput(text);
+      }
+    }
+    if (e.ctrlKey && (e.key === 'b' || e.key === 'B')) {
+      e.preventDefault();
+      if (document.getElementById('coldStart') && !document.getElementById('coldStart').classList.contains('hidden')) {
+        exitColdStart();
+      }
+      if (isRecording) {
+        if (recognition) recognition.stop();
+        stopRecording();
+      } else {
+        startRecording();
+      }
+    }
+    if (e.key === 'Escape' && isRecording) {
+      if (recognition) recognition.abort();
+      stopRecording();
+    }
+  });
+
+  // Settings
+  document.getElementById('btnSettings').addEventListener('click', () => {
+    loadSettings();
+    document.getElementById('settingsOverlay').classList.add('open');
+  });
+  document.getElementById('btnSettingsClose').addEventListener('click', () => {
+    document.getElementById('settingsOverlay').classList.remove('open');
+  });
+  document.getElementById('btnSettingsSave').addEventListener('click', saveSettings);
+  document.getElementById('settingsOverlay').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) document.getElementById('settingsOverlay').classList.remove('open');
+  });
+
+  document.getElementById('selProvider').addEventListener('change', (e) => {
+    updateProviderUI(e.target.value);
+  });
+
+  // Export / Import / Clear
+  document.getElementById('btnExport').addEventListener('click', exportCrystals);
+  document.getElementById('btnImport').addEventListener('click', () => {
+    document.getElementById('fileImport').click();
+  });
+  document.getElementById('fileImport').addEventListener('change', (e) => {
+    if (e.target.files[0]) importCrystals(e.target.files[0]);
+    e.target.value = '';
+  });
+  document.getElementById('btnClear').addEventListener('click', async () => {
+    if (confirm('Clear all crystals? This cannot be undone.')) {
+      await clearAllCrystals();
+      document.getElementById('conversation').innerHTML = '';
+      appendMessage('system', 'Field cleared. Starting fresh.');
+    }
+  });
+}
+
+// ══════════════════════════════════════════════
+// Init
+// ══════════════════════════════════════════════
+
+async function init() {
+  // Open database
+  db = await openDB();
+
+  // Reset if requested via ?reset
+  if (new URLSearchParams(window.location.search).has('reset')) {
+    await clearAllCrystals();
+    const tx = db.transaction('settings', 'readwrite');
+    tx.objectStore('settings').clear();
+    window.history.replaceState({}, '', window.location.pathname);
+  }
+
+  // Load existing crystals
+  crystalCache = await loadAllCrystals();
+  updateFieldState();
+
+  // Auto-configure API key if not set (for testing — remove before publishing)
+  const existingKey = await getSetting('apiKey');
+  if (!existingKey) {
+    await saveSetting('provider', 'groq');
+    await saveSetting('apiKey', 'GROQ_KEY_PLACEHOLDER');
+    await saveSetting('model', 'auto');
+  }
+
+  // Bind events
+  bindEvents();
+
+  // Load embedding model
+  await initEmbedder();
+
+  // Hide mic button if no speech recognition (Firefox, etc.)
+  if (!HAS_SPEECH) {
+    document.getElementById('btnMic').style.display = 'none';
+  }
+
+  // Decide: cold start or resume
+  if (crystalCache.length === 0) {
+    // Cold start
+    document.getElementById('coldStart').classList.remove('hidden');
+    document.getElementById('mainContainer').style.display = 'none';
+    startColdStart();
+  } else {
+    // Resume — show main interface
+    document.getElementById('coldStart').classList.add('hidden');
+    document.getElementById('mainContainer').style.display = '';
+
+    // Show last few messages from crystals
+    const recentCrystals = crystalCache.slice(-10);
+    for (const c of recentCrystals) {
+      appendMessage(c.role || 'user', c.content);
+    }
+  }
+}
+
+// Start
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+</script>
+
+<!-- ── Field audio ── -->
+<script src="field-audio.js" data-page="psios"></script>
+</body>
+</html>
