@@ -610,6 +610,8 @@ body {
         <span id="zlDisplay">Z&lambda; &mdash;</span>
         &middot;
         <span id="crystalCount">0 crystals</span>
+        &middot;
+        <span id="activeModel" style="opacity:0.5;font-size:0.85em">groq</span>
       </div>
       <button class="settings-btn" id="btnSettings" title="Settings">&#x2699;</button>
     </div>
@@ -1645,6 +1647,16 @@ async function loadSettings() {
   document.getElementById('inpEndpoint').value = endpoint;
   updateProviderUI(provider); // rebuild model list FIRST
   document.getElementById('selModel').value = model; // THEN set the saved value
+  updateModelIndicator(provider, model);
+}
+
+function updateModelIndicator(provider, model) {
+  const el = document.getElementById('activeModel');
+  if (!el) return;
+  const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
+  const resolvedModel = model === 'auto' ? providerConfig.default : model;
+  const short = resolvedModel.split('/').pop().replace(/:latest$/, '');
+  el.textContent = short;
 }
 
 function updateProviderUI(provider) {
@@ -1719,6 +1731,7 @@ async function saveSettings() {
   btn.textContent = 'Saved!';
   btn.style.borderColor = 'var(--accent)';
   setTimeout(() => { btn.textContent = orig; btn.style.borderColor = ''; }, 1500);
+  updateModelIndicator(provider, model);
   document.getElementById('settingsOverlay').classList.remove('open');
   console.log('[PsiOS] Settings saved:', { provider, model });
 }
@@ -1896,6 +1909,11 @@ async function init() {
     await saveSetting('apiKey', 'GROQ_KEY_PLACEHOLDER');
     await saveSetting('model', 'auto');
   }
+
+  // Show active model in status bar
+  const curProvider = await getSetting('provider') || 'groq';
+  const curModel = await getSetting('model') || 'auto';
+  updateModelIndicator(curProvider, curModel);
 
   // Bind events
   bindEvents();
