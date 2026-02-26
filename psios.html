@@ -1061,8 +1061,12 @@ async function clearAllCrystals() {
 }
 
 async function saveSetting(key, value) {
-  const tx = db.transaction('settings', 'readwrite');
-  tx.objectStore('settings').put({ key, value });
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('settings', 'readwrite');
+    tx.objectStore('settings').put({ key, value });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
 }
 
 async function getSetting(key) {
@@ -1133,6 +1137,7 @@ async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
   const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
   const url = provider === 'custom' ? (customUrl || providerConfig.url) : providerConfig.url;
   const model = modelPref === 'auto' ? providerConfig.default : modelPref;
+  console.log(`[PsiOS] Calling ${provider} → ${model} @ ${url}`);
 
   // Build messages with crystal context
   const messages = [{ role: 'system', content: systemPrompt }];
@@ -1702,11 +1707,20 @@ function updateProviderUI(provider) {
 }
 
 async function saveSettings() {
-  await saveSetting('provider', document.getElementById('selProvider').value);
+  const provider = document.getElementById('selProvider').value;
+  const model = document.getElementById('selModel').value;
+  await saveSetting('provider', provider);
   await saveSetting('apiKey', document.getElementById('inpApiKey').value);
   await saveSetting('customEndpoint', document.getElementById('inpEndpoint').value);
-  await saveSetting('model', document.getElementById('selModel').value);
+  await saveSetting('model', model);
+  // Visual confirmation
+  const btn = document.getElementById('btnSettingsSave');
+  const orig = btn.textContent;
+  btn.textContent = 'Saved!';
+  btn.style.borderColor = 'var(--accent)';
+  setTimeout(() => { btn.textContent = orig; btn.style.borderColor = ''; }, 1500);
   document.getElementById('settingsOverlay').classList.remove('open');
+  console.log('[PsiOS] Settings saved:', { provider, model });
 }
 
 async function exportCrystals() {
@@ -1864,11 +1878,10 @@ async function init() {
   // Open database
   db = await openDB();
 
-  // Reset if requested via ?reset
+  // Reset if requested via ?reset (clears crystals but keeps settings)
   if (new URLSearchParams(window.location.search).has('reset')) {
     await clearAllCrystals();
-    const tx = db.transaction('settings', 'readwrite');
-    tx.objectStore('settings').clear();
+    // Don't clear settings — provider choice should persist across resets
     window.history.replaceState({}, '', window.location.pathname);
   }
 
