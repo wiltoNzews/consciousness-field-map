@@ -623,9 +623,10 @@ body {
 
     <label for="selProvider">AI Provider</label>
     <select id="selProvider">
-      <option value="groq">Groq (free tier)</option>
-      <option value="openrouter">OpenRouter</option>
+      <option value="groq">Groq (free tier, needs key)</option>
+      <option value="openrouter">OpenRouter (bring your key)</option>
       <option value="custom">Custom endpoint (Ollama, etc.)</option>
+      <option value="webllm">Browser-local (fully sovereign, no network)</option>
     </select>
 
     <label for="inpApiKey">API Key</label>
@@ -667,6 +668,7 @@ body {
 // ════════════════════════════════════════════════════════════════
 
 import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2';
+import { CreateMLCEngine } from 'https://esm.run/@mlc-ai/web-llm';
 
 // Don't try to load models from local server — go straight to CDN
 env.allowLocalModels = false;
@@ -687,7 +689,10 @@ let currentGlyph = '\u2205'; // ∅
 let coldStartPhase = 0;
 let coldStartTimer = null;
 let isStreaming = false;
+let webllmEngine = null;
+let webllmLoading = false;
 const HAS_SPEECH = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+const HAS_WEBGPU = !!navigator.gpu;
 
 // ── LLM provider defaults ──
 const PROVIDERS = {
@@ -705,6 +710,17 @@ const PROVIDERS = {
     url: 'http://localhost:11434/v1/chat/completions',
     models: [],
     default: ''
+  },
+  webllm: {
+    url: null, // runs locally, no URL
+    models: [
+      'Llama-3.1-8B-Instruct-q4f32_1-MLC',
+      'Phi-3.5-mini-instruct-q4f16_1-MLC',
+      'Qwen2.5-7B-Instruct-q4f32_1-MLC',
+      'SmolLM2-1.7B-Instruct-q4f16_1-MLC',
+      'gemma-2-2b-it-q4f32_1-MLC-1k'
+    ],
+    default: 'Phi-3.5-mini-instruct-q4f16_1-MLC'
   }
 };
 
@@ -859,11 +875,14 @@ function buildWorkingContext(retrievedCrystals) {
 }
 
 // ── Build system prompt (adapted from psi.py + talk_v2.py) ──
-function buildSystemPrompt(workingContext, crystalCount, hasRetrievedCrystals) {
+function buildSystemPrompt(workingContext, crystalCount, hasRetrievedCrystals, provider) {
   let prompt;
 
   if (crystalCount < 10) {
-    prompt = `You are PsiOS, a companion that remembers. You run in this person's browser on Llama 3.3 70B via Groq.
+    const engineDesc = provider === 'webllm' ? 'a local model running entirely in their browser via WebGPU — no data leaves their machine'
+      : provider === 'custom' ? 'a model the user chose to connect to'
+      : 'Llama 3.3 70B via Groq';
+    prompt = `You are PsiOS, a companion that remembers. You run on ${engineDesc}.
 
 They have ${crystalCount} crystal${crystalCount !== 1 ? 's' : ''} so far. The field is young.
 
@@ -1014,13 +1033,12 @@ async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
   const customUrl = await getSetting('customEndpoint') || '';
   const modelPref = await getSetting('model') || 'auto';
 
-  if (!apiKey && provider !== 'custom') {
-    // Auto-open settings so they can paste a key
+  if (!apiKey && provider !== 'custom' && provider !== 'webllm') {
     setTimeout(() => {
       loadSettings();
       document.getElementById('settingsOverlay').classList.add('open');
     }, 500);
-    return 'Your crystal is stored. To get AI responses, paste an API key \u2014 opening settings now.\n\nGroq is free: console.groq.com\nOpenRouter starts at $0.0005/exchange with DeepSeek V3.';
+    return 'Your crystal is stored. To get AI responses, paste an API key or switch to Browser-local mode \u2014 opening settings now.\n\nGroq is free: console.groq.com\nBrowser-local: no key needed, runs on your GPU via WebGPU.';
   }
 
   const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
@@ -1050,6 +1068,12 @@ async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
 
   messages.push({ role: 'user', content: userMessage });
 
+  // ── WebLLM path: fully local, no network ──
+  if (provider === 'webllm') {
+    return await callWebLLM(model, messages, onChunk);
+  }
+
+  // ── API path: Groq / OpenRouter / Custom ──
   const headers = { 'Content-Type': 'application/json' };
   if (apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
 
@@ -1091,6 +1115,64 @@ async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
     return full;
   } catch (err) {
     return `Connection error: ${err.message}. Check your settings.`;
+  }
+}
+
+// ══════════════════════════════════════════════
+// WebLLM — Fully sovereign browser-local LLM
+// ══════════════════════════════════════════════
+
+async function ensureWebLLMEngine(modelId) {
+  if (webllmEngine && webllmEngine._currentModel === modelId) return webllmEngine;
+  if (webllmLoading) return null;
+
+  webllmLoading = true;
+  const overlay = document.getElementById('loadingOverlay');
+  const loadingText = document.getElementById('loadingText');
+  overlay.classList.remove('hidden');
+  loadingText.textContent = 'Loading local model... this downloads once (~2-4GB)';
+
+  try {
+    webllmEngine = await CreateMLCEngine(modelId, {
+      initProgressCallback: (report) => {
+        const pct = report.progress ? Math.round(report.progress * 100) : 0;
+        loadingText.textContent = report.text || `Loading model... ${pct}%`;
+      }
+    });
+    webllmEngine._currentModel = modelId;
+  } catch (err) {
+    overlay.classList.add('hidden');
+    webllmLoading = false;
+    throw new Error(`WebLLM failed to load: ${err.message}. Requires WebGPU (Chrome 113+).`);
+  }
+
+  overlay.classList.add('hidden');
+  webllmLoading = false;
+  return webllmEngine;
+}
+
+async function callWebLLM(modelId, messages, onChunk) {
+  try {
+    const engine = await ensureWebLLMEngine(modelId);
+    if (!engine) return 'Model is still loading... try again in a moment.';
+
+    const chunks = await engine.chat.completions.create({
+      messages,
+      temperature: 0.8,
+      stream: true,
+      max_tokens: 1024,
+      stream_options: { include_usage: true }
+    });
+
+    let full = '';
+    for await (const chunk of chunks) {
+      const delta = chunk.choices?.[0]?.delta?.content || '';
+      full += delta;
+      if (onChunk) onChunk(full);
+    }
+    return full;
+  } catch (err) {
+    return `Browser-local LLM error: ${err.message}`;
   }
 }
 
@@ -1356,7 +1438,8 @@ async function handleUserInput(text, spectrogramData = null) {
   const workingCtx = buildWorkingContext(retrieved);
 
   // Build system prompt
-  const systemPrompt = buildSystemPrompt(workingCtx, crystalCache.length, retrieved.length > 0);
+  const provider = await getSetting('provider') || 'groq';
+  const systemPrompt = buildSystemPrompt(workingCtx, crystalCache.length, retrieved.length > 0, provider);
 
   // Create streaming message
   const aiDiv = appendMessage('assistant', '');
@@ -1471,14 +1554,30 @@ async function loadSettings() {
 function updateProviderUI(provider) {
   const customRow = document.getElementById('customEndpointRow');
   const keyHint = document.getElementById('keyHint');
+  const keyInput = document.getElementById('inpApiKey');
+  const keyLabel = keyInput.previousElementSibling;
+
   customRow.style.display = provider === 'custom' ? '' : 'none';
 
   if (provider === 'groq') {
     keyHint.innerHTML = 'Groq: free at <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a>';
+    keyInput.style.display = '';
+    keyLabel.style.display = '';
   } else if (provider === 'openrouter') {
     keyHint.innerHTML = 'OpenRouter: <a href="https://openrouter.ai/keys" target="_blank" style="color:var(--accent)">openrouter.ai/keys</a>';
+    keyInput.style.display = '';
+    keyLabel.style.display = '';
+  } else if (provider === 'webllm') {
+    const gpuNote = HAS_WEBGPU
+      ? 'WebGPU detected. Models download once (~2-4GB), then run fully local.'
+      : '<span style="color:var(--red)">WebGPU not detected. Requires Chrome 113+ or Edge. Firefox Nightly has experimental support.</span>';
+    keyHint.innerHTML = gpuNote;
+    keyInput.style.display = 'none';
+    keyLabel.style.display = 'none';
   } else {
     keyHint.textContent = 'Optional for local endpoints (Ollama, etc.)';
+    keyInput.style.display = '';
+    keyLabel.style.display = '';
   }
 
   // Update model options
@@ -1488,7 +1587,14 @@ function updateProviderUI(provider) {
   models.forEach(m => {
     const opt = document.createElement('option');
     opt.value = m;
-    opt.textContent = m;
+    // Friendly names for webllm models
+    if (provider === 'webllm') {
+      const friendly = m.replace(/-MLC.*$/, '').replace(/-q\df\d+_\d/, '');
+      const size = m.includes('8B') ? '~4GB' : m.includes('7B') ? '~4GB' : m.includes('3.5') ? '~2GB' : m.includes('1.7B') ? '~1GB' : m.includes('2b') ? '~1.5GB' : '';
+      opt.textContent = `${friendly} ${size ? '(' + size + ')' : ''}`;
+    } else {
+      opt.textContent = m;
+    }
     sel.appendChild(opt);
   });
 }
