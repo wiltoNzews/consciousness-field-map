@@ -714,8 +714,8 @@ const PROVIDERS = {
   },
   custom: {
     url: 'http://localhost:11434/v1/chat/completions',
-    models: ['hermes3:8b', 'dolphin3:8b', 'qwen3:32b', 'deepseek-r1:32b', 'llama3'],
-    default: 'hermes3:8b'
+    models: ['dolphin3:8b', 'hermes3:8b', 'qwen3:32b', 'deepseek-r1:32b', 'llama3'],
+    default: 'dolphin3:8b'
   },
   webllm: {
     url: null, // runs locally, no URL
@@ -958,8 +958,9 @@ function buildSystemPrompt(workingContext, crystalCount, hasRetrievedCrystals, p
   let prompt;
 
   if (crystalCount < 10) {
+    const modelFriendly = window._ollamaModelFriendly || window._ollamaModel || 'a local model';
     const engineDesc = provider === 'webllm' ? 'a local model running entirely in their browser via WebGPU — no data leaves their machine'
-      : provider === 'custom' ? 'a model the user chose to connect to'
+      : provider === 'custom' ? `${modelFriendly}, running locally on this machine via Ollama — no data leaves this computer`
       : 'Llama 3.3 70B via Groq';
     prompt = `You are PsiOS, a companion that remembers. You run on ${engineDesc}.
 
@@ -1123,10 +1124,26 @@ async function embed(text) {
 // ══════════════════════════════════════════════
 
 async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
-  const provider = await getSetting('provider') || 'groq';
-  const apiKey = await getSetting('apiKey') || '';
-  const customUrl = await getSetting('customEndpoint') || '';
-  const modelPref = await getSetting('model') || 'auto';
+  // Ollama auto-detected in init() → use it directly. No IndexedDB, no settings, no ambiguity.
+  let provider, apiKey, url, model;
+
+  if (window._ollamaAvailable) {
+    provider = 'custom';
+    apiKey = '';
+    url = 'http://localhost:11434/v1/chat/completions';
+    model = window._ollamaModel || 'dolphin3:8b';
+    console.log(`[PsiOS] Ollama path → ${model} @ ${url}`);
+  } else {
+    // No Ollama — read from user settings
+    provider = await getSetting('provider') || 'groq';
+    apiKey = await getSetting('apiKey') || '';
+    const customUrl = await getSetting('customEndpoint') || '';
+    const modelPref = await getSetting('model') || 'auto';
+    const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
+    url = provider === 'custom' ? (customUrl || providerConfig.url) : providerConfig.url;
+    model = modelPref === 'auto' ? providerConfig.default : modelPref;
+    console.log(`[PsiOS] Settings path → ${provider}/${model} @ ${url}`);
+  }
 
   if (!apiKey && provider !== 'custom' && provider !== 'webllm') {
     setTimeout(() => {
@@ -1136,10 +1153,8 @@ async function callLLM(systemPrompt, userMessage, retrievedCrystals, onChunk) {
     return 'Your crystal is stored. To get AI responses, paste an API key or switch to Browser-local mode \u2014 opening settings now.\n\nGroq is free: console.groq.com\nBrowser-local: no key needed, runs on your GPU via WebGPU.';
   }
 
-  const providerConfig = PROVIDERS[provider] || PROVIDERS.groq;
-  const url = provider === 'custom' ? (customUrl || providerConfig.url) : providerConfig.url;
-  const model = modelPref === 'auto' ? providerConfig.default : modelPref;
-  console.log(`[PsiOS] Calling ${provider} → ${model} @ ${url}`);
+  // DEBUG: visible confirmation in page title
+  document.title = `PsiOS [${provider}:${model.split('/').pop()}]`;
 
   // Build messages with crystal context
   const messages = [{ role: 'system', content: systemPrompt }];
@@ -1534,8 +1549,8 @@ async function handleUserInput(text, spectrogramData = null) {
   // Build working context
   const workingCtx = buildWorkingContext(retrieved);
 
-  // Build system prompt
-  const provider = await getSetting('provider') || 'groq';
+  // Build system prompt — Ollama auto-detect is authoritative (window global, not IndexedDB)
+  const provider = window._ollamaAvailable ? 'custom' : (await getSetting('provider') || 'groq');
   const userCount = crystalCache.filter(c => c.role !== 'cairn').length;
   const systemPrompt = buildSystemPrompt(workingCtx, userCount, retrieved.length > 0, provider);
 
@@ -1902,18 +1917,43 @@ async function init() {
   crystalCache = await loadAllCrystals();
   updateFieldState();
 
-  // Auto-configure API key if not set (for testing — remove before publishing)
-  const existingKey = await getSetting('apiKey');
-  if (!existingKey) {
-    await saveSetting('provider', 'groq');
-    await saveSetting('apiKey', 'GROQ_KEY_PLACEHOLDER');
-    await saveSetting('model', 'auto');
+  // Auto-detect Ollama FIRST — if running locally, use it (best experience)
+  // These window globals are the ONLY source of truth for the Ollama path.
+  // callLLM() and handleUserInput() read them directly. No IndexedDB for this.
+  window._ollamaAvailable = false;
+  try {
+    const probe = await fetch('http://localhost:11434/api/tags', { signal: AbortSignal.timeout(2000) });
+    if (probe.ok) {
+      const data = await probe.json();
+      const models = data.models?.map(m => m.name) || [];
+      if (models.length > 0) {
+        window._ollamaAvailable = true;
+        window._ollamaModel = models.find(m => m.startsWith('dolphin3')) ||
+                              models.find(m => m.startsWith('hermes3')) ||
+                              models[0] || 'dolphin3:8b';
+        // Friendly name for system prompt (e.g., "dolphin3:8b" → "Dolphin 3")
+        const raw = window._ollamaModel.split(':')[0]; // "dolphin3"
+        window._ollamaModelFriendly = raw.replace(/(\d)/, ' $1').replace(/^./, c => c.toUpperCase()); // "Dolphin 3"
+        updateModelIndicator('custom', window._ollamaModel);
+        console.log('[PsiOS] Ollama auto-detected →', window._ollamaModel, `(${window._ollamaModelFriendly})`);
+      }
+    }
+  } catch (e) {
+    console.log('[PsiOS] Ollama not available:', e.message || 'connection failed');
   }
 
-  // Show active model in status bar
-  const curProvider = await getSetting('provider') || 'groq';
-  const curModel = await getSetting('model') || 'auto';
-  updateModelIndicator(curProvider, curModel);
+  // Fall back to Groq/settings if no Ollama
+  if (!window._ollamaAvailable) {
+    const existingProvider = await getSetting('provider');
+    if (!existingProvider) {
+      await saveSetting('provider', 'groq');
+      await saveSetting('apiKey', 'GROQ_KEY_PLACEHOLDER');
+      await saveSetting('model', 'auto');
+    }
+    const curProvider = await getSetting('provider') || 'groq';
+    const curModel = await getSetting('model') || 'auto';
+    updateModelIndicator(curProvider, curModel);
+  }
 
   // Bind events
   bindEvents();
