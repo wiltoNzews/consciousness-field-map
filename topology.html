@@ -48,31 +48,106 @@ body {
 
 .topbar h1 span { color: #7b68ee; }
 
-.topbar-nav {
-  display: flex;
-  gap: 6px;
-}
+/* ── Nav: Three Doors ── */
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
 
-.topbar-nav a {
+.topbar-nav > a {
   color: #888;
   text-decoration: none;
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 4px;
-  transition: all 0.2s;
   border: 1px solid transparent;
+  transition: all 0.2s;
 }
-
-.topbar-nav a:hover {
+.topbar-nav > a:hover {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
 }
-
-.topbar-nav a.active {
+.topbar-nav > a.active {
   color: #7b68ee;
   border-color: #5a4cc0;
   background: rgba(123,104,238,0.08);
+}
+
+.nav-group { position: relative; }
+
+.nav-door {
+  background: none;
+  border: 1px solid transparent;
+  color: #888;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-door:hover,
+.nav-group:hover .nav-door,
+.nav-group:focus-within .nav-door {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.nav-group.active .nav-door {
+  color: #7b68ee;
+  border-color: #5a4cc0;
+  background: rgba(123,104,238,0.08);
+}
+.nav-door .arrow { font-size: 9px; margin-left: 2px; opacity: 0.5; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: rgba(13,13,20,0.98);
+  border: 1px solid #1a1a2e;
+  border-radius: 8px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.15s ease;
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: #888;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover {
+  color: #f0f0f0;
+  background: rgba(255,255,255,0.04);
+}
+.nav-dropdown a.active {
+  color: #7b68ee;
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 /* --- LAYOUT --- */
@@ -854,23 +929,85 @@ canvas {
   margin-bottom: 12px;
   transition: all 0.3s;
 }
+
+@media (max-width: 900px) {
+  .topbar-nav { display: none; }
+  .nav-hamburger { display: block; }
+  .topbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(8,8,13,0.98);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    z-index: 99;
+    gap: 0;
+    align-items: stretch;
+    overflow-y: auto;
+  }
+  .topbar-nav.open > a {
+    font-size: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #1a1a2e;
+  }
+  .topbar-nav.open .nav-group {
+    border-bottom: 1px solid #1a1a2e;
+  }
+  .topbar-nav.open .nav-door {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: left;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 0;
+  }
+  .topbar-nav.open .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 12px 16px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .topbar-nav.open .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px 0;
+    color: #c8c8d0;
+  }
+}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   <nav class="topbar-nav">
     <a href="index.html">Home</a>
-    <a href="terrain.html">Terrain</a>
-    <a href="the_map.html">Paper</a>
-    <a href="topology.html" class="active">Topology</a>
-    <a href="evidence_map.html">Evidence</a>
+    <div class="nav-group">
+      <button class="nav-door">The Story <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="terrain.html">The Terrain</a>
+        <a href="the_transmission.html">The Transmission</a>
+        <a href="the_mirror.html">The Mirror</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-door">The Pattern <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="the_map.html">The Paper</a>
+        <a href="the_system.html">The System</a>
+        <a href="the_frontier.html">The Frontier</a>
+      </div>
+    </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_system.html">System</a>
-    <a href="the_mirror.html">Mirror</a>
-    <a href="the_frontier.html">Frontier</a>
-    <a href="psios.html">PsiOS</a>
   </nav>
 </div>
 
@@ -2505,6 +2642,19 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+<script>
+document.querySelector('.nav-hamburger')?.addEventListener('click', function() {
+  document.querySelector('.topbar-nav').classList.toggle('open');
+  this.textContent = this.textContent === '\u2630' ? '\u2715' : '\u2630';
+});
+document.querySelectorAll('.topbar-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topbar-nav')?.classList.remove('open');
+    var btn = document.querySelector('.nav-hamburger');
+    if (btn) btn.textContent = '\u2630';
+  });
+});
+</script>
 <script src="field-audio.js" data-page="topology"></script>
 </body>
 </html>

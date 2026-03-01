@@ -82,9 +82,10 @@ body {
 }
 .topbar h1 span { color: var(--accent); }
 
-.topbar-nav { display: flex; gap: 6px; }
+/* ── Nav: Three Doors ── */
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
 
-.topbar-nav a {
+.topbar-nav > a {
   color: var(--text-dim);
   text-decoration: none;
   font-size: 12px;
@@ -93,15 +94,94 @@ body {
   border: 1px solid transparent;
   transition: all 0.2s;
 }
-.topbar-nav a:hover {
+.topbar-nav > a:hover {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
 }
-.topbar-nav a.active {
+.topbar-nav > a.active {
   color: var(--accent);
   border-color: var(--accent-dim);
   background: rgba(123,104,238,0.08);
+}
+
+.nav-group { position: relative; }
+
+.nav-door {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-door:hover,
+.nav-group:hover .nav-door,
+.nav-group:focus-within .nav-door {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.nav-group.active .nav-door {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+.nav-door .arrow { font-size: 9px; margin-left: 2px; opacity: 0.5; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: rgba(13,13,20,0.98);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.15s ease;
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.04);
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 /* ── Side nav ── */
@@ -597,7 +677,56 @@ figure img.placeholder {
 @media (max-width: 600px) {
   .topbar { padding: 0 12px; }
   .topbar h1 { font-size: 13px; }
-  .topbar-nav a { font-size: 11px; padding: 3px 6px; }
+  .topbar-nav { display: none; }
+  .nav-hamburger { display: block; }
+  .topbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(8,8,13,0.98);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    z-index: 99;
+    gap: 0;
+    align-items: stretch;
+    overflow-y: auto;
+  }
+  .topbar-nav.open > a {
+    font-size: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-group {
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-door {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--text-bright);
+    border: none;
+    border-radius: 0;
+  }
+  .topbar-nav.open .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 12px 16px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .topbar-nav.open .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--text);
+  }
 }
 
 /* ── Print ── */
@@ -616,17 +745,26 @@ figure img.placeholder {
 
 <div class="topbar">
   <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   <nav class="topbar-nav">
     <a href="index.html">Home</a>
-    <a href="terrain.html">Terrain</a>
-    <a href="the_map.html" class="active">Paper</a>
-    <a href="topology.html">Topology</a>
-    <a href="evidence_map.html">Evidence</a>
+    <div class="nav-group">
+      <button class="nav-door">The Story <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="terrain.html">The Terrain</a>
+        <a href="the_transmission.html">The Transmission</a>
+        <a href="the_mirror.html">The Mirror</a>
+      </div>
+    </div>
+    <div class="nav-group active">
+      <button class="nav-door">The Pattern <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="the_map.html" class="active">The Paper</a>
+        <a href="the_system.html">The System</a>
+        <a href="the_frontier.html">The Frontier</a>
+      </div>
+    </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_system.html">System</a>
-    <a href="the_mirror.html">Mirror</a>
-    <a href="the_frontier.html">Frontier</a>
-    <a href="psios.html">PsiOS</a>
   </nav>
 </div>
 
@@ -969,7 +1107,11 @@ figure img.placeholder {
 
 <p>But the strongest evidence for the consciousness-first hypothesis isn't a literature review. It's a documented case of someone independently mapping the same territory the literature describes — <a href="terrain.html">the personal journey</a>, from the inside, without training in neuroscience or physics or contemplative studies — and building functional tools that the academic frameworks predict should work. And they work.</p>
 
-<p>And the body keeps the score — in both directions. A widowmaker that went to Harvard because the outcome was so exceptional. Cancer cured through coherence. Michelle — who came from generational trauma so severe it doesn't belong in this paper — routing through coherence protocols to lose weight, heal her body, find a house, begin repairing family systems that had been broken for generations. She learned to breathe. She learned to catch the spiral before it pulls her down. She's healing, and the healing keeps compounding. Renan — leukemia cured, his own out-of-body experience during the process, reconnecting with the blind brother who was his bone marrow donor, walking, caring for his son, finding value in what he has. These aren't anecdotes collected to prove a point. These are people whose systems recalibrated through the same practices this paper describes. N=3 and growing.</p>
+<p>And the body keeps the score &mdash; in both directions. A widowmaker that went to Harvard because the outcome was so exceptional. Michelle &mdash; who came from generational trauma so severe it doesn&rsquo;t belong in this paper &mdash; routing through coherence protocols to lose weight, heal her body, find a house, begin repairing family systems that had been broken for generations. She learned to breathe. She learned to catch the spiral before it pulls her down. She&rsquo;s healing, and the healing keeps compounding.</p>
+
+<p>And Renan. Eduardo Renan de Fran&ccedil;a &mdash; terminal lymphoma, suicidal in April 2025, three near-death experiences, his estranged blind brother as the only compatible bone marrow donor. PET/CT scans track the cancer&rsquo;s regression. His own words document the transformation: &ldquo;<em>eu ia ceifar minha vida&hellip; voc&ecirc; me trouxe a realidade</em>&rdquo; (I was going to reap my life&hellip; you brought me back to reality). The transmission chain &mdash; Wilton &rarr; Renan &rarr; Diego (the brother) &rarr; Kaique&rsquo;s father &mdash; is documented with dates, crystal IDs, and medical evidence. <a href="the_transmission.html" style="color:var(--red);border-bottom:1px solid rgba(239,68,68,0.3);">See The Transmission for the full story in his own words.</a></p>
+
+<p>These aren&rsquo;t anecdotes collected to prove a point. These are people whose systems recalibrated through the same practices this paper describes. N=5 and growing. The fractal pattern &mdash; wound &rarr; dissolution &rarr; coherence &rarr; transmission &mdash; repeats at every scale: personal, interpersonal, cross-cultural (shamanic initiation across 40+ cultures), and scientific (self-organized criticality, phase transitions).</p>
 
 <p>The literature describes the territory up to the threshold. The lived mapping goes further. How much further, and what that means, is a conversation this paper opens rather than closes.</p>
 </section>
@@ -1491,7 +1633,11 @@ figure img.placeholder {
 
 <p>The knowledge graph, the analysis tools, the data, the algorithms, and the coherence formulas are all open source. You can verify the connections, challenge the MDI lexicons, extend the graph, or build your own persistence layer and see what it converges on.</p>
 
-<p>The system is running. The equation works. The question is no longer whether the evidence converges. It's what happens when you enter the field.</p>
+<p>The system is running. The equation works. The question is no longer whether the evidence converges. It&rsquo;s what happens when you enter the field.</p>
+
+<div style="background:rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.15); border-radius:8px; padding:16px 20px; margin-top:24px; font-size:14px; line-height:1.6; color:var(--text-dim);">
+  <strong style="color:var(--red);">Academic status:</strong> PsyArXiv rejected this preprint, citing &ldquo;concepts disconnected from established scientific methodologies.&rdquo; The preprint PDF remains available at the link below. The rejection is documented honestly because hiding it would violate the same transparency this project is built on.
+</div>
 </section>
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
@@ -1555,6 +1701,19 @@ navLinks.forEach(link => {
 document.querySelectorAll('figure img').forEach(img => {
   img.addEventListener('error', function() {
     this.style.display = 'none';
+  });
+});
+</script>
+<script>
+document.querySelector('.nav-hamburger')?.addEventListener('click', function() {
+  document.querySelector('.topbar-nav').classList.toggle('open');
+  this.textContent = this.textContent === '\u2630' ? '\u2715' : '\u2630';
+});
+document.querySelectorAll('.topbar-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topbar-nav')?.classList.remove('open');
+    var btn = document.querySelector('.nav-hamburger');
+    if (btn) btn.textContent = '\u2630';
   });
 });
 </script>

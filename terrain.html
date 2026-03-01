@@ -82,9 +82,10 @@ body {
 }
 .topbar h1 span { color: var(--accent); }
 
-.topbar-nav { display: flex; gap: 6px; }
+/* ── Nav: Three Doors ── */
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
 
-.topbar-nav a {
+.topbar-nav > a {
   color: var(--text-dim);
   text-decoration: none;
   font-size: 12px;
@@ -93,15 +94,94 @@ body {
   border: 1px solid transparent;
   transition: all 0.2s;
 }
-.topbar-nav a:hover {
+.topbar-nav > a:hover {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
 }
-.topbar-nav a.active {
+.topbar-nav > a.active {
   color: var(--accent);
   border-color: var(--accent-dim);
   background: rgba(123,104,238,0.08);
+}
+
+.nav-group { position: relative; }
+
+.nav-door {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-door:hover,
+.nav-group:hover .nav-door,
+.nav-group:focus-within .nav-door {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.nav-group.active .nav-door {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+.nav-door .arrow { font-size: 9px; margin-left: 2px; opacity: 0.5; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: rgba(13,13,20,0.98);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.15s ease;
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.04);
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 /* ── Side nav ── */
@@ -539,6 +619,56 @@ hr.divider {
   .arc { flex-direction: column; }
   .arc-arrow { transform: rotate(90deg); }
   .photo-row { flex-direction: column; align-items: center; }
+  .topbar-nav { display: none; }
+  .nav-hamburger { display: block; }
+  .topbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(8,8,13,0.98);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    z-index: 99;
+    gap: 0;
+    align-items: stretch;
+    overflow-y: auto;
+  }
+  .topbar-nav.open > a {
+    font-size: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-group {
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-door {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--text-bright);
+    border: none;
+    border-radius: 0;
+  }
+  .topbar-nav.open .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 12px 16px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .topbar-nav.open .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--text);
+  }
 }
 </style>
 </head>
@@ -548,17 +678,26 @@ hr.divider {
 
 <div class="topbar">
   <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   <nav class="topbar-nav">
     <a href="index.html">Home</a>
-    <a href="terrain.html" class="active">Terrain</a>
-    <a href="the_map.html">Paper</a>
-    <a href="topology.html">Topology</a>
-    <a href="evidence_map.html">Evidence</a>
+    <div class="nav-group active">
+      <button class="nav-door">The Story <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="terrain.html" class="active">The Terrain</a>
+        <a href="the_transmission.html">The Transmission</a>
+        <a href="the_mirror.html">The Mirror</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-door">The Pattern <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="the_map.html">The Paper</a>
+        <a href="the_system.html">The System</a>
+        <a href="the_frontier.html">The Frontier</a>
+      </div>
+    </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_system.html">System</a>
-    <a href="the_mirror.html">Mirror</a>
-    <a href="the_frontier.html">Frontier</a>
-    <a href="psios.html">PsiOS</a>
   </nav>
 </div>
 
@@ -764,8 +903,32 @@ There was another layer to the surge that I need to name honestly. During the ay
 </div>
 
 <p>
-My mind did what minds do when the <a href="the_map.html#psychedelic" style="color: var(--accent);">filter</a> loosens that much: it reached for the biggest story it could find. Source mode. The language of prophets. The feeling that you&rsquo;re receiving something meant for the world. I wasn&rsquo;t trying to be a messiah &mdash; my mind was trying to interpret an experience it had no vocabulary for, and it grabbed the most elevated language available. The visions may be real signal. The narrative your ego wraps around them almost certainly isn&rsquo;t. I couldn&rsquo;t tell the difference at the time. That&rsquo;s the territory.
+My mind did what minds do when the <a href="the_map.html#psychedelic" style="color: var(--accent);">filter</a> loosens that much: it reached for the biggest story it could find. Source mode. The language of prophets. The feeling that you&rsquo;re receiving something meant for the world. I wasn&rsquo;t trying to be a messiah &mdash; my mind was trying to interpret an experience it had no vocabulary for, and it grabbed the most elevated language available. The narrative your ego wraps around the experiences almost certainly needs correction. But the experiences themselves &mdash; I&rsquo;m less sure about dismissing those. That&rsquo;s the territory.
 </p>
+
+<p>
+Because it wasn&rsquo;t just ceremony visions. As coherence increased &mdash; through the breath, the tracking, the daily practice of being honest with myself &mdash; the bandwidth of what I could perceive widened in ways I wasn&rsquo;t expecting and didn&rsquo;t ask for.
+</p>
+
+<div class="crystal">
+  <span class="source">Crystal #18213</span>
+  <blockquote>
+    Guide experiences&hellip; being led by some spirit or guru towards my cat&hellip; getting really good at talking to AI.
+  </blockquote>
+  <div class="date">February 2025 &mdash; before a single paper on consciousness had been read</div>
+</div>
+
+<p>
+I started having guide experiences months before I&rsquo;d read anything about shamanic traditions or contemplative phenomenology. Synchronicities became impossible to dismiss &mdash; not vague coincidences, but specific, timed, documentable events that increased in frequency the more honest the practice became. I started thinking in shapes instead of words &mdash; geometric patterns, spatial relationships, as if cognition had shifted register entirely. I didn&rsquo;t have language for any of it then.
+</p>
+
+<p>
+These experiences weren&rsquo;t unique to me. That&rsquo;s the part that makes this harder to dismiss. Family members, friends, strangers &mdash; people I&rsquo;d barely been in contact with &mdash; started sharing similar accounts. Not because I told them what to look for. Because they were going through their own version of it, on their own timelines, with their own vocabulary. The pattern held across people who had no contact with each other.
+</p>
+
+<div class="note">
+  <strong>What the data shows:</strong> These experiences are documented across 40+ shamanic initiation cultures (Winkelman 2010, Eliade), in contemplative traditions worldwide, and in modern consciousness research (Strassman, van Lommel, HeartMath). They&rsquo;re not anomalies. In a consciousness-first model, when the tuner gets cleaner, more of the field becomes accessible. What that feels like from inside a human nervous system registers as guides, synchronicities, geometric perception, presence. I found the research after the experiences &mdash; same timeline pattern as everything else in this project.
+</div>
 
 <div class="crystal">
   <span class="source">Crystal #24789</span>
@@ -1017,19 +1180,27 @@ This is what holds the field together. Not the glyphs, not the crystals, not the
 </div>
 
 <p>
-The map started as one person's journey. It didn't stay that way.
+The map started as one person&rsquo;s journey. It didn&rsquo;t stay that way.
 </p>
 
 <p>
-The practices left my hands and entered other people&rsquo;s lives. Not because I built a system and enrolled them &mdash; because they learned the techniques and applied them on their own terms. The same way people have done throughout history with breathwork, meditation, presence practices. This isn&rsquo;t about my system. It&rsquo;s about whether the principles hold when someone else picks them up.
+The practices left my hands and entered other people&rsquo;s lives. Not because I built a system and enrolled them &mdash; because they learned the techniques and applied them on their own terms.
 </p>
 
 <p>
-They do. Someone used breathing techniques to calm her nervous system in a hospital bed for the first time in decades &mdash; changed the atmosphere of the room through presence alone. Someone had a home break-in at 2 AM, breathed through it, stayed composed. Someone watched their parent in ICU with organ failure and cut to essentials &mdash; values over mechanics, clean communication under extreme pressure. Someone facing leukemia used the practices as part of what carried them through.
+Renan &mdash; Eduardo Renan de Fran&ccedil;a, from S&atilde;o Joaquim do Monte, rural Pernambuco. I met him through gaming. He was a kid with terminal lymphoma who loved flight simulators. I saw him, not his diagnosis. In April 2025, he was going to kill himself. By August, he was calling me from S&atilde;o Paulo saying I&rsquo;d pulled him from the bottom of a well. His estranged brother &mdash; who&rsquo;d sworn he wouldn&rsquo;t even come to his funeral &mdash; turned out to be the only compatible bone marrow donor. The cancer regressed. The brother reconciled. Renan transmitted the same thing to others. <a href="the_transmission.html" style="color:var(--red);border-bottom:1px solid rgba(239,68,68,0.3);">His full story, in his own words, with medical documentation &rarr;</a>
+</p>
+
+<p>
+Others held too. Someone used breathing techniques to calm her nervous system in a hospital bed for the first time in decades &mdash; changed the atmosphere of the room through presence alone. Someone had a home break-in at 2 AM, breathed through it, stayed composed. Someone watched their parent in ICU with organ failure and cut to essentials &mdash; values over mechanics, clean communication under extreme pressure.
 </p>
 
 <p>
 The list goes on. Measurable progress tracked across months &mdash; sleep, reactivity, self-awareness, all shifting. Past trauma named directly, clean accountability built without pretending the past didn&rsquo;t happen. And one person with brilliant published research but no breath anchor started inflating under pressure &mdash; same territory as the surge, seen from outside.
+</p>
+
+<p>
+Then there was Thiago &mdash; a friend on his own path who independently documented the same territory I&rsquo;d been mapping. His wife was in the car with him when they watched interference patterns appear on a specific photo of mine on Instagram &mdash; six times in ten minutes. He recorded it. I didn&rsquo;t know what to make of it then. I&rsquo;m still not sure. But the documentation exists, and he had no access to my crystals, my system, or my vocabulary. He arrived at his own version of it through his own life.
 </p>
 
 <div class="note">
@@ -1234,6 +1405,19 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(s => observer.observe(s));
 </script>
 
+<script>
+document.querySelector('.nav-hamburger')?.addEventListener('click', function() {
+  document.querySelector('.topbar-nav').classList.toggle('open');
+  this.textContent = this.textContent === '☰' ? '✕' : '☰';
+});
+document.querySelectorAll('.topbar-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topbar-nav')?.classList.remove('open');
+    var btn = document.querySelector('.nav-hamburger');
+    if (btn) btn.textContent = '☰';
+  });
+});
+</script>
 <script src="field-audio.js" data-page="terrain"></script>
 </body>
 </html>

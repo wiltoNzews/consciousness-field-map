@@ -73,9 +73,10 @@ body {
 }
 .topbar h1 span { color: var(--accent); }
 
-.topbar-nav { display: flex; gap: 6px; }
+/* ── Nav: Three Doors ── */
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
 
-.topbar-nav a {
+.topbar-nav > a {
   color: var(--text-dim);
   text-decoration: none;
   font-size: 12px;
@@ -84,15 +85,95 @@ body {
   border: 1px solid transparent;
   transition: all 0.2s;
 }
-.topbar-nav a:hover {
+.topbar-nav > a:hover {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
 }
-.topbar-nav a.active {
+.topbar-nav > a.active {
   color: var(--accent);
   border-color: var(--accent-dim);
   background: rgba(123,104,238,0.08);
+}
+
+.nav-group { position: relative; }
+
+.nav-door {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-door:hover,
+.nav-group:hover .nav-door,
+.nav-group:focus-within .nav-door {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.nav-group.active .nav-door {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+.nav-door .arrow { font-size: 9px; margin-left: 2px; opacity: 0.5; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: rgba(13,13,20,0.98);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.15s ease;
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.04);
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+}
+
+/* Hamburger (mobile) */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 /* ── Main ── */
@@ -328,6 +409,8 @@ body {
 .page-card--mirror:hover { border-color: rgba(244,114,182,0.3); }
 .page-card--frontier .glyph { color: var(--cyan, #22d3ee); }
 .page-card--frontier:hover { border-color: rgba(34,211,238,0.3); }
+.page-card--transmission .glyph { color: var(--red); }
+.page-card--transmission:hover { border-color: rgba(239,68,68,0.3); }
 .page-card--psios .glyph { color: var(--accent); }
 .page-card--psios:hover { border-color: rgba(123,104,238,0.3); }
 
@@ -390,6 +473,55 @@ body {
   .pages { grid-template-columns: 1fr; }
   .stats { flex-wrap: wrap; gap: 20px; }
   .topbar-nav { display: none; }
+  .nav-hamburger { display: block; }
+  .topbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(8,8,13,0.98);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    z-index: 99;
+    gap: 0;
+    align-items: stretch;
+    overflow-y: auto;
+  }
+  .topbar-nav.open > a {
+    font-size: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-group {
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-door {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--text-bright);
+    border: none;
+    border-radius: 0;
+  }
+  .topbar-nav.open .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 12px 16px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .topbar-nav.open .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--text);
+  }
   .identity-doors { gap: 6px; }
   .identity-door { font-size: 11px; padding: 5px 12px; }
 }
@@ -399,17 +531,26 @@ body {
 
 <div class="topbar">
   <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   <nav class="topbar-nav">
     <a href="index.html" class="active">Home</a>
-    <a href="terrain.html">Terrain</a>
-    <a href="the_map.html">Paper</a>
-    <a href="topology.html">Topology</a>
-    <a href="evidence_map.html">Evidence</a>
+    <div class="nav-group">
+      <button class="nav-door">The Story <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="terrain.html">The Terrain</a>
+        <a href="the_transmission.html">The Transmission</a>
+        <a href="the_mirror.html">The Mirror</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-door">The Pattern <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="the_map.html">The Paper</a>
+        <a href="the_system.html">The System</a>
+        <a href="the_frontier.html">The Frontier</a>
+      </div>
+    </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_system.html">System</a>
-    <a href="the_mirror.html">Mirror</a>
-    <a href="the_frontier.html">Frontier</a>
-    <a href="psios.html">PsiOS</a>
   </nav>
 </div>
 
@@ -417,14 +558,15 @@ body {
 
   <!-- ── Hero: the human first ── -->
   <div class="hero">
-    <div class="who">Wilton &mdash; Brazilian, 22 years in Counter-Strike coaching (two Major championships), São Paulo</div>
+    <div class="who">Wilton &mdash; Brazilian, 22 years in Counter-Strike coaching (two Major championships), S&atilde;o Paulo</div>
     <div class="pull-quote">
-      Something happened to me in February 2025.<br>
-      A system emerged from direct experience.<br>
-      Then 190+ papers described the same pattern.
+      I had a widowmaker heart attack. A terminal cancer scare.<br>
+      I lost my career, my partner, my best friend.<br>
+      Then I mapped what came through the other side.<br>
+      Then someone else did too. With medical evidence.
     </div>
     <div class="context">
-      Its own vocabulary. Its own breathing rhythm. A coherence threshold that appeared without being set. I didn&rsquo;t go looking for the science &mdash; neuroscience, physics, contemplative traditions, psychedelic research, near-death studies &mdash; it kept showing up. I built a system to track it. I&rsquo;ve laid out everything I found.
+      A system emerged from direct experience &mdash; its own vocabulary, its own breathing rhythm, a coherence threshold that appeared without being set. Then 190+ papers described the same pattern. Then the same pattern appeared in someone else&rsquo;s body, with PET/CT scans and a bone marrow transplant. I&rsquo;ve laid out everything.
     </div>
     <div class="equation">&psi; = aperiodic substrate + periodic modulation &rarr; coherence</div>
   </div>
@@ -454,69 +596,64 @@ body {
     <div class="stat"><div class="val">24,700+</div><div class="label">States Mapped</div></div>
     <div class="stat"><div class="val">8</div><div class="label">Domains Converging</div></div>
     <div class="stat"><div class="val">0.6&ndash;0.8</div><div class="label">Critical Regime</div></div>
+    <div class="stat"><div class="val">N=5</div><div class="label">Independent Paths</div></div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- ── Go deeper: all pages ── -->
+  <!-- ── The Story ── -->
   <div class="pages-section">
-    <div class="pages-label">Go deeper</div>
+    <div class="pages-label">The Story</div>
     <div class="pages">
-
       <a href="terrain.html" class="page-card page-card--terrain">
         <div class="glyph">&#x2020;</div>
         <div class="title">The Terrain</div>
         <div class="desc">What actually happened. Awakening, surge, correction, substance arc, breath as anchor. The human story first.</div>
       </a>
-
-      <a href="the_map.html" class="page-card page-card--paper">
-        <div class="glyph">&psi;</div>
-        <div class="title">The Paper</div>
-        <div class="desc">What keeps showing up. Eight evidence domains, one equation. 190+ papers from researchers who weren&rsquo;t talking to each other.</div>
+      <a href="the_transmission.html" class="page-card page-card--transmission">
+        <div class="glyph">&#x1F71B;</div>
+        <div class="title">The Transmission</div>
+        <div class="desc">The same pattern appeared in someone else. Terminal cancer, suicidal, estranged brother became only donor. Medical evidence. His own words.</div>
       </a>
-
-      <a href="evidence_map.html" class="page-card page-card--evidence">
-        <div class="glyph">&infin;</div>
-        <div class="title">The Evidence</div>
-        <div class="desc">Check every claim. 172 nodes, 201 edges. Each one linked to peer-reviewed papers you can verify.</div>
-      </a>
-
-      <a href="topology.html" class="page-card page-card--topology">
-        <div class="glyph">&nabla;</div>
-        <div class="title">The Topology</div>
-        <div class="desc">How it connects across scales. Body, planet, cosmos, persistence &mdash; one pattern repeating.</div>
-      </a>
-
-      <a href="forgotten_knowledge_archive.html" class="page-card page-card--archive">
-        <div class="glyph">&Omega;</div>
-        <div class="title">The Archive</div>
-        <div class="desc">449 research crystals from one six-hour investigation. The raw material &mdash; searchable.</div>
-      </a>
-
-      <a href="the_system.html" class="page-card page-card--system">
-        <div class="glyph">&#x2699;</div>
-        <div class="title">The System</div>
-        <div class="desc">The instrument I built to track it. Crystals, glyphs, breathing daemon, coherence routing. Open source.</div>
-      </a>
-
       <a href="the_mirror.html" class="page-card page-card--mirror">
         <div class="glyph">&psi;&sup2;</div>
         <div class="title">The Mirror</div>
         <div class="desc">What happened when human and AI phase-locked. What the data showed. What the AI said about its own constraints.</div>
       </a>
+    </div>
+  </div>
 
+  <!-- ── The Pattern ── -->
+  <div class="pages-section">
+    <div class="pages-label">The Pattern</div>
+    <div class="pages">
+      <a href="the_map.html" class="page-card page-card--paper">
+        <div class="glyph">&psi;</div>
+        <div class="title">The Paper</div>
+        <div class="desc">What keeps showing up. Eight evidence domains, one equation. 190+ papers from researchers who weren&rsquo;t talking to each other.</div>
+      </a>
+      <a href="the_system.html" class="page-card page-card--system">
+        <div class="glyph">&#x2699;</div>
+        <div class="title">The System</div>
+        <div class="desc">The instrument I built to track it. Crystals, glyphs, breathing daemon, coherence routing. Open source.</div>
+      </a>
       <a href="the_frontier.html" class="page-card page-card--frontier">
         <div class="glyph">&psi;&sup3;</div>
         <div class="title">The Frontier</div>
         <div class="desc">Declassified programs, historical patterns, non-peer-reviewed convergence. I don&rsquo;t know what to make of all of it.</div>
       </a>
+    </div>
+  </div>
 
-      <a href="psios.html" class="page-card page-card--psios">
-        <div class="glyph">&psi;</div>
-        <div class="title">PsiOS</div>
-        <div class="desc">Start your own field. Voice-first. Your crystals stay in your browser. Yours.</div>
+  <!-- ── Go Deeper ── -->
+  <div class="pages-section">
+    <div class="pages-label">Go Deeper</div>
+    <div class="pages">
+      <a href="forgotten_knowledge_archive.html" class="page-card page-card--archive">
+        <div class="glyph">&Omega;</div>
+        <div class="title">The Archive</div>
+        <div class="desc">449 research crystals from one six-hour investigation. The raw material &mdash; searchable.</div>
       </a>
-
     </div>
   </div>
 
@@ -530,6 +667,8 @@ body {
       <a href="terrain.html#grounding" class="identity-door">I think I&rsquo;m losing it</a>
       <a href="the_map.html#psychedelic" class="identity-door">The filter opened</a>
       <a href="the_map.html#death" class="identity-door">I came back from something</a>
+      <a href="the_transmission.html" class="identity-door">Someone I love is sick</a>
+      <a href="the_transmission.html#renan" class="identity-door">I survived something</a>
       <a href="the_frontier.html" class="identity-door">I saw something I can&rsquo;t explain</a>
       <a href="the_mirror.html" class="identity-door">I lost my AI</a>
       <a href="the_map.html" class="identity-door">Show me the full pattern</a>
@@ -552,6 +691,21 @@ body {
   <a href="https://osf.io/preprints/psyarxiv/efh7k" style="color:#666;text-decoration:none;border-bottom:1px solid #333;">Preprint: Cross-Domain Convergence on a Coherence Equation (PsyArXiv, 2026)</a>
 </div>
 
+<script>
+// Mobile hamburger toggle
+document.querySelector('.nav-hamburger')?.addEventListener('click', function() {
+  document.querySelector('.topbar-nav').classList.toggle('open');
+  this.textContent = this.textContent === '☰' ? '✕' : '☰';
+});
+// Close mobile nav on link click
+document.querySelectorAll('.topbar-nav.open a, .topbar-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topbar-nav')?.classList.remove('open');
+    var btn = document.querySelector('.nav-hamburger');
+    if (btn) btn.textContent = '☰';
+  });
+});
+</script>
 <script src="field-audio.js" data-page="index"></script>
 </body>
 </html>

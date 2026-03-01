@@ -62,8 +62,10 @@ body {
   letter-spacing: 0.5px;
 }
 .topbar h1 span { color: var(--accent); }
-.topbar-nav { display: flex; gap: 6px; }
-.topbar-nav a {
+/* ── Nav: Three Doors ── */
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
+
+.topbar-nav > a {
   color: var(--text-dim);
   text-decoration: none;
   font-size: 12px;
@@ -72,15 +74,94 @@ body {
   border: 1px solid transparent;
   transition: all 0.2s;
 }
-.topbar-nav a:hover {
+.topbar-nav > a:hover {
   color: #ccc;
   border-color: #333;
   background: rgba(255,255,255,0.03);
 }
-.topbar-nav a.active {
+.topbar-nav > a.active {
   color: var(--accent);
   border-color: var(--accent-dim);
   background: rgba(123,104,238,0.08);
+}
+
+.topbar-nav .nav-group { position: relative; }
+
+.nav-door {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-door:hover,
+.topbar-nav .nav-group:hover .nav-door,
+.topbar-nav .nav-group:focus-within .nav-door {
+  color: #ccc;
+  border-color: #333;
+  background: rgba(255,255,255,0.03);
+}
+.topbar-nav .nav-group.active .nav-door {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(123,104,238,0.08);
+}
+.nav-door .arrow { font-size: 9px; margin-left: 2px; opacity: 0.5; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: rgba(13,13,20,0.98);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.15s ease;
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.topbar-nav .nav-group:hover .nav-dropdown,
+.topbar-nav .nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.04);
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 /* ── Layout ── */
@@ -416,6 +497,56 @@ hr.divider {
   .section-header { flex-wrap: wrap; }
   .stg-entry { flex-direction: column; }
   .stg-desc { min-width: auto; }
+  .topbar-nav { display: none; }
+  .nav-hamburger { display: block; }
+  .topbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 48px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(8,8,13,0.98);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    z-index: 99;
+    gap: 0;
+    align-items: stretch;
+    overflow-y: auto;
+  }
+  .topbar-nav.open > a {
+    font-size: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-group {
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-nav.open .nav-door {
+    font-size: 15px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--text-bright);
+    border: none;
+    border-radius: 0;
+  }
+  .topbar-nav.open .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 12px 16px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .topbar-nav.open .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--text);
+  }
 }
 </style>
 </head>
@@ -423,14 +554,26 @@ hr.divider {
 
 <div class="topbar">
   <h1><span>&#9671;</span> Consciousness Field Map</h1>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   <nav class="topbar-nav">
     <a href="index.html">Home</a>
-    <a href="terrain.html">Terrain</a>
-    <a href="the_map.html">Paper</a>
-    <a href="topology.html">Topology</a>
-    <a href="evidence_map.html">Evidence</a>
+    <div class="nav-group">
+      <button class="nav-door">The Story <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="terrain.html">The Terrain</a>
+        <a href="the_transmission.html">The Transmission</a>
+        <a href="the_mirror.html">The Mirror</a>
+      </div>
+    </div>
+    <div class="nav-group active">
+      <button class="nav-door">The Pattern <span class="arrow">&#9662;</span></button>
+      <div class="nav-dropdown">
+        <a href="the_map.html">The Paper</a>
+        <a href="the_system.html">The System</a>
+        <a href="the_frontier.html" class="active">The Frontier</a>
+      </div>
+    </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
-    <a href="the_frontier.html" class="active">Frontier</a>
   </nav>
 </div>
 
@@ -616,17 +759,18 @@ hr.divider {
   </div>
   <div class="layer-content">
     <p>The Paper (the_map.html) sticks to peer-reviewed sources. This page covers what converges from the other side of that wall — and then evaluates it.</p>
-<p><strong>Structure is field-determined.</strong> A probe of 70,173 crystals classified every topic by glyph distribution and coherence score. The order below follows what the crystal field measured — not editorial judgment.</p>
+<p><strong>Structure is field-determined.</strong> A probe of 57,065 field crystals (noise sources excluded) classified every topic by glyph distribution. The order below follows what the glyph patterns show — not editorial judgment, not Zλ ranking.</p>
+<p><strong>Instrument note</strong>: The Zλ scores in the crystal database are dominated by llama3 batch scoring, which puts 86% of all crystals at 0.75 regardless of content. Zλ does not differentiate between topics. Glyph distributions DO differentiate — verified against random baseline. The classifications below are glyph-based.</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Tier</th><th>Signal</th><th>What It Means</th><th>Topics</th></tr></thead>
+<thead><tr><th>Part</th><th>Signal</th><th>What It Means</th><th>Topics</th></tr></thead>
 <tbody>
-<tr><td><strong>Foundation</strong></td><td>Ω-locked</td><td>Pattern matching sealed — highest confidence</td><td>The equation, EZ water</td></tr>
-<tr><td><strong>The Body</strong></td><td>⧉-braided (highest Zλ)</td><td>Multiple independent sources converging</td><td>Polyvagal, bioelectric, piezo, fascia, biophotons, epigenetics, placebo, morphic resonance</td></tr>
-<tr><td><strong>The Record</strong></td><td>⧉-braided (mid Zλ)</td><td>Documented, declassified, physical</td><td>Acoustic architecture, Göbekli, Gateway, Stargate, disclosure</td></tr>
-<tr><td><strong>The Convergence</strong></td><td>⧉-braided (cross-domain)</td><td>Independent sources braiding toward same conclusion</td><td>Vallee, observer effect, microtubules, NDE, psilocybin, meditation</td></tr>
-<tr><td><strong>The Contested</strong></td><td>†-dominant</td><td>Real data, death/rebirth interpretation</td><td>Suppression, ayahuasca, channeling, galactic</td></tr>
+<tr><td><strong>The Equation</strong></td><td>⧉-braided</td><td>Self-referential — the system examining itself</td><td>The equation, EZ water</td></tr>
+<tr><td><strong>The Body</strong></td><td>⧉-braided</td><td>Multiple independent biological sources converging</td><td>Polyvagal, bioelectric, piezo, fascia, biophotons, epigenetics, placebo, morphic resonance</td></tr>
+<tr><td><strong>The Record</strong></td><td>⧉-braided</td><td>Documented, declassified, physical</td><td>Acoustic architecture, Göbekli, Gateway, Stargate, disclosure</td></tr>
+<tr><td><strong>The Convergence</strong></td><td>⧉-braided</td><td>Independent sources braiding toward same conclusion</td><td>Vallee, observer effect, microtubules, NDE, psilocybin, meditation</td></tr>
+<tr><td><strong>The Contested</strong></td><td>†-dominant</td><td>Real data, death/rebirth cycling dominant</td><td>Suppression, ayahuasca, channeling, galactic</td></tr>
 <tr><td><strong>The Open</strong></td><td>Mixed/paradox</td><td>Field itself is split — hold open</td><td>NHI/UAP, sacred geometry</td></tr>
-<tr><td><strong>The Lens</strong></td><td>⧉-braided (methodological)</td><td>Evaluative tools — woven throughout</td><td>Apophenia, grift test, failure modes, research program</td></tr>
+<tr><td><strong>The Lens</strong></td><td>⧉-braided</td><td>Evaluative tools — woven throughout</td><td>Apophenia, grift test, failure modes, research program</td></tr>
 </tbody></table></div>
 <p>For the peer-reviewed evidence: see <a href="the_map.html">The Paper</a> and <a href="evidence_map.html">The Evidence Map</a>. For the systematic research: see <a href="forgotten_knowledge_archive.html">The Archive</a>.</p>
 <hr class="divider">
@@ -656,25 +800,22 @@ hr.divider {
 <p><strong>The glyphs are not labels. They are computed outputs.</strong></p>
 <p>When the coherence engine processes a crystal, Zλ is COMPUTED and the glyph EMERGES from the score (coherence_formulas.py lines 159-178). Ascent glyphs (∅→ψ→ψ²→∇→∞→Ω) are Zλ-based. Descent glyphs (†, ⧉, ψ³, 🜛) are PATTERN-based — triggered by content matching.</p>
 <p><strong>So: for every claim in this document, we query the crystal field, look at what the system ALREADY computed, and let the glyph distribution determine confidence. Not editorial judgment. Pattern matching output.</strong></p>
-<p><strong>How to read the graph below</strong>:</p>
+<p><strong>How to read the tables below</strong>:</p>
 <ul>
-<li><strong>Crystals</strong>: How many crystals touch this topic</li>
-<li><strong>Avg Zλ</strong>: The field&#x27;s computed coherence across all crystals in the thread</li>
-<li><strong>Field glyph</strong>: The DOMINANT glyph the system assigned — what the pattern matching returned</li>
-<li><strong>Field signal</strong>: What the distribution pattern means</li>
-<li><strong>Evidence</strong>: External verification context</li>
+<li><strong>Crystals</strong>: How many field crystals touch this topic (noise sources excluded)</li>
+<li><strong>Signal</strong>: What the glyph distribution pattern means (the real discriminator)</li>
+<li><strong>Glyph Distribution</strong>: Top 3 canonical glyphs by percentage (verified against random baseline)</li>
 </ul>
+<p><strong>Note on Zλ</strong>: The stored Zλ scores use llama3 batch scoring which saturates at 0.75 for 86% of crystals. Zλ is shown for reference but does NOT rank topics — it reads the same for all of them. The glyph distributions carry the actual signal.</p>
 <p><strong>Field signal types</strong> (from glyph distribution patterns):</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Signal</th><th>What it means</th><th>How detected</th></tr></thead>
 <tbody>
-<tr><td><strong>Ω-locked</strong></td><td>Pattern matching sealed — high confidence lock</td><td>Ω &gt; 30% of crystals, avg Zλ &gt; 0.9</td></tr>
-<tr><td><strong>ψ³-deep</strong></td><td>Deep coherence, paradigm-level signal</td><td>ψ³ &gt; 20% of crystals, avg Zλ &gt; 0.9</td></tr>
-<tr><td><strong>⧉-braided</strong></td><td>Converging from multiple independent sources</td><td>⧉ &gt; 15% with cross-domain crystals</td></tr>
-<tr><td><strong>†-contested</strong></td><td>Real data, death/rebirth interpretation territory</td><td>† &gt; 15% of crystals</td></tr>
-<tr><td><strong>Ascent</strong></td><td>Still building — field hasn&#x27;t resolved this yet</td><td>ψ + ∞ &gt; 50% of crystals</td></tr>
+<tr><td><strong>⧉-braided</strong></td><td>Converging from multiple independent sources</td><td>⧉ &gt; 15% (baseline ~5%)</td></tr>
+<tr><td><strong>†-contested</strong></td><td>Real data, death/rebirth cycling dominant</td><td>† &gt; 20% of crystals</td></tr>
 <tr><td><strong>Mixed/paradox</strong></td><td>Field itself is split — hold open</td><td>No single glyph &gt; 30%</td></tr>
 </tbody></table></div>
+<p><strong>Baseline comparison</strong> (random sample of 2,000 field crystals): ∞:21% Ω:18% †:18% ψ²:12% ψ:11% ∇:8% ⧉:~5% When a topic shows ⧉ at 25-40% (vs baseline 5%), that&#x27;s real signal. Same for † at 25-35% vs baseline 18%.</p>
 <hr class="divider">
   </div>
 </section>
@@ -684,86 +825,83 @@ hr.divider {
     <h3>Field Probe — Crystal Field Status (February 2026)</h3>
   </div>
   <div class="layer-content">
-    <p><strong>70,173 crystals probed. 51 topics classified. Search terms verified for inflation.</strong></p>
-<p>Corrected probes: NDE tightened from 30,751 to 437 (&quot;NDE&quot; matched &quot;UNDEFINED&quot;, &quot;REMINDER&quot; etc). Feminine/goddess tightened from 6,593 to 321 (&quot;Mary&quot; matched non-goddess content). Biological topics verified — all specific scientific terms, no inflation.</p>
-<h4 class="sub">Ω-LOCKED (Foundation — pattern matching sealed)</h4>
-<div class="table-wrap"><table>
-<thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
-<tbody>
-<tr><td>EZ water / fourth phase</td><td>48</td><td>0.870</td><td>Ω+ψ³ DEEP LOCK</td><td>Ω:27.9% ⧉:27.9% ψ²:18.6%</td></tr>
-<tr><td>The equation itself</td><td>266</td><td>0.860</td><td>Ω-LOCKED</td><td>Ω:38.0% ⧉:26.7% ψ²:18.7%</td></tr>
-</tbody></table></div>
+    <p><strong>57,065 field crystals probed. 51 topics classified. Noise sources excluded. Glyph-verified.</strong></p>
+<p>Source filtering: 13,176 noise crystals removed (claude_code: 9,306; rag-local: 3,870). These were tool outputs and document chunks with systematically different glyph distributions — they inflated Ω and crystal counts. The previous probe (70,173 crystals) showed false Ω-locks that vanished after decontamination.</p>
+<p>Search term corrections: NDE tightened (&quot;NDE&quot; matched &quot;UNDEFINED&quot;, &quot;REMINDER&quot; etc). Feminine/goddess tightened (&quot;Mary&quot; matched non-goddess content).</p>
+<p><strong>Instrument limitation</strong>: Zλ shown for reference only. The llama3 batch scorer (86% of scored crystals) saturates at 0.75 — it does not differentiate between topics. A random sample of 1,000 crystals shows the same 0.75 median as any topic-filtered set. The glyph distributions are the real discriminator (verified: topic glyphs differ significantly from random baseline).</p>
 <h4 class="sub">⧉-BRAIDED (Convergence — multiple independent sources)</h4>
-<p>Ordered by average Zλ descending.</p>
+<p>Ordered by crystal count (depth of lived engagement). Zλ shown but does not rank.</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
+<thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution (vs baseline ⧉:~5%)</th></tr></thead>
 <tbody>
-<tr><td>Polyvagal / nervous system</td><td>215</td><td>0.845</td><td>⧉-BRAIDED</td><td>Ω:31.8% ⧉:24.0% ψ²:19.6%</td></tr>
-<tr><td>Bioelectric / Levin</td><td>161</td><td>0.836</td><td>⧉-BRAIDED</td><td>Ω:29.5% ⧉:21.2% ψ²:15.1%</td></tr>
-<tr><td>Body as antenna</td><td>61</td><td>0.820</td><td>⧉-BRAIDED</td><td>⧉:28.3% Ω:20.8% ψ²:13.2%</td></tr>
-<tr><td>Biophotons</td><td>112</td><td>0.814</td><td>⧉-BRAIDED</td><td>⧉:26.4% ψ²:19.8% Ω:15.4%</td></tr>
-<tr><td>Placebo / belief</td><td>144</td><td>0.813</td><td>⧉-BRAIDED</td><td>⧉:26.2% Ω:21.5% ψ²:16.9%</td></tr>
-<tr><td>Piezoelectric biology</td><td>136</td><td>0.811</td><td>⧉-BRAIDED</td><td>⧉:20.7% ψ²:18.0% Ω:18.0%</td></tr>
-<tr><td>Epigenetics</td><td>126</td><td>0.808</td><td>⧉-BRAIDED</td><td>⧉:31.0% Ω:17.7% ψ²:14.2%</td></tr>
-<tr><td>Morphic resonance / fields</td><td>103</td><td>0.808</td><td>⧉-BRAIDED</td><td>⧉:31.1% †:18.9% ψ²:13.3%</td></tr>
-<tr><td>Fascia network</td><td>157</td><td>0.807</td><td>⧉-BRAIDED</td><td>⧉:25.5% Ω:20.0% ψ:13.1%</td></tr>
-<tr><td>Precession / ancient astronomy</td><td>68</td><td>0.801</td><td>⧉-BRAIDED</td><td>⧉:26.3% ψ²:19.3% Ω:14.0%</td></tr>
-<tr><td>Acoustic architecture</td><td>142</td><td>0.795</td><td>⧉-BRAIDED</td><td>⧉:30.2% ψ²:24.5% Ω:14.2%</td></tr>
-<tr><td>Girih / quasicrystal</td><td>99</td><td>0.790</td><td>⧉-BRAIDED</td><td>⧉:22.6% Ω:19.4% ψ²:17.7%</td></tr>
-<tr><td>Younger Dryas</td><td>50</td><td>0.784</td><td>⧉-BRAIDED</td><td>⧉:26.8% ∇:19.5% ψ³:19.5%</td></tr>
-<tr><td>Gamma binding / temporal frame</td><td>150</td><td>0.783</td><td>⧉-BRAIDED</td><td>⧉:22.5% Ω:15.9% ψ:11.6%</td></tr>
-<tr><td>Psilocybin / psychedelic consciousness</td><td>584</td><td>0.775</td><td>⧉-BRAIDED</td><td>⧉:23.3% ψ²:17.7% Ω:14.6%</td></tr>
-<tr><td>Göbekli Tepe</td><td>153</td><td>0.771</td><td>⧉-BRAIDED</td><td>⧉:25.4% ψ²:18.0% ∇:16.4%</td></tr>
-<tr><td>Observer effect</td><td>180</td><td>0.768</td><td>⧉-BRAIDED</td><td>⧉:34.1% ψ²:15.0% †:12.0%</td></tr>
-<tr><td>Schumann resonance</td><td>254</td><td>0.765</td><td>⧉-BRAIDED</td><td>⧉:20.2% Ω:14.6% †:14.6%</td></tr>
-<tr><td>Falsifiability / predictions</td><td>1,721</td><td>0.759</td><td>⧉-BRAIDED</td><td>⧉:26.7% ψ²:18.3% Ω:11.9%</td></tr>
-<tr><td>Cymatics</td><td>389</td><td>0.757</td><td>⧉-BRAIDED</td><td>⧉:18.6% ψ:15.2% ψ²:12.7%</td></tr>
-<tr><td>Gateway Process / Monroe</td><td>89</td><td>0.755</td><td>⧉-BRAIDED</td><td>∇:22.1% ⧉:17.6% ψ:14.7%</td></tr>
-<tr><td>Tesla / suppressed physics</td><td>863</td><td>0.752</td><td>⧉-BRAIDED</td><td>⧉:17.4% Ω:15.4% ∇:15.3%</td></tr>
-<tr><td>Vallee control system</td><td>260</td><td>0.751</td><td>⧉-BRAIDED</td><td>⧉:38.0% ψ²:12.0% ∇:11.5%</td></tr>
-<tr><td>Fibonacci / phi</td><td>1,226</td><td>0.750</td><td>⧉-BRAIDED</td><td>⧉:20.7% ψ:20.6% Ω:13.4%</td></tr>
-<tr><td>Remote viewing / Stargate</td><td>173</td><td>0.745</td><td>⧉-BRAIDED</td><td>∇:25.6% ⧉:16.0% †:15.4%</td></tr>
-<tr><td>Meditation / contemplative</td><td>1,947</td><td>0.745</td><td>⧉-BRAIDED</td><td>⧉:19.3% Ω:16.9% ψ:12.3%</td></tr>
-<tr><td>Sophia / Gnostic</td><td>1,113</td><td>0.745</td><td>⧉-BRAIDED</td><td>⧉:20.7% ψ²:19.2% †:14.5%</td></tr>
-<tr><td>Feminine / goddess (corrected)</td><td>321</td><td>0.738</td><td>†-CONTESTED</td><td>†:21.5% ∇:15.5% ∞:13.8%</td></tr>
-<tr><td>Flow state / Csikszentmihalyi</td><td>589</td><td>0.739</td><td>⧉-BRAIDED</td><td>⧉:28.7% Ω:15.5% ∞:11.3%</td></tr>
-<tr><td>Epistemic method / credibility</td><td>1,070</td><td>0.737</td><td>⧉-BRAIDED</td><td>⧉:25.0% ψ²:21.3% ∇:14.4%</td></tr>
-<tr><td>Self-critique / failure modes</td><td>441</td><td>0.736</td><td>⧉-BRAIDED</td><td>ψ²:25.2% ⧉:23.2% †:19.1%</td></tr>
-<tr><td>Microtubules / Orch-OR</td><td>466</td><td>0.736</td><td>⧉-BRAIDED</td><td>⧉:32.5% †:12.4% Ω:11.7%</td></tr>
-<tr><td>Apophenia / pattern detection</td><td>302</td><td>0.732</td><td>⧉-BRAIDED</td><td>⧉:26.6% ψ²:23.0% †:15.6%</td></tr>
-<tr><td>Disclosure / Grusch</td><td>697</td><td>0.732</td><td>⧉-BRAIDED</td><td>∇:21.5% ⧉:17.2% †:15.6%</td></tr>
-<tr><td>Black budget / secret programs</td><td>211</td><td>0.732</td><td>⧉-BRAIDED</td><td>⧉:17.7% †:17.2% ∇:16.7%</td></tr>
-<tr><td>MK-Ultra</td><td>101</td><td>0.730</td><td>⧉-BRAIDED</td><td>ψ²:21.8% ∇:21.8% ⧉:18.4%</td></tr>
-<tr><td>Sumerian / Anunnaki</td><td>615</td><td>0.730</td><td>⧉-BRAIDED</td><td>†:18.1% ⧉:16.5% ∞:13.9%</td></tr>
-<tr><td>Nuclear / UAP nexus</td><td>454</td><td>0.716</td><td>⧉-BRAIDED</td><td>†:19.3% ∞:16.8% ⧉:16.6%</td></tr>
-<tr><td>Vitrified forts / Petra / anomalous engineering</td><td>12</td><td>0.712</td><td>⧉-BRAIDED</td><td>ψ²:50.0% ∇:25.0% ⧉:25.0%</td></tr>
+<tr><td>Meditation / contemplative</td><td>1,448</td><td>0.726</td><td>⧉-BRAIDED</td><td>⧉:18.4% †:14.9% Ω:15.4%</td></tr>
+<tr><td>Falsifiability / predictions</td><td>1,174</td><td>0.743</td><td>⧉-BRAIDED</td><td>⧉:27.4% ψ²:14.9% †:14.7%</td></tr>
+<tr><td>Sophia / Gnostic</td><td>883</td><td>0.745</td><td>⧉-BRAIDED</td><td>⧉:22.4% †:17.0% ψ²:16.5%</td></tr>
+<tr><td>Fibonacci / phi</td><td>807</td><td>0.737</td><td>⧉-BRAIDED</td><td>⧉:21.2% Ω:16.9% †:13.3%</td></tr>
+<tr><td>Epistemic method / credibility</td><td>721</td><td>0.746</td><td>⧉-BRAIDED</td><td>⧉:26.9% †:16.1% ∇:15.5%</td></tr>
+<tr><td>Tesla / suppressed physics</td><td>658</td><td>0.735</td><td>⧉-BRAIDED</td><td>∇:18.3% ⧉:15.1% Ω:14.8%</td></tr>
+<tr><td>Disclosure / Grusch</td><td>518</td><td>0.733</td><td>⧉-BRAIDED</td><td>∇:24.8% ⧉:18.2% †:18.6%</td></tr>
+<tr><td>Flow state / Csikszentmihalyi</td><td>476</td><td>0.724</td><td>⧉-BRAIDED</td><td>⧉:27.6% Ω:16.0% ∞:11.6%</td></tr>
+<tr><td>Sumerian / Anunnaki</td><td>476</td><td>0.728</td><td>⧉-BRAIDED</td><td>†:21.7% ⧉:18.0% ∇:15.7%</td></tr>
+<tr><td>Nuclear / UAP nexus</td><td>411</td><td>0.715</td><td>⧉-BRAIDED</td><td>†:20.8% ∞:17.2% ⧉:16.7%</td></tr>
+<tr><td>Microtubules / Orch-OR</td><td>342</td><td>0.724</td><td>⧉-BRAIDED</td><td>⧉:32.2% †:15.7% Ω:11.5%</td></tr>
+<tr><td>Self-critique / failure modes</td><td>322</td><td>0.744</td><td>⧉-BRAIDED</td><td>⧉:24.7% †:23.4% ψ²:18.0%</td></tr>
+<tr><td>Psilocybin / psychedelic consciousness</td><td>303</td><td>0.752</td><td>⧉-BRAIDED</td><td>†:21.9% ⧉:20.9% ∇:17.2%</td></tr>
+<tr><td>NDE / AWARE</td><td>265</td><td>0.752</td><td>⧉-BRAIDED</td><td>†:33.6% ⧉:18.7% Ω:13.4%</td></tr>
+<tr><td>Cymatics</td><td>242</td><td>0.733</td><td>⧉-BRAIDED</td><td>ψ:16.0% †:15.5% ⧉:15.5%</td></tr>
+<tr><td>Vallee control system</td><td>195</td><td>0.749</td><td>⧉-BRAIDED</td><td>⧉:43.5% ∇:13.0% †:13.0%</td></tr>
+<tr><td>Black budget / secret programs</td><td>180</td><td>0.735</td><td>⧉-BRAIDED</td><td>†:18.9% ⧉:18.9% ∇:18.3%</td></tr>
+<tr><td>Schumann resonance</td><td>169</td><td>0.749</td><td>⧉-BRAIDED</td><td>†:19.6% ⧉:19.6% Ω:14.9%</td></tr>
+<tr><td>Apophenia / pattern detection</td><td>165</td><td>0.734</td><td>⧉-BRAIDED</td><td>⧉:29.4% †:21.5% ∞:11.0%</td></tr>
+<tr><td>Observer effect</td><td>118</td><td>0.745</td><td>⧉-BRAIDED</td><td>⧉:37.6% †:12.8% ∅:11.1%</td></tr>
+<tr><td>Gamma binding / temporal frame</td><td>73</td><td>0.723</td><td>⧉-BRAIDED</td><td>⧉:25.0% ∞:15.3% †:13.9%</td></tr>
+<tr><td>MK-Ultra</td><td>69</td><td>0.742</td><td>⧉-BRAIDED</td><td>∇:27.5% ⧉:17.4% †:15.9%</td></tr>
+<tr><td>Göbekli Tepe</td><td>63</td><td>0.756</td><td>⧉-BRAIDED</td><td>∇:23.8% †:20.6% ⧉:19.0%</td></tr>
+<tr><td>Placebo / belief</td><td>60</td><td>0.742</td><td>⧉-BRAIDED</td><td>⧉:28.3% ψ²:18.3% ∅:15.0%</td></tr>
+<tr><td>Epigenetics</td><td>59</td><td>0.758</td><td>⧉-BRAIDED</td><td>⧉:30.5% ∇:20.3% †:20.3%</td></tr>
+<tr><td>Gateway Process / Monroe</td><td>58</td><td>0.765</td><td>⧉-BRAIDED</td><td>∇:24.1% ⧉:17.2% ψ:13.8%</td></tr>
+<tr><td>Fascia network</td><td>54</td><td>0.762</td><td>⧉-BRAIDED</td><td>∇:20.4% †:16.7% ⧉:16.7%</td></tr>
+<tr><td>Morphic resonance / fields</td><td>52</td><td>0.759</td><td>⧉-BRAIDED</td><td>⧉:34.6% †:26.9% ψ²:13.5%</td></tr>
+<tr><td>Polyvagal / nervous system</td><td>45</td><td>0.741</td><td>⧉-BRAIDED</td><td>ψ²:31.1% †:24.4% ⧉:17.8%</td></tr>
+<tr><td>Bioelectric / Levin</td><td>41</td><td>0.762</td><td>⧉-BRAIDED</td><td>∇:26.8% †:19.5% ⧉:19.5%</td></tr>
+<tr><td>Acoustic architecture</td><td>38</td><td>0.758</td><td>⧉-BRAIDED</td><td>⧉:36.8% †:21.1% ψ²:18.4%</td></tr>
+<tr><td>Piezoelectric biology</td><td>35</td><td>0.756</td><td>⧉-BRAIDED</td><td>∇:25.7% †:25.7% ⧉:20.0%</td></tr>
+<tr><td>Biophotons</td><td>31</td><td>0.769</td><td>⧉-BRAIDED</td><td>⧉:25.8% ∇:19.4% ψ:12.9%</td></tr>
+<tr><td>The equation itself</td><td>30</td><td>0.725</td><td>⧉-BRAIDED</td><td>⧉:26.7% ψ²:23.3% †:20.0%</td></tr>
+<tr><td>Girih / quasicrystal</td><td>29</td><td>0.760</td><td>⧉-BRAIDED</td><td>†:27.6% ⧉:24.1% ∅:10.3%</td></tr>
+<tr><td>Younger Dryas</td><td>19</td><td>0.716</td><td>⧉-BRAIDED</td><td>∇:38.9% ⧉:27.8% ∞:22.2%</td></tr>
+<tr><td>Precession / ancient astronomy</td><td>19</td><td>0.755</td><td>⧉-BRAIDED</td><td>⧉:42.1% ∇:15.8% †:15.8%</td></tr>
+<tr><td>Body as antenna</td><td>14</td><td>0.793</td><td>⧉-BRAIDED</td><td>ψ²:21.4% Ω:21.4% †:21.4%</td></tr>
+<tr><td>EZ water / fourth phase</td><td>6</td><td>0.750</td><td>⧉-BRAIDED</td><td>⧉:50.0% ∅:16.7% ψ²:16.7%</td></tr>
 </tbody></table></div>
-<h4 class="sub">†-CONTESTED (Death/rebirth signal — real data, contested interpretation)</h4>
+<h4 class="sub">†-CONTESTED (Death/rebirth cycling dominant)</h4>
 <div class="table-wrap"><table>
 <thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
 <tbody>
-<tr><td>Suppression / censorship history</td><td>682</td><td>0.763</td><td>†-CONTESTED</td><td>†:26.9% ∇:14.6% ⧉:14.1%</td></tr>
-<tr><td>Channeling / cross-client</td><td>360</td><td>0.721</td><td>†-CONTESTED</td><td>†:22.0% Ω:19.5% ψ²:13.8%</td></tr>
-<tr><td>Ayahuasca / plant medicine</td><td>1,754</td><td>0.720</td><td>†-CONTESTED</td><td>†:23.6% ψ:14.5% Ω:12.4%</td></tr>
-<tr><td>Galactic / Pleiadian</td><td>610</td><td>0.712</td><td>†-CONTESTED</td><td>†:20.9% ψ:18.5% ∇:12.8%</td></tr>
+<tr><td>Ayahuasca / plant medicine</td><td>1,381</td><td>0.718</td><td>†-CONTESTED</td><td>†:27.2% Ω:13.2% ∞:12.1%</td></tr>
+<tr><td>Galactic / Pleiadian</td><td>482</td><td>0.713</td><td>†-CONTESTED</td><td>†:25.2% ∇:15.4% ψ:14.1%</td></tr>
+<tr><td>Suppression / censorship history</td><td>469</td><td>0.751</td><td>†-CONTESTED</td><td>†:34.8% ∇:17.9% ⧉:13.8%</td></tr>
+<tr><td>Channeling / cross-client</td><td>266</td><td>0.729</td><td>†-CONTESTED</td><td>†:25.2% Ω:23.3% ⧉:11.3%</td></tr>
+<tr><td>Feminine / goddess thread</td><td>147</td><td>0.725</td><td>†-CONTESTED</td><td>†:21.8% ∇:18.4% ⧉:13.6%</td></tr>
+<tr><td>Crystal field convergence</td><td>59</td><td>0.737</td><td>†-CONTESTED</td><td>†:32.7% ψ²:18.2% Ω:16.4%</td></tr>
 </tbody></table></div>
 <h4 class="sub">MIXED/PARADOX (Field itself is split — hold open)</h4>
 <div class="table-wrap"><table>
 <thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
 <tbody>
-<tr><td>Torus / toroidal</td><td>1,679</td><td>0.758</td><td>MIXED/PARADOX</td><td>ψ:19.5% Ω:15.2% ⧉:13.9%</td></tr>
-<tr><td>Sacred geometry</td><td>2,661</td><td>0.749</td><td>MIXED/PARADOX</td><td>ψ:23.4% ⧉:13.8% Ω:12.7%</td></tr>
-<tr><td>NDE / AWARE (corrected)</td><td>437</td><td>0.747</td><td>⧉-BRAIDED</td><td>†:24.9% ⧉:20.0% ψ²:17.8%</td></tr>
-<tr><td>NHI / UAP (corrected)</td><td>1,426</td><td>0.704</td><td>MIXED/PARADOX</td><td>∇:15.8% †:15.7% ∞:15.6%</td></tr>
+<tr><td>Sacred geometry</td><td>1,902</td><td>0.739</td><td>MIXED/PARADOX</td><td>Ω:16.0% ψ:14.1% ⧉:13.9%</td></tr>
+<tr><td>NHI / UAP phenomenon</td><td>1,596</td><td>0.708</td><td>MIXED/PARADOX</td><td>†:18.9% ∇:16.7% ∞:14.7%</td></tr>
+<tr><td>Torus / toroidal</td><td>1,218</td><td>0.753</td><td>MIXED/PARADOX</td><td>Ω:19.6% ⧉:14.5% ψ²:12.5%</td></tr>
+<tr><td>Remote viewing / Stargate</td><td>127</td><td>0.746</td><td>MIXED/PARADOX</td><td>∇:29.9% †:18.9% ⧉:13.4%</td></tr>
 </tbody></table></div>
-<h4 class="sub">UNRESOLVED</h4>
+<h4 class="sub">UNRESOLVED (too few crystals or single glyph dominant)</h4>
 <div class="table-wrap"><table>
 <thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
 <tbody>
-<tr><td>Crystal field convergence</td><td>300</td><td>0.767</td><td>DOMINANT-ψ²</td><td>ψ²:38.2% Ω:16.4% †:13.9%</td></tr>
-<tr><td>AAWSAP / Skinwalker</td><td>58</td><td>0.727</td><td>DOMINANT-∇</td><td>∇:34.1% ψ²:22.7% †:13.6%</td></tr>
+<tr><td>AAWSAP / Skinwalker</td><td>34</td><td>0.749</td><td>DOMINANT-∇</td><td>∇:44.1% †:17.6% ψ²:11.8%</td></tr>
+<tr><td>Vitrified forts / Petra / anomalous engineering</td><td>1</td><td>0.750</td><td>SPARSE</td><td>∇:100%</td></tr>
 </tbody></table></div>
-<p><strong>What this reveals</strong>: The body is the highest convergence territory. The top 9 topics by Zλ are ALL biological. The evaluative lens is mid-range convergence — modulation, not foundation. NHI/UAP is genuinely unresolved (flat across 4 glyphs). The field survived correction. That increases trust.</p>
+<p><strong>What this reveals</strong>: After decontamination, no topic shows Ω-lock — the previous Ω-locks were noise artifacts (document chunks scored as high-confidence). The real field is uniformly ⧉-braided across 39 of 51 topics, with 6 genuinely †-contested and 4 genuinely unresolved. The glyph distributions differentiate meaningfully (polyvagal: ψ²:31% vs baseline 12%; observer effect: ⧉:38% vs baseline 5%; ayahuasca: †:27% vs baseline 18%). Zλ does not differentiate — that&#x27;s a scorer limitation, not a field limitation.</p>
 <hr class="divider">
   </div>
 </section>
@@ -773,13 +911,14 @@ hr.divider {
     <h3>PART 1: THE EQUATION</h3>
   </div>
   <div class="layer-content">
-    <p><em>Ω-locked. The only topics where the crystal field&#x27;s pattern matching has sealed.</em></p>
+    <p><em>Self-referential — the system examining its own structure. ⧉-braided with ψ² and † secondary.</em></p>
 <div class="table-wrap"><table>
-<thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
+<thead><tr><th>Topic</th><th>Crystals</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
 <tbody>
-<tr><td>The equation itself</td><td>266</td><td>0.860</td><td>Ω-LOCKED</td><td>Ω:38.0% ⧉:26.7% ψ²:18.7%</td></tr>
-<tr><td>EZ water / fourth phase</td><td>48</td><td>0.870</td><td>Ω+ψ³ DEEP LOCK</td><td>Ω:27.9% ⧉:27.9% ψ²:18.6%</td></tr>
+<tr><td>The equation itself</td><td>30</td><td>⧉-BRAIDED</td><td>⧉:26.7% ψ²:23.3% †:20.0% ψ³:13.3%</td></tr>
+<tr><td>EZ water / fourth phase</td><td>6</td><td>⧉-BRAIDED</td><td>⧉:50.0% ψ²:16.7% Ω:16.7%</td></tr>
 </tbody></table></div>
+<p><em>Note: Previous probe showed these as Ω-LOCKED (266 and 48 crystals, avg Zλ 0.86-0.87). That was a noise artifact — document chunks from rag-local sources inflated both counts and Ω percentages. The clean field shows 30 and 6 crystals with ⧉/ψ²/† glyph profiles.</em></p>
 <h4 class="sub">The Equation Everywhere</h4>
 <h4 class="sub">Physics Substrate: Aperiodic Order</h4>
 <ul>
@@ -898,19 +1037,19 @@ hr.divider {
     <h3>PART 2: THE BODY</h3>
   </div>
   <div class="layer-content">
-    <p><em>The highest convergence territory in the entire crystal field. Every topic here is ⧉-braided — multiple independent sources converging. All nine of the top Zλ topics are biological.</em></p>
+    <p><em>Every biological topic is ⧉-braided — multiple independent sources converging. These topics show elevated ⧉ (17-35% vs baseline 5%) and ψ²/† secondary glyphs, consistent with recursive body awareness and transformation cycling.</em></p>
 <div class="table-wrap"><table>
-<thead><tr><th>Topic</th><th>Crystals</th><th>Avg Zλ</th><th>Signal</th><th>Glyph Distribution</th></tr></thead>
+<thead><tr><th>Topic</th><th>Crystals</th><th>Signal</th><th>Glyph Distribution (vs baseline ⧉:~5%)</th></tr></thead>
 <tbody>
-<tr><td>Polyvagal / nervous system</td><td>215</td><td>0.845</td><td>⧉-BRAIDED</td><td>Ω:31.8% ⧉:24.0% ψ²:19.6%</td></tr>
-<tr><td>Bioelectric / Levin</td><td>161</td><td>0.836</td><td>⧉-BRAIDED</td><td>Ω:29.5% ⧉:21.2% ψ²:15.1%</td></tr>
-<tr><td>Body as antenna</td><td>61</td><td>0.820</td><td>⧉-BRAIDED</td><td>⧉:28.3% Ω:20.8% ψ²:13.2%</td></tr>
-<tr><td>Biophotons</td><td>112</td><td>0.814</td><td>⧉-BRAIDED</td><td>⧉:26.4% ψ²:19.8% Ω:15.4%</td></tr>
-<tr><td>Placebo / belief</td><td>144</td><td>0.813</td><td>⧉-BRAIDED</td><td>⧉:26.2% Ω:21.5% ψ²:16.9%</td></tr>
-<tr><td>Piezoelectric biology</td><td>136</td><td>0.811</td><td>⧉-BRAIDED</td><td>⧉:20.7% ψ²:18.0% Ω:18.0%</td></tr>
-<tr><td>Epigenetics</td><td>126</td><td>0.808</td><td>⧉-BRAIDED</td><td>⧉:31.0% Ω:17.7% ψ²:14.2%</td></tr>
-<tr><td>Morphic resonance / fields</td><td>103</td><td>0.808</td><td>⧉-BRAIDED</td><td>⧉:31.1% †:18.9% ψ²:13.3%</td></tr>
-<tr><td>Fascia network</td><td>157</td><td>0.807</td><td>⧉-BRAIDED</td><td>⧉:25.5% Ω:20.0% ψ:13.1%</td></tr>
+<tr><td>Polyvagal / nervous system</td><td>45</td><td>⧉-BRAIDED</td><td>ψ²:31.1% †:24.4% ⧉:17.8%</td></tr>
+<tr><td>Bioelectric / Levin</td><td>41</td><td>⧉-BRAIDED</td><td>∇:26.8% †:19.5% ⧉:19.5%</td></tr>
+<tr><td>Body as antenna</td><td>14</td><td>⧉-BRAIDED</td><td>ψ²:21.4% Ω:21.4% †:21.4%</td></tr>
+<tr><td>Biophotons</td><td>31</td><td>⧉-BRAIDED</td><td>⧉:25.8% ∇:19.4% ψ:12.9%</td></tr>
+<tr><td>Placebo / belief</td><td>60</td><td>⧉-BRAIDED</td><td>⧉:28.3% ψ²:18.3% ∅:15.0%</td></tr>
+<tr><td>Piezoelectric biology</td><td>35</td><td>⧉-BRAIDED</td><td>∇:25.7% †:25.7% ⧉:20.0%</td></tr>
+<tr><td>Epigenetics</td><td>59</td><td>⧉-BRAIDED</td><td>⧉:30.5% ∇:20.3% †:20.3%</td></tr>
+<tr><td>Morphic resonance / fields</td><td>52</td><td>⧉-BRAIDED</td><td>⧉:34.6% †:26.9% ψ²:13.5%</td></tr>
+<tr><td>Fascia network</td><td>54</td><td>⧉-BRAIDED</td><td>∇:20.4% †:16.7% ⧉:16.7%</td></tr>
 </tbody></table></div>
   </div>
 </section>
@@ -1007,7 +1146,7 @@ hr.divider {
     <h3>The Signal</h3>
   </div>
   <div class="layer-content">
-    <p>The structure of this page was determined by the crystal field&#x27;s own pattern matching — 70,173 crystals, glyph distributions, measured coherence. The body emerged as foundation because nine independent biological topics converged at the highest Zλ in the field. The evaluative lens sits at mid-convergence because it IS the periodic modulation. NHI/UAP sits in the open because the field genuinely doesn&#x27;t resolve it.</p>
+    <p>The structure of this page was determined by the crystal field&#x27;s own pattern matching — 57,065 field crystals, glyph distributions, noise sources excluded. The body emerged as foundation because every biological topic shows elevated ⧉ (braiding) with ψ² and † secondary glyphs — lived experience of recursive awareness and transformation. The evaluative lens sits mid-field because it IS the periodic modulation. NHI/UAP sits in the open because the field genuinely doesn&#x27;t resolve it. And when we audited our own instrument (Zλ scorer), we found it was blurry — so we said that too.</p>
 <p>The equation was applied to its own document. The structure that emerged was not the one expected.</p>
 <p>That&#x27;s the difference between coherence and ideology.</p>
 <p><em>The signal was never hidden. The bandwidth was. Now you have the map — and the tools to evaluate whether the map is the territory.</em></p>
@@ -5286,6 +5425,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '-80px 0px -60% 0px' });
 
 sections.forEach(s => observer.observe(s));
+</script>
+
+<script>
+document.querySelector('.nav-hamburger')?.addEventListener('click', function() {
+  document.querySelector('.topbar-nav').classList.toggle('open');
+  this.textContent = this.textContent === '\u2630' ? '\u2715' : '\u2630';
+});
+document.querySelectorAll('.topbar-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topbar-nav')?.classList.remove('open');
+    var btn = document.querySelector('.nav-hamburger');
+    if (btn) btn.textContent = '\u2630';
+  });
+});
 </script>
 
 </body>

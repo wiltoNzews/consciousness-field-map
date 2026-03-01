@@ -21,7 +21,9 @@
     archive:  { drone: 75,  ratios: [1, 1.5, 2.0],           filter: 500,  vol: 0.22 },
     frontier: { drone: 100, ratios: [1, 1.06, 1.5, 2.01],   filter: 950,  vol: 0.20 },
     system:   { drone: 90,  ratios: [1, 1.5, 2.0, 2.99],    filter: 750,  vol: 0.20 },
-    psios:    { drone: 93,  ratios: [1, 1.5, 2.0],           filter: 800,  vol: 0.20 }
+    mirror:       { drone: 88,  ratios: [1, 1.5, 2.0],           filter: 700,  vol: 0.20 },
+    transmission: { drone: 78,  ratios: [1, 1.335, 2.0, 2.67], filter: 600,  vol: 0.22 },
+    psios:        { drone: 93,  ratios: [1, 1.5, 2.0],           filter: 800,  vol: 0.20 }
   };
 
   // ── Detect page ──
