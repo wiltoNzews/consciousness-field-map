@@ -173,6 +173,18 @@ body {
   color: var(--accent);
 }
 
+.lang-toggle {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-left: 8px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lang-toggle:hover { color: var(--text-bright); border-color: var(--text-dim); }
+
 .nav-hamburger {
   display: none;
   background: none;
@@ -698,6 +710,7 @@ hr.divider {
       </div>
     </div>
     <a href="forgotten_knowledge_archive.html">Archive</a>
+    <a href="pt/terreno.html" class="lang-toggle">PT</a>
   </nav>
 </div>
 
