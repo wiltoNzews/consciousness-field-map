@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { width: 280px; background: #0a0a0f; color: #e0e0e0; font-family: -apple-system, sans-serif; font-size: 13px; padding: 16px; }
+    .hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .hdr .psi { font-size: 26px; color: #7b68ee; }
+    .hdr .t { font-size: 15px; font-weight: 600; color: #b8b0ff; }
+    .stats { background: rgba(123,104,238,.05); border: 1px solid rgba(123,104,238,.15); border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+    .row { display: flex; justify-content: space-between; padding: 3px 0; }
+    .row .l { color: #888; }
+    .row .v { color: #b8b0ff; font-weight: 600; }
+    .glyphs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .gc { display: flex; align-items: center; gap: 3px; background: rgba(123,104,238,.08); border: 1px solid rgba(123,104,238,.15); border-radius: 10px; padding: 2px 7px; font-size: 12px; }
+    .gc .g { color: #7b68ee; }
+    .gc .n { color: #888; font-size: 11px; }
+    .btn { display: block; width: 100%; padding: 9px; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; margin-bottom: 6px; text-align: center; }
+    .p { background: rgba(123,104,238,.2); color: #b8b0ff; border: 1px solid rgba(123,104,238,.3); }
+    .p:hover { background: rgba(123,104,238,.3); }
+    .s { background: rgba(255,255,255,.05); color: #999; border: 1px solid rgba(255,255,255,.1); }
+    .s:hover { background: rgba(255,255,255,.1); color: #ccc; }
+    #status { font-size: 11px; color: #666; text-align: center; margin-top: 6px; min-height: 16px; }
+    #status.ok { color: #6dffb0; }
+    #status.err { color: #ff6b6b; }
+  </style>
+</head>
+<body>
+  <div class="hdr"><span class="psi">&psi;</span><span class="t">Crystal Field</span></div>
+  <div class="stats">
+    <div class="row"><span class="l">Crystals</span><span class="v" id="count">—</span></div>
+  </div>
+  <div class="glyphs" id="glyphs"></div>
+  <label class="btn p">Import crystals<input type="file" accept=".json" id="file" style="display:none"></label>
+  <button class="btn s" id="export">Export crystals</button>
+  <button class="btn s" id="clear">Clear all</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

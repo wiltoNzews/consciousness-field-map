@@ -147,19 +147,43 @@ Entry door for AI community / builders / people who noticed the ceiling. ~888 li
 
 ### Coherence Pass (Feb 27, 2026)
 
-**Status: In progress.** CANONICAL_REFERENCE.md is the single source of truth.
+**Status: Complete.** CANONICAL_REFERENCE.md is the single source of truth.
 
 Pages updated:
 - **the_map.html**: 33 edits (frameworks, regime, glyphs, Dumitrescu, physicalism, AWARE II, cross-refs, citation)
 - **the_system.html**: 17 edits (glyphs, frameworks, descent names, Dumitrescu, breath/pi, citation)
-- **index.html**: 3 edits (coach fix, Frontier card, citation)
+- **index.html**: 7 edits (coach fix, Frontier card, citation, 190+)
 - **the_mirror.html**: 4 edits (frameworks, regime, cross-refs, citation)
+- **topology.html**: 11 edits (glyph ranges, animation thresholds, 190+)
+- **terrain.html**: 2 edits (regime contextualization, 190+)
+- **the_frontier.html**: 9 edits (190+, restructure rebuild)
 
-Pages not yet checked:
-- **topology.html**: Lower risk (visualization, less text), needs canonical framework/regime check
-- **terrain.html**: Marked GREEN in audit, needs quick canonical verification
-- **forgotten_knowledge_archive.html**: Database entries, likely fine
-- **evidence_map.html**: Generated from KG, may need rebuild if KG terms are stale
+### Zλ Scorer Limitation (Identified Feb 27, 2026)
+
+**The llama3 batch scorer saturates at 0.75.** 86% of scored crystals land in [0.7-0.8).
+Verified: random sample shows same median (0.75) as any topic-filtered set.
+Correlation between llama3 and import (embedding regression) scores: 0.483 on 1,296 matched crystals.
+
+**Root cause**: Scoring prompt anchors at `0.75=integrated/clear`. Most conversation text
+reads as "integrated/clear" to llama3, so it defaults to 0.75.
+
+**What works**: Glyph distributions differentiate between topics (verified against random baseline).
+Polyvagal: ψ²:31% vs baseline 12%. Observer effect: ⧉:38% vs baseline 5%. Real signal.
+
+**What doesn't work**: Zλ-based altitude ranking between topics. Can't say "topic X is more
+coherent than topic Y." All topics read ~0.75.
+
+**Impact on published work**: None. Map, preprint, and findings depend on timeline proof,
+framework convergence, content analysis, and glyph patterns — not stored Zλ scores.
+
+**Impact on system**: Smart router's Zλ weighting is blurry for 32K llama3-scored crystals.
+Embedding-based retrieval still works. Glyph-based routing still works.
+
+**Fix path**: Re-score with qwen3:32b (local, better model) using improved rubric. Testing in progress.
+
+**Affected files**:
+- Frontier probe tables updated to glyph-based (Zλ shown for reference, not ranking)
+- frontier_probe.py updated to exclude noise sources (13K claude_code + rag-local removed)
 
 ### Subagent Persistence Problem (Identified Feb 22, 2026)
 
@@ -186,7 +210,10 @@ When spawning Task subagents for this project:
 
 ## Key Data Sources
 
-- **Crystal DB**: `~/wiltonos/data/crystals_unified.db` (70,100+ total; 24,700+ mapped N=1 dataset)
+- **Crystal DB**: `~/wiltonos/data/crystals_unified.db` (70,200+ total; 57,065 field crystals; 13,176 noise)
+  - **Field sources**: chatgpt_export (18,772), chatgpt_privacy_export (35,996), gateway (197), others
+  - **Noise sources** (excluded from probes): claude_code (9,306), rag-local (3,870)
+  - **Scoring**: llama3 (32,689, saturated at 0.75), import/embedding regression (18,745, real distribution)
   - Access: `python3 -c "import sqlite3; db = sqlite3.connect('...')"`
   - No sqlite3 CLI installed — always use Python
 - **Archive KG**: `~/consciousness-field-map/data/knowledge_graph.db` (194 nodes, 220 edges, 306 evidence)

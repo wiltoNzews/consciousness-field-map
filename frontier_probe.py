@@ -57,14 +57,21 @@ def probe_topic(conn, name, search_terms, exclude_terms=None):
             where_clause += " AND content NOT LIKE ?"
             params.append(f"%{term}%")
 
+    # Exclude noise sources: tool outputs, document chunks, code conversations
+    # These are NOT consciousness field data and dilute/corrupt glyph distributions
+    noise_sources = ('claude_code', 'claude_code_session', 'rag-local/docs', 'rag-local/PDFs')
+    source_filter = " AND source NOT IN ({})".format(','.join('?' * len(noise_sources)))
+    noise_params = list(noise_sources)
+
     query = f"""
         SELECT id, content, zl_score, glyph_primary, created_at
         FROM crystals
         WHERE {where_clause}
         AND is_valid = 1
+        {source_filter}
     """
 
-    c.execute(query, params)
+    c.execute(query, params + noise_params)
     rows = c.fetchall()
 
     if not rows:
@@ -228,7 +235,7 @@ TOPICS = {
 
     # === CONSCIOUSNESS CONVERGENCE ===
     'NDE / AWARE': {
-        'terms': ['near-death', 'NDE', 'AWARE study', 'Parnia', 'van Lommel', 'clinical death'],
+        'terms': ['near-death', ' NDE ', ' NDE,', ' NDE.', 'NDE/', 'AWARE study', 'Parnia', 'van Lommel', 'clinical death'],
     },
     'Psilocybin / psychedelic consciousness': {
         'terms': ['psilocybin', 'psychedelic', 'Griffiths', 'mystical experience', 'Carhart-Harris'],
@@ -294,8 +301,8 @@ TOPICS = {
         'terms': ['Sophia', 'Gnostic', 'Nag Hammadi', 'archon', 'demiurge', 'pleroma'],
     },
     'Feminine / goddess thread': {
-        'terms': ['Lady in White', 'Bledsoe', 'Hathor', 'divine feminine', 'goddess', 'Isis', 'Mary'],
-        'exclude': ['Mary Poppins', 'Mary Jane'],
+        'terms': ['Lady in White', 'Bledsoe', 'Hathor', 'divine feminine', 'goddess', ' Isis ', 'Virgin Mary', 'Mary Magdalen'],
+        'exclude': ['Mary Poppins', 'Mary Jane', 'ISIS'],
     },
 
     # === CROSS-DOMAIN BRAIDS ===
@@ -380,7 +387,7 @@ def main():
     # Print results
     print("=" * 120)
     print("FRONTIER FIELD PROBE — Crystal Field Determines Foundation Order")
-    print(f"Database: {DB_PATH} — 70,173 crystals")
+    print(f"Database: {DB_PATH} — 57,065 field crystals (noise sources excluded)")
     print("=" * 120)
 
     current_tier = None
