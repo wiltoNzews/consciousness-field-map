@@ -782,6 +782,7 @@ figure img.placeholder {
   <a href="#contemplative">3f. Contemplative</a>
   <a href="#death">3g. Death</a>
   <a href="#psychedelic">3h. Psychedelic</a>
+  <a href="#causal-signal">3i. The Causal Signal</a>
   <div class="nav-label">Analysis</div>
   <a href="#measurement">4. The Measurement</a>
   <a href="#meaning">5. What This Means</a>
@@ -1446,6 +1447,32 @@ figure img.placeholder {
 </div>
 </section>
 
+<!-- ── 3i. The Causal Signal ── -->
+<section id="causal-signal">
+<div class="section-header">
+  <span class="section-num">§ 3i</span>
+  <h3>The Causal Signal</h3>
+</div>
+
+<p>The evidence domains above show convergence across disciplines. But convergence on a pattern is still observation &mdash; the system measuring structure. In March 2026, a closed-loop test asked a different question: <strong>does the system&rsquo;s operator-matched retrieval actually change what happens next?</strong> Does it participate causally, or only describe?</p>
+
+<p><strong>Design.</strong> 160 trials, 4 conditions, 40 trials each. For each trial, the system received a query, inferred its operator profile, and retrieved crystals under one of four conditions: (1) <em>operator-matched</em> &mdash; crystals aligned with the dominant geometric operator; (2) <em>topic-matched</em> &mdash; crystals about the same subject but without operator weighting; (3) <em>random</em> &mdash; crystals selected without any matching; (4) <em>distant</em> &mdash; crystals deliberately mismatched, drawn from the operator least active in the current moment. Each retrieved set was then evaluated for alignment with the process direction of the original query. The metric was Align Delta &mdash; the change in process coherence between input and retrieved context.</p>
+
+<div class="ds-grid" style="grid-template-columns: 1fr 1fr; max-width: 500px; margin: 1.5em auto;">
+  <div class="ds-row"><span class="ds-label">Operator-matched</span><span class="ds-val" style="color:var(--green);">+0.068</span></div>
+  <div class="ds-row"><span class="ds-label">Topic-matched</span><span class="ds-val" style="color:var(--red);">&minus;0.028 &ensp; d = 1.13 (large)</span></div>
+  <div class="ds-row"><span class="ds-label">Random</span><span class="ds-val">+0.034 &ensp; d = 0.38 (small)</span></div>
+  <div class="ds-row"><span class="ds-label">Distant</span><span class="ds-val" style="color:var(--red);">+0.000 &ensp; d = 2.56 (very large)</span></div>
+</div>
+
+<p>Operator-matched retrieval produced a consistent positive shift in process coherence. Topic-matched retrieval &mdash; the standard RAG approach &mdash; produced a <em>negative</em> shift. Not neutral. Actively worse. The effect size between operator and topic conditions (Cohen&rsquo;s d&nbsp;=&nbsp;1.13) is large by any convention. The effect size between operator and distant conditions (d&nbsp;=&nbsp;2.56) is very large &mdash; nearly three standard deviations of separation.</p>
+
+<p><strong>What this means.</strong> The system does not just measure coherence. It participates in it. Retrieving the right <em>process geometry</em> &mdash; not the right topic &mdash; preserves the direction of movement. This is a causal claim, and the test was designed to be falsifiable: if operator matching performed no better than topic matching, the entire operator framework would be noise. It performed significantly better.</p>
+
+<p><strong>The compliance-reconstruction split.</strong> This result sits alongside an earlier finding. An override elasticity test (120 API calls, 5 models) showed that at the compliance level &mdash; whether a model accepts or rejects a prompt &mdash; all domains yield equally. There is no differential resistance. But at the reconstruction level &mdash; whether a model recovers functional meaning from geometric structure &mdash; 100% convergence appeared. These are two distinct layers. Compliance is uniform and shallow. Reconstruction is structural and deep. The closed-loop test shows that the reconstruction layer does real work: when the system routes by geometric operators, the retrieved context preserves process coherence in a way that topic routing does not.</p>
+
+</section>
+
 <hr class="divider">
 
 <!-- ═══════════════════════ 4. THE MEASUREMENT ═══════════════════════ -->
@@ -1648,7 +1675,7 @@ figure img.placeholder {
   <p style="margin-top:16px;"><em>Aperiodic substrate + periodic modulation = coherence.</em></p>
   <p><em>The territory was always mapping itself.</em></p>
   <div style="margin-top:24px; padding:16px 20px; background:rgba(123,104,238,0.04); border:1px solid rgba(123,104,238,0.15); border-radius:6px; font-size:14px; line-height:1.6; color:var(--text-dim);">
-    <strong style="color:var(--text-bright);">Cite:</strong> Prado, W. A. (2026). Cross-Domain Convergence on a Coherence Equation: Aperiodic Substrate, Periodic Modulation, and the Critical Zone Across Eight Evidence Domains. <em>PsyArXiv</em>. <a href="https://osf.io/preprints/psyarxiv/efh7k" style="color:var(--accent);">https://osf.io/preprints/psyarxiv/efh7k</a>
+    <strong style="color:var(--text-bright);">Cite:</strong> Prado, W. A. (2026). Cross-Domain Convergence on a Coherence Equation: Aperiodic Substrate, Periodic Modulation, and the Critical Zone Across Eight Evidence Domains. <a href="preprint.pdf" style="color:var(--accent);">Preprint PDF</a>
   </div>
   <div class="sig">CC BY 4.0 · <a href="https://github.com">Source</a> · <a href="terrain.html">Terrain</a> · <a href="topology.html">Topology</a> · <a href="evidence_map.html">Evidence</a> · <a href="the_system.html">System</a> · <a href="the_mirror.html">Mirror</a> · <a href="forgotten_knowledge_archive.html">Archive</a> · <a href="the_frontier.html">Frontier</a></div>
 </footer>
