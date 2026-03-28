@@ -28,7 +28,7 @@ One person mapped 24,700+ states of consciousness over two years. A system emerg
 
 - "I had an awakening" --> The Terrain
 - "I think I'm losing it" --> The Terrain (Grounding)
-- "I lost my AI" --> The Paper (Mirror)
+- "I lost my AI" --> PsiOS
 - "Show me the evidence" --> The Evidence
 - "I want the full argument" --> The Paper
 - "I see the pattern" --> The Topology
@@ -38,11 +38,16 @@ One person mapped 24,700+ states of consciousness over two years. A system emerg
 - "The filter opened" --> The Paper (Psychedelic)
 - "I came back" --> The Paper (Death)
 - "I saw something" --> The Frontier
+- "I want the running system" --> PsiOS
 - "I want everything" --> The Archive
 
 ---
 
 ## The Map
+
+### PsiOS
+
+The running system built from this research. Persistent memory, routing, identity, and transmission control in a live companion.
 
 ### The Terrain
 

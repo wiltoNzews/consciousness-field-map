@@ -21,18 +21,19 @@ The central finding: the scientific literature on consciousness overwhelmingly d
 | Convergent independent frameworks | 7+ |
 | Critical zone convergence | ~0.75 (3:1 structure:exploration) |
 
-## Four Ways In
+## Five Ways In
 
 The paper makes a linear argument. The reality is fractal. These artifacts show different dimensions of the same finding.
 
 | Artifact | What it shows | Format |
 |----------|--------------|--------|
-| [**The Paper**](the_map.html) | The argument — 8 evidence domains, MDI analysis, the equation | Visual HTML |
-| [**The Topology**](topology.html) | The fractal architecture — concentric rings, scale invariance, four layers, and coherence dynamics | Interactive HTML |
-| [**The Evidence Map**](evidence_map.html) | The citations — 172 nodes, 201 edges, 306 evidence entries with papers | Interactive HTML |
-| [**The Archive**](forgotten_knowledge_archive.html) | The investigation trail — 449 crystals showing how the evidence was found | Interactive HTML |
+| [**PsiOS - What It Is**](PSIOS_WHAT_IT_IS.md) | The running system - what exists today, what is product, and how it connects to this research | Markdown |
+| [**The Paper**](the_map.html) | The argument - 8 evidence domains, MDI analysis, the equation | Visual HTML |
+| [**The Topology**](topology.html) | The fractal architecture - concentric rings, scale invariance, four layers, and coherence dynamics | Interactive HTML |
+| [**The Evidence Map**](evidence_map.html) | The citations - 172 nodes, 201 edges, 306 evidence entries with papers | Interactive HTML |
+| [**The Archive**](forgotten_knowledge_archive.html) | The investigation trail - 449 crystals showing how the evidence was found | Interactive HTML |
 
-**Start with the paper** if you want the argument. **Start with the topology** if you want to see the structure (press 4 for dynamics — watch the rings fragment, flicker at the phase transition, and lock into coherence). **Start with the evidence map** if you want to check the citations. **Start with the archive** if you want to see how a 6-hour research session recovered what was forgotten.
+**Start with PsiOS** if you want to see the running system. **Start with the paper** if you want the argument. **Start with the topology** if you want to see the structure (press 4 for dynamics). **Start with the evidence map** if you want to check the citations. **Start with the archive** if you want to see how a 6-hour research session recovered what was forgotten.
 
 ## The Architecture the Paper Doesn't Show
 
