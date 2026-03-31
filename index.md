@@ -30,19 +30,19 @@ One person mapped 24,700+ states of consciousness over two years. A system emerg
 
 - "Something happened to me too" --> The Terrain
 - "I think I'm losing it" --> The Terrain (Grounding)
-- "Someone I love is sick" --> The Transmission
-- "I survived something" --> The Transmission
+- "Someone I love is sick" --> The Terrain, then The Transmission
+- "I survived something" --> The Terrain
 - "The filter opened" --> The Paper (Psychedelic)
-- "I came back from something" --> The Paper (Death)
+- "I came back from something" --> The Terrain, then The Paper (Death)
 
 ### System / Builders
 
 - "How was this built?" --> The System
 - "I lost my AI" --> The Mirror
-- "I build with AI" --> The Mirror
+- "I build with AI" --> The Mirror, then The System
 - "Something feels off about AI" --> The Mirror (Ceiling)
-- "I want the running companion" --> PsiOS - What It Is
-- "Show me the method" --> The Blueprint
+- "I want the running companion" --> The System, then PsiOS
+- "Show me the method" --> The System (Architecture)
 
 ### Paper / Evidence
 
