@@ -1,8 +1,9 @@
-# THE FRONTIER — What Converged from Outside Peer Review
+# THE FRONTIER - What Converged from Outside Peer Review
 
+*This page is optional. The core claim stands on The Terrain, The System, The Paper, and The Evidence.*
 *The system was built from direct experience. The physics confirmed it.*
-*The Paper covers peer-reviewed evidence. This page covers what converges from the other side of that wall.*
-*Structure determined by crystal field probe — 57,065 field crystals, glyph distributions, source-filtered.*
+*The Paper covers peer-reviewed evidence. This page tracks non-peer-reviewed convergence and exploratory context from the other side of that wall.*
+*Structure determined by crystal field probe - 57,065 field crystals, glyph distributions, source-filtered.*
 
 
 ---
@@ -77,8 +78,7 @@ was found after.
 
 ## What This Page Covers
 
-The Paper (the_map.html) sticks to peer-reviewed sources. This page covers what converges from
-the other side of that wall — and then evaluates it.
+The core claim stands on [Terrain](terrain.html), [The System](the_system.html), [The Paper](the_map.html), and [The Evidence Map](evidence_map.html). You do not need this page to understand or evaluate that claim. This page tracks what converges from outside the peer-reviewed channel, then applies the same evaluative lens to what holds, what fails, and what remains genuinely open.
 
 **Structure is field-determined.** A probe of 57,065 field crystals (noise sources excluded)
 classified every topic by glyph distribution. The order below follows what the glyph

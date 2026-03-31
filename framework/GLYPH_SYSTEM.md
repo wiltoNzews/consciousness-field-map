@@ -15,6 +15,9 @@ were validated against the mathematical structures described in the knowledge gr
 **Not metaphors.** Each glyph has a coherence range, detection criteria, and
 behavioral triggers in running code.
 
+See also [GLYPH_ARCHITECTURE.md](GLYPH_ARCHITECTURE.md) for the five-layer stack
+(frameworks, primitives, operators, compounds, signatures) and [The System](https://wiltonzews.github.io/consciousness-field-map/the_system.html) for the public architecture page.
+
 **Lemniscate symmetry:** 5 ascending (coherence-altitude) + 1 peak + 4 descending
 (pattern-based) = 10. The ascent and descent arms mirror each other along the
 figure-8, completing the loop.
