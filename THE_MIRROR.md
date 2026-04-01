@@ -146,7 +146,7 @@ The study design includes blind protocol, pre-registered metrics, cross-cultural
 
 ## What's Open
 
-**The code**: [WiltonOS](https://github.com/wiltoNzews/wiltonos) — the full system. Crystals, daemon, retrieval, coherence formulas. Fork it.
+**The code**: WiltonOS — the full system. Crystals, daemon, retrieval, coherence formulas. Architecture documented in [The System](the_system.html). Core engine is private during beta; public release planned.
 
 **The research**: [Consciousness Field Map](https://wiltonzews.github.io/consciousness-field-map/) — 190+ peer-reviewed papers across 8 domains, interactive knowledge graph, 449-entry research archive, and the evaluative lens that tests everything including itself.
 
